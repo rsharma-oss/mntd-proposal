@@ -3,590 +3,2113 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>MNTD × Growth Automated · Proposal</title>
-<meta name="description" content="A short, direct proposal from Rahul Sharma at Growth Automated for MNTD's email + lifecycle program. Starts with a mystery shop, ends with a plan.">
+<title>MNTD × Growth Automated · Proposal for Kate Rothschild</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=DM+Serif+Display&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>(function(){var s;try{s=localStorage.getItem('mntd_theme');}catch(e){}var pd=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',s||(pd?'dark':'light'));})();</script>
 <style>
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  :root{
-    --blue:#334FB4;
-    --blue-dark:#243B89;
-    --blue-tint:#EEF1FB;
-    --green:#2D9C56;
-    --green-dark:#1F7A40;
-    --green-tint:#EAF6EF;
-    --black:#121212;
-    --gray:#F3F3F3;
-    --rule:#E2E4EC;
-    --ink:#121212;
-    --ink-2:#3A3A42;
-    --ink-3:#5A5A66;
-    --ink-4:#8C8C96;
-    --paper:#FFFFFF;
-    --paper-2:#FAFAFB;
-    --warn:#B8531A;
-    --danger:#C1272D;
-  }
-  html{scroll-behavior:smooth;scroll-padding-top:76px}
-  body{font-family:'Assistant',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-weight:400;-webkit-font-smoothing:antialiased}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ga-blue:#334FB4;--ga-green:#2D9C56;--ga-carbon:#121212;--ga-cloud:#F3F3F3;--critical:#DC2626;--warn:#F59E0B;--good:#10B981}
+[data-theme="light"]{--bg:#F3F3F3;--surface-1:#FFF;--surface-2:#F8FAFC;--surface-3:#EEF1F6;--rule:#E2E8F0;--ink-1:#121212;--ink-2:#1F2937;--ink-3:#4B5563;--ink-4:#71717A;--logo-filter:none;--mntd-mark-bg:#FFF;--mntd-mark-border:1px solid #E2E8F0}
+[data-theme="dark"]{--bg:#121212;--surface-1:#1B1B26;--surface-2:#22222E;--surface-3:#2C2C38;--rule:#33333E;--ink-1:#FFF;--ink-2:#EDEDF0;--ink-3:#C1CEE0;--ink-4:#8A8A94;--logo-filter:brightness(0) invert(1);--mntd-mark-bg:#FFF;--mntd-mark-border:1px solid #33333E}
+html,body{background:var(--bg)}
+body{font-family:'Assistant',sans-serif;color:var(--ink-2);min-height:100vh;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.page{max-width:1080px;margin:0 auto;padding:0 24px}
 
-  /* ── Sticky nav ─────────────────────────────────────────────────────── */
-  .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
-  .nav-inner{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-  .nav-brand{font-size:13px;font-weight:700;letter-spacing:-0.2px;color:var(--ink);display:flex;align-items:center;gap:10px}
-  .nav-brand-mark{width:8px;height:8px;border-radius:2px;background:var(--blue)}
-  .nav-brand em{font-style:normal;color:var(--ink-4);font-weight:500;margin:0 4px}
-  .nav-jumps{display:flex;gap:2px;align-items:center;overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none}
-  .nav-jumps::-webkit-scrollbar{display:none}
-  .nav-jumps a{font-size:12px;font-weight:600;color:var(--ink-3);text-decoration:none;padding:6px 10px;border-radius:6px;letter-spacing:0.1px;white-space:nowrap;transition:all .15s}
-  .nav-jumps a:hover{color:var(--blue);background:var(--blue-tint)}
-  .nav-cta{font-size:12px;font-weight:700;color:#fff;background:var(--blue);padding:8px 14px;border-radius:8px;text-decoration:none;letter-spacing:0.2px;white-space:nowrap;transition:all .15s}
-  .nav-cta:hover{background:var(--blue-dark)}
-  @media(max-width:760px){.nav-jumps{display:none}.nav-inner{padding:12px 18px}}
+/* Smooth scroll + anchor offset so section headers clear the sticky two-row topbar */
+html{scroll-behavior:smooth}
+section[id],.obs-details[id]{scroll-margin-top:140px}
 
-  /* ── Base section rhythm ────────────────────────────────────────────── */
-  section{padding:88px 24px;position:relative}
-  .wrap{max-width:820px;margin:0 auto}
-  .wrap-wide{max-width:1080px;margin:0 auto}
-  .eyebrow{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:18px;display:flex;align-items:center;gap:12px}
-  .eyebrow-num{font-family:'DM Mono',monospace;font-weight:500;color:var(--ink-4);letter-spacing:0.8px}
-  .eyebrow-sep{color:var(--rule)}
-  h1,h2,h3{font-family:'Assistant',sans-serif;color:var(--ink);letter-spacing:-0.5px;line-height:1.15}
-  h2{font-size:38px;font-weight:800;margin-bottom:22px}
-  h3{font-size:22px;font-weight:700;margin-bottom:12px;letter-spacing:-0.2px}
-  .lead{font-size:20px;font-weight:400;color:var(--ink-2);line-height:1.55;margin-bottom:20px}
-  p{font-size:16px;color:var(--ink-2);line-height:1.7;margin-bottom:16px}
-  p strong{color:var(--ink);font-weight:600}
-  em.hl{font-style:normal;background:linear-gradient(180deg,transparent 60%,rgba(51,79,180,0.15) 60%);padding:0 2px}
-  em.hl-green{font-style:normal;background:linear-gradient(180deg,transparent 60%,rgba(45,156,86,0.20) 60%);padding:0 2px}
+/* NAV · two-row: brand + scrollable section nav */
+.topbar{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--rule);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.topbar-brand{max-width:1080px;margin:0 auto;padding:14px 24px 10px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.tb-brand-left{display:flex;align-items:center;gap:16px;min-width:0;flex-shrink:1}
+.mntd-mark{height:52px;width:88px;background:var(--mntd-mark-bg);border:var(--mntd-mark-border);border-radius:10px;display:flex;align-items:center;justify-content:center;padding:8px 12px;flex-shrink:0}
+.mntd-mark img{width:100%;height:100%;object-fit:contain}
+.tb-title-block{display:flex;flex-direction:column;min-width:0}
+.tb-title{font-size:15px;font-weight:800;color:var(--ink-1);letter-spacing:-0.3px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tb-sub{font-size:10.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-4);margin-top:3px;white-space:nowrap}
+.tb-brand-right{display:flex;align-items:center;gap:16px;flex-shrink:0}
+.theme-seg{display:flex;background:var(--surface-2);border:1px solid var(--rule);border-radius:8px;padding:2px;gap:2px}
+.theme-seg button{font-family:inherit;font-size:11px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;background:transparent;border:0;color:var(--ink-3);padding:6px 12px;border-radius:6px;cursor:pointer;transition:all .15s}
+.theme-seg button[aria-pressed="true"]{background:var(--ga-blue);color:#FFF}
+.ga-mark{display:flex;align-items:center}
+.ga-mark img{height:30px;filter:var(--logo-filter);display:block}
+.topbar-nav-wrap{max-width:1080px;margin:0 auto;padding:0 24px 12px;position:relative}
+.topbar-nav-wrap::after{content:'';position:absolute;top:0;right:24px;bottom:12px;width:44px;background:linear-gradient(90deg,transparent,var(--bg) 60%);pointer-events:none;opacity:0;transition:opacity .2s}
+.topbar-nav-wrap.can-scroll::after{opacity:1}
+.topbar-nav{display:flex;gap:2px;align-items:center;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;padding-bottom:2px}
+.topbar-nav::-webkit-scrollbar{display:none}
+.topbar-nav a{font-size:12.5px;font-weight:700;color:var(--ink-3);text-decoration:none;padding:8px 12px;border-radius:6px;letter-spacing:0.3px;white-space:nowrap;transition:all .15s;flex-shrink:0}
+.topbar-nav a:hover{color:var(--ink-1);background:var(--surface-2)}
+.topbar-nav a:focus-visible{outline:2px solid var(--ga-blue);outline-offset:1px}
+.topbar-nav a.ext{color:var(--ga-blue);font-weight:800}
+.topbar-nav a.ext::after{content:' ↗';font-size:10px}
+@media(max-width:640px){
+  .topbar-brand{padding:12px 16px 8px;gap:12px}
+  .mntd-mark{height:42px;width:72px;padding:6px 10px}
+  .tb-title{font-size:13px}
+  .tb-sub{font-size:9.5px;letter-spacing:1.1px}
+  .ga-mark img{height:22px}
+  .theme-seg button{font-size:10px;padding:5px 8px}
+  .topbar-nav-wrap{padding:0 16px 8px}
+  .topbar-nav-wrap::after{right:16px}
+  .topbar-nav a{font-size:11.5px;padding:7px 10px}
+}
 
-  /* ── Hero (Section 1) ───────────────────────────────────────────────── */
-  .hero{background:var(--black);color:#fff;padding:120px 24px 100px;position:relative;overflow:hidden}
-  .hero::before{content:'';position:absolute;top:-100px;right:-80px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(51,79,180,0.35) 0%,transparent 65%);pointer-events:none}
-  .hero .wrap{position:relative;z-index:1}
-  .hero .eyebrow{color:#A9B8EE}
-  .hero .eyebrow-num{color:rgba(255,255,255,0.4)}
-  .hero .eyebrow-sep{color:rgba(255,255,255,0.2)}
-  .hero h1{font-size:52px;font-weight:800;color:#fff;line-height:1.1;letter-spacing:-0.9px;max-width:780px;margin-bottom:24px}
-  .hero h1 em{font-style:normal;color:#6E86DD}
-  .hero-sub{font-size:20px;font-weight:400;color:rgba(255,255,255,0.75);line-height:1.6;max-width:640px;margin-bottom:32px}
-  .hero-sub strong{color:#fff;font-weight:600}
-  .hero-meta{display:flex;align-items:center;gap:20px;margin-top:40px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.12);flex-wrap:wrap}
-  .hero-meta-item{font-size:12px;color:rgba(255,255,255,0.7);font-family:'DM Mono',monospace;letter-spacing:0.4px}
-  .hero-meta-item strong{color:#fff;font-weight:500}
-  @media(max-width:760px){.hero{padding:80px 20px 60px}.hero h1{font-size:36px}.hero-sub{font-size:17px}}
+/* HERO */
+.hero{padding:64px 0 48px}
+.hero-eyebrow{font-size:11px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:var(--ga-blue);margin-bottom:22px}
+.hero-headline{font-family:'DM Serif Display',serif;font-size:44px;font-weight:400;color:var(--ink-1);line-height:1.14;letter-spacing:-1px;max-width:820px;margin-bottom:24px}
+.hero-headline em{font-style:italic;color:var(--ga-blue)}
+.hero-body{max-width:720px;font-size:17px;line-height:1.7;color:var(--ink-2)}
+.hero-body p{margin-bottom:16px}
+.hero-body p:last-child{margin-bottom:0}
+.hero-body strong{color:var(--ink-1);font-weight:700}
+.hero-sig{margin-top:32px;padding-top:24px;border-top:1px solid var(--rule);display:flex;align-items:center;gap:16px}
+.hero-sig-name{font-size:14px;font-weight:700;color:var(--ink-1)}
+.hero-sig-role{font-size:12px;color:var(--ink-4);letter-spacing:0.3px}
+.hero-top{display:grid;grid-template-columns:1fr 220px;column-gap:40px;row-gap:0;align-items:start;margin-bottom:8px}
+.hero-top-header{grid-column:1 / -1}
+.hero-top-main{min-width:0}
+.hero-ig-frame{aspect-ratio:4/5;background:linear-gradient(135deg,var(--surface-2),var(--surface-3));border:2px dashed var(--rule);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px;text-align:center;position:relative;overflow:hidden;text-decoration:none;color:inherit}
+.hero-ig-frame.is-image{background:transparent;border:1px solid var(--rule);padding:0;transition:transform .2s,box-shadow .2s;cursor:zoom-in}
+.hero-ig-frame.is-image:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.15);border-color:var(--ga-blue)}
+.hero-ig-frame.is-image img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;border-radius:11px}
+.hero-ig-frame::before{content:'IG';position:absolute;top:8px;right:10px;font-size:9px;font-weight:800;letter-spacing:1.4px;color:var(--ink-4);background:var(--surface-1);padding:2px 7px;border-radius:3px;z-index:2}
+.hero-ig-frame.is-image::before{background:rgba(255,255,255,0.92);color:#111}
+.hero-ig-icon{font-family:'DM Serif Display',serif;font-size:40px;color:var(--ga-blue);opacity:0.35;line-height:1;margin-bottom:10px}
+.hero-ig-label{font-size:10.5px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-4)}
+.hero-ig-sub{font-size:9.5px;color:var(--ink-4);margin-top:8px;font-family:'DM Mono',monospace;line-height:1.45;max-width:170px}
+.hero-ig-caption{font-size:10.5px;color:var(--ink-4);text-align:center;margin-top:10px;font-family:'DM Mono',monospace;letter-spacing:0.3px;line-height:1.4}
+@media(max-width:680px){.hero-top{grid-template-columns:1fr;gap:22px}.hero-ig{max-width:220px;margin:0 auto}}
 
-  /* ── Mystery shop findings ──────────────────────────────────────────── */
-  .finding{background:var(--paper);border:1px solid var(--rule);border-left:4px solid var(--blue);border-radius:10px;padding:26px 30px;margin-bottom:16px}
-  .finding-tag{display:inline-block;font-family:'DM Mono',monospace;font-size:11px;font-weight:500;letter-spacing:1.2px;color:var(--blue);background:var(--blue-tint);padding:3px 10px;border-radius:4px;margin-bottom:12px}
-  .finding.critical{border-left-color:var(--danger)}
-  .finding.critical .finding-tag{color:var(--danger);background:#FCE9EA}
-  .finding.opportunity{border-left-color:var(--green)}
-  .finding.opportunity .finding-tag{color:var(--green-dark);background:var(--green-tint)}
-  .finding h3{margin-bottom:8px}
-  .finding p{font-size:15px;margin-bottom:10px}
-  .finding p:last-child{margin-bottom:0}
-  .finding p.impact{background:var(--paper-2);padding:12px 14px;border-radius:6px;font-size:13.5px;color:var(--ink-3);margin-top:14px;border-left:2px solid var(--rule)}
-  .finding p.impact strong{color:var(--ink)}
+/* SECTION */
+.section{padding:56px 0;border-top:1px solid var(--rule)}
+.section-label{font-size:11px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:var(--ga-blue);margin-bottom:14px}
+.section-title{font-family:'DM Serif Display',serif;font-size:32px;font-weight:400;color:var(--ink-1);line-height:1.2;letter-spacing:-0.6px;margin-bottom:14px}
+.section-intro{font-size:16px;color:var(--ink-3);line-height:1.65;max-width:780px;margin-bottom:32px}
 
-  /* ── Scorecard section ──────────────────────────────────────────────── */
-  .scorecard-band{background:var(--gray);padding:88px 24px}
-  .score-hero{display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;background:var(--black);color:#fff;padding:36px 40px;border-radius:16px;margin-bottom:32px;position:relative;overflow:hidden}
-  .score-hero::before{content:'';position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle,rgba(193,39,45,0.28) 0%,transparent 60%);pointer-events:none}
-  .score-gauge{width:120px;height:120px;border-radius:50%;background:conic-gradient(var(--danger) 0deg 122deg,rgba(255,255,255,0.15) 122deg 360deg);display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0}
-  .score-gauge::after{content:'';position:absolute;width:96px;height:96px;border-radius:50%;background:var(--black)}
-  .score-gauge-num{position:relative;z-index:1;font-family:'DM Mono',monospace;font-size:34px;font-weight:500;color:var(--danger);letter-spacing:-1px}
-  .score-gauge-max{position:relative;z-index:1;font-family:'DM Mono',monospace;font-size:12px;color:rgba(255,255,255,0.5);margin-left:2px}
-  .score-hero-body{position:relative;z-index:1}
-  .score-band-label{font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:#F5A0A6;margin-bottom:8px}
-  .score-hero h3{color:#fff;font-size:22px;margin-bottom:6px}
-  .score-hero-desc{color:rgba(255,255,255,0.7);font-size:14.5px;line-height:1.5;max-width:520px}
-  .score-hero-desc strong{color:#fff;font-weight:600}
-  .score-bands{display:flex;gap:2px;margin-top:20px;font-size:9px;color:rgba(255,255,255,0.55);font-family:'DM Mono',monospace;letter-spacing:0.4px}
-  .score-band-cell{padding:6px 8px;border-radius:3px;background:rgba(255,255,255,0.06);flex:1;text-align:center;text-transform:uppercase;letter-spacing:0.5px}
-  .score-band-cell.active{background:rgba(193,39,45,0.28);color:#F5A0A6}
+/* MYSTERY SHOP */
+.ms-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.ms-card{background:var(--surface-1);border:1px solid var(--rule);border-radius:10px;padding:22px 24px;border-left:4px solid var(--warn);transition:transform .15s}
+.ms-card.critical{border-left-color:var(--critical)}
+.ms-card:hover{transform:translateX(2px)}
+.ms-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;gap:12px;flex-wrap:wrap}
+.ms-code{font-family:'DM Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.4px;color:var(--ink-4)}
+.ms-tag{font-size:9px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;padding:2px 8px;border-radius:4px}
+.ms-tag.critical{background:rgba(220,38,38,0.12);color:var(--critical)}
+.ms-tag.warn{background:rgba(245,158,11,0.14);color:var(--warn)}
+.ms-title{font-size:18px;font-weight:700;color:var(--ink-1);margin-bottom:8px;letter-spacing:-0.2px}
+.ms-body{font-size:14px;color:var(--ink-3);line-height:1.6}
+.ms-body strong{color:var(--ink-2);font-weight:600}
+.ms-body code{font-family:'DM Mono',monospace;background:var(--surface-3);padding:1px 5px;border-radius:3px;font-size:12.5px}
+.ms-impact{margin-top:12px;padding-top:12px;border-top:1px dashed var(--rule);font-size:12px;color:var(--ink-4)}
+.ms-impact strong{color:var(--ink-2);font-weight:700}
+.ms-impact code{font-family:'DM Mono',monospace;background:var(--surface-3);padding:1px 5px;border-radius:3px;font-size:11.5px}
 
-  .dim-table{width:100%;border-collapse:collapse;background:var(--paper);border-radius:12px;overflow:hidden;border:1px solid var(--rule);box-shadow:0 1px 3px rgba(18,18,18,0.04)}
-  .dim-table thead tr{background:var(--paper-2);border-bottom:1px solid var(--rule)}
-  .dim-table thead th{font-size:10px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;color:var(--ink-4);padding:14px 16px;text-align:left}
-  .dim-table thead th.r{text-align:right}
-  .dim-table tbody tr{border-bottom:1px solid var(--rule)}
-  .dim-table tbody tr:last-child{border-bottom:none}
-  .dim-table tbody tr.total{background:var(--paper-2);font-weight:700}
-  .dim-table tbody td{padding:12px 16px;font-size:14px;color:var(--ink-2)}
-  .dim-table tbody td.r{text-align:right;font-family:'DM Mono',monospace;font-size:13px}
-  .dim-label{color:var(--ink);font-weight:600;font-size:14.5px}
-  .dim-desc{color:var(--ink-4);font-size:12px;margin-top:2px;font-weight:400}
-  .score-cell{display:inline-flex;align-items:center;gap:8px}
-  .score-bar{width:56px;height:6px;background:var(--rule);border-radius:3px;overflow:hidden}
-  .score-bar-fill{height:100%;border-radius:3px}
-  .score-fail{background:var(--danger)}
-  .score-poor{background:var(--warn)}
-  .score-ok{background:var(--blue)}
-  .score-good{background:var(--green)}
-  .confidence{display:inline-block;font-family:'DM Mono',monospace;font-size:10px;font-weight:500;color:var(--ink-4);letter-spacing:0.5px;padding:2px 6px;border-radius:3px;background:var(--gray)}
+/* GAPS */
+.gaps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.gap-card{background:var(--surface-1);border:1px solid var(--rule);border-radius:10px;padding:22px;display:flex;flex-direction:column}
+.gap-tier{display:inline-block;font-size:9px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;padding:3px 8px;border-radius:4px;margin-bottom:10px;align-self:flex-start}
+.gap-tier.t1{background:rgba(220,38,38,0.12);color:var(--critical)}
+.gap-tier.t2{background:rgba(245,158,11,0.14);color:var(--warn)}
+.gap-tier.t3{background:rgba(51,79,180,0.12);color:var(--ga-blue)}
+.gap-title{font-size:16px;font-weight:700;color:var(--ink-1);margin-bottom:8px;letter-spacing:-0.2px}
+.gap-body{font-size:13px;color:var(--ink-3);line-height:1.55}
+.gap-body code{font-family:'DM Mono',monospace;background:var(--surface-3);padding:1px 5px;border-radius:3px;font-size:11.5px}
 
-  /* ── Gaps section ───────────────────────────────────────────────────── */
-  .gaps-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
-  .gap-card{background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:26px 28px;position:relative}
-  .gap-card.dollar{border-color:rgba(193,39,45,0.25);background:linear-gradient(180deg,#FEF5F5 0%,var(--paper) 60%)}
-  .gap-money{position:absolute;top:24px;right:24px;font-family:'DM Mono',monospace;font-size:11px;font-weight:600;color:var(--danger);letter-spacing:0.5px;text-transform:uppercase}
-  .gap-card h3{font-size:18px;margin-bottom:8px;padding-right:80px}
-  .gap-card p{font-size:14px;margin-bottom:0;line-height:1.65}
-  @media(max-width:760px){.gaps-grid{grid-template-columns:1fr}}
+.evidence{margin-top:22px;background:var(--surface-2);border:1px solid var(--rule);border-radius:12px;padding:22px}
+.evidence-title{font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-4);margin-bottom:16px}
+.evidence-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:720px){.evidence-grid{grid-template-columns:1fr}}
+.evidence-item{background:var(--surface-1);border:1px solid var(--rule);border-radius:8px;padding:16px}
+.evidence-kind{font-family:'DM Mono',monospace;font-size:10px;font-weight:600;letter-spacing:0.4px;color:var(--ink-4);margin-bottom:6px}
+.evidence-headline{font-size:14px;font-weight:700;color:var(--ink-1);margin-bottom:4px;letter-spacing:-0.1px}
+.evidence-meta{font-size:11px;color:var(--ink-4);font-family:'DM Mono',monospace}
+.evidence-body{margin-top:10px;font-size:13px;color:var(--ink-3);line-height:1.55;padding:10px 12px;background:var(--surface-2);border-radius:6px;border-left:2px solid var(--rule)}
+.evidence-flag{margin-top:8px;font-size:11px;font-weight:700;color:var(--critical);letter-spacing:0.2px}
+.evidence-flag.good{color:var(--good)}
+.sms-shot{margin-top:16px;background:var(--surface-1);border:1px solid var(--rule);border-radius:8px;padding:16px;text-align:center}
+.sms-shot img{max-height:520px;margin:0 auto;border-radius:6px}
+.sms-cap{margin-top:10px;font-size:11px;color:var(--ink-4);font-family:'DM Mono',monospace;letter-spacing:0.3px}
 
-  /* ── Engagement section ─────────────────────────────────────────────── */
-  .engagement-band{background:var(--blue);color:#fff;padding:88px 24px;position:relative;overflow:hidden}
-  .engagement-band::before{content:'';position:absolute;bottom:-100px;left:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.10) 0%,transparent 65%);pointer-events:none}
-  .engagement-band .eyebrow{color:#C6D0F2}
-  .engagement-band .eyebrow-num{color:rgba(255,255,255,0.5)}
-  .engagement-band .eyebrow-sep{color:rgba(255,255,255,0.25)}
-  .engagement-band h2{color:#fff}
-  .engagement-band .lead{color:rgba(255,255,255,0.85)}
-  .engagement-band p{color:rgba(255,255,255,0.85)}
-  .engagement-band p strong{color:#fff}
-  .pillars{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:32px 0}
-  .pillar{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:20px 22px}
-  .pillar-num{font-family:'DM Serif Display',serif;font-size:22px;color:#A9B8EE;line-height:1;margin-bottom:8px}
-  .pillar-title{font-size:15px;font-weight:700;color:#fff;margin-bottom:6px;letter-spacing:-0.1px}
-  .pillar-body{font-size:13px;color:rgba(255,255,255,0.75);line-height:1.55}
-  @media(max-width:760px){.pillars{grid-template-columns:1fr}}
+/* Big finding */
+.big-finding{background:linear-gradient(135deg,rgba(220,38,38,0.08),rgba(220,38,38,0.02));border:1px solid rgba(220,38,38,0.24);border-left:4px solid var(--critical);border-radius:10px;padding:22px 24px;margin-bottom:22px}
+.bf-tag{font-size:10px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--critical);margin-bottom:8px}
+.bf-title{font-size:19px;font-weight:800;color:var(--ink-1);margin-bottom:6px;letter-spacing:-0.3px}
+.bf-body{font-size:14px;color:var(--ink-3);line-height:1.6}
+.bf-body strong{color:var(--ink-1)}
+.bf-body code{font-family:'DM Mono',monospace;background:var(--surface-3);padding:1px 5px;border-radius:3px;font-size:12px}
+.bf-numbers{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap}
+.bf-num{display:flex;flex-direction:column;padding:10px 14px;background:var(--surface-1);border-radius:6px;border:1px solid var(--rule)}
+.bf-num-val{font-family:'DM Mono',monospace;font-size:20px;font-weight:600;color:var(--critical)}
+.bf-num-lbl{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--ink-4);margin-top:2px}
 
-  .timeline-rail{margin-top:32px;padding:32px 0 8px;border-top:1px solid rgba(255,255,255,0.15)}
-  .timeline-rail-label{font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:#C6D0F2;margin-bottom:20px}
-  .timeline-row{display:grid;grid-template-columns:120px 1fr;gap:24px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.10);align-items:baseline}
-  .timeline-row:last-child{border-bottom:none}
-  .timeline-when{font-family:'DM Mono',monospace;font-size:12px;font-weight:500;color:#A9B8EE;letter-spacing:0.6px}
-  .timeline-what{font-size:14.5px;color:rgba(255,255,255,0.9);line-height:1.55}
-  .timeline-what strong{color:#fff;font-weight:600}
+/* Cards */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.card{background:var(--surface-1);border:1px solid var(--rule);border-radius:10px;padding:22px;position:relative}
+.card-num{font-family:'DM Serif Display',serif;font-size:26px;font-weight:400;color:var(--ga-blue);line-height:1;margin-bottom:10px;letter-spacing:-0.5px}
+.card-title{font-size:16px;font-weight:700;color:var(--ink-1);margin-bottom:8px;letter-spacing:-0.2px;line-height:1.3}
+.card-body{font-size:13.5px;color:var(--ink-3);line-height:1.6}
+.card-body strong{color:var(--ink-2);font-weight:600}
+.card-quote{margin-top:12px;padding-top:12px;border-top:1px dashed var(--rule);font-size:12.5px;color:var(--ink-2);font-style:italic;line-height:1.55}
+.card-quote-attr{margin-top:6px;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--ink-4);font-style:normal;display:block}
 
-  .investment-card{margin-top:36px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.20);border-radius:14px;padding:32px 36px;display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center}
-  .investment-price{font-family:'DM Mono',monospace}
-  .investment-amount{font-size:52px;font-weight:500;color:#fff;line-height:1;letter-spacing:-1.5px}
-  .investment-cadence{font-size:14px;color:rgba(255,255,255,0.75);margin-top:6px}
-  .investment-body p{margin-bottom:8px;font-size:14px}
-  .investment-body p:last-child{margin-bottom:0}
-  @media(max-width:760px){.investment-card{grid-template-columns:1fr;padding:24px}}
+/* Segmentation */
+.lanes{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:22px}
+@media(max-width:800px){.lanes{grid-template-columns:1fr}}
+.lane{background:var(--surface-1);border:1px solid var(--rule);border-radius:12px;padding:24px;border-top:4px solid var(--ga-blue)}
+.lane.b{border-top-color:var(--ga-green)}
+.lane-tag{font-size:10px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--ga-blue);margin-bottom:10px}
+.lane.b .lane-tag{color:var(--ga-green)}
+.lane-title{font-size:19px;font-weight:800;color:var(--ink-1);margin-bottom:8px;letter-spacing:-0.3px}
+.lane-body{font-size:14px;color:var(--ink-3);line-height:1.6;margin-bottom:14px}
+.lane-body strong{color:var(--ink-2)}
+.lane-list{list-style:none;padding:0;margin:0;font-size:13px;color:var(--ink-3);line-height:1.55}
+.lane-list li{padding:6px 0 6px 20px;position:relative;border-bottom:1px solid var(--rule)}
+.lane-list li:last-child{border-bottom:0}
+.lane-list li::before{content:'→';position:absolute;left:0;top:6px;color:var(--ga-blue);font-weight:700}
+.lane.b .lane-list li::before{color:var(--ga-green)}
+.lane-list code{font-family:'DM Mono',monospace;background:var(--surface-3);padding:1px 5px;border-radius:3px;font-size:11.5px}
+.lane.wide{margin-bottom:22px}
+.lane.c{border-top-color:var(--warn)}
+.lane.c .lane-tag{color:var(--warn)}
+.segment-matrix{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:18px;margin-top:6px}
+@media(max-width:600px){.segment-matrix{grid-template-columns:1fr}}
+.segment-col-title{font-size:10px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-4);margin-bottom:10px}
+.segment-list{list-style:none;padding:0;margin:0}
+.segment-list li{font-size:13px;color:var(--ink-2);padding:8px 12px;background:var(--surface-2);border-radius:6px;margin-bottom:6px;border-left:3px solid var(--warn);font-weight:500}
+.flow-strip{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:12px;align-items:center;background:var(--surface-2);border:1px solid var(--rule);border-radius:10px;padding:18px 20px;margin-top:6px}
+@media(max-width:700px){.flow-strip{grid-template-columns:1fr;gap:8px}.flow-arrow{transform:rotate(90deg)}}
+.flow-node{text-align:center}
+.flow-node-label{font-size:9px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-4);margin-bottom:4px}
+.flow-node-name{font-size:14px;font-weight:800;color:var(--ink-1);letter-spacing:-0.2px;margin-bottom:2px}
+.flow-node-sub{font-size:11px;color:var(--ink-3)}
+.flow-arrow{font-size:20px;color:var(--ink-4);font-weight:300}
 
-  /* ── Tools grid ─────────────────────────────────────────────────────── */
-  .tools-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:8px}
-  .tool{background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:20px 22px}
-  .tool-name{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:4px}
-  .tool-role{font-size:13px;color:var(--ink-3);line-height:1.5}
-  @media(max-width:760px){.tools-grid{grid-template-columns:1fr}}
+.mcp-strip{margin-top:16px;background:var(--surface-2);border:1px solid var(--rule);border-radius:10px;padding:18px 22px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.mcp-strip-icon{width:38px;height:38px;background:var(--ga-blue);color:#FFF;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:20px;flex-shrink:0}
+.mcp-strip-title{font-size:13px;font-weight:800;color:var(--ink-1);letter-spacing:-0.2px}
+.mcp-strip-body{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin-top:2px}
+.mcp-strip-body strong{color:var(--ink-2)}
 
-  /* ── MRR Layer ──────────────────────────────────────────────────────── */
-  .mrr-band{background:var(--gray);padding:88px 24px}
-  .mrr-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:8px}
-  .mrr-card{background:var(--paper);border:1px solid var(--rule);border-top:3px solid var(--green);border-radius:10px;padding:24px 26px}
-  .mrr-card h3{font-size:17px;color:var(--green-dark);margin-bottom:8px}
-  .mrr-card p{font-size:14px;color:var(--ink-3);line-height:1.6;margin-bottom:0}
-  @media(max-width:760px){.mrr-cards{grid-template-columns:1fr}}
+/* Pillars + timeline */
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:32px}
+.pillar{background:var(--surface-1);border:1px solid var(--rule);border-radius:10px;padding:18px}
+.pillar-num{font-family:'DM Mono',monospace;font-size:11px;font-weight:600;color:var(--ga-blue);letter-spacing:1.2px;margin-bottom:6px}
+.pillar-title{font-size:14px;font-weight:700;color:var(--ink-1);letter-spacing:-0.2px;margin-bottom:6px}
+.pillar-body{font-size:12.5px;color:var(--ink-3);line-height:1.5}
 
-  /* ── CTA / footer ───────────────────────────────────────────────────── */
-  .cta-band{background:var(--black);color:#fff;padding:96px 24px 60px;text-align:center}
-  .cta-band .eyebrow{color:#A9B8EE;justify-content:center}
-  .cta-band .eyebrow-num{color:rgba(255,255,255,0.4)}
-  .cta-band .eyebrow-sep{color:rgba(255,255,255,0.2)}
-  .cta-band h2{color:#fff;font-size:40px;max-width:640px;margin:0 auto 22px}
-  .cta-band .lead{color:rgba(255,255,255,0.75);max-width:560px;margin:0 auto 40px}
-  .cta-row{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:56px}
-  .cta-primary{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--black);font-weight:700;font-size:15px;padding:14px 28px;border-radius:999px;text-decoration:none;letter-spacing:0.2px;transition:all .18s}
-  .cta-primary:hover{background:#EEF1FB;transform:translateY(-1px)}
-  .cta-primary::after{content:'→';font-weight:400}
-  .cta-secondary{display:inline-flex;align-items:center;gap:10px;background:transparent;color:#fff;font-weight:600;font-size:15px;padding:14px 28px;border-radius:999px;text-decoration:none;letter-spacing:0.2px;border:1px solid rgba(255,255,255,0.3);transition:all .18s}
-  .cta-secondary:hover{border-color:#fff;background:rgba(255,255,255,0.06)}
-  .sig{max-width:520px;margin:0 auto;padding-top:32px;border-top:1px solid rgba(255,255,255,0.12);text-align:left;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center}
-  .sig-avatar{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--blue) 0%,var(--green) 100%);display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;color:#fff;font-size:22px;flex-shrink:0}
-  .sig-name{font-size:16px;font-weight:700;color:#fff;line-height:1.2}
-  .sig-role{font-size:13px;color:rgba(255,255,255,0.65);margin-top:2px}
-  .sig-contact{font-size:13px;color:rgba(255,255,255,0.65);margin-top:6px;font-family:'DM Mono',monospace}
-  .sig-contact a{color:#A9B8EE;text-decoration:none}
-  .sig-contact a:hover{color:#fff}
-  .footer-tiny{text-align:center;font-size:11px;color:rgba(255,255,255,0.35);margin-top:44px;letter-spacing:0.4px;font-family:'DM Mono',monospace}
+.timeline-block{background:var(--surface-1);border:1px solid var(--rule);border-radius:12px;padding:26px;margin-bottom:22px}
+.timeline-title{font-size:15px;font-weight:800;color:var(--ink-1);letter-spacing:-0.2px;margin-bottom:18px}
+.tl-lanes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:720px){.tl-lanes{grid-template-columns:1fr}}
+.tl-lane{border-top:3px solid var(--ga-blue);padding-top:12px}
+.tl-lane.b{border-top-color:var(--ga-green)}
+.tl-lane.c{border-top-color:var(--warn)}
+.tl-when{font-family:'DM Mono',monospace;font-size:10px;font-weight:600;color:var(--ink-4);letter-spacing:1.2px;text-transform:uppercase;margin-bottom:4px}
+.tl-h{font-size:14px;font-weight:800;color:var(--ink-1);margin-bottom:8px;letter-spacing:-0.2px}
+.tl-list{list-style:none;padding:0;margin:0;font-size:12.5px;color:var(--ink-3);line-height:1.5}
+.tl-list li{padding:4px 0 4px 14px;position:relative}
+.tl-list li::before{content:'•';position:absolute;left:2px;color:var(--ga-blue);font-weight:700}
+.tl-lane.b .tl-list li::before{color:var(--ga-green)}
+.tl-lane.c .tl-list li::before{color:var(--warn)}
 
-  /* ── Alt band ───────────────────────────────────────────────────────── */
-  .alt-band{background:var(--paper-2)}
+.invest{background:var(--ga-blue);color:#FFF;border-radius:12px;padding:32px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+@media(max-width:700px){.invest{grid-template-columns:1fr}}
+.invest-title{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:4px}
+.invest-body{font-size:15px;line-height:1.55;color:rgba(255,255,255,0.92);max-width:560px}
+.invest-price{text-align:right}
+@media(max-width:700px){.invest-price{text-align:left}}
+.invest-amt{font-family:'DM Serif Display',serif;font-size:44px;font-weight:400;line-height:1;letter-spacing:-1.5px}
+.invest-per{font-size:12px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-top:4px}
+
+/* TEAM */
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:720px){.team-grid{grid-template-columns:1fr}}
+.team-card{background:var(--surface-1);border:1px solid var(--rule);border-radius:12px;padding:26px;position:relative}
+.team-role{font-size:10px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--ga-blue);margin-bottom:8px}
+.team-name{font-family:'DM Serif Display',serif;font-size:26px;font-weight:400;color:var(--ink-1);letter-spacing:-0.5px;margin-bottom:6px}
+.team-title{font-size:13px;font-weight:700;color:var(--ink-2);margin-bottom:14px;letter-spacing:0.1px}
+.team-body{font-size:13.5px;color:var(--ink-3);line-height:1.6;margin-bottom:16px}
+.team-body strong{color:var(--ink-2);font-weight:600}
+.team-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.nmm-connection{margin-top:6px;margin-bottom:14px;padding:9px 12px;background:var(--surface-2);border:1px solid var(--rule);border-radius:8px;display:flex;align-items:center;gap:12px}
+.nmm-connection img{width:28px;height:28px;object-fit:contain;border-radius:4px;flex-shrink:0;background:#fff;padding:2px}
+.nmm-connection-label{font-size:9px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--ga-blue);margin-bottom:2px;line-height:1}
+.nmm-connection-name{font-size:12.5px;font-weight:700;color:var(--ink-1);letter-spacing:-0.1px}
+.references{margin-top:36px}
+.references-title{font-size:11px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--ga-blue);margin-bottom:14px}
+.references-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:720px){.references-grid{grid-template-columns:1fr}}
+.ref-card{margin:0;background:var(--surface-1);border:1px solid var(--rule);border-left:4px solid var(--ga-blue);border-radius:10px;padding:22px 24px}
+.ref-quote{font-size:13.5px;color:var(--ink-2);line-height:1.65;font-style:italic;margin-bottom:14px;position:relative}
+.ref-quote::before{content:'\201C';color:var(--ga-blue);font-weight:800;font-style:normal;margin-right:2px;font-size:20px;line-height:0;vertical-align:-6px}
+.ref-quote::after{content:'\201D';color:var(--ga-blue);font-weight:800;font-style:normal;margin-left:2px;font-size:20px;line-height:0;vertical-align:-6px}
+.ref-attr{padding-top:12px;border-top:1px dashed var(--rule)}
+.ref-name{font-size:13.5px;font-weight:800;color:var(--ink-1);letter-spacing:-0.1px}
+.ref-role{font-size:11px;color:var(--ink-4);margin-top:2px;font-family:'DM Mono',monospace;letter-spacing:0.2px;line-height:1.4}
+.ref-link{display:inline-block;font-size:12px;font-weight:800;color:var(--ga-blue);text-decoration:none;margin-top:8px;margin-right:14px;letter-spacing:0.2px}
+.ref-link:hover{text-decoration:underline}
+.team-tag{font-size:10px;font-weight:700;letter-spacing:0.4px;color:var(--ink-3);background:var(--surface-3);padding:3px 8px;border-radius:4px}
+.team-link{display:inline-block;font-size:12px;font-weight:700;color:var(--ga-blue);text-decoration:none;letter-spacing:0.2px}
+.team-link::after{content:' ↗';font-size:10px}
+.team-card.founder{border:2px solid var(--ga-blue);background:linear-gradient(135deg,rgba(51,79,180,0.05),transparent)}
+.team-card.founder .team-role{color:var(--ga-blue)}
+.team-card.forthcoming{border-style:dashed}
+.team-card.forthcoming .team-role{color:var(--ink-4)}
+.team-forthcoming-note{margin-top:10px;font-size:11px;color:var(--ink-4);font-style:italic;padding-top:10px;border-top:1px dashed var(--rule)}
+
+/* TOOLS */
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.tool{background:var(--surface-1);border:1px solid var(--rule);border-radius:10px;padding:18px 78px 18px 18px;position:relative}
+.tool-badge{display:inline-block;font-size:9px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;padding:2px 6px;border-radius:3px;margin-bottom:8px}
+.tool-badge.core{background:rgba(51,79,180,0.14);color:var(--ga-blue)}
+.tool-badge.new{background:rgba(45,156,86,0.14);color:var(--ga-green)}
+.tool-badge.partner{background:rgba(245,158,11,0.16);color:var(--warn)}
+.tool-name{font-size:14px;font-weight:800;color:var(--ink-1);margin-bottom:4px;letter-spacing:-0.1px}
+.tool-body{font-size:12.5px;color:var(--ink-3);line-height:1.5}
+.tool-logo{position:absolute;top:14px;right:14px;max-width:60px;max-height:36px;width:auto;height:auto;object-fit:contain;object-position:right center;border-radius:4px}
+.tool-logo-multi{position:absolute;top:12px;right:14px;display:flex;gap:6px;align-items:center;justify-content:flex-end}
+.tool-logo-multi img{max-width:32px;max-height:28px;width:auto;height:auto;object-fit:contain;border-radius:3px}
+.klaviyo-badge-strip{margin-top:12px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.klaviyo-badge-strip img{max-height:26px;max-width:130px;width:auto;height:auto;display:block;border-radius:3px}
+
+/* PROPOSAL / MRR */
+.mrr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:22px}
+.mrr-card{background:var(--surface-1);border:1px solid var(--rule);border-radius:10px;padding:22px;border-top:4px solid var(--ga-blue)}
+.mrr-card.aeo{border-top-color:var(--ga-blue)}
+.mrr-card.seo{border-top-color:var(--ga-green)}
+.mrr-card.reddit{border-top-color:var(--warn)}
+.mrr-eyebrow{font-size:10px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--ga-blue);margin-bottom:6px}
+.mrr-card.seo .mrr-eyebrow{color:var(--ga-green)}
+.mrr-card.reddit .mrr-eyebrow{color:var(--warn)}
+.mrr-title{font-size:17px;font-weight:800;color:var(--ink-1);margin-bottom:8px;letter-spacing:-0.2px}
+.mrr-body{font-size:13px;color:var(--ink-3);line-height:1.55}
+
+.deck-note{margin-top:22px;background:var(--surface-2);border:1px dashed var(--rule);border-radius:8px;padding:16px 20px;font-size:13px;color:var(--ink-3);line-height:1.5}
+.deck-note strong{color:var(--ink-1)}
+
+/* LEGAL */
+.legal-timeline{background:var(--surface-1);border:1px solid var(--rule);border-radius:14px;padding:32px 24px;margin-bottom:22px}
+.tl-track{display:grid;grid-template-columns:1fr 24px 1fr 24px 1fr 24px 1fr;align-items:start;gap:0}
+@media(max-width:800px){.tl-track{grid-template-columns:1fr;gap:12px}.legal-arrow{transform:rotate(90deg)}}
+.legal-node{display:flex;flex-direction:column;align-items:center;text-align:center;padding:10px 6px;border-radius:10px;transition:background .15s;text-decoration:none;color:inherit}
+.legal-node:hover{background:var(--surface-2)}
+.legal-num{width:52px;height:52px;border-radius:50%;background:var(--accent);color:#FFF;font-family:'DM Serif Display',serif;font-weight:400;font-size:22px;display:flex;align-items:center;justify-content:center;letter-spacing:-0.5px;box-shadow:0 3px 10px rgba(0,0,0,0.15);margin-bottom:10px}
+.legal-code{font-family:'DM Serif Display',serif;font-size:10px;font-style:italic;color:var(--ink-4);letter-spacing:1.2px;margin-bottom:4px}
+.legal-label{font-size:13px;font-weight:700;color:var(--ink-1);line-height:1.3;letter-spacing:-0.1px}
+.legal-arrow{display:flex;align-items:center;justify-content:center;color:var(--ink-4);font-size:16px;padding-top:22px}
+.legal-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+@media(max-width:800px){.legal-detail-grid{grid-template-columns:1fr}}
+.legal-detail{background:var(--surface-1);border:1px solid var(--rule);border-radius:10px;padding:20px;border-left:4px solid var(--accent);text-decoration:none;color:inherit;display:block;transition:transform .15s}
+.legal-detail:hover{transform:translateX(2px)}
+.legal-detail-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:6px}
+.legal-detail-step{font-family:'DM Mono',monospace;font-size:10px;font-weight:600;color:var(--ink-4);letter-spacing:0.4px}
+.legal-detail-label{font-size:15px;font-weight:800;color:var(--ink-1);margin-bottom:6px;letter-spacing:-0.2px}
+.legal-detail-purpose{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin-bottom:10px}
+.legal-detail-terms{list-style:none;padding:0;margin:0;font-size:11.5px;color:var(--ink-3);line-height:1.5}
+.legal-detail-terms li{padding:2px 0 2px 12px;position:relative}
+.legal-detail-terms li::before{content:'•';position:absolute;left:2px;color:var(--accent)}
+.legal-detail-when{font-size:11px;color:var(--ink-4);font-style:italic;margin-top:8px;padding-top:8px;border-top:1px dashed var(--rule)}
+
+/* CTA */
+.cta{background:var(--ga-carbon);color:#FFF;border-radius:14px;padding:44px;text-align:center;margin:36px 0}
+.cta-eye{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:16px}
+.cta-h{font-family:'DM Serif Display',serif;font-size:36px;font-weight:400;line-height:1.15;letter-spacing:-0.8px;margin-bottom:14px;max-width:640px;margin-left:auto;margin-right:auto}
+.cta-body{font-size:15px;color:rgba(255,255,255,0.75);line-height:1.6;max-width:560px;margin:0 auto 26px}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cta-btn{background:#FFF;color:var(--ga-carbon);padding:14px 28px;border-radius:8px;font-size:14px;font-weight:800;text-decoration:none;letter-spacing:0.2px;transition:transform .15s}
+.cta-btn:hover{transform:translateY(-1px)}
+.cta-btn.ghost{background:transparent;color:#FFF;border:1px solid rgba(255,255,255,0.3)}
+
+.footer{padding:26px 0 40px;border-top:1px solid var(--rule);font-size:11px;color:var(--ink-4);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer strong{color:var(--ink-2)}
+.footer a{color:var(--ga-blue);text-decoration:none;font-weight:700}
+
+/* Stakeholder strip */
+.stakeholders{margin:32px 0 0;padding:24px;background:var(--surface-1);border:1px solid var(--rule);border-radius:12px}
+.stakeholders-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.stakeholders-title{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--ga-blue)}
+.stakeholders-note{font-size:11px;font-weight:600;color:var(--ink-4);letter-spacing:0.4px}
+.stakeholders-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.stakeholder{background:var(--surface-2);border:1px solid var(--rule);border-radius:8px;padding:12px 14px}
+.stakeholder.primary{border-color:var(--ga-blue);background:linear-gradient(135deg,rgba(51,79,180,0.08),transparent)}
+.stakeholder.tbd{border-style:dashed;background:transparent}
+.s-badge{font-size:9px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-4);margin-bottom:4px}
+.stakeholder.primary .s-badge{color:var(--ga-blue)}
+.s-name{font-size:14px;font-weight:800;color:var(--ink-1);letter-spacing:-0.2px;margin-bottom:2px}
+.stakeholder.tbd .s-name{color:var(--ink-4)}
+.s-role{font-size:11px;color:var(--ink-3);letter-spacing:0.2px}
+
+/* Observations · accordion listicle */
+.observations{list-style:none;padding:0;margin:24px 0 0}
+.obs{border-top:1px solid var(--rule)}
+.obs:last-child{border-bottom:1px solid var(--rule)}
+.obs-details summary{cursor:pointer;padding:18px 8px;display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;list-style:none;user-select:none;border-radius:6px;transition:background .15s}
+.obs-details summary::-webkit-details-marker{display:none}
+.obs-details summary:hover{background:var(--surface-2)}
+.obs-details summary:focus-visible{outline:2px solid var(--ga-blue);outline-offset:-2px}
+.obs-code{font-family:'DM Mono',monospace;font-size:11px;font-weight:700;color:var(--ga-blue);letter-spacing:0.8px;background:rgba(51,79,180,0.10);padding:4px 10px;border-radius:4px;white-space:nowrap}
+.obs-head{font-size:16px;font-weight:700;color:var(--ink-1);letter-spacing:-0.2px;line-height:1.35}
+.obs-toggle{font-size:22px;font-weight:300;color:var(--ink-4);width:24px;height:24px;display:flex;align-items:center;justify-content:center;line-height:1;transition:transform .2s;flex-shrink:0}
+.obs-details[open] .obs-toggle{transform:rotate(45deg)}
+.obs-body{padding:4px 16px 22px 16px;animation:obsFade .18s ease-out}
+@keyframes obsFade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.obs-body p{font-size:14px;color:var(--ink-3);line-height:1.65;margin-bottom:10px}
+.obs-body p strong{color:var(--ink-2);font-weight:600}
+.obs-body p em{font-style:italic}
+.obs-body p code{font-family:'DM Mono',monospace;background:var(--surface-3);padding:1px 5px;border-radius:3px;font-size:12.5px;color:var(--ink-2)}
+.obs-read{font-size:12.5px;color:var(--ink-4);line-height:1.5;font-style:italic;padding-top:10px;border-top:1px dashed var(--rule);margin-top:8px}
+.obs-read strong{color:var(--ink-2);font-weight:700;font-style:normal}
+.obs-read code{font-family:'DM Mono',monospace;background:var(--surface-3);padding:1px 5px;border-radius:3px;font-size:11.5px;font-style:normal;color:var(--ink-2)}
+@media(max-width:600px){.obs-details summary{padding:14px 6px;gap:10px}.obs-head{font-size:15px}.obs-body{padding:2px 10px 18px 10px}}
+
+/* Placeholder evidence items */
+.evidence-item.placeholder{border-style:dashed;background:transparent;opacity:0.85}
+.evidence-item.placeholder .evidence-kind{color:var(--ink-4)}
+.evidence-item.placeholder .evidence-headline{color:var(--ink-4);font-style:italic}
+.evidence-item.placeholder .evidence-meta{color:var(--ink-4)}
+.evidence-item.placeholder .evidence-body{background:transparent;border:1px dashed var(--rule);color:var(--ink-4);font-style:italic}
+.evidence-item.placeholder .evidence-flag{color:var(--ink-4);font-weight:700;letter-spacing:0.4px}
+.evidence-shot{margin-top:12px;width:100%;height:auto;border-radius:6px;border:1px solid var(--rule);display:block}
+.evidence-item.wide{grid-column:1 / -1}
+.email-timeline{list-style:none;counter-reset:et;padding:0;margin:14px 0 10px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:6px}
+.email-timeline li{counter-increment:et;font-size:12px;color:var(--ink-2);padding:8px 10px 8px 34px;background:var(--surface-2);border-radius:6px;position:relative;line-height:1.4;display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+.email-timeline li::before{content:counter(et,decimal-leading-zero);position:absolute;left:10px;top:9px;font-family:'DM Mono',monospace;font-size:10px;font-weight:700;color:var(--ink-4);letter-spacing:0.8px}
+.et-time{font-family:'DM Mono',monospace;font-size:10px;font-weight:700;color:var(--ink-4);letter-spacing:0.4px;white-space:nowrap}
+.et-src{display:inline-block;font-family:'DM Mono',monospace;font-size:9px;font-weight:700;padding:2px 6px;border-radius:3px;letter-spacing:0.4px;white-space:nowrap}
+.et-src.mntd{color:var(--ga-blue);background:rgba(51,79,180,0.10)}
+.et-src.carrier{color:var(--warn);background:rgba(245,158,11,0.14)}
+.et-subj{font-size:12px;color:var(--ink-2);flex:1;min-width:0}
+.media-ref-thumb.has-img{background:transparent;border:1px solid var(--rule);padding:0}
+.media-ref-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;border-radius:7px}
+.media-ref-thumb.has-img .media-ref-thumb-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2}
+.media-ref-thumb.has-img .media-ref-thumb-caption{position:absolute;bottom:6px;left:8px;font-size:8px;background:rgba(255,255,255,0.9);padding:2px 6px;border-radius:3px;z-index:2;color:var(--ink-3)}
+[data-theme="dark"] .media-ref-thumb.has-img .media-ref-thumb-caption{background:rgba(0,0,0,0.75);color:var(--ink-2)}
+
+/* Media reference · video / doc callouts */
+.media-ref{display:grid;grid-template-columns:220px 1fr;gap:22px;background:var(--surface-1);border:1px solid var(--rule);border-radius:12px;padding:20px;margin-top:22px;align-items:center}
+@media(max-width:640px){.media-ref{grid-template-columns:1fr}}
+.media-ref-thumb{position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,var(--surface-2),var(--surface-3));border:1px dashed var(--rule);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;overflow:hidden}
+.media-ref-thumb::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at center,rgba(51,79,180,0.05),transparent 70%)}
+.media-ref-thumb-play{position:relative;width:48px;height:48px;background:var(--ga-blue);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;padding-left:4px;box-shadow:0 6px 16px rgba(51,79,180,0.35)}
+.media-ref-thumb-caption{position:relative;font-size:9px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-4)}
+.media-ref-body{display:flex;flex-direction:column;gap:6px}
+.media-ref-eyebrow{font-size:10px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--ga-blue)}
+.media-ref-title{font-size:17px;font-weight:800;color:var(--ink-1);letter-spacing:-0.2px;line-height:1.3}
+.media-ref-meta{font-size:12.5px;color:var(--ink-3);line-height:1.5}
+.media-ref-meta strong{color:var(--ink-2);font-weight:700}
+.media-ref-cta{display:inline-block;font-size:12.5px;font-weight:800;color:var(--ga-blue);text-decoration:none;letter-spacing:0.2px;margin-top:6px;align-self:flex-start;padding:7px 14px;background:rgba(51,79,180,0.09);border-radius:6px;transition:background .15s}
+.media-ref-cta:hover{background:rgba(51,79,180,0.18)}
+
+/* Evidence subtitles · thumbnail grid · expandable · lightbox */
+.evidence-subtitle{font-size:10px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-4);margin:22px 0 8px;padding-top:14px;border-top:1px dashed var(--rule)}
+.evidence-subtitle:first-of-type{margin-top:12px;padding-top:0;border-top:0}
+.thumb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin-top:6px}
+.thumb{margin:0;position:relative}
+.thumb img{width:100%;height:200px;object-fit:cover;object-position:top;border-radius:6px;border:1px solid var(--rule);cursor:zoom-in;transition:transform .15s,box-shadow .15s,border-color .15s;display:block;background:var(--surface-2)}
+.thumb img:hover{transform:scale(1.02);box-shadow:0 6px 20px rgba(0,0,0,0.2);border-color:var(--ga-blue)}
+.thumb figcaption{font-size:10.5px;font-family:'DM Mono',monospace;color:var(--ink-4);letter-spacing:0.3px;margin-top:6px;line-height:1.35}
+.expandable{cursor:zoom-in}
+.evidence-shot.expandable{max-width:420px;transition:transform .15s,box-shadow .15s}
+.evidence-shot.expandable:hover{transform:scale(1.01);box-shadow:0 6px 20px rgba(0,0,0,0.2)}
+.sms-shot img.expandable{max-height:340px;transition:transform .15s}
+.sms-shot img.expandable:hover{transform:scale(1.02)}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:1000;display:none;align-items:center;justify-content:center;padding:40px;cursor:zoom-out;backdrop-filter:blur(4px)}
+.lightbox.open{display:flex;animation:lbFade .15s ease-out}
+@keyframes lbFade{from{opacity:0}to{opacity:1}}
+.lightbox img{max-width:100%;max-height:calc(100vh - 120px);object-fit:contain;border-radius:6px;box-shadow:0 20px 60px rgba(0,0,0,0.6);cursor:default}
+.lightbox-close{position:absolute;top:20px;right:24px;font-size:26px;color:#fff;cursor:pointer;font-weight:300;background:rgba(255,255,255,0.14);border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:0;line-height:1;font-family:inherit}
+.lightbox-close:hover{background:rgba(255,255,255,0.28)}
+.lightbox-caption{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);color:#fff;font-size:12px;background:rgba(0,0,0,0.7);padding:8px 16px;border-radius:6px;font-family:'DM Mono',monospace;max-width:80%;text-align:center;letter-spacing:0.4px;line-height:1.4}
+@media(max-width:600px){.lightbox{padding:20px}.thumb img{height:180px}}
+
+/* Post-Purchase flow chart */
+.pp-thesis{background:linear-gradient(135deg,rgba(51,79,180,0.07),rgba(45,156,86,0.04));border:1px solid var(--rule);border-left:4px solid var(--ga-blue);border-radius:10px;padding:22px 26px;margin-top:20px;margin-bottom:6px}
+.pp-thesis-eyebrow{font-size:10px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--ga-blue);margin-bottom:8px}
+.pp-thesis-body{font-size:15.5px;color:var(--ink-2);line-height:1.6}
+.pp-thesis-body strong{color:var(--ink-1);font-weight:800}
+.pp-flow{background:var(--surface-1);border:1px solid var(--rule);border-radius:12px;padding:24px;margin-top:26px;margin-bottom:32px;overflow-x:auto}
+.pp-flow-header{margin-bottom:14px}
+.pp-flow-title{font-family:'DM Serif Display',serif;font-size:22px;color:var(--ink-1);letter-spacing:-0.3px;margin-bottom:6px;line-height:1.2}
+.pp-flow-sub{font-size:12.5px;color:var(--ink-3);line-height:1.5}
+.pp-flow-legend{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--rule)}
+.pp-legend-item{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:700;color:var(--ink-3);letter-spacing:0.4px;text-transform:uppercase}
+.pp-legend-dot{width:10px;height:10px;border-radius:3px;background:var(--ink-4)}
+.pp-legend-item.mntd .pp-legend-dot{background:var(--ga-blue)}
+.pp-legend-item.web .pp-legend-dot{background:var(--ga-green)}
+.pp-legend-item.carrier .pp-legend-dot{background:var(--warn)}
+.pp-legend-item.physical .pp-legend-dot{background:#8B5CF6}
+.pp-flow-lanes{display:grid;grid-template-columns:110px repeat(6,minmax(140px,1fr));gap:6px;min-width:920px}
+.pp-flow-lanes.wide-7{grid-template-columns:110px repeat(7,minmax(130px,1fr));min-width:1030px}
+.pp-lane-cell{display:flex;align-items:center;padding:6px 0}
+.pp-lane-label{display:inline-block;font-family:'DM Mono',monospace;font-size:10px;font-weight:800;letter-spacing:0.6px;padding:6px 10px;border-radius:5px;background:var(--surface-2);color:var(--ink-3)}
+.pp-lane-label.mntd{background:rgba(51,79,180,0.12);color:var(--ga-blue)}
+.pp-lane-label.web{background:rgba(45,156,86,0.14);color:var(--ga-green)}
+.pp-lane-label.carrier{background:rgba(245,158,11,0.16);color:var(--warn)}
+.pp-lane-label.physical{background:rgba(139,92,246,0.14);color:#8B5CF6}
+.pp-stage-header{text-align:center;padding:6px 4px 12px;border-bottom:1px dashed var(--rule)}
+.pp-stage-name{font-size:11px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--ink-2)}
+.pp-stage-when{font-size:9.5px;font-family:'DM Mono',monospace;color:var(--ink-4);letter-spacing:0.4px;margin-top:2px}
+.pp-stage{display:flex;flex-direction:column;gap:6px;padding:8px 4px;min-height:60px}
+.pp-node{background:var(--surface-2);border:1px solid var(--rule);border-radius:6px;padding:8px 10px;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:2px;transition:transform .15s,box-shadow .15s,border-color .15s;font-family:inherit}
+.pp-node:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,0.12);border-color:var(--ga-blue)}
+.pp-node.mntd{border-left:3px solid var(--ga-blue)}
+.pp-node.web{border-left:3px solid var(--ga-green)}
+.pp-node.carrier{border-left:3px solid var(--warn)}
+.pp-node.physical{border-left:3px solid #8B5CF6}
+.pp-node[data-seq]{padding-left:36px}
+.pp-node[data-seq]::before{content:attr(data-seq);position:absolute;top:8px;left:8px;width:22px;height:22px;background:#111;color:#fff;border-radius:50%;font-family:'DM Mono',monospace;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;line-height:1;z-index:3}
+[data-theme="dark"] .pp-node[data-seq]::before{background:#fff;color:#111}
+.pp-node-time{font-family:'DM Mono',monospace;font-size:9px;color:var(--ink-4);letter-spacing:0.4px;line-height:1.2}
+.pp-node-label{font-size:11.5px;font-weight:700;color:var(--ink-1);line-height:1.25;letter-spacing:-0.1px}
+.pp-node-tag{display:inline-block;font-size:8px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--ink-4);align-self:flex-start;margin-top:2px}
+.pp-node-tag.email{color:var(--ga-blue)}
+.pp-node-tag.web{color:var(--ga-green)}
+.pp-node-tag.sms{color:var(--warn)}
+.pp-node-tag.physical{color:#8B5CF6}
+
+/* Email timeline · clickable · overrides earlier rules */
+.email-timeline li{padding:0 !important;background:transparent !important;border:0;counter-increment:none}
+.email-timeline li::before{display:none}
+.email-timeline li a{counter-increment:et;position:relative;font-size:12px;color:var(--ink-2);padding:8px 26px 8px 34px;background:var(--surface-2);border-radius:6px;line-height:1.4;display:flex;flex-wrap:wrap;gap:6px;align-items:baseline;text-decoration:none;transition:transform .15s,background .15s,border-left-color .15s;font-family:inherit;border-left:3px solid transparent}
+.email-timeline li a::before{content:counter(et,decimal-leading-zero);position:absolute;left:10px;top:9px;font-family:'DM Mono',monospace;font-size:10px;font-weight:700;color:var(--ink-4);letter-spacing:0.8px}
+.email-timeline li a::after{content:'↗';position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:11px;color:var(--ink-4);opacity:0.5;transition:opacity .15s,color .15s}
+.email-timeline li a:hover{background:var(--surface-3);transform:translateX(2px);border-left-color:var(--ga-blue)}
+.email-timeline li a:hover::after{opacity:1;color:var(--ga-blue)}
+
+/* Clickable evidence email cards */
+.evidence-item.linked{cursor:pointer;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s,border-color .15s;position:relative;display:block}
+.evidence-item.linked:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(0,0,0,0.1);border-color:var(--ga-blue)}
+.evidence-item.linked::after{content:'↗ view email';position:absolute;top:12px;right:12px;font-size:9px;font-weight:800;letter-spacing:0.6px;color:var(--ga-blue);text-transform:uppercase;background:rgba(51,79,180,0.09);padding:3px 6px;border-radius:3px;opacity:0.7;transition:opacity .15s}
+.evidence-item.linked:hover::after{opacity:1}
+
+/* Value proposition fraction diagram · Section 08 · Commercial Strategy */
+.value-prop-diagram{background:var(--surface-1);border:1px solid var(--rule);border-radius:12px;padding:28px 24px;margin-bottom:26px}
+.vp-numerator{text-align:center;padding:10px 0 6px}
+.vp-numerator-label{font-family:'DM Serif Display',serif;font-size:30px;color:var(--ink-1);letter-spacing:-0.6px;line-height:1.15}
+.vp-numerator-sub{font-size:10.5px;font-family:'DM Mono',monospace;color:var(--ink-4);letter-spacing:0.6px;margin-top:4px;text-transform:uppercase;font-weight:700}
+.vp-divider{position:relative;padding:16px 0}
+.vp-divider-line{height:2px;background:linear-gradient(90deg,transparent,var(--ink-1) 12%,var(--ink-1) 88%,transparent);opacity:0.72}
+.vp-divider-caption{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--surface-1);padding:3px 12px;font-family:'DM Mono',monospace;font-size:9px;color:var(--ink-4);letter-spacing:1.4px;text-transform:uppercase;font-weight:800}
+.vp-denominator{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:10px 0 4px}
+@media(max-width:640px){.vp-denominator{grid-template-columns:1fr 1fr}}
+.vp-comp{background:var(--surface-2);border:1px solid var(--rule);border-radius:8px;padding:14px 12px;text-align:center;position:relative;opacity:0.78;transition:opacity .2s,transform .15s}
+.vp-comp:hover{opacity:1;transform:translateY(-1px)}
+.vp-comp-name{font-size:14px;font-weight:800;color:var(--ink-1);letter-spacing:-0.2px;margin-bottom:4px;line-height:1.2}
+.vp-comp-sub{font-size:10.5px;color:var(--ink-3);line-height:1.5}
+.vp-comp.leading{opacity:1;border-color:var(--warn);background:linear-gradient(135deg,rgba(245,158,11,0.10),rgba(245,158,11,0.02));box-shadow:0 4px 18px rgba(245,158,11,0.16)}
+.vp-comp.leading .vp-comp-name{color:var(--warn)}
+.vp-comp-flag{margin-top:10px;padding-top:8px;border-top:1px dashed rgba(245,158,11,0.35);font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--warn)}
+.vp-caption{font-size:13px;color:var(--ink-3);line-height:1.6;margin-top:14px;padding-top:14px;border-top:1px solid var(--rule)}
+.vp-caption strong{color:var(--ink-1);font-weight:700}
 </style>
 </head>
 <body>
 
-<nav class="nav">
-  <div class="nav-inner">
-    <div class="nav-brand">
-      <span class="nav-brand-mark"></span>
-      MNTD <em>×</em> Growth Automated
+<div class="topbar">
+  <div class="topbar-brand">
+    <div class="tb-brand-left">
+      <div class="mntd-mark"><img src="assets/mntd-logo-black.svg" alt="MNTD"></div>
+      <div class="tb-title-block">
+        <div class="tb-title">MNTD × Growth Automated</div>
+        <div class="tb-sub">Proposal · Kate Rothschild</div>
+      </div>
     </div>
-    <div class="nav-jumps">
-      <a href="#story">The Story</a>
-      <a href="#observed">What I Noticed</a>
-      <a href="#scorecard">The Scorecard</a>
-      <a href="#gaps">The Gaps</a>
-      <a href="#engagement">The Engagement</a>
-      <a href="#tools">The Tools</a>
-      <a href="#mrr">The MRR Layer</a>
+    <div class="tb-brand-right">
+      <div class="theme-seg" role="group" aria-label="Theme">
+        <button data-theme-btn="light" aria-pressed="true">Light</button>
+        <button data-theme-btn="dark" aria-pressed="false">Dark</button>
+      </div>
+      <div class="ga-mark"><img src="assets/ga-logo-color.svg" alt="Growth Automated"></div>
     </div>
-    <a class="nav-cta" href="#talk">Let's talk</a>
   </div>
-</nav>
+  <div class="topbar-nav-wrap">
+    <nav class="topbar-nav" aria-label="Section navigation">
+      <a href="#story">Story</a>
+      <a href="#store">In-Store</a>
+      <a href="#shop1">Mobile</a>
+      <a href="#shop2">Desktop</a>
+      <a href="#prejourney">Journey Map</a>
+      <a href="#postpurchase">Post-Purchase</a>
+      <a href="#gaps">Gaps</a>
+      <a href="#commercial">Commercial</a>
+      <a href="#segmentation">Segmentation</a>
+      <a href="#engagement">Engagement</a>
+      <a href="#team">Team</a>
+      <a href="#tools">Tools</a>
+      <a href="#proposal">Proposal</a>
+      <a href="#legal">Legal</a>
+      <a href="scorecard.html" class="ext">Scorecard</a>
+    </nav>
+  </div>
+</div>
 
-<!-- ═════ SECTION 1 · THE STORY ═════════════════════════════════════════ -->
+<div class="page">
+
 <section class="hero" id="story">
-  <div class="wrap">
-    <div class="eyebrow"><span class="eyebrow-num">01</span><span class="eyebrow-sep">·</span><span>The Story</span></div>
-    <h1>I bought the Tee at <em>Pints &amp; Periods.</em><br>Then I tried to become an online customer.</h1>
-    <p class="hero-sub">Kate — we met briefly at the event with Joanna. I picked up an MNTD Tee that night, wore it home, and then did what most first-time buyers do next: I opened the site on my phone the following week to buy again. <strong>The audit that follows is the story of that second visit.</strong></p>
-    <p class="hero-sub">This is not a deck. It is one page. Eight sections. What I saw, what I would fix, and what I would build if we worked together.</p>
-    <div class="hero-meta">
-      <div class="hero-meta-item"><strong>Prepared for</strong> · Kate Rothschild, MNTD (Knix)</div>
-      <div class="hero-meta-item"><strong>Prepared by</strong> · Rahul Sharma, Growth Automated</div>
-      <div class="hero-meta-item"><strong>July 2026</strong></div>
+  <div class="hero-top">
+    <div class="hero-top-header">
+      <div class="hero-eyebrow">01 · The Story · Pints &amp; Periods</div>
+      <h1 class="hero-headline">Kate — we met briefly at <em>Pints &amp; Periods</em>, and I have a confession to make.</h1>
+    </div>
+    <div class="hero-top-main">
+  <div class="hero-body">
+    <p>I've actually been using MNTD since the end of January — I got your boxers and socks from Knix — but I was always too skeptical to treat myself to a $50 T-shirt. That changed at the event, when I finally picked up a black Tee (and some more boxers and socks — thank you!).</p>
+    <p><strong>Long story short: the claim holds. It is the best tee.</strong> I love how it looks at the gym. In fact, ten days ago I literally stripped naked in my laundry room just so I could wash it and immediately wear it again. A bit TMI, maybe — but that's how hooked I am.</p>
+    <p>Since then, three more things have happened. I want you to know I'm writing you as a customer first, not a consultant. <strong>I brought my 12-year-old son to Knix Eaton Centre for a daddy-son day.</strong> <strong>I opened wearmntd.ca on my phone to buy more.</strong> And <strong>I placed a real order.</strong> Three customer stories, same protagonist — me — trying to give MNTD my money.</p>
+    <p>I'd love to hop into a co-working session with you to walk you through what I saw across all three, and pick the quick wins together. Let me know if you're open to it.</p>
+  </div>
+  <div class="hero-sig">
+    <div class="ga-mark"><img src="assets/ga-logo-color.svg" alt=""></div>
+    <div>
+      <div class="hero-sig-name">Rahul Sharma</div>
+      <div class="hero-sig-role">Founder · Growth Automated</div>
+    </div>
+  </div>
+    </div>
+    <div class="hero-ig">
+      <a class="hero-ig-frame is-image" href="https://www.instagram.com/wearmntd/" target="_blank" rel="noopener" aria-label="View wearmntd on Instagram">
+        <img src="assets/hero-ig.png" alt="MNTD Instagram · Pints &amp; Periods event · founder speaking with men in attendance" class="expandable">
+      </a>
+      <div class="hero-ig-caption">@wearmntd · Pints &amp; Periods</div>
+    </div>
+  </div>
+
+  <div class="stakeholders">
+    <div class="stakeholders-head">
+      <div class="stakeholders-title">Prepared for · Stakeholder map</div>
+      <div class="stakeholders-note">Two seats intentionally left open — see below</div>
+    </div>
+    <div class="stakeholders-grid">
+      <div class="stakeholder primary">
+        <div class="s-badge">Primary recipient</div>
+        <div class="s-name">Kate Rothschild</div>
+        <div class="s-role">GM · Emerging Brands (incl. MNTD)</div>
+      </div>
+      <div class="stakeholder">
+        <div class="s-badge">Inside partner · Knix Group</div>
+        <div class="s-name">Raffael Sarracini</div>
+        <div class="s-role">VP eCommerce · Knix + MNTD</div>
+      </div>
+      <div class="stakeholder">
+        <div class="s-badge">Knix leadership</div>
+        <div class="s-name">Niki Tapscott</div>
+        <div class="s-role">Brand President · Knix</div>
+      </div>
+      <div class="stakeholder">
+        <div class="s-badge">Knix leadership</div>
+        <div class="s-name">Cynthia Leo</div>
+        <div class="s-role">CMO · Knix (ex-Nike)</div>
+      </div>
+      <div class="stakeholder tbd">
+        <div class="s-badge">Seat open</div>
+        <div class="s-name">Procurement</div>
+        <div class="s-role">TBD — flag when named</div>
+      </div>
+      <div class="stakeholder tbd">
+        <div class="s-badge">Seat open</div>
+        <div class="s-name">Technology</div>
+        <div class="s-role">TBD — flag when named</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ═════ SECTION 2 · WHAT I NOTICED ════════════════════════════════════ -->
-<section id="observed">
-  <div class="wrap">
-    <div class="eyebrow"><span class="eyebrow-num">02</span><span class="eyebrow-sep">·</span><span>What I Noticed</span></div>
-    <h2>Five specific things — from the doorway to the abandoned cart.</h2>
-    <p class="lead">Mystery shop, no account access. iOS Safari. Standard first-time-buyer flow. What I saw is what your next customer will see.</p>
+<section class="section" id="store">
+  <div class="section-label">02 · In the Store · Knix Eaton Centre</div>
+  <h2 class="section-title">The most honest focus group I could have run — and I didn't plan it.</h2>
+  <p class="section-intro">Last Saturday my son (12) and I walked into Knix Eaton Centre for a daddy-son day. I wasn't there to audit — I was there to find MNTD. What I noticed is a growth lever hiding in plain sight, and moving on it is cheap.</p>
 
-    <div class="finding">
-      <div class="finding-tag">MS-1 · SMS double pop-up</div>
-      <h3>Two SMS subscribe prompts fired in the same session.</h3>
-      <p>Duplicate trigger — either two independent sources (email capture + checkout capture) firing without deduplication, or a single trigger misconfigured to double-fire. Small thing, but the second prompt reads as spam to a customer who already said yes.</p>
-    </div>
+  <ol class="observations">
+    <li class="obs">
+      <details class="obs-details">
+        <summary>
+          <span class="obs-code">IS-1</span>
+          <span class="obs-head">A first-time male walk-in — what the room signals</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>The store was doing what it was built to do — serving Knix's core customer well. As two visible outsiders (my son and me), we were noticed. Friendly, not unwelcoming — but the signal was that men aren't the room's primary story yet. That's a growth opportunity for MNTD, not a critique of Knix.</p>
+          <div class="obs-read"><strong>Read:</strong> Same room, different customer. MNTD's growth path runs through claiming its own visible entry point without competing with the core Knix experience.</div>
+        </div>
+      </details>
+    </li>
+    <li class="obs">
+      <details class="obs-details">
+        <summary>
+          <span class="obs-code">IS-2</span>
+          <span class="obs-head">Six shirts on a back-right change rack</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>Six MNTD shirts, back-right wall — quiet placement in a bright store. I was happy to find them; a first-time male customer wouldn't know to look.</p>
+          <div class="obs-read"><strong>Read:</strong> The product is here. The signage isn't yet.</div>
+        </div>
+      </details>
+    </li>
+    <li class="obs">
+      <details class="obs-details">
+        <summary>
+          <span class="obs-code">IS-3</span>
+          <span class="obs-head">The boxer rack is hard to shop</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>Hangers packed tight, sizes buried, minimal signage — the rack is optimised for a customer who already knows the size story. A first-time male buyer doesn't yet. Fixing the density and adding a signage layer solves it — same rack, same product, faster commit.</p>
+          <div class="obs-read"><strong>Read:</strong> Merchandising, not policy. Rack density + first-buyer signage lifts male-customer commit rates without touching the store's core layout.</div>
+        </div>
+      </details>
+    </li>
+    <li class="obs">
+      <details class="obs-details">
+        <summary>
+          <span class="obs-code">IS-4</span>
+          <span class="obs-head">Move MNTD to the front of the store</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>Knix is growing fast. If MNTD moves to the <strong>front of the store</strong>, as a clearly-signalled male entry point, there is a testable hypothesis: does incremental male foot traffic follow? Even a 30-day retail A/B would tell you.</p>
+          <div class="obs-read"><strong>Read:</strong> Single highest-leverage retail move I saw — and the cheapest.</div>
+        </div>
+      </details>
+    </li>
+  </ol>
+</section>
 
-    <div class="finding critical">
-      <div class="finding-tag">MS-2 · SMS code UX failure</div>
-      <h3>The welcome code was 22 characters, unlinkable, and not auto-fillable.</h3>
-      <p>The code (<code style="font-family:'DM Mono',monospace;font-size:13px;background:var(--gray);padding:1px 6px;border-radius:3px">WELCOMEMNTD1557TPTGFM</code>) arrived by SMS with no deep link and no tap-to-apply. To use it: open SMS → precisely select 22 characters → copy → open Notes → paste → return to browser → navigate back to cart → paste at checkout.</p>
-      <p class="impact"><strong>Impact.</strong> Six steps for what should be one tap. A material share of first-time buyers abandon between steps 3 and 4. This is the primary conversion lever leaking money.</p>
-    </div>
+<section class="section" id="shop1">
+  <div class="section-label">03 · DTC Canada · Shop 1 · Mobile</div>
+  <h2 class="section-title">Five friction moments — from opening the site to abandoning a bundle.</h2>
+  <p class="section-intro">Each of these is a lived observation, not a heuristic. I paid, I subscribed, I built a cart. What I saw is below — and every finding maps to a specific fix.</p>
 
-    <div class="finding">
-      <div class="finding-tag">MS-3 · Mobile navigation friction</div>
-      <h3>Four sequential product decisions, each reloading the page.</h3>
-      <p>Style → colour → size → length. Every step is its own page load, and back-navigation loses prior context. On a catalog structured for a desktop grid but served to a 70%+ mobile audience, this is a CRO problem before it's an email problem.</p>
-    </div>
+  <ol class="observations">
+    <li class="obs">
+      <details class="obs-details">
+        <summary>
+          <span class="obs-code">MS-1</span>
+          <span class="obs-head">SMS double pop-up on first session</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>Two separate SMS subscribe prompts fired during the same session — likely a duplicate trigger, or two capture sources (email popup + checkout) firing with no dedupe check. Screenshot below in Gaps. Confusing and spammy for someone who just said yes.</p>
+          <div class="obs-read"><strong>Impact:</strong> D3 Segmentation penalty confirmed — no dedupe logic in place.</div>
+        </div>
+      </details>
+    </li>
+    <li class="obs">
+      <details class="obs-details">
+        <summary>
+          <span class="obs-code">MS-2</span>
+          <span class="obs-head">Welcome code is a 22-character string with no deep link</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>Code arrived as <code>WELCOMEMNTD1557TPTGFM</code>. On mobile, the customer must: open SMS → select-and-copy 22 chars → open Notes → paste → return to browser → paste at checkout. That's a six-step journey for a code that should be one tap.</p>
+          <div class="obs-read"><strong>Impact:</strong> D7 Conversion path scored 1.0/5. Fix: shorten to <code>MNTD15</code>, or wrap as <code>wearmntd.ca/discount/MNTD15</code>, or Klaviyo unique codes with auto-apply.</div>
+        </div>
+      </details>
+    </li>
+    <li class="obs">
+      <details class="obs-details" id="ms3">
+        <summary>
+          <span class="obs-code">MS-3</span>
+          <span class="obs-head">Product path forces four sequential decisions on mobile</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>Purchase required: Style → Colour → Size → Length. Each reload lost prior context on back-navigation. The taxonomy is designed for a desktop grid view — at likely 70%+ mobile traffic, this is structural. Fixing flows without fixing the landing experience is incomplete.</p>
+          <div class="obs-read"><strong>Impact:</strong> D7 downgraded further. Pitch anchor: <strong>reduce choices in the product flow.</strong></div>
+        </div>
+      </details>
+    </li>
+    <li class="obs">
+      <details class="obs-details" id="ms4">
+        <summary>
+          <span class="obs-code">MS-4</span>
+          <span class="obs-head">Bundle + welcome offer conflict → confirmed cart abandon</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>Built a bundle — the highest-AOV product in the catalog. Welcome code didn't apply: bundles excluded from welcome discount. <strong>No disclosure at the offer stage.</strong> Cart abandoned. Zero recovery: no abandoned cart email, no checkout abandon email, no browse retargeting. Three simultaneous flow failures.</p>
+          <div class="obs-read"><strong>Impact:</strong> D2 Lifecycle at 0.5/5 confirmed. D5 Offer at 1.0/5. Fastest revenue leak to plug.</div>
+        </div>
+      </details>
+    </li>
+    <li class="obs">
+      <details class="obs-details">
+        <summary>
+          <span class="obs-code">MS-5</span>
+          <span class="obs-head">No differentiation between first-time and returning</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>Everyone gets the same welcome → discount → product push sequence. There are two under-served segments: <strong>1st vs. 2nd purchase</strong> (fundamentally different jobs), and <strong>dads-with-daughters</strong> (Knix-household referral, higher trust, gifting-ready). Nobody else has the second angle.</p>
+          <div class="obs-read"><strong>Impact:</strong> D3 Segmentation confirmed. Becomes the strategic anchor of the engagement — see Section 09.</div>
+        </div>
+      </details>
+    </li>
+  </ol>
+</section>
 
-    <div class="finding critical">
-      <div class="finding-tag">MS-4 · The bundle-vs-code conflict</div>
-      <h3>Built the highest-AOV cart — the welcome code did not apply. No recovery.</h3>
-      <p>Welcome offer is 15% off. Commercial policy excludes bundles. This exclusion was not disclosed at the offer stage — not in email, not in SMS, not on the bundle page. Cart abandoned at checkout. In the 72 hours that followed:</p>
-      <p style="padding-left:16px;border-left:2px solid var(--danger);color:var(--ink-2)"><strong>Zero</strong> abandoned cart email. <strong>Zero</strong> abandoned checkout email. <strong>Zero</strong> browse retargeting. <strong>Zero</strong> SMS recovery.</p>
-      <p class="impact"><strong>Impact.</strong> This is offer-induced cart abandonment. The commercial strategy acquires customers on a discount, then routes them to the one product line the discount excludes — with no recovery mechanism. Three simultaneous failures.</p>
-    </div>
+<section class="section" id="shop2">
+  <div class="section-label">04 · DTC Canada · Shop 2 · Desktop</div>
+  <h2 class="section-title">The second visit — and the moment I stopped optimising for the discount.</h2>
+  <p class="section-intro">Between the mobile visit and this one, the site had already changed — a few visible improvements in flow. I gave the desktop shop a proper try, bundle-first, with intent to buy real quantity. Different friction, and a customer decision I made mid-basket that shouldn't have to happen.</p>
 
-    <div class="finding opportunity">
-      <div class="finding-tag">MS-5 · The strategic angle no one else has</div>
-      <h3>Dads with daughters. A Knix-specific insight, invisible in the current program.</h3>
-      <p>A meaningful share of MNTD's addressable audience was introduced to the brand through the Knix household — fathers, partners, brothers of Knix customers. Higher brand affinity, higher trust, receptive to bundling and gifting messaging. Nobody else in menswear can walk in with this angle. Right now, there is no onboarding question that captures it and no lifecycle branch that serves it.</p>
-      <p class="impact"><strong>Impact.</strong> This becomes the strategic vision of the program — Father's Day, birthdays, Christmas — grounded in first-party data no competitor can replicate.</p>
+  <ol class="observations">
+    <li class="obs">
+      <details class="obs-details">
+        <summary>
+          <span class="obs-code">DS-1</span>
+          <span class="obs-head">Some things had already changed since my mobile visit</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>Between the mobile session and this desktop session, pieces of the flow had visibly moved — the site is shipping. I want to name that up top because everything below is a snapshot of a moving target, not a static verdict.</p>
+          <div class="obs-read"><strong>Read:</strong> Continuous iteration is a strength. It also means findings need timestamps — I'll date the artefacts as they land.</div>
+        </div>
+      </details>
+    </li>
+
+    <li class="obs">
+      <details class="obs-details">
+        <summary>
+          <span class="obs-code">DS-2</span>
+          <span class="obs-head">The repeat visit UX felt better — because I'd worn the product</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>On the return visit I moved faster: I knew my sizes, I'd seen the colours in real life, I trusted the fit story. <strong>Product recognition did the work that on-site UX couldn't.</strong></p>
+          <div class="obs-read"><strong>Read:</strong> Repeat-customers get a good experience by accident, not by design. This is exactly the segment the 2nd-purchase lane in Section 09 is built to serve intentionally.</div>
+        </div>
+      </details>
+    </li>
+
+    <li class="obs">
+      <details class="obs-details">
+        <summary>
+          <span class="obs-code">DS-3</span>
+          <span class="obs-head">Klaviyo welcome code dropped after a few bundle iterations</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>Built a bundle. Applied <code>WELCOMEMNTD1557TPTGFM</code> at 2 items — 15% off, worked. Added a third item to unlock Volume Discount and the free-gift threshold — the welcome code silently stopped applying in the cart, no toast, no reason. At checkout, Shopify made the conflict loud: <em>"WELCOMEMNTD1557TPTGFM couldn't be used with your existing discounts."</em> The full 4-screenshot sequence is in the evidence panel below.</p>
+          <p>The math the customer is forced to do: welcome code = 15% off ($18.60 saved on 2 items) vs Volume + GWP = ~38% off ($92.20 saved on 4 items). You have to <em>find</em> that math yourself — the cart doesn't say "you're better off without the code."</p>
+          <div class="obs-read"><strong>Read:</strong> This is an offer-stack policy problem, not a bug. Either (a) let the welcome code stack with Volume/GWP (Klaviyo unique codes with a max-cap), or (b) make the mutually-exclusive rule visible at the cart tier — a "your Volume Discount saves more than the welcome code — code deactivated" state. Silent drops + loud rejections at checkout are the worst of both worlds.</div>
+        </div>
+      </details>
+    </li>
+
+    <li class="obs">
+      <details class="obs-details">
+        <summary>
+          <span class="obs-code">DS-4</span>
+          <span class="obs-head">A lot happened in the side cart</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>The side-cart drawer is doing a lot at once — upsells, cross-sells, free-shipping thresholds, GWP tracking, and the discount status. Individually each element is fine. Together, the drawer feels busy at exactly the moment the customer is trying to commit.</p>
+          <div class="obs-read"><strong>Read:</strong> Cart drawer = commitment moment. Reduce to two clear elements — what you're paying, and what unlocks next. Everything else belongs earlier in the flow, not at the point of checkout.</div>
+        </div>
+      </details>
+    </li>
+
+    <li class="obs">
+      <details class="obs-details">
+        <summary>
+          <span class="obs-code">DS-5</span>
+          <span class="obs-head">Discount strategy on the repeat visit was still weird</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>Even with everything I already knew, I was clicking back and forth between the cart, the collection page, and the product page just to understand which discount applied to what. A returning customer should feel rewarded, not audited.</p>
+          <div class="obs-read"><strong>Read:</strong> Repeat-visit discount logic should default to the best available combination, not require the customer to reason through the stacking rules.</div>
+        </div>
+      </details>
+    </li>
+
+    <li class="obs">
+      <details class="obs-details">
+        <summary>
+          <span class="obs-code">DS-6</span>
+          <span class="obs-head">I bought less — to protect the GWP and the free Tee</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>Honest customer moment: I could see that adding another item would push me past a threshold that changed what I got for free. So I trimmed the basket to keep the GWP and the free Tee intact. <strong>I ended up buying less than I intended.</strong> That's the discount strategy actively working against AOV.</p>
+          <div class="obs-read"><strong>Read:</strong> Threshold-triggered GWPs are meant to lift AOV. When the customer can see the threshold move against them, they optimise down instead of up. Inverse framing — "add $X to keep your free Tee" — or persistent unlocks solve it.</div>
+        </div>
+      </details>
+    </li>
+
+    <li class="obs">
+      <details class="obs-details">
+        <summary>
+          <span class="obs-code">DS-7</span>
+          <span class="obs-head">I deferred the rest of the basket to a repeat visit</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>I closed the basket at what I bought and made a plan to come back for at least three more items on a repeat visit. Which I then did.</p>
+          <div class="obs-read"><strong>Read:</strong> Deferred purchases don't always come back. Post-purchase flow should treat this as a "saved for next visit" signal, not a completed conversion — a soft browse-abandon can catch it.</div>
+        </div>
+      </details>
+    </li>
+  </ol>
+
+  <div class="evidence">
+    <div class="evidence-title">Evidence · Shop 2 desktop artefacts</div>
+    <div class="evidence-grid">
+
+      <div class="evidence-item">
+        <div class="evidence-kind">SCREENSHOT · Thu Jul 9, 4:51 PM · Confirmation</div>
+        <div class="evidence-headline">Thank you, Rahul! · Confirmation #WH70F0DPL</div>
+        <div class="evidence-meta">GIFT-A applied · Best Damn Tee (Moss / M) free · Total CAD $158.42</div>
+        <img src="assets/shop2-order-confirmation.png" alt="MNTD order confirmation page · Confirmation #WH70F0DPL · 6-item basket · Best Damn Tee (Moss/M) FREE via GIFT-A · total CAD $158.42 · savings $62.80" class="evidence-shot expandable">
+        <div class="evidence-flag good">✓ DS-7 · order completed 3 minutes after the DS-3 coupon rejection · basket adjusted to protect the free Tee (DS-6)</div>
+      </div>
+
+      <div class="evidence-item wide">
+        <div class="evidence-kind">SCREENSHOT SEQUENCE · Thu Jul 9 · Cart → Checkout</div>
+        <div class="evidence-headline">The 4-step story that killed WELCOMEMNTD1557TPTGFM — welcome code vs Volume + GWP, one path wins</div>
+        <div class="evidence-meta">Direct evidence for DS-3 (coupon rejection) and DS-4 (busy side-cart)</div>
+        <div class="thumb-grid">
+          <figure class="thumb">
+            <img src="assets/dscart-01-welcome-applied.png" alt="Step 1 · Cart with 2 Long Sleeves ($124) · WELCOMEMNTD1557TPTGFM applied · 15% off · total $105.40 · $19.60 away from free gift" class="expandable">
+            <figcaption>1 · Welcome code applied · 15% off · $124 → $105.40</figcaption>
+          </figure>
+          <figure class="thumb">
+            <img src="assets/dscart-02-volume-kicks-in.png" alt="Step 2 · Added third Long Sleeve · Volume Discount kicks in on each item ($49.60 each) · Best Damn Tee GWP unlocked at $55 → FREE · subtotal $186 → $148.80" class="expandable">
+            <figcaption>2 · Volume + GWP unlock · $186 → $148.80</figcaption>
+          </figure>
+          <figure class="thumb">
+            <img src="assets/dscart-03-free-tee-added.png" alt="Step 3 · Moss Tee added FREE via GIFT-A · 4 items now in cart · original value $241 · discounted to $148.80 · savings compound" class="expandable">
+            <figcaption>3 · Moss Tee added FREE · $241 → $148.80</figcaption>
+          </figure>
+          <figure class="thumb">
+            <img src="assets/dscart-04-checkout-rejection.png" alt="Step 4 · Shop Pay checkout · WELCOMEMNTD1557TPTGFM couldn't be used with your existing discounts · Volume + GIFT-A already applied · CAD $168.15 total · savings $92.20" class="expandable">
+            <figcaption>4 · Checkout · WELCOMEMNTD rejected</figcaption>
+          </figure>
+        </div>
+        <div class="evidence-flag">◇ A customer anchored on the welcome code sees $18.60 saved. The Volume + GWP path — same brand, same session, same cart — would have saved them $92.20. The gap between those two paths is $73.60. Nothing in the cart tells them Path B exists. <strong>The fix:</strong> a Rebuy-style cart (see Section 12) with targeted upsells that surface Path B in real time — <em>"add 1 more Long Sleeve to unlock Volume Discount and a free Tee"</em> — so the customer doesn't have to find the better path by accident.</div>
+      </div>
+
+      <div class="evidence-item placeholder">
+        <div class="evidence-kind">EMAIL · TBD</div>
+        <div class="evidence-headline">Repeat-visit receipt · Shop 2 · session 2</div>
+        <div class="evidence-meta">Awaiting forward</div>
+        <div class="evidence-body">The return-purchase order confirmation — same flow, different customer state.</div>
+        <div class="evidence-flag">◇ Placeholder</div>
+      </div>
+
+      <div class="evidence-item placeholder">
+        <div class="evidence-kind">FLOW · TBD</div>
+        <div class="evidence-headline">Klaviyo post-purchase MARKETING flow</div>
+        <div class="evidence-meta">Awaiting export · distinct from the transactional emails below</div>
+        <div class="evidence-body">Marketing re-engagement (cross-sell, product education, review request) — not the transactional confirmations captured in the timeline below.</div>
+        <div class="evidence-flag">◇ Placeholder</div>
+      </div>
+
+      <div class="evidence-item wide">
+        <div class="evidence-kind">EMAIL SEQUENCE · Thu Jul 9 – Sat Jul 11 · Fulfilment</div>
+        <div class="evidence-headline">Post-purchase transactional flow · 9 emails across ~40 hours</div>
+        <div class="evidence-meta">MNTD order MNTDCA4963 · Carrier FleetOptics · tracking TL26070907239001C21405127</div>
+        <ol class="email-timeline">
+          <li><a href="assets/email-01-mntd-order-confirmation.png" data-lightbox target="_blank" rel="noopener"><span class="et-time">Thu 4:48 PM</span> <span class="et-src mntd">MNTD</span> <span class="et-subj">Order Confirmation: MNTDCA4963</span></a></li>
+          <li><a href="assets/email-02-mntd-ready-to-ship.png" data-lightbox target="_blank" rel="noopener"><span class="et-time">Fri 4:27 PM</span> <span class="et-src mntd">MNTD</span> <span class="et-subj">Your order is ready to ship</span></a></li>
+          <li><a href="assets/email-03-mntd-picked-up.png" data-lightbox target="_blank" rel="noopener"><span class="et-time">Fri 4:34 PM</span> <span class="et-src mntd">MNTD</span> <span class="et-subj">Your order has been picked up</span></a></li>
+          <li><a href="assets/email-04-carrier-received.png" data-lightbox target="_blank" rel="noopener"><span class="et-time">Sat 12:57 AM</span> <span class="et-src carrier">Carrier</span> <span class="et-subj">Hello Rahul, we have received your package</span></a></li>
+          <li><a href="assets/email-05-carrier-in-transit.png" data-lightbox target="_blank" rel="noopener"><span class="et-time">Sat 6:49 AM</span> <span class="et-src carrier">Carrier</span> <span class="et-subj">Good news — your package is on its way</span></a></li>
+          <li><a href="assets/email-06-mntd-out-for-delivery.png" data-lightbox target="_blank" rel="noopener"><span class="et-time">Sat 7:25 AM</span> <span class="et-src mntd">MNTD</span> <span class="et-subj">Your order is out for delivery</span></a></li>
+          <li><a href="assets/email-07-carrier-coming-up.png" data-lightbox target="_blank" rel="noopener"><span class="et-time">Sat 10:03 AM</span> <span class="et-src carrier">Carrier</span> <span class="et-subj">Get excited — your delivery is coming up next</span></a></li>
+          <li><a href="assets/email-08-carrier-delivered.png" data-lightbox target="_blank" rel="noopener"><span class="et-time">Sat 10:07 AM</span> <span class="et-src carrier">Carrier</span> <span class="et-subj">Great news — successfully delivered</span></a></li>
+          <li><a href="assets/email-09-mntd-delivered.png" data-lightbox target="_blank" rel="noopener"><span class="et-time">Sat 11:12 AM</span> <span class="et-src mntd">MNTD</span> <span class="et-subj">Your order has been delivered!</span></a></li>
+        </ol>
+        <div class="evidence-flag">◇ Notable · nine emails for one order, MNTD and FleetOptics in parallel at every stage · also: the order confirmation ships from <code style="font-family:'DM Mono',monospace;background:var(--surface-3);padding:1px 4px;border-radius:3px;font-size:10.5px;color:var(--ink-2)">info@wearmntd.ca</code> (auth passes) but the four shipping-update emails still ship from <code style="font-family:'DM Mono',monospace;background:var(--surface-3);padding:1px 4px;border-radius:3px;font-size:10.5px;color:var(--ink-2)">info@wearmntd.com</code> (auth fails) — same Section 07 D1 gap, now confirmed on the transactional side too.</div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ═════ SECTION 3 · THE SCORECARD ═════════════════════════════════════ -->
-<section class="scorecard-band" id="scorecard">
-  <div class="wrap">
-    <div class="eyebrow"><span class="eyebrow-num">03</span><span class="eyebrow-sep">·</span><span>The Scorecard</span></div>
-    <h2>34 out of 100. At risk.</h2>
-    <p class="lead">A weighted 9-dimension audit against the Growth Automated Proforma Email Audit framework. Same rubric we apply to every ecommerce program we look at. Outside-in — no account access needed to produce this.</p>
+<section class="section" id="prejourney">
+  <div class="section-label">05 · Pre-Purchase Journey Map</div>
+  <h2 class="section-title">From Pints &amp; Periods to the buy button — the pre-purchase arc, mapped.</h2>
+  <p class="section-intro">Every touchpoint that turned a stranger at an event tent into a paying customer, mapped across four channels. Together with the post-purchase map in Section 06, this is the full customer arc — <strong>pre → post</strong>.</p>
 
-    <div class="score-hero">
-      <div class="score-gauge">
+  <div class="pp-flow" role="region" aria-label="Pre-purchase journey flow diagram">
+    <div class="pp-flow-header">
+      <div class="pp-flow-title">The pre-purchase arc · discovery to the buy button</div>
+      <div class="pp-flow-sub">Thirteen touchpoints across four channels · click any email or SMS node to open the actual screenshot in a lightbox. The final node pivots into Section 06 Post-Purchase.</div>
+    </div>
+    <div class="pp-flow-legend">
+      <span class="pp-legend-item"><span class="pp-legend-dot" style="background:#71717A"></span>Physical</span>
+      <span class="pp-legend-item"><span class="pp-legend-dot" style="background:var(--warn)"></span>Email / SMS</span>
+      <span class="pp-legend-item"><span class="pp-legend-dot" style="background:var(--ga-blue)"></span>Mobile Web</span>
+      <span class="pp-legend-item"><span class="pp-legend-dot" style="background:var(--ga-green)"></span>Desktop Web</span>
+    </div>
+    <div class="pp-flow-lanes wide-7">
+      <div class="pp-lane-cell"></div>
+      <div class="pp-stage-header"><div class="pp-stage-name">Discovery</div><div class="pp-stage-when">May · P&amp;P</div></div>
+      <div class="pp-stage-header"><div class="pp-stage-name">In-Store</div><div class="pp-stage-when">Sat · Eaton Centre</div></div>
+      <div class="pp-stage-header"><div class="pp-stage-name">Subscribe</div><div class="pp-stage-when">Jun 21–24</div></div>
+      <div class="pp-stage-header"><div class="pp-stage-name">Mobile Shop</div><div class="pp-stage-when">Jun 21 · mystery</div></div>
+      <div class="pp-stage-header"><div class="pp-stage-name">Nurture</div><div class="pp-stage-when">Jun 28 – Jul 7</div></div>
+      <div class="pp-stage-header"><div class="pp-stage-name">Desktop Shop</div><div class="pp-stage-when">Thu Jul 9</div></div>
+      <div class="pp-stage-header"><div class="pp-stage-name">Purchase</div><div class="pp-stage-when">4:48 PM · pivot</div></div>
+
+      <div class="pp-lane-cell"><span class="pp-lane-label physical">Physical</span></div>
+      <div class="pp-stage">
+        <a class="pp-node physical" href="#story">
+          <span class="pp-node-time">May 2026</span>
+          <span class="pp-node-label">Pints &amp; Periods · met Kate</span>
+          <span class="pp-node-tag physical">Physical</span>
+        </a>
+      </div>
+      <div class="pp-stage">
+        <a class="pp-node physical" href="#store">
+          <span class="pp-node-time">Daddy-son day</span>
+          <span class="pp-node-label">Knix Eaton Centre visit</span>
+          <span class="pp-node-tag physical">Physical</span>
+        </a>
+      </div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"></div>
+
+      <div class="pp-lane-cell"><span class="pp-lane-label carrier">Email/SMS</span></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage">
+        <a class="pp-node carrier" href="assets/sms-double-subscribe.png" data-lightbox target="_blank" rel="noopener">
+          <span class="pp-node-time">Jun 21, 1:12 PM</span>
+          <span class="pp-node-label">Double SMS opt-in popup</span>
+          <span class="pp-node-tag sms">SMS</span>
+        </a>
+        <a class="pp-node carrier" href="assets/email-w1-welcome-jun21.png" data-lightbox target="_blank" rel="noopener">
+          <span class="pp-node-time">Jun 21, 5:12 PM</span>
+          <span class="pp-node-label">Welcome · 15% code</span>
+          <span class="pp-node-tag email">Email</span>
+        </a>
+        <a class="pp-node carrier" href="assets/email-w2-story-jun22.png" data-lightbox target="_blank" rel="noopener">
+          <span class="pp-node-time">Jun 22, 5:13 PM</span>
+          <span class="pp-node-label">The REAL story · same code</span>
+          <span class="pp-node-tag email">Email</span>
+        </a>
+        <a class="pp-node carrier" href="assets/email-w3-feels-different-jun24.png" data-lightbox target="_blank" rel="noopener">
+          <span class="pp-node-time">Jun 24, 5:14 PM</span>
+          <span class="pp-node-label">Why MNTD feels different · same code</span>
+          <span class="pp-node-tag email">Email</span>
+        </a>
+      </div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage">
+        <a class="pp-node carrier" href="assets/email-w4-guys-jun28.png" data-lightbox target="_blank" rel="noopener">
+          <span class="pp-node-time">Jun 28, 8:00 AM</span>
+          <span class="pp-node-label">Campaign · For the guys</span>
+          <span class="pp-node-tag email">Email</span>
+        </a>
+        <a class="pp-node carrier" href="assets/email-w5-heat-jul07.png" data-lightbox target="_blank" rel="noopener">
+          <span class="pp-node-time">Jul 7, 5:15 PM</span>
+          <span class="pp-node-label">Campaign · Beat the heat</span>
+          <span class="pp-node-tag email">Email</span>
+        </a>
+      </div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"></div>
+
+      <div class="pp-lane-cell"><span class="pp-lane-label mntd">Mobile</span></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage">
+        <a class="pp-node mntd" href="#ms3">
+          <span class="pp-node-time">Jun · mystery</span>
+          <span class="pp-node-label">4-decision product path</span>
+          <span class="pp-node-tag web">Web</span>
+        </a>
+        <a class="pp-node mntd" href="#ms4">
+          <span class="pp-node-time">Jun · cart</span>
+          <span class="pp-node-label">Bundle · welcome-offer conflict · abandon</span>
+          <span class="pp-node-tag web">Web</span>
+        </a>
+      </div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"></div>
+
+      <div class="pp-lane-cell"><span class="pp-lane-label web">Desktop</span></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage">
+        <a class="pp-node web" href="assets/dscart-04-checkout-rejection.png" data-lightbox target="_blank" rel="noopener">
+          <span class="pp-node-time">Thu 4:45 PM</span>
+          <span class="pp-node-label">Return visit · coupon rejected</span>
+          <span class="pp-node-tag web">Web</span>
+        </a>
+      </div>
+      <div class="pp-stage">
+        <a class="pp-node web" href="assets/shop2-order-confirmation.png" data-lightbox target="_blank" rel="noopener">
+          <span class="pp-node-time">Thu 4:48 PM</span>
+          <span class="pp-node-label">Order placed · $158.42 → post-purchase</span>
+          <span class="pp-node-tag web">Web</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="postpurchase">
+  <div class="section-label">06 · Post-Purchase · Delivery to Doorstep</div>
+  <h2 class="section-title">The last mile — where the brand should feel most present, and where it's easiest to disappear.</h2>
+  <p class="section-intro">Order placed Thu Jul 9. Everything after that shaped whether I'd come back. What follows is what I saw between confirmation and doorstep — where MNTD held up, and where it handed off to a carrier.</p>
+
+  <div class="pp-thesis">
+    <div class="pp-thesis-eyebrow">Why post-purchase matters most</div>
+    <div class="pp-thesis-body">Post-purchase is the moment of <strong>highest customer engagement in the entire lifecycle</strong> — the customer has paid, they're waiting for their product, and their attention is fully on you. <strong>How you handle this journey is the single biggest lever for repeat revenue, loyalty, and lifetime value.</strong> Every touch here is either compounding trust or eroding it. There is no neutral.</div>
+  </div>
+
+  <div class="pp-flow" role="region" aria-label="Post-purchase journey flow diagram">
+    <div class="pp-flow-header">
+      <div class="pp-flow-title">The journey · order confirmation to unboxing</div>
+      <div class="pp-flow-sub">Fifteen touchpoints across four channels and ~72 hours. Click any node — email nodes open the email as a full screenshot, web/SMS/physical nodes jump to the observation below.</div>
+    </div>
+    <div class="pp-flow-legend">
+      <span class="pp-legend-item mntd"><span class="pp-legend-dot"></span> MNTD</span>
+      <span class="pp-legend-item web"><span class="pp-legend-dot"></span> Mobile Web</span>
+      <span class="pp-legend-item carrier"><span class="pp-legend-dot"></span> Carrier · FleetOptics</span>
+      <span class="pp-legend-item physical"><span class="pp-legend-dot"></span> Physical</span>
+    </div>
+    <div class="pp-flow-lanes">
+      <div class="pp-lane-cell empty"></div>
+      <div class="pp-stage-header"><div class="pp-stage-name">Order</div><div class="pp-stage-when">Thu evening</div></div>
+      <div class="pp-stage-header"><div class="pp-stage-name">Prep</div><div class="pp-stage-when">Fri afternoon</div></div>
+      <div class="pp-stage-header"><div class="pp-stage-name">Transit</div><div class="pp-stage-when">Sat overnight</div></div>
+      <div class="pp-stage-header"><div class="pp-stage-name">Delivery</div><div class="pp-stage-when">Sat morning</div></div>
+      <div class="pp-stage-header"><div class="pp-stage-name">Doorstep</div><div class="pp-stage-when">Sat 10–12</div></div>
+      <div class="pp-stage-header"><div class="pp-stage-name">After</div><div class="pp-stage-when">Sun onward</div></div>
+
+      <div class="pp-lane-cell"><span class="pp-lane-label mntd">MNTD</span></div>
+      <div class="pp-stage"><a class="pp-node mntd" href="assets/email-01-mntd-order-confirmation.png" data-seq="1" data-lightbox target="_blank" rel="noopener"><span class="pp-node-time">Thu 4:48 PM</span><span class="pp-node-label">Order Confirmation</span><span class="pp-node-tag email">Email</span></a></div>
+      <div class="pp-stage"><a class="pp-node mntd" href="assets/email-02-mntd-ready-to-ship.png" data-seq="2" data-lightbox target="_blank" rel="noopener"><span class="pp-node-time">Fri 4:27 PM</span><span class="pp-node-label">Ready to Ship</span><span class="pp-node-tag email">Email</span></a><a class="pp-node mntd" href="assets/email-03-mntd-picked-up.png" data-seq="3" data-lightbox target="_blank" rel="noopener"><span class="pp-node-time">Fri 4:34 PM</span><span class="pp-node-label">Picked up</span><span class="pp-node-tag email">Email</span></a></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"><a class="pp-node mntd" href="assets/email-06-mntd-out-for-delivery.png" data-seq="9" data-lightbox target="_blank" rel="noopener"><span class="pp-node-time">Sat 7:25 AM</span><span class="pp-node-label">Out for Delivery</span><span class="pp-node-tag email">Email</span></a></div>
+      <div class="pp-stage"><a class="pp-node mntd" href="assets/email-09-mntd-delivered.png" data-seq="13" data-lightbox target="_blank" rel="noopener"><span class="pp-node-time">Sat 11:12 AM</span><span class="pp-node-label">Delivered</span><span class="pp-node-tag email">Email</span></a></div>
+      <div class="pp-stage"></div>
+
+      <div class="pp-lane-cell"><span class="pp-lane-label web">Mobile Web</span></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"><a class="pp-node web" href="#pp1" data-seq="4"><span class="pp-node-time">Fri 7:06 PM</span><span class="pp-node-label">Order Details Page</span><span class="pp-node-tag web">Web</span></a><a class="pp-node web" href="#pp1" data-seq="5"><span class="pp-node-time">Fri</span><span class="pp-node-label">Shipment Journey</span><span class="pp-node-tag web">Web</span></a><a class="pp-node web" href="#pp2" data-seq="6"><span class="pp-node-time">Fri</span><span class="pp-node-label">15% Off Popup</span><span class="pp-node-tag web">Web</span></a></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"></div>
+
+      <div class="pp-lane-cell"><span class="pp-lane-label carrier">FleetOptics</span></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"><a class="pp-node carrier" href="assets/email-04-carrier-received.png" data-seq="7" data-lightbox target="_blank" rel="noopener"><span class="pp-node-time">Sat 12:57 AM</span><span class="pp-node-label">Received Package</span><span class="pp-node-tag email">Email</span></a><a class="pp-node carrier" href="assets/email-05-carrier-in-transit.png" data-seq="8" data-lightbox target="_blank" rel="noopener"><span class="pp-node-time">Sat 6:49 AM</span><span class="pp-node-label">On its Way</span><span class="pp-node-tag email">Email</span></a></div>
+      <div class="pp-stage"><a class="pp-node carrier" href="assets/email-07-carrier-coming-up.png" data-seq="10" data-lightbox target="_blank" rel="noopener"><span class="pp-node-time">Sat 10:03 AM</span><span class="pp-node-label">Coming Up Next</span><span class="pp-node-tag email">Email</span></a></div>
+      <div class="pp-stage"><a class="pp-node carrier" href="assets/email-08-carrier-delivered.png" data-seq="11" data-lightbox target="_blank" rel="noopener"><span class="pp-node-time">Sat 10:07 AM</span><span class="pp-node-label">Delivered</span><span class="pp-node-tag email">Email</span></a><a class="pp-node carrier" href="#pp4" data-seq="14"><span class="pp-node-time">Sat 11:24 AM</span><span class="pp-node-label">Delivery SMS</span><span class="pp-node-tag sms">SMS</span></a></div>
+      <div class="pp-stage"></div>
+
+      <div class="pp-lane-cell"><span class="pp-lane-label physical">Physical</span></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"></div>
+      <div class="pp-stage"><a class="pp-node physical" href="#pp5" data-seq="12"><span class="pp-node-time">Sat</span><span class="pp-node-label">Package Received</span><span class="pp-node-tag physical">Physical</span></a></div>
+      <div class="pp-stage"><a class="pp-node physical" href="#pp6" data-seq="15"><span class="pp-node-time">Sun+</span><span class="pp-node-label">Unboxing</span><span class="pp-node-tag physical">Physical</span></a></div>
+    </div>
+  </div>
+
+  <ol class="observations">
+    <li class="obs">
+      <details class="obs-details" id="pp1">
+        <summary>
+          <span class="obs-code">PP-1</span>
+          <span class="obs-head">Mobile order-tracking is a branded shell around Shop Pay defaults</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>Opened the order page on mobile Safari on Fri Jul 10. The MNTD shell is there — logo, nav, footer. The content inside is Shop Pay defaults. No brand voice, no cross-sell, no size-guide reminder, no "here's what to expect at the door."</p>
+          <div class="obs-read"><strong>Read:</strong> The order page is a branded frame around a stock experience. Real estate for personalisation, cross-sell, or fit education is unused.</div>
+        </div>
+      </details>
+    </li>
+
+    <li class="obs">
+      <details class="obs-details" id="pp2">
+        <summary>
+          <span class="obs-code">PP-2</span>
+          <span class="obs-head">The 15% off popup fires on the order-tracking page</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>While checking my order status on mobile, the "UNLOCK 15% OFF" popup fired again. I have already ordered. The gate is closed and someone is still trying to hand me the key. Nothing about my authenticated / post-purchase state suppresses the entry-point offer.</p>
+          <div class="obs-read"><strong>Read:</strong> Popup logic should suppress on authenticated, order-history, or post-purchase views. Klaviyo profile has <code>has_placed_order</code> — use it.</div>
+        </div>
+      </details>
+    </li>
+
+    <li class="obs">
+      <details class="obs-details" id="pp3">
+        <summary>
+          <span class="obs-code">PP-3</span>
+          <span class="obs-head">Notification stream duplicates · MNTD and FleetOptics fire in parallel</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>Between MNTD's own delivery emails and FleetOptics' carrier notifications, I received two "your order is delivered" messages inside 12 minutes (see the inbox thumbnail below — MNTD 11:12 AM, FleetOptics 11:24 AM). See the full fulfilment timeline in Section 04 — 9 emails across ~40 hours, mostly duplicated at every stage.</p>
+          <p><strong>Same pattern likely runs through Knix.</strong> I saw the same duplicated + unbranded shipping-notification stream on my own Knix order at the end of January — worth checking whether it's the Group's standard post-purchase architecture. If it is, fixing it once at the Group level would unlock both MNTD and Knix in parallel.</p>
+          <div class="obs-read"><strong>Read:</strong> Pick one stream. Either MNTD owns post-purchase and treats FleetOptics as internal-only, or MNTD hands off cleanly and stops sending. Doing both is a UX cost with no upside.</div>
+        </div>
+      </details>
+    </li>
+
+    <li class="obs">
+      <details class="obs-details" id="pp4">
+        <summary>
+          <span class="obs-code">PP-4</span>
+          <span class="obs-head">The delivery SMS lands from an unrecognised number</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>"Great news — your order has been successfully delivered!" arrived via SMS from <code>+1 (647) 557-4039</code>, an unrecognised number. iOS flagged it as "unknown sender" with a spam prompt and a Delete / Mark as Known choice. First reaction: is this a phishing attempt? The <code>fleetopticsinc.ca</code> link doesn't help.</p>
+          <div class="obs-read"><strong>Read:</strong> Delivery SMS from an unrecognised number reads as suspicious. Options: (a) SMS through MNTD's registered short code with an "MNTD:" prefix, (b) use FleetOptics with a co-branded header, (c) suppress carrier SMS if the email flow already covers delivery.</div>
+        </div>
+      </details>
+    </li>
+
+    <li class="obs">
+      <details class="obs-details" id="pp5">
+        <summary>
+          <span class="obs-code">PP-5</span>
+          <span class="obs-head">The package arrives brand-forward — packaging is doing the work</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>The physical package delivered a real MNTD moment. Black polybag (100% recycled ocean-bound plastic, per the label), FleetOptics next-day sticker, MNTD wordmark on the bag. The shipping label is functional, not branded — but the package as a whole feels like MNTD's.</p>
+          <div class="obs-read"><strong>Read:</strong> Packaging punches above the digital experience. The brand shows up strongest at the door, not on the way there.</div>
+        </div>
+      </details>
+    </li>
+
+    <li class="obs">
+      <details class="obs-details" id="pp6">
+        <summary>
+          <span class="obs-code">PP-6</span>
+          <span class="obs-head">Inside the box · MNTD packing slip, individually-bagged products, Pur Mints gift</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>Packing slip clearly branded (MNTD wordmark, order <code>MNTDCA4963-IF5714159</code>). Products individually bagged in labelled clear polybags. A Pur Mints tin included as a small unexpected gift. Effort is visible.</p>
+          <div class="obs-read"><strong>Read:</strong> Unboxing effort punches above the digital experience. MNTD puts more care into what arrives than into what the customer sees on the way there.</div>
+        </div>
+      </details>
+    </li>
+
+    <li class="obs">
+      <details class="obs-details" id="pp7">
+        <summary>
+          <span class="obs-code">PP-7</span>
+          <span class="obs-head">What's missing from the box · no welcome insert, no fit / returns card</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>No welcome insert. No "if it doesn't fit" note explaining the returns and exchange flow (this is exactly what the Loop partner in Section 12 is for). No QR code to a first-purchase experience, care guide, or dad-with-daughters gifting angle. The package is beautiful — but transactional.</p>
+          <div class="obs-read"><strong>Read:</strong> Post-purchase inserts are the cheapest customer-education real estate in DTC. One printed card at ~$0.15 unit cost can move NPS, reduce returns confusion, and drive a second purchase.</div>
+        </div>
+      </details>
+    </li>
+
+    <li class="obs">
+      <details class="obs-details" id="pp8">
+        <summary>
+          <span class="obs-code">PP-8</span>
+          <span class="obs-head">Notifications drift out of sync with the physical world</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>MNTD emailed <em>"Your order has been delivered!"</em> at <strong>Sat 11:12 AM</strong>. The package physically arrived at the door around <strong>10:07 AM</strong> — the exact moment FleetOptics confirmed delivery. MNTD's own record was ~1 hour behind reality. The customer knew before the store did.</p>
+          <p>Same pattern earlier in the chain: MNTD's "Out for Delivery" fired at Sat 7:25 AM — but FleetOptics had already marked the package <em>"on its way"</em> at 6:49 AM, 36 minutes earlier. Every stage MNTD narrates has already happened.</p>
+          <div class="obs-read"><strong>Read:</strong> MNTD state is chained to a webhook that arrives after the carrier's own signal. Either pull tracking directly from FleetOptics and mirror in real time, or stop sending duplicate MNTD notifications — the customer will get the truthful signal from the carrier anyway.</div>
+        </div>
+      </details>
+    </li>
+
+    <li class="obs">
+      <details class="obs-details" id="pp9">
+        <summary>
+          <span class="obs-code">PP-9</span>
+          <span class="obs-head">FleetOptics notifications are entirely unbranded — they read like shipping-company spam</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>The four FleetOptics emails don't mention MNTD anywhere. Subject lines like <em>"Hello Rahul Sharma, we have received your package"</em> or <em>"Get Excited — Your delivery is coming up next"</em>. Sender: <code>FleetOptics Notifications &lt;notifications@mailer.fleetopticsinc.com&gt;</code>. Nothing links back to the MNTD order I placed. The first two, I almost marked as spam.</p>
+          <p>The Sat 11:24 AM SMS from an unrecognised <code>+1 (647)</code> number (PP-4) is the same problem in a different channel.</p>
+          <div class="obs-read"><strong>Read:</strong> Carrier notifications should be co-branded ("MNTD · delivery via FleetOptics"), or fully suppressed if MNTD's own stream is real-time. Right now the carrier is doing the branding work for both companies — and it's not MNTD's.</div>
+        </div>
+      </details>
+    </li>
+
+    <li class="obs">
+      <details class="obs-details" id="pp10">
+        <summary>
+          <span class="obs-code">PP-10</span>
+          <span class="obs-head">The order shipped in ~40 hours. So what does "expedited" even mean?</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>Order placed Thu 4:48 PM. Confirmed delivered Sat 10:07 AM. <strong>Under 42 hours — on the free-shipping tier.</strong> It's genuinely fast. Which raises the question the site can't answer today: what is the paid expedited option, exactly? Faster than 42 hours? Same-day? Guaranteed morning? Right now the shipping tier menu is a mystery — one where the default already feels like premium.</p>
+          <div class="obs-read"><strong>Read:</strong> Two options — (a) reposition the free tier as "Standard 3–5 days" and route this actual speed to a paid "Priority" tier so pricing captures the value, or (b) keep free = fast but define paid expedited as "guaranteed &lt;24h" with an SLA. Either way, the current menu leaves money on the table because the free tier over-delivers.</div>
+        </div>
+      </details>
+    </li>
+
+    <li class="obs">
+      <details class="obs-details" id="pp11">
+        <summary>
+          <span class="obs-code">PP-11</span>
+          <span class="obs-head">First wear · care education is missing — and the label is a missed brand moment</span>
+          <span class="obs-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="obs-body">
+          <p>New shirts take time to break in. Fresh from the polybag, the Best Damn Tee is stiffer than it'll be in a week. At premium price, that first-wear moment is where buyer's remorse either crystallises or dissolves — and MNTD sends zero educational signal to help. What temperature to wash on, when the fabric hits its best feel, how to preserve the shape, what's normal shrinkage — all silent.</p>
+          <p>The interior label is a physical annoyance I notice every wear. It's long enough that it <strong>lifts up and hangs over the back of my neck</strong> — visible from the outside. Not premium.</p>
+          <p>Which is a shame, because the best shirt experience I've ever had wasn't from a Canadian tee brand — it was a Ted Baker button-down whose interior label simply read <em>"Have a nice day."</em> Every single time I grabbed it, I smiled. It became my favourite shirt. That's what a $55 tee's label <em>could</em> be doing.</p>
+          <div class="obs-read"><strong>Read:</strong> Two moves at premium-price scale — (a) a QR insert (or a first-wear email fired 24h post-delivery) that owns break-in + care + wash and preempts remorse, (b) rework the label from an annoyance into a delight: shorter physically, MNTD-specific copy that makes the customer smile. Not "Machine wash cold." Something that earns the price point. That's the difference between a shirt you own and a shirt you wear.</div>
+        </div>
+      </details>
+    </li>
+  </ol>
+
+  <div class="evidence">
+    <div class="evidence-title">Evidence · Post-purchase artefacts</div>
+
+    <div class="evidence-subtitle">Mobile order-tracking · Fri Jul 10 · wearmntd.ca on iOS Safari</div>
+    <div class="thumb-grid">
+      <figure class="thumb">
+        <img src="assets/pp-mobile-order-details.png" alt="MNTD order details page on mobile Safari · Fri Jul 10 · Received Order Details at 7:06 PM · Show Shipment Journey CTA · shipment contents list (Best Damn Tee Moss and Black, Non-Stop Crew Sock, Boxer Briefs) · GET 15% OFF banner at bottom of the same page as a placed order" class="expandable">
+        <figcaption>PP-1 · Order details on mobile</figcaption>
+      </figure>
+      <figure class="thumb">
+        <img src="assets/pp-popup-on-order-page.png" alt="UNLOCK 15% OFF popup overlay on wearmntd.ca while checking order status on mobile — customer already has an active order but the entry-point popup still fires" class="expandable">
+        <figcaption>PP-2 · Popup still fires post-order</figcaption>
+      </figure>
+      <figure class="thumb">
+        <img src="assets/pp-shipment-journey.png" alt="Shipment journey modal on wearmntd.ca showing Sat Jul 11 6:49 AM Out for Delivery Toronto ON, 12:56 AM Scanned at Delivery Terminal, Fri Jul 10 7:06 PM Received Order Details" class="expandable">
+        <figcaption>Shipment journey modal expanded</figcaption>
+      </figure>
+    </div>
+
+    <div class="evidence-subtitle">Notification stream · Sat Jul 11 · duplicated between MNTD and FleetOptics</div>
+    <div class="thumb-grid">
+      <figure class="thumb">
+        <img src="assets/pp-inbox-duplicate-notifications.jpeg" alt="iCloud inbox showing FleetOptics Notifications at 11:24 AM (Get Excited - Your delivery is coming up next) and MNTD at 11:12 AM (Your order has been delivered!) — two delivery notifications within 12 minutes from two different senders" class="expandable">
+        <figcaption>PP-3 · Inbox · both hit at 11:12 + 11:24</figcaption>
+      </figure>
+      <figure class="thumb">
+        <img src="assets/pp-delivery-sms.png" alt="iMessage from unrecognised number +1 (647) 557-4039 flagged as unknown sender: Great news — your order has been successfully delivered! with fleetopticsinc.ca link and Delete / Mark as Known prompt" class="expandable">
+        <figcaption>PP-4 · Delivery SMS from unknown sender</figcaption>
+      </figure>
+    </div>
+
+    <div class="evidence-subtitle">Unboxing · yesterday · package to product</div>
+    <div class="thumb-grid">
+      <figure class="thumb">
+        <img src="assets/pp-unbox-01-received.jpeg" alt="MNTD FleetOptics polybag received at doorstep · black recycled ocean-bound plastic bag with shipping label showing FleetOptics Next Day service, MNTD wordmark visible" class="expandable">
+        <figcaption>PP-5 · Package received · FleetOptics polybag</figcaption>
+      </figure>
+      <figure class="thumb">
+        <img src="assets/pp-unbox-02.jpeg" alt="Second unboxing frame" class="expandable">
+        <figcaption>Unboxing 02</figcaption>
+      </figure>
+      <figure class="thumb">
+        <img src="assets/pp-unbox-03.jpeg" alt="Third unboxing frame" class="expandable">
+        <figcaption>Unboxing 03</figcaption>
+      </figure>
+      <figure class="thumb">
+        <img src="assets/pp-unbox-04-contents.jpeg" alt="Unboxed contents · MNTD packing slip for order MNTDCA4963-IF5714159, individually-bagged products (boxers, socks), Pur Mints tin gift, all laid out" class="expandable">
+        <figcaption>PP-6 · Packing slip + products + Pur Mints</figcaption>
+      </figure>
+      <figure class="thumb">
+        <img src="assets/pp-unbox-05.jpeg" alt="Fifth unboxing frame" class="expandable">
+        <figcaption>Unboxing 05</figcaption>
+      </figure>
+      <figure class="thumb">
+        <img src="assets/pp-unbox-06.jpeg" alt="Sixth unboxing frame" class="expandable">
+        <figcaption>Unboxing 06</figcaption>
+      </figure>
+      <figure class="thumb">
+        <img src="assets/pp-unbox-07.jpeg" alt="Seventh unboxing frame" class="expandable">
+        <figcaption>Unboxing 07</figcaption>
+      </figure>
+      <figure class="thumb">
+        <img src="assets/pp-unbox-08-mint-gift.jpeg" alt="Pur Mints polar mint tin resting on the MNTD packing slip — unexpected small gift in the package" class="expandable">
+        <figcaption>PP-6 · Pur Mints gift detail</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gaps">
+  <div class="section-label">07 · The Gaps</div>
+  <h2 class="section-title">Where MNTD is leaving money — evidence, not opinion.</h2>
+  <p class="section-intro">Six revenue leaks mapped against the actual email + SMS I received during the mystery shop. The big one at the top is a discovery from this week — it's material.</p>
+
+  <div class="big-finding">
+    <div class="bf-tag">New finding · discount conflict</div>
+    <div class="bf-title">The SMS promises 20% off. The emails promise 15% off. Same code.</div>
+    <div class="bf-body">
+      A first-time subscriber sees the SMS welcome offer <strong>20% off</strong> with code <code>WELCOMEMNTD1557TPTGFM</code>, then the exact same code shows up in three sequential welcome emails as <strong>15% off</strong>. Either the SMS copy is stale or the email copy is — either way, the customer sees two prices for one code within 24 hours. That's a trust hit at the moment of first purchase.
+    </div>
+    <div class="bf-numbers">
+      <div class="bf-num"><span class="bf-num-val">20%</span><span class="bf-num-lbl">SMS Welcome</span></div>
+      <div class="bf-num"><span class="bf-num-val">15%</span><span class="bf-num-lbl">Email Welcome</span></div>
+      <div class="bf-num"><span class="bf-num-val">1×</span><span class="bf-num-lbl">Shared code</span></div>
+      <div class="bf-num"><span class="bf-num-val">3×</span><span class="bf-num-lbl">Same code repeated</span></div>
+    </div>
+  </div>
+
+  <div class="gaps-grid">
+    <div class="gap-card">
+      <span class="gap-tier t1">Tier 1 · Direct revenue leak</span>
+      <div class="gap-title">No cart / checkout / browse abandon</div>
+      <div class="gap-body">Mystery-shop cart was abandoned. Zero recovery flow fired. In a Klaviyo-native shop, this is the first thing to build — hours of work, days of return.</div>
+    </div>
+    <div class="gap-card">
+      <span class="gap-tier t1">Tier 1 · Deliverability</span>
+      <div class="gap-title">Sender domain split · DMARC fail on 3 of 4</div>
+      <div class="gap-body">Three of five emails send From <code>info@wearmntd.com</code> while DKIM auth is on <code>wearmntd.ca</code>. Only the Jun 28 and Jul 7 campaigns send from the correct <code>.ca</code> domain and pass. One config fix.</div>
+    </div>
+    <div class="gap-card">
+      <span class="gap-tier t1">Tier 1 · Popup logic</span>
+      <div class="gap-title">SMS subscribe popup fires twice</div>
+      <div class="gap-body">Two separate opt-in prompts hit the same session (Jun 21, then Jun 23). No dedupe check between the popup trigger and the checkout capture. Documented below.</div>
+    </div>
+    <div class="gap-card">
+      <span class="gap-tier t2">Tier 2 · Personalization</span>
+      <div class="gap-title">"Hi, there." — no first-name merge</div>
+      <div class="gap-body">Zero first-name personalization across all five emails, despite Klaviyo having the field. Same greeting, same body, same code. Cheapest lift in the audit.</div>
+    </div>
+    <div class="gap-card">
+      <span class="gap-tier t2">Tier 2 · Offer strategy</span>
+      <div class="gap-title">Bundle exclusion not disclosed</div>
+      <div class="gap-body">The welcome code doesn't apply to bundles — the highest-AOV product. Valid commercial policy, but not disclosed at the offer stage. Reads as bait-and-switch. Fix at the offer, not the checkout.</div>
+    </div>
+    <div class="gap-card">
+      <span class="gap-tier t3">Tier 3 · Compliance signal</span>
+      <div class="gap-title">CASL holds — but BIMI is off</div>
+      <div class="gap-body">DMARC policy is <code>p=none</code> — monitoring only. BIMI is skipped on all five emails ("insufficient dmarc"). After the domain fix, escalate to <code>quarantine</code> and light up BIMI. Brand mark in the inbox.</div>
+    </div>
+  </div>
+
+  <div class="evidence">
+    <div class="evidence-title">Evidence · five emails + SMS thread I received (Jun 21 – Jul 7)</div>
+    <div class="evidence-grid">
+      <a class="evidence-item linked" href="assets/email-w1-welcome-jun21.png" data-lightbox target="_blank" rel="noopener">
+        <div class="evidence-kind">EMAIL · Jun 21, 17:12 · Welcome</div>
+        <div class="evidence-headline">You're in! Let's get you MNTD</div>
+        <div class="evidence-meta">From: info@wearmntd.com → DMARC fail</div>
+        <div class="evidence-body">"Hi, there. We're so glad you're here! As a thank you for joining, enjoy this special offer for your first purchase. <strong>15% OFF · WELCOMEMNTD1557TPTGFM</strong>"</div>
+        <div class="evidence-flag">✕ No first-name merge · 22-char code · sender domain fails auth</div>
+      </a>
+      <a class="evidence-item linked" href="assets/email-w2-story-jun22.png" data-lightbox target="_blank" rel="noopener">
+        <div class="evidence-kind">EMAIL · Jun 22, 17:13 · Brand story</div>
+        <div class="evidence-headline">The REAL Story Behind MNTD</div>
+        <div class="evidence-meta">From: info@wearmntd.com → DMARC fail</div>
+        <div class="evidence-body">Image-stacked brand story with the same <strong>15% OFF · WELCOMEMNTD1557TPTGFM</strong> code repeated at the top.</div>
+        <div class="evidence-flag">✕ No copy body · repeats the same discount lever</div>
+      </a>
+      <a class="evidence-item linked" href="assets/email-w3-feels-different-jun24.png" data-lightbox target="_blank" rel="noopener">
+        <div class="evidence-kind">EMAIL · Jun 24, 17:14 · Product education</div>
+        <div class="evidence-headline">Why MNTD feels different</div>
+        <div class="evidence-meta">From: info@wearmntd.com → DMARC fail</div>
+        <div class="evidence-body">Product features (Mint Condition tech, Pristine Pouch), boxer bundle imagery, same <strong>15% OFF</strong> code. Still no cart-abandon trigger despite my Jun 21 abandoned bundle.</div>
+        <div class="evidence-flag">✕ Third repeat of same welcome code · zero flow branching</div>
+      </a>
+      <a class="evidence-item linked" href="assets/email-w4-guys-jun28.png" data-lightbox target="_blank" rel="noopener">
+        <div class="evidence-kind">EMAIL · Jun 28, 12:00 · Campaign</div>
+        <div class="evidence-headline">For the guys who don't overthink getting dressed</div>
+        <div class="evidence-meta">From: info@wearmntd.ca → DMARC pass ✓</div>
+        <div class="evidence-body">Best Damn Tee campaign push. Fires from the correct <code>.ca</code> domain — proving the fix is a config, not an infra problem.</div>
+        <div class="evidence-flag good">✓ Proves the deliverability fix is a one-line change</div>
+      </a>
+
+      <a class="evidence-item linked" href="assets/email-w5-heat-jul07.png" data-lightbox target="_blank" rel="noopener">
+        <div class="evidence-kind">EMAIL · Jul 7, 17:15 · Campaign</div>
+        <div class="evidence-headline">Beat the heat without breaking a sweat.</div>
+        <div class="evidence-meta">From: info@wearmntd.ca → DMARC pass ✓</div>
+        <div class="evidence-body">New product push: <strong>CoolShift Tee</strong> with temperature-regulation copy, 5-star verified-reviewer quote ("Terry"), CoolShift Long Sleeve variant, and a <strong>Bundle &amp; Save 20%</strong> cross-sell (CoolShift + ActivTemp Boxer Brief). No welcome-code reference — the welcome window has closed. Comes 9 days after the Jun 28 send.</div>
+        <div class="evidence-flag good">✓ The Jun 28 .ca sender fix held · new product narrative (cool-comfort) · but 9-day gap between sends leaves warm subscribers cold.</div>
+      </a>
+    </div>
+
+    <div class="sms-shot">
+      <img src="assets/sms-double-subscribe.png" alt="MNTD SMS conversation with +1 (866) 655-0522 · double subscribe prompt on Jun 21 and Jun 23 · welcome offer stated as 20% off in the SMS body (vs 15% off in the emails · same code)" class="expandable">
+      <div class="sms-cap">SMS thread with +1 (866) 655-0522 · double subscribe prompt Jun 21 + Jun 23 · welcome offer stated as <strong>20% off</strong> in SMS body</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="commercial">
+  <div class="section-label">08 · Commercial Strategy</div>
+  <h2 class="section-title">Where the offer, the site, and the CRM should agree.</h2>
+  <p class="section-intro">Right now the offer strategy, the flow, and the site are pulling in slightly different directions. Five observations from the mystery shop that a commercial-strategy pass would resolve in the first sprint.</p>
+
+  <div class="value-prop-diagram" role="figure" aria-label="Value proposition framework: Brand, Reason to Believe, Offer, Why Buy Now">
+    <div class="vp-numerator">
+      <div class="vp-numerator-label">Value Proposition</div>
+      <div class="vp-numerator-sub">What MNTD is actually selling</div>
+    </div>
+    <div class="vp-divider">
+      <div class="vp-divider-line"></div>
+      <div class="vp-divider-caption">= built from →</div>
+    </div>
+    <div class="vp-denominator">
+      <div class="vp-comp brand">
+        <div class="vp-comp-name">Brand</div>
+        <div class="vp-comp-sub">Who this is for · what MNTD stands for</div>
+      </div>
+      <div class="vp-comp rtb">
+        <div class="vp-comp-name">Reason to Believe</div>
+        <div class="vp-comp-sub">Proof · reviews · fabric IP · category authority</div>
+      </div>
+      <div class="vp-comp offer">
+        <div class="vp-comp-name">Offer</div>
+        <div class="vp-comp-sub">Bundle · GWP · shipping · returns</div>
+      </div>
+      <div class="vp-comp why-now leading">
+        <div class="vp-comp-name">Why Buy Now</div>
+        <div class="vp-comp-sub">Urgency · welcome discount · limited push</div>
+        <div class="vp-comp-flag">MNTD is leading here</div>
+      </div>
+    </div>
+    <div class="vp-caption">MNTD is leaning almost entirely on <strong>Why Buy Now</strong> — the welcome code, the GWP threshold, the bundle-and-save. <strong>Even the current campaigns for both new and returning customers keep pitching Why Buy Now</strong> — acquisition and retention look nearly identical. The other three legs — <strong>Brand, Reason to Believe, Offer strategy</strong> — are under-weighted. The five cards below sequence how to rebalance so the whole value proposition carries the sale, not just the discount.</div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-num">01</div>
+      <div class="card-title">Too many competing offers running at once</div>
+      <div class="card-body">Welcome code, SMS-vs-email discount mismatch, bundle exclusion, and Best-Damn-Tee campaign push — all inside a 7-day window. The customer can't tell which offer they're supposed to act on.</div>
+      <div class="card-quote">"Discount is a lever, not a landing page."<span class="card-quote-attr">— Working thesis for the engagement</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-num">02</div>
+      <div class="card-title">Use conditional logic in the welcome path</div>
+      <div class="card-body">Same code, same body, three welcome emails. Klaviyo supports <strong>conditional splits</strong> on browse behavior, cart state, and product affinity out of the box. Every email should branch on what the customer has already done, not just what day it is.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-num">03</div>
+      <div class="card-title">Segment new vs. returning at the offer layer</div>
+      <div class="card-body">A first-time buyer needs a barrier-lowering offer. A second-purchase buyer needs a <strong>habit-forming</strong> offer — different code, different SKU push, different copy. Today one flow does both, poorly. See Section 09 for the full segmentation lanes.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-num">04</div>
+      <div class="card-title">Reduce choices in the product flow</div>
+      <div class="card-body">Four sequential decisions on mobile — Style × Colour × Size × Length — with context loss on back-navigation. Cut to two upfront choices (Style + Fit), collapse the rest into a size flyout.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-num">05</div>
+      <div class="card-title">Size charts: buried, generic, not confident-making</div>
+      <div class="card-body">The size chart is a static overlay with generic ranges. For a $50 tee where fit is the promise, a confident size recommender (height / weight / preferred fit → suggested SKU). In DTC benchmarks, this class of rollout drops returns 10–25% and lifts AOV in the same window.</div>
+    </div>
+  </div>
+
+  <div class="media-ref">
+    <div class="media-ref-thumb has-img">
+      <img src="assets/pdp-conference-slide.png" alt="Slide from Style and Scale DTC Conference (organised by Task Husky, March 2026): Designed to reduce fit friction and increase conversion confidence, with David Yassky presenting · one of 8 hours moderated by Rahul Sharma" class="media-ref-img">
+      <div class="media-ref-thumb-play">▶</div>
+      <div class="media-ref-thumb-caption">Snippet · 20:16</div>
+    </div>
+    <div class="media-ref-body">
+      <div class="media-ref-eyebrow">Style and Scale DTC Conference · March 2026 · organised by Task Husky</div>
+      <div class="media-ref-title">Content × Commerce: UX &amp; UI Best Practices in PDP Design</div>
+      <div class="media-ref-meta">One of <strong>8 hours moderated by Rahul Sharma</strong> · Guest presenter <strong>David Yassky</strong></div>
+      <a href="https://drive.google.com/file/d/1c1BA0ANkJRyo3YteLxuAMDeAVRlBMNmg/view?usp=sharing&amp;t=1216.512" target="_blank" rel="noopener" class="media-ref-cta">Watch the snippet ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="segmentation">
+  <div class="section-label">09 · Segmentation</div>
+  <h2 class="section-title">Three lanes — the two MNTD is missing, and the one that unlocks the whole Group.</h2>
+  <p class="section-intro">Two came from the mystery shop — new vs. returning, and the MNTD-specific dads-with-daughters angle. The third is the Klaviyo → ad-platform lane the whole Knix Group needs anyway: one segment library, targeted by audience × behaviour, feeding every campaign. Compounding leverage.</p>
+
+  <div class="lanes">
+    <div class="lane">
+      <div class="lane-tag">Lane A · Table stakes</div>
+      <div class="lane-title">1st vs. 2nd purchase</div>
+      <div class="lane-body">First purchase: lower the barrier to try. Second purchase: <strong>build the habit</strong>. Different offer, different copy, different product push. One flow can't do both.</div>
+      <ul class="lane-list">
+        <li>1st purchase → welcome bar + trial-size framing</li>
+        <li>2nd purchase → bundle upsell + refill triggers</li>
+        <li>3rd+ → loyalty tier + gifting</li>
+        <li>Klaviyo branch on <code>customer_order_count</code></li>
+      </ul>
+    </div>
+
+    <div class="lane b">
+      <div class="lane-tag">Lane B · Differentiated angle</div>
+      <div class="lane-title">Dads with daughters (Knix households)</div>
+      <div class="lane-body">A meaningful MNTD segment was introduced through Knix — fathers, partners, brothers in Knix households. Higher brand affinity, higher trust, receptive to bundled and gifting messaging. Nobody else can walk in with this.</div>
+      <ul class="lane-list">
+        <li>Capture: "How did you hear about MNTD?" on welcome</li>
+        <li>Unlocks: Father's Day, birthday, Christmas gift calendar</li>
+        <li>Knix cross-promote: co-branded gifting slot</li>
+        <li>Higher LTV, higher basket, defensible moat</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="lane wide c">
+    <div class="lane-tag">Lane C · Knix parent · Ad orchestration</div>
+    <div class="lane-title">Full-audience segmentation, fed from Klaviyo into the ad stack</div>
+    <div class="lane-body">The same Klaviyo instance can power the whole Knix Group's ad orchestration if we build the segment library right. Every campaign gets targeted by <strong>audience × behaviour</strong>, not one message for everyone. Live sync from Klaviyo out to the ad platforms means the segments are always current — no manual CSV pushes, no drift.</div>
+
+    <div class="segment-matrix">
+      <div class="segment-col">
+        <div class="segment-col-title">Audience segments</div>
+        <ul class="segment-list">
+          <li>Women — Knix core</li>
+          <li>Mums with daughters</li>
+          <li>Dads with daughters — bridges to MNTD</li>
+          <li>Men only — MNTD anchor</li>
+        </ul>
+      </div>
+      <div class="segment-col">
+        <div class="segment-col-title">Behaviour segments</div>
+        <ul class="segment-list">
+          <li>First-time purchase</li>
+          <li>Purchase items &lt; 3</li>
+          <li>Purchase items ≥ 3</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flow-strip">
+      <div class="flow-node">
+        <div class="flow-node-label">Source</div>
+        <div class="flow-node-name">Klaviyo</div>
+        <div class="flow-node-sub">Live segment membership</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">
+        <div class="flow-node-label">Sync</div>
+        <div class="flow-node-name">Ad platforms</div>
+        <div class="flow-node-sub">Meta · Google · TikTok</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">
+        <div class="flow-node-label">Result</div>
+        <div class="flow-node-name">Campaign-level targeting</div>
+        <div class="flow-node-sub">Audience × behaviour</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mcp-strip">
+    <div class="mcp-strip-icon">↔</div>
+    <div>
+      <div class="mcp-strip-title">Shopify MCP + Klaviyo MCP hookup — real segments, not powerpoint segments</div>
+      <div class="mcp-strip-body">Growth Automated connects to your Shopify and Klaviyo through <strong>Model Context Protocol</strong> — I read live customer, order, and flow data during the engagement and build segments against your actual RFM curves. No exports, no CSV round-tripping, no waiting on data eng.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="engagement">
+  <div class="section-label">10 · The Engagement</div>
+  <h2 class="section-title">Five pillars. Ninety days. One dedicated operator.</h2>
+  <p class="section-intro">Not a discovery-and-deck engagement. A working engagement — I ship inside Shopify and Klaviyo, alongside you, from week one.</p>
+
+  <div class="pillars">
+    <div class="pillar"><div class="pillar-num">01</div><div class="pillar-title">Flow repair</div><div class="pillar-body">Cart abandon → checkout abandon → browse abandon → winback → post-purchase. Domain fix on Day 1.</div></div>
+    <div class="pillar"><div class="pillar-num">02</div><div class="pillar-title">Commercial alignment</div><div class="pillar-body">Align SMS + email welcome offer. Bundle exclusion disclosed at offer stage. One code, one price.</div></div>
+    <div class="pillar"><div class="pillar-num">03</div><div class="pillar-title">Lifecycle setup</div><div class="pillar-body">RFM-driven segments. New vs. returning branching. Dads-with-daughters onboarding tag.</div></div>
+    <div class="pillar"><div class="pillar-num">04</div><div class="pillar-title">Bundling &amp; AOV</div><div class="pillar-body">Bundle-first landing pages. Refill cadence. Gifting bundle for Q4. ReBuy on the cart.</div></div>
+    <div class="pillar"><div class="pillar-num">05</div><div class="pillar-title">Segmentation &amp; cart</div><div class="pillar-body">Klaviyo list hygiene. Cart-abandon copy A/B. Size recommender wired to Shopify metafields.</div></div>
+  </div>
+
+  <div class="timeline-block">
+    <div class="timeline-title">Ninety-day working plan</div>
+    <div class="tl-lanes">
+      <div class="tl-lane">
+        <div class="tl-when">Days 0 – 30 · Stop the leak</div>
+        <div class="tl-h">Fix, ship, stabilise</div>
+        <ul class="tl-list">
+          <li>DNS + Klaviyo sender domain align</li>
+          <li>SMS/email welcome offer reconcile</li>
+          <li>Cart abandon + checkout abandon live</li>
+          <li>Klaviyo popup dedupe check</li>
+          <li>First-name merge across all templates</li>
+        </ul>
+      </div>
+      <div class="tl-lane b">
+        <div class="tl-when">Days 31 – 60 · Build the lanes</div>
+        <div class="tl-h">Segment, personalise, scale</div>
+        <ul class="tl-list">
+          <li>New vs. returning branching</li>
+          <li>Dads-with-daughters tag + flow</li>
+          <li>Size recommender wired to catalog</li>
+          <li>Bundle-first landing pages</li>
+          <li>Retention X reporting stood up</li>
+        </ul>
+      </div>
+      <div class="tl-lane c">
+        <div class="tl-when">Days 61 – 90 · Compound</div>
+        <div class="tl-h">Test, learn, expand</div>
+        <ul class="tl-list">
+          <li>Winback + churn-risk flow</li>
+          <li>Loyalty tier tests (ReBuy)</li>
+          <li>BIMI on after DMARC quarantine</li>
+          <li>Q4 gifting bundle + calendar</li>
+          <li>Phase 2 MRR gate: AEO / SEO / Reddit</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="invest">
+    <div>
+      <div class="invest-title">Working retainer · 90 days</div>
+      <div class="invest-body">Founder-level operator in Shopify + Klaviyo. Weekly working sessions with Kate. Shared dashboard and change log. Deposit + monthly, net 30 thereafter.</div>
+    </div>
+    <div class="invest-price">
+      <div class="invest-amt">*.*</div>
+      <div class="invest-per">Pricing TBD · not yet defined</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="team">
+  <div class="section-label">11 · The Team</div>
+  <h2 class="section-title">Two operators, not an agency deck.</h2>
+  <p class="section-intro">You are hiring two people who have shipped inside Shopify DTC brands — one from the outside, one you already know from the inside.</p>
+
+  <div class="team-grid">
+    <div class="team-card founder">
+      <div class="team-role">Founder · Growth Automated</div>
+      <div class="team-name">Rahul Sharma</div>
+      <div class="team-title">Commercial Strategy · Brand · Technology Enabler</div>
+      <div class="team-body">Data-driven revenue acceleration for ambitious Shopify brands. Prior operator work spans <strong>Rogers, Shaw, Bell, Microsoft</strong> — digital product, ecommerce platforms, omni-channel marketing, CX design. Recent focus: Shopify optimisation, Answer Engine Optimisation (AEO), email/SMS lifecycle, CRO and AOV.</div>
+      <div class="team-tags">
+        <span class="team-tag">Shopify</span>
+        <span class="team-tag">Klaviyo</span>
+        <span class="team-tag">Lifecycle</span>
+        <span class="team-tag">CRO · AOV</span>
+        <span class="team-tag">AEO</span>
+      </div>
+      <a class="team-link" href="https://www.linkedin.com/in/rahulsharma/" target="_blank" rel="noopener">LinkedIn</a>
+      &nbsp;·&nbsp;
+      <a class="team-link" href="https://growthautomated.ai/" target="_blank" rel="noopener">growthautomated.ai</a>
+    </div>
+
+    <div class="team-card">
+      <div class="team-role">Inside partner · Knix Group</div>
+      <div class="team-name">Raffael Sarracini</div>
+      <div class="team-title">VP eCommerce · Knix + MNTD · shared New Metric Media origin</div>
+      <div class="team-body">Raff owns eCommerce across the whole Knix Group — Knix and MNTD both sit under him. <strong>The connection point is New Metric Media.</strong> I built and scaled the New Metric Media eCommerce org, designed the org chart, and put down the operating stack. New Metric Media then hired Raff into that role — a role Kate was one of the finalists for. Raff built on the stack I laid down. That is the shared origin: not a decade-long friendship, but a shared operating context that means Day 1 doesn't start from zero.</div>
+      <div class="nmm-connection">
+        <img src="assets/partners/newmetricmedia.png" alt="New Metric Media">
         <div>
-          <span class="score-gauge-num">34</span><span class="score-gauge-max">/100</span>
+          <div class="nmm-connection-label">Shared origin</div>
+          <div class="nmm-connection-name">New Metric Media · client (Rahul, then Raff)</div>
         </div>
       </div>
-      <div class="score-hero-body">
-        <div class="score-band-label">At risk · post-mystery-shop</div>
-        <h3>The bones of a real brand, executed at a fraction of its potential.</h3>
-        <p class="score-hero-desc">Strong product positioning, credible origin story, parent-company Klaviyo maturity to draw from. <strong>But the program is running a broadcast welcome flow, zero cart recovery, DMARC failing on 3 of 4 sends, and identical discount codes across email and SMS.</strong> Every dimension below is fixable, fast, and high-leverage.</p>
-        <div class="score-bands">
-          <div class="score-band-cell active">&lt; 40 · At risk</div>
-          <div class="score-band-cell">40–54 · Under</div>
-          <div class="score-band-cell">55–69 · Competent</div>
-          <div class="score-band-cell">70–84 · Strong</div>
-          <div class="score-band-cell">85+ · Best-in-class</div>
+      <div class="team-tags">
+        <span class="team-tag">VP eCommerce</span>
+        <span class="team-tag">Knix + MNTD</span>
+        <span class="team-tag">NMM origin</span>
+      </div>
+      <a class="team-link" href="https://www.linkedin.com/in/raffaelsarracini/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+
+  <div class="references">
+    <div class="references-title">Client references · verified</div>
+    <div class="references-grid">
+      <blockquote class="ref-card">
+        <div class="ref-quote">Drove 3x revenue growth in 24 months for Shopify-based businesses through strategic planning and execution. Spearheaded Product-Led Growth initiatives, integrating platform investments with revenue targets and designing exceptional customer experiences. Optimized marketing and customer service automations, achieving peak conversion rates of over 13% and a 40%+ customer service automation rate in Q4. Implemented comprehensive customer journey design, from pre-order to post-purchase, yielding significant ROI.</div>
+        <div class="ref-attr">
+          <div class="ref-name">Jeff · COO, New Metric Media</div>
+          <div class="ref-role">Featured on growthautomated.ai/pages/portfolio-of-stores · same NMM engagement that later hired Raff</div>
+          <a class="ref-link" href="https://www.growthautomated.ai/pages/portfolio-of-stores" target="_blank" rel="noopener">Read the full case ↗</a>
+          <a class="ref-link" href="https://ca.trustpilot.com/review/growthautomated.ai" target="_blank" rel="noopener">Trustpilot review ↗</a>
         </div>
-      </div>
-    </div>
-
-    <table class="dim-table">
-      <thead>
-        <tr>
-          <th style="padding-left:18px">Dimension</th>
-          <th class="r">Weight</th>
-          <th class="r" style="min-width:120px">Score</th>
-          <th class="r" style="padding-right:18px">Confidence</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="padding-left:18px"><div class="dim-label">D1 · Deliverability &amp; list health</div><div class="dim-desc">DMARC fail on 3 of 4 sends (From wearmntd.com, DKIM on .ca)</div></td>
-          <td class="r">20</td>
-          <td class="r"><span class="score-cell">1.5<span class="score-bar"><span class="score-bar-fill score-poor" style="width:30%"></span></span></span></td>
-          <td class="r" style="padding-right:18px"><span class="confidence">MED</span></td>
-        </tr>
-        <tr>
-          <td style="padding-left:18px"><div class="dim-label">D2 · Lifecycle &amp; flow coverage</div><div class="dim-desc">Broadcast welcome only. Zero cart / checkout / browse abandon.</div></td>
-          <td class="r">20</td>
-          <td class="r"><span class="score-cell">0.5<span class="score-bar"><span class="score-bar-fill score-fail" style="width:10%"></span></span></span></td>
-          <td class="r" style="padding-right:18px"><span class="confidence">LOW</span></td>
-        </tr>
-        <tr>
-          <td style="padding-left:18px"><div class="dim-label">D3 · Segmentation &amp; personalization</div><div class="dim-desc">"Hi, there." — zero first-name across all 4 emails</div></td>
-          <td class="r">12</td>
-          <td class="r"><span class="score-cell">0.5<span class="score-bar"><span class="score-bar-fill score-fail" style="width:10%"></span></span></span></td>
-          <td class="r" style="padding-right:18px"><span class="confidence">MED</span></td>
-        </tr>
-        <tr>
-          <td style="padding-left:18px"><div class="dim-label">D4 · Campaign strategy &amp; calendar</div><div class="dim-desc">Strong narrative arc, aggressive cadence, no A/B signal</div></td>
-          <td class="r">10</td>
-          <td class="r"><span class="score-cell">2.0<span class="score-bar"><span class="score-bar-fill score-poor" style="width:40%"></span></span></span></td>
-          <td class="r" style="padding-right:18px"><span class="confidence">MED</span></td>
-        </tr>
-        <tr>
-          <td style="padding-left:18px"><div class="dim-label">D5 · Offer &amp; margin strategy</div><div class="dim-desc">Welcome code excludes bundles — no disclosure. Cart abandon.</div></td>
-          <td class="r">10</td>
-          <td class="r"><span class="score-cell">1.0<span class="score-bar"><span class="score-bar-fill score-fail" style="width:20%"></span></span></span></td>
-          <td class="r" style="padding-right:18px"><span class="confidence">MED</span></td>
-        </tr>
-        <tr>
-          <td style="padding-left:18px"><div class="dim-label">D6 · Creative, copy &amp; UX</div><div class="dim-desc">Brand aesthetic strong. Template width inconsistency (600 vs 640).</div></td>
-          <td class="r">10</td>
-          <td class="r"><span class="score-cell">2.5<span class="score-bar"><span class="score-bar-fill score-ok" style="width:50%"></span></span></span></td>
-          <td class="r" style="padding-right:18px"><span class="confidence">HIGH</span></td>
-        </tr>
-        <tr>
-          <td style="padding-left:18px"><div class="dim-label">D7 · Conversion path &amp; tracking</div><div class="dim-desc">Split-domain links in one send. SMS code not deep-linked.</div></td>
-          <td class="r">8</td>
-          <td class="r"><span class="score-cell">1.0<span class="score-bar"><span class="score-bar-fill score-fail" style="width:20%"></span></span></span></td>
-          <td class="r" style="padding-right:18px"><span class="confidence">HIGH</span></td>
-        </tr>
-        <tr>
-          <td style="padding-left:18px"><div class="dim-label">D8 · Measurement &amp; reporting</div><div class="dim-desc">DMARC reports to postmaster@knix.com — unclear MNTD review</div></td>
-          <td class="r">6</td>
-          <td class="r"><span class="score-cell">1.0<span class="score-bar"><span class="score-bar-fill score-fail" style="width:20%"></span></span></span></td>
-          <td class="r" style="padding-right:18px"><span class="confidence">LOW</span></td>
-        </tr>
-        <tr>
-          <td style="padding-left:18px"><div class="dim-label">D9 · Compliance &amp; consent (CASL)</div><div class="dim-desc">Double opt-in confirmed. Physical address + one-click unsub present.</div></td>
-          <td class="r">4</td>
-          <td class="r"><span class="score-cell">3.5<span class="score-bar"><span class="score-bar-fill score-good" style="width:70%"></span></span></span></td>
-          <td class="r" style="padding-right:18px"><span class="confidence">HIGH</span></td>
-        </tr>
-        <tr class="total">
-          <td style="padding-left:18px">Total (adjusted for mystery shop findings)</td>
-          <td class="r">100</td>
-          <td class="r" style="color:var(--danger);font-weight:700">34 / 100</td>
-          <td class="r" style="padding-right:18px">·</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<!-- ═════ SECTION 4 · THE GAPS ══════════════════════════════════════════ -->
-<section id="gaps">
-  <div class="wrap">
-    <div class="eyebrow"><span class="eyebrow-num">04</span><span class="eyebrow-sep">·</span><span>The Gaps</span></div>
-    <h2>Where MNTD is leaving revenue on the table — in order of dollar impact.</h2>
-    <p class="lead">The scorecard tells you what is broken. This tells you the order I would fix it in, and the reason for the sequence.</p>
-
-    <div class="gaps-grid">
-      <div class="gap-card dollar">
-        <span class="gap-money">Revenue leak · Tier 1</span>
-        <h3>Offer-induced cart abandon on your highest-AOV product</h3>
-        <p>The welcome discount excludes bundles, but bundles are the top of the cart. Every motivated new subscriber routes here, hits the exclusion wall, and leaves — with no recovery flow to bring them back. Fixing this is a bundle-code + cart-abandon-flow one-two.</p>
-      </div>
-
-      <div class="gap-card dollar">
-        <span class="gap-money">Revenue leak · Tier 1</span>
-        <h3>Zero cart / checkout / browse abandon coverage</h3>
-        <p>Every DTC benchmark puts abandon flows at 15–30% of email revenue. MNTD's contribution here today is zero. The one flow with the highest ROI in the entire program does not exist yet.</p>
-      </div>
-
-      <div class="gap-card">
-        <span class="gap-money" style="color:var(--warn)">Credibility · Tier 2</span>
-        <h3>DMARC failing on 3 of 4 sends</h3>
-        <p>Send-from address is <code style="font-family:'DM Mono',monospace;font-size:12px;background:var(--gray);padding:1px 5px;border-radius:3px">info@wearmntd.com</code> while DKIM authenticates on <code style="font-family:'DM Mono',monospace;font-size:12px;background:var(--gray);padding:1px 5px;border-radius:3px">wearmntd.ca</code>. Result: iCloud / Google DMARC verifiers log fail. BIMI blocked. Deliverability at risk as inbox providers tighten. One DNS change fixes it. Day-one task.</p>
-      </div>
-
-      <div class="gap-card">
-        <span class="gap-money" style="color:var(--warn)">Conversion · Tier 2</span>
-        <h3>SMS code that requires six steps to redeem</h3>
-        <p>22-character welcome code, not tappable, not linkable, not auto-fillable on mobile. Shorten to <code style="font-family:'DM Mono',monospace;font-size:12px;background:var(--gray);padding:1px 5px;border-radius:3px">MNTD15</code>, wrap in a Klaviyo dynamic-coupon deep link that auto-applies at checkout, split by channel.</p>
-      </div>
-
-      <div class="gap-card">
-        <span class="gap-money" style="color:var(--blue)">Strategic · Tier 3</span>
-        <h3>No 1st-vs-2nd buyer segmentation</h3>
-        <p>The welcome and re-engagement flows are the same email. First purchase is a barrier problem; second purchase is a habit problem. These need different copy, different offers, different cadence — starting with a 14-day and 30-day post-purchase trigger.</p>
-      </div>
-
-      <div class="gap-card">
-        <span class="gap-money" style="color:var(--green-dark)">Strategic · Tier 3</span>
-        <h3>The dads-with-daughters segment is invisible</h3>
-        <p>The Knix relationship is a first-party-data moat no competitor has. One onboarding question — "how did you hear about MNTD?" — unlocks a gift-occasion calendar (Father's Day, birthdays, Christmas) that becomes an owned revenue channel. Introduce in month 2, mature over the quarter.</p>
-      </div>
+      </blockquote>
+      <blockquote class="ref-card">
+        <div class="ref-quote">Growth Automated operated as a true extension of our existing team. Rahul and his group brought strategic thinking, transparency, expertise, and a collaborative approach that made complex and rapidly evolving concepts understandable and actionable.</div>
+        <div class="ref-attr">
+          <div class="ref-name">Brett Bailey · CEO, WBM Technologies</div>
+          <div class="ref-role">AI Answer Engine Optimisation engagement · trustpilot.ca · 5★</div>
+          <a class="ref-link" href="https://ca.trustpilot.com/review/growthautomated.ai" target="_blank" rel="noopener">View on Trustpilot ↗</a>
+        </div>
+      </blockquote>
     </div>
   </div>
 </section>
 
-<!-- ═════ SECTION 5 · THE ENGAGEMENT ════════════════════════════════════ -->
-<section class="engagement-band" id="engagement">
-  <div class="wrap">
-    <div class="eyebrow"><span class="eyebrow-num">05</span><span class="eyebrow-sep">·</span><span>The Engagement</span></div>
-    <h2>What I would do — and when.</h2>
-    <p class="lead">A focused engagement that closes the biggest revenue leaks in the first 30 days and builds the segmentation moat by day 90. Peer-level, hands-on, no consulting deck.</p>
+<section class="section" id="tools">
+  <div class="section-label">12 · Tools &amp; Stack</div>
+  <h2 class="section-title">The kit I bring on Day 1.</h2>
+  <p class="section-intro">The kit Growth Automated brings on Day 1 — partnerships, MCP integrations, and working scripts. Licence fees for each platform stay on your side of the ledger; making each one earn it stays on mine.</p>
 
-    <div class="pillars">
-      <div class="pillar">
-        <div class="pillar-num">01</div>
-        <div class="pillar-title">Flow Repair</div>
-        <div class="pillar-body">Cart, checkout, browse abandon. Post-purchase Day 14 and Day 30. Winback at Day 90. Fixing the leak.</div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-num">02</div>
-        <div class="pillar-title">Commercial Alignment</div>
-        <div class="pillar-body">Sync the email/SMS calendar to product drops. Fix the bundle-vs-code conflict with disclosed exclusions and bundle-specific offers.</div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-num">03</div>
-        <div class="pillar-title">Lifecycle Marketing Setup</div>
-        <div class="pillar-body">RFM segmentation. Engagement tiers. First-vs-second buyer split. Dads-with-daughters as its own segment with an onboarding question.</div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-num">04</div>
-        <div class="pillar-title">Bundling &amp; AOV</div>
-        <div class="pillar-body">Dedicated bundle flow. Bundle-first CTAs in the welcome series. Post-purchase bundle upsells at Day 14 targeting the second purchase.</div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-num">05</div>
-        <div class="pillar-title">Segmentation &amp; Cart</div>
-        <div class="pillar-body">Klaviyo list hygiene, engagement segmentation, cart-abandon optimization with Klaviyo Coupon Codes and dynamic content. Deliverability protected.</div>
+  <div class="tools-grid">
+    <div class="tool">
+      <img src="assets/partners/shopify.png" alt="Shopify" class="tool-logo">
+      <span class="tool-badge partner">Partner</span>
+      <div class="tool-name">Shopify MCP</div>
+      <div class="tool-body">Shopify's <em>Model Context Protocol</em> — live read/write on catalog, orders, customers, collections, discounts, analytics. Segments built against real RFM, not sample exports.</div>
+    </div>
+    <div class="tool">
+      <img src="assets/partners/klaviyo.png" alt="Klaviyo" class="tool-logo">
+      <span class="tool-badge partner">Partner</span>
+      <div class="tool-name">Klaviyo MCP</div>
+      <div class="tool-body">Klaviyo's <em>Model Context Protocol</em> — direct flow, template, segment, and campaign work. Live A/B testing without CSV round-trips.</div>
+      <div class="klaviyo-badge-strip">
+        <img src="assets/partners/klaviyo-partner.png" alt="Klaviyo Partner badge">
+        <img src="assets/partners/klaviyo-master-silver.png" alt="Klaviyo Master Silver Partner badge — Growth Automated tier">
       </div>
     </div>
-
-    <div class="timeline-rail">
-      <div class="timeline-rail-label">Timeline · 90 days</div>
-      <div class="timeline-row">
-        <div class="timeline-when">Day 0 · Week 1</div>
-        <div class="timeline-what"><strong>Klaviyo access + deliverability audit.</strong> Fix From-domain / DKIM to eliminate the DMARC fail. First-name token everywhere. Split welcome code by channel. Klaviyo dashboard walkthrough — set the baseline number.</div>
-      </div>
-      <div class="timeline-row">
-        <div class="timeline-when">Day 1–30</div>
-        <div class="timeline-what"><strong>Cart abandon → checkout abandon → browse abandon flows live.</strong> Bundle-disclosure fix at the offer stage. Template standardized on 600px. Alt text on every image. This is where the revenue leak stops.</div>
-      </div>
-      <div class="timeline-row">
-        <div class="timeline-when">Day 30–60</div>
-        <div class="timeline-what"><strong>Post-purchase Day 14 + Day 30 flows.</strong> RFM segmentation live. First-vs-second buyer split. Bundle-specific email series. Dads-with-daughters onboarding question in place.</div>
-      </div>
-      <div class="timeline-row">
-        <div class="timeline-when">Day 60–90</div>
-        <div class="timeline-what"><strong>Winback at Day 90.</strong> Preference center. Gift-occasion calendar (Father's Day, birthdays, Christmas) mapped for Q4. Handoff-ready SOPs so the team owns every flow after month three.</div>
-      </div>
+    <div class="tool">
+      <img src="assets/partners/taskhusky.png" alt="Task Husky" class="tool-logo">
+      <span class="tool-badge partner">Partner</span>
+      <div class="tool-name"><a href="https://taskhusky.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Task Husky (themes · size · conference)</a></div>
+      <div class="tool-body">Three ways deep. <strong>(a)</strong> Leading Shopify theme development shop for scale-phase DTC brands. <strong>(b)</strong> Makers of <em>Clean Size Charts</em> — the drop-in Shopify app that solves the fit-confidence gap in Section 08 card 5. <strong>(c)</strong> Organisers of <em>Style &amp; Scale</em>, the retail DTC apparel conference. Rahul moderated 8 hours of Style &amp; Scale in March 2026 (one of those sessions is the PDP snippet in Section 08).</div>
     </div>
-
-    <div class="investment-card">
-      <div class="investment-price">
-        <div class="investment-amount">$5,000</div>
-        <div class="investment-cadence">/ month · CAD · 3-month minimum</div>
+    <div class="tool">
+      <img src="assets/partners/domaine.png" alt="Domaine Worldwide" class="tool-logo">
+      <span class="tool-badge partner">Partner</span>
+      <div class="tool-name"><a href="https://domaineworldwide.com/ca/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Domaine Worldwide (Shopify Plus agency)</a></div>
+      <div class="tool-body">"Purpose-built for ambitious &amp; beloved brands" — the leading Shopify partner for scaling global brands. <strong>750+ Shopify sites launched, 150+ platform migrations, 300+ FTEs, $5B+ portfolio GMV.</strong> Toronto office gives MNTD local pull-through when the engagement needs enterprise-grade Shopify tech (migrations, unified commerce, B2B, retail POS).</div>
+    </div>
+    <div class="tool">
+      <img src="assets/partners/rewind.png" alt="Rewind" class="tool-logo">
+      <span class="tool-badge partner">Partner</span>
+      <div class="tool-name"><a href="https://rewind.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Rewind (backup)</a></div>
+      <div class="tool-body">"Your SaaS data has no safety net" — automated backup and item-level restore across Shopify, Klaviyo, and every other tool in the stack. Nothing structural ships without a same-day snapshot in place.</div>
+    </div>
+    <div class="tool">
+      <img src="assets/partners/rebuy.png" alt="Rebuy" class="tool-logo">
+      <span class="tool-badge partner">Partner</span>
+      <div class="tool-name"><a href="https://rebuyengine.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Rebuy (personalisation)</a></div>
+      <div class="tool-body">"Smart ecommerce personalisation for growing Shopify brands" — AI-driven product recommendations across cart, PDP, and post-purchase. Directly addresses the busy side-cart friction in Section 04 (DS-4).</div>
+    </div>
+    <div class="tool">
+      <img src="assets/partners/retentionx.png" alt="RetentionX" class="tool-logo">
+      <span class="tool-badge partner">Partner</span>
+      <div class="tool-name"><a href="https://retentionx.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">RetentionX (analytics + action)</a></div>
+      <div class="tool-body">"From insights to execution" — customer analytics with the workflows attached. LTV, cohort, RFM, identity resolution, predictive AI, and marketing attribution in one platform. Where Rebuy suggests, RetentionX explains why.</div>
+    </div>
+    <div class="tool">
+      <img src="assets/partners/triplewhale.png" alt="Triple Whale" class="tool-logo">
+      <span class="tool-badge partner">Partner</span>
+      <div class="tool-name"><a href="https://www.triplewhale.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Triple Whale (attribution + forecasting)</a></div>
+      <div class="tool-body">"The Command Center for Ecommerce Brands" — attribution, blended ROAS, LTV, forecasting, and creative testing. Where RetentionX explains why customers come back, Triple Whale explains where the first-order acquisition came from and what to spend where.</div>
+    </div>
+    <div class="tool">
+      <div class="tool-logo-multi">
+        <img src="assets/partners/loop.png" alt="Loop">
+        <img src="assets/partners/wonderment.png" alt="Wonderment (acquired by Loop)">
       </div>
-      <div class="investment-body">
-        <p><strong>Includes:</strong> the five scope pillars above, executed. Klaviyo build work, deliverability, flow architecture, copy, QA, weekly working sessions with Kate + team.</p>
-        <p><strong>Structure:</strong> 1-month deposit + NET 30 on months 2 and 3. Cancel anytime after month three with 30 days' notice.</p>
-        <p><strong>What this is not:</strong> a strategy deck. If we work together, we're building live in Klaviyo from week one.</p>
-      </div>
+      <span class="tool-badge partner">Partner</span>
+      <div class="tool-name"><a href="https://www.loopreturns.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Loop + Wonderment (post-purchase)</a></div>
+      <div class="tool-body">"The operations platform built for retention" — AI-powered returns, exchanges, and fraud prevention. Loop acquired <strong>Wonderment</strong> for the post-purchase notification side: branded delivery notifications, shipment tracking, and proactive customer comms. <strong>Directly fixes the PP-8 (out-of-sync MNTD notifications) and PP-9 (unbranded FleetOptics stream) gaps</strong> in Section 06. Pair with Clean Size Charts by Task Husky above for the pre-purchase side.</div>
+    </div>
+    <div class="tool">
+      <img src="assets/partners/gorgias.png" alt="Gorgias" class="tool-logo">
+      <span class="tool-badge partner">Partner</span>
+      <div class="tool-name"><a href="https://www.gorgias.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Gorgias (support that sells)</a></div>
+      <div class="tool-body">"The #1 helpdesk + AI agent built to drive sales" — conversations that drive revenue, not just resolutions. Ticket triage, live chat, macro automation. Also the support-data pipe that feeds segmentation and product decisions.</div>
+    </div>
+    <div class="tool">
+      <img src="assets/partners/yotpo.png" alt="Yotpo" class="tool-logo">
+      <span class="tool-badge partner">Partner</span>
+      <div class="tool-name"><a href="https://www.yotpo.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Yotpo (reviews · loyalty · AI visibility)</a></div>
+      <div class="tool-body">Reviews &amp; UGC, loyalty &amp; referrals, and their new <em>Discover</em> product for controlling how AI ranks and recommends your products. Powers the <em>Reason to Believe</em> leg of Section 08's value-prop diagram — and doubles down on Phase 2 Track A.</div>
+    </div>
+    <div class="tool">
+      <img src="assets/partners/acceler8.png" alt="Acceler8 Labs" class="tool-logo">
+      <span class="tool-badge partner">Partner</span>
+      <div class="tool-name"><a href="https://acceler8labs.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Acceler8 Labs (paid media)</a></div>
+      <div class="tool-body">"Built by former Facebookers" — performance-marketing agency running paid across Meta, Google, TikTok, LinkedIn, and Amazon, with creative development and retail media. $1B in reported client revenue. Channel-level firepower when it's time to scale.</div>
+    </div>
+    <div class="tool">
+      <img src="assets/partners/reddit.png" alt="Reddit" class="tool-logo">
+      <span class="tool-badge partner">Partner</span>
+      <div class="tool-name"><a href="https://business.reddit.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Reddit</a></div>
+      <div class="tool-body">The intent-rich community platform — where men ask real questions before buying real clothes. Powers Phase 2 Track C (Section 13): structured listening across <code>r/malelifestyle</code>, <code>r/frugalmalefashion</code>, <code>r/mensfashionadvice</code>, plus paid promotion into those same subreddits.</div>
+    </div>
+    <div class="tool">
+      <img src="assets/partners/aipeekaboo.png" alt="AI Peekaboo" class="tool-logo">
+      <span class="tool-badge new">AEO</span>
+      <div class="tool-name">AI Peekaboo</div>
+      <div class="tool-body">AEO tracking layer we use for WBM and Hockeystickman.com. 90-day prompt-visibility trend against a configured competitor set.</div>
+    </div>
+    <div class="tool">
+      <img src="assets/partners/dataforseo.png" alt="DataForSEO" class="tool-logo">
+      <span class="tool-badge new">SEO</span>
+      <div class="tool-name">DataForSEO</div>
+      <div class="tool-body">Keyword coverage, SERP monitoring, competitor topic mapping — feeds the Reddit + editorial calendar.</div>
+    </div>
+    <div class="tool">
+      <img src="assets/partners/ga-favicon.png" alt="Growth Automated" class="tool-logo">
+      <span class="tool-badge core">Governance</span>
+      <div class="tool-name">Growth Automated dashboard</div>
+      <div class="tool-body">Shared change log + weekly working note. Kate always sees what shipped and what's next — no black-box work.</div>
     </div>
   </div>
 </section>
 
-<!-- ═════ SECTION 6 · THE TOOLS ═════════════════════════════════════════ -->
-<section class="alt-band" id="tools">
-  <div class="wrap">
-    <div class="eyebrow"><span class="eyebrow-num">06</span><span class="eyebrow-sep">·</span><span>The Tools</span></div>
-    <h2>The stack I work with.</h2>
-    <p class="lead">Every one of these is proven inside the MNTD stack today or is a lightweight add-on that lives beside Klaviyo.</p>
-    <div class="tools-grid" style="margin-top:28px">
-      <div class="tool">
-        <div class="tool-name">Klaviyo</div>
-        <div class="tool-role">Flow architecture, segmentation, coupon codes, deliverability. Where the work lives.</div>
+<section class="section" id="proposal">
+  <div class="section-label">13 · The Proposal</div>
+  <h2 class="section-title">Pricing to be defined. Ninety days. Then a Phase 2 gate for AEO, SEO, Reddit.</h2>
+  <p class="section-intro">This is the shape of the working agreement. Everything scoped in Sections 08 – 12 fits inside the core retainer. The MRR expansion below is optional — added on top after the first 60 days if the shared dashboard says it's the right time.</p>
+
+  <div class="invest" style="margin-bottom:22px">
+    <div>
+      <div class="invest-title">Core working retainer</div>
+      <div class="invest-body">Sections 08 – 12 inclusive. 90-day working plan. Weekly co-working session with Kate. Shared change log. Deposit + monthly, net 30 thereafter. MSA + SOW under Growth Automated's standard papering (see Section 14).</div>
+    </div>
+    <div class="invest-price">
+      <div class="invest-amt">*.*</div>
+      <div class="invest-per">Pricing TBD · not yet defined</div>
+    </div>
+  </div>
+
+  <div style="font-size:14px;font-weight:800;color:var(--ink-1);letter-spacing:-0.2px;margin-top:32px;margin-bottom:12px">Phase 2 MRR expansion · optional · gated on Day 60</div>
+  <div class="mrr-grid">
+    <div class="mrr-card aeo">
+      <div class="mrr-eyebrow">Track A</div>
+      <div class="mrr-title">Answer Engine Optimisation (AEO)</div>
+      <div class="mrr-body">Prompt-visibility tracking against your competitor set in AI Peekaboo. Weekly action plan on citations, entity coverage, and structured content. MNTD should own the "best men's tee" answer space before Knix does.</div>
+    </div>
+    <div class="mrr-card seo">
+      <div class="mrr-eyebrow">Track B</div>
+      <div class="mrr-title">SEO · organic content strategy</div>
+      <div class="mrr-body">Keyword and SERP mapping in DataForSEO. Editorial calendar that feeds Klaviyo, Reddit, and organic. Category authority built once, monetised many times — measured monthly.</div>
+    </div>
+    <div class="mrr-card reddit">
+      <div class="mrr-eyebrow">Track C</div>
+      <div class="mrr-title">Reddit · community listening + seeding</div>
+      <div class="mrr-body">Structured listening across r/malelifestyle, r/frugalmalefashion, r/mensfashionadvice. Seeded participation and thought-leadership content that keeps MNTD in the conversation without paid amplification.</div>
+    </div>
+  </div>
+
+  <div class="deck-note">
+    <strong>Appendix — the AEO deck.</strong> The nine-page AEO pitch deck will be generated and appended below this section in the next revision. It lives as follow-on content, so Kate can read it if Track A is on the table and skip it if it isn't.
+  </div>
+</section>
+
+<section class="section" id="legal">
+  <div class="section-label">14 · Legal &amp; Onboarding</div>
+  <h2 class="section-title">Four documents. In order.</h2>
+  <p class="section-intro">Growth Automated papers every engagement the same way. All four documents live in our legal folder and can be shared under NDA on request.</p>
+
+  <div class="legal-timeline">
+    <div class="tl-track">
+      <div class="legal-node" style="--accent:#334FB4">
+        <div class="legal-num">01</div>
+        <div class="legal-code">Doc #01</div>
+        <div class="legal-label">Mutual NDA</div>
       </div>
-      <div class="tool">
-        <div class="tool-name">Shopify</div>
-        <div class="tool-role">Product feed, cart events, discount rule review, checkout deep links. Already in place.</div>
+      <div class="legal-arrow">→</div>
+      <div class="legal-node" style="--accent:#2D9C56">
+        <div class="legal-num">02</div>
+        <div class="legal-code">Doc #08</div>
+        <div class="legal-label">Master Client Services Agreement</div>
       </div>
-      <div class="tool">
-        <div class="tool-name">Postmark / GlockApps</div>
-        <div class="tool-role">Deliverability monitoring — inbox placement, spam-score verification, DMARC report parsing.</div>
+      <div class="legal-arrow">→</div>
+      <div class="legal-node" style="--accent:#F59E0B">
+        <div class="legal-num">03</div>
+        <div class="legal-code">Doc #10A</div>
+        <div class="legal-label">Statement of Work · under MSA</div>
       </div>
-      <div class="tool">
-        <div class="tool-name">Proforma Email Audit</div>
-        <div class="tool-role">Growth Automated's 9-dimension weighted audit. Same rubric quarterly to track the score.</div>
+      <div class="legal-arrow">→</div>
+      <div class="legal-node" style="--accent:#DC2626">
+        <div class="legal-num">04</div>
+        <div class="legal-code">Doc #09</div>
+        <div class="legal-label">Schedule B · Insurance</div>
       </div>
-      <div class="tool">
-        <div class="tool-name">Reddit / Community Listening</div>
-        <div class="tool-role">Voice-of-customer, category conversation, product research feedback loop into copy.</div>
-      </div>
-      <div class="tool">
-        <div class="tool-name">AI Peekaboo</div>
-        <div class="tool-role">Answer Engine Optimization — track brand mentions across ChatGPT, Gemini, Perplexity, Google AI Overviews.</div>
-      </div>
+    </div>
+  </div>
+
+  <div class="legal-detail-grid">
+    <div class="legal-detail" style="--accent:#334FB4">
+      <div class="legal-detail-head"><span class="legal-detail-step">Step 01 · Doc #01</span></div>
+      <div class="legal-detail-label">Mutual NDA</div>
+      <div class="legal-detail-purpose">Two-way confidentiality before any material information exchange.</div>
+      <ul class="legal-detail-terms">
+        <li>3-year term · 3-year survival (indefinite on trade secrets)</li>
+        <li>12-month no-poach</li>
+        <li>Ontario law</li>
+      </ul>
+      <div class="legal-detail-when"><strong>When:</strong> Standalone. Signed before diligence, not tied to a specific engagement.</div>
+    </div>
+
+    <div class="legal-detail" style="--accent:#2D9C56">
+      <div class="legal-detail-head"><span class="legal-detail-step">Step 02 · Doc #08</span></div>
+      <div class="legal-detail-label">Master Client Services Agreement</div>
+      <div class="legal-detail-purpose">The primary framework — rate card, IP, payment terms, privacy.</div>
+      <ul class="legal-detail-terms">
+        <li>1-month deposit + net 30 on retainers</li>
+        <li>Rate card: $135 / $165 / $1,250 CAD</li>
+        <li>No work-at-risk · FreshBooks time tracking</li>
+      </ul>
+      <div class="legal-detail-when"><strong>When:</strong> Signed once. All future SOWs are issued under this MSA.</div>
+    </div>
+
+    <div class="legal-detail" style="--accent:#F59E0B">
+      <div class="legal-detail-head"><span class="legal-detail-step">Step 03 · Doc #10A</span></div>
+      <div class="legal-detail-label">Statement of Work — MNTD 90-day retainer</div>
+      <div class="legal-detail-purpose">Per-engagement scope: milestones, RACI, deliverables, investment.</div>
+      <ul class="legal-detail-terms">
+        <li>Cover, scope, RACI, milestones, investment, acceptance</li>
+        <li>MNTD-specific inclusions: Sections 08 – 12 above</li>
+        <li>Retainer form · pricing TBD · not yet defined</li>
+      </ul>
+      <div class="legal-detail-when"><strong>When:</strong> Signed per engagement. This is where the MNTD scope and monthly figure are codified.</div>
+    </div>
+
+    <div class="legal-detail" style="--accent:#DC2626">
+      <div class="legal-detail-head"><span class="legal-detail-step">Step 04 · Doc #09</span></div>
+      <div class="legal-detail-label">Schedule B · Insurance</div>
+      <div class="legal-detail-purpose">Codified insurance — attaches automatically to the MSA.</div>
+      <ul class="legal-detail-terms">
+        <li>Commercial General Liability: $1M</li>
+        <li>Professional Liability / E&amp;O: $500K</li>
+        <li>Multimedia / IP / Defamation / Privacy: $500K</li>
+      </ul>
+      <div class="legal-detail-when"><strong>When:</strong> Referenced from the MSA; updates without re-papering the underlying contract.</div>
     </div>
   </div>
 </section>
 
-<!-- ═════ SECTION 7 · THE MRR LAYER ═════════════════════════════════════ -->
-<section class="mrr-band" id="mrr">
-  <div class="wrap">
-    <div class="eyebrow"><span class="eyebrow-num">07</span><span class="eyebrow-sep">·</span><span>The MRR Layer</span></div>
-    <h2>After the lifecycle engine is fixed — the owned-authority expansion.</h2>
-    <p class="lead">Once cart flows are converting and RFM is running, the second engine kicks in. This is the Phase 2 conversation — not part of the initial engagement, but where MNTD compounds into a category leader.</p>
-    <div class="mrr-cards">
-      <div class="mrr-card">
-        <h3>AEO</h3>
-        <p>Answer Engine Optimization. When customers ask ChatGPT, Gemini, or Google AI Overviews about menswear underwear brands, MNTD is in the answer. Trackable via AI Peekaboo. Compounds over quarters.</p>
-      </div>
-      <div class="mrr-card">
-        <h3>SEO</h3>
-        <p>Organic content strategy around dads, gifting, category education, and the "why MNTD" story. Feeds AI Overviews, drives long-tail traffic, reduces paid-media dependency.</p>
-      </div>
-      <div class="mrr-card">
-        <h3>Reddit</h3>
-        <p>Community listening + seeding. Where menswear buyers ask each other for recommendations. Rare category with a real Knix-adjacent audience conversation. Not a growth-hack — a listening posture.</p>
-      </div>
-    </div>
+<div class="cta">
+  <div class="cta-eye">Next step</div>
+  <h2 class="cta-h">A 30-minute co-working session — I share the screen, we walk it together.</h2>
+  <p class="cta-body">Not a pitch call. I'll open the site on my phone, we'll retrace the customer journey together, and we'll agree what ships in the first two weeks. If it lands, we paper it under the MSA + SOW in Section 14.</p>
+  <div class="cta-btns">
+    <a class="cta-btn" href="mailto:rahul@growthautomated.ai?subject=MNTD × Growth Automated · co-working session">Book 30 minutes · rahul@growthautomated.ai</a>
+    <a class="cta-btn ghost" href="scorecard.html">Open the full scorecard →</a>
   </div>
-</section>
+</div>
 
-<!-- ═════ SECTION 8 · LET'S TALK ════════════════════════════════════════ -->
-<section class="cta-band" id="talk">
-  <div class="wrap">
-    <div class="eyebrow"><span class="eyebrow-num">08</span><span class="eyebrow-sep">·</span><span>Let's Talk</span></div>
-    <h2>If the mystery-shop story rings true, one working session is worth more than another deck.</h2>
-    <p class="lead">30 minutes. Klaviyo screen-share. I walk you through the first three fixes I would make on day one. No follow-up unless you want it.</p>
-    <div class="cta-row">
-      <a class="cta-primary" href="https://seo-for-ai.growthautomated.ai/book_time" target="_blank" rel="noopener">Book 30 minutes</a>
-      <a class="cta-secondary" href="mailto:rahul@growthautomated.ai?subject=MNTD%20%C3%97%20Growth%20Automated">Reply by email</a>
-    </div>
-    <div class="sig">
-      <div class="sig-avatar">R</div>
-      <div>
-        <div class="sig-name">Rahul Sharma</div>
-        <div class="sig-role">Founder · Growth Automated · Toronto</div>
-        <div class="sig-contact"><a href="mailto:rahul@growthautomated.ai">rahul@growthautomated.ai</a> · <a href="https://growthautomated.ai" target="_blank" rel="noopener">growthautomated.ai</a></div>
-      </div>
-    </div>
-    <div class="footer-tiny">Prepared for MNTD · July 2026 · Growth Automated / Small Fidelity Services Ltd. · Toronto, Ontario</div>
-  </div>
-</section>
+<div class="footer">
+  <div><strong>Prepared for Kate Rothschild</strong> · MNTD · Toronto ON · July 2026</div>
+  <div>Growth Automated · <a href="https://growthautomated.ai">growthautomated.ai</a></div>
+</div>
+
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Enlarged image view" aria-hidden="true">
+  <button class="lightbox-close" aria-label="Close">×</button>
+  <img src="" alt="">
+  <div class="lightbox-caption"></div>
+</div>
+
+<script>
+(function(){
+  var btns = document.querySelectorAll('[data-theme-btn]');
+  function apply(t){
+    document.documentElement.setAttribute('data-theme', t);
+    try{ localStorage.setItem('mntd_theme', t); }catch(e){}
+    btns.forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-theme-btn') === t ? 'true' : 'false'); });
+  }
+  var current = document.documentElement.getAttribute('data-theme') || 'light';
+  apply(current);
+  btns.forEach(function(b){ b.addEventListener('click', function(){ apply(b.getAttribute('data-theme-btn')); }); });
+})();
+
+(function(){
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="#"]');
+    if(!a) return;
+    var href = a.getAttribute('href');
+    if(!/^#(pp|ms|ds|is)\d+$/.test(href)) return;
+    e.preventDefault();
+    var d = document.getElementById(href.substring(1));
+    if(d){
+      if(d.tagName === 'DETAILS') d.open = true;
+      d.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+  });
+})();
+
+(function(){
+  var wrap = document.querySelector('.topbar-nav-wrap');
+  if(!wrap) return;
+  var scroller = wrap.querySelector('.topbar-nav');
+  function check(){
+    var overflow = scroller.scrollWidth - scroller.clientWidth;
+    var atEnd = scroller.scrollLeft >= overflow - 4;
+    wrap.classList.toggle('can-scroll', overflow > 4 && !atEnd);
+  }
+  check();
+  scroller.addEventListener('scroll', check, {passive:true});
+  window.addEventListener('resize', check);
+})();
+
+(function(){
+  var lb = document.getElementById('lightbox');
+  if(!lb) return;
+  var lbImg = lb.querySelector('img');
+  var lbCap = lb.querySelector('.lightbox-caption');
+  function open(src, alt){
+    lbImg.src = src;
+    lbImg.alt = alt || '';
+    lbCap.textContent = alt || '';
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function close(){
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('click', function(e){
+    var t = e.target.closest('img.expandable');
+    if(t){
+      e.preventDefault();
+      open(t.dataset.full || t.src, t.alt);
+      return;
+    }
+    var lnk = e.target.closest('a[data-lightbox]');
+    if(lnk){
+      e.preventDefault();
+      var src = lnk.getAttribute('href');
+      var cap = lnk.getAttribute('data-caption') || lnk.textContent.replace(/\s+/g,' ').trim();
+      open(src, cap);
+      return;
+    }
+    if(lb.classList.contains('open')){
+      if(e.target === lb || e.target.closest('.lightbox-close')){
+        close();
+      }
+    }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && lb.classList.contains('open')) close();
+  });
+})();
+</script>
 
 </body>
 </html>

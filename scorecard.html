@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MNTD · Proforma Email Program Scorecard · Growth Automated</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=DM+Serif+Display&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>(function(){var s;try{s=localStorage.getItem('mntd_theme');}catch(e){}var pd=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',s||(pd?'dark':'light'));})();</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ga-blue:#334FB4;--ga-green:#2D9C56;--ga-carbon:#121212;--ga-cloud:#F3F3F3;--critical:#DC2626;--warn:#F59E0B;--good:#10B981}
+[data-theme="light"]{--bg:#F3F3F3;--surface-1:#FFF;--surface-2:#F8FAFC;--surface-3:#EEF1F6;--rule:#E2E8F0;--ink-1:#121212;--ink-2:#1F2937;--ink-3:#4B5563;--ink-4:#71717A;--logo-filter:none;--mntd-mark-bg:#FFF;--mntd-mark-border:1px solid #E2E8F0}
+[data-theme="dark"]{--bg:#121212;--surface-1:#1B1B26;--surface-2:#22222E;--surface-3:#2C2C38;--rule:#33333E;--ink-1:#FFF;--ink-2:#EDEDF0;--ink-3:#C1CEE0;--ink-4:#8A8A94;--logo-filter:brightness(0) invert(1);--mntd-mark-bg:#FFF;--mntd-mark-border:1px solid #33333E}
+html,body{background:var(--bg)}
+body{font-family:'Assistant',sans-serif;color:var(--ink-2);min-height:100vh;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.page{max-width:1080px;margin:0 auto;padding:0 24px}
+html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:100px}
+
+/* NAV */
+.topbar{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--rule);backdrop-filter:blur(8px)}
+.topbar-inner{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.tb-left{display:flex;align-items:center;gap:14px;min-width:0}
+.mntd-mark{height:52px;width:88px;background:var(--mntd-mark-bg);border:var(--mntd-mark-border);border-radius:10px;display:flex;align-items:center;justify-content:center;padding:8px 12px}
+.mntd-mark img{width:100%;height:100%;object-fit:contain}
+.tb-title{font-size:15px;font-weight:800;color:var(--ink-1);letter-spacing:-0.3px;line-height:1.2}
+.tb-sub{font-size:10px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--ink-4)}
+.tb-back{font-size:12px;font-weight:700;color:var(--ga-blue);text-decoration:none;padding:6px 12px;border-radius:6px;letter-spacing:0.2px;border:1px solid var(--rule);background:var(--surface-1)}
+.tb-back:hover{background:var(--surface-2)}
+.tb-right{display:flex;align-items:center;gap:12px}
+.theme-seg{display:flex;background:var(--surface-2);border:1px solid var(--rule);border-radius:8px;padding:2px;gap:2px}
+.theme-seg button{font-family:inherit;font-size:11px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;background:transparent;border:0;color:var(--ink-3);padding:5px 10px;border-radius:6px;cursor:pointer;transition:all .15s}
+.theme-seg button[aria-pressed="true"]{background:var(--ga-blue);color:#FFF}
+.ga-mark{display:flex;align-items:center;gap:6px}
+.ga-mark img{height:30px;filter:var(--logo-filter);display:block}
+
+/* HERO */
+.sc-hero{padding:48px 0 32px}
+.sc-eye{font-size:11px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:var(--ga-blue);margin-bottom:16px}
+.sc-headline{font-family:'DM Serif Display',serif;font-size:36px;font-weight:400;color:var(--ink-1);line-height:1.15;letter-spacing:-0.8px;max-width:820px;margin-bottom:12px}
+.sc-sub{font-size:15px;color:var(--ink-3);line-height:1.6;max-width:720px}
+
+/* GAUGE */
+.gauge-block{display:grid;grid-template-columns:auto 1fr;gap:32px;margin:32px 0;background:var(--surface-1);border:1px solid var(--rule);border-radius:14px;padding:32px;align-items:center}
+@media(max-width:720px){.gauge-block{grid-template-columns:1fr;gap:20px}}
+.gauge{position:relative;width:220px;height:220px}
+.gauge svg{width:100%;height:100%;transform:rotate(-90deg)}
+.gauge-track{fill:none;stroke:var(--surface-3);stroke-width:16}
+.gauge-fill{fill:none;stroke:var(--critical);stroke-width:16;stroke-linecap:round;transition:stroke-dashoffset 1s}
+.gauge-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.gauge-val{font-family:'DM Serif Display',serif;font-size:64px;font-weight:400;color:var(--ink-1);line-height:1;letter-spacing:-2px}
+.gauge-out{font-family:'DM Mono',monospace;font-size:12px;font-weight:600;color:var(--ink-4);letter-spacing:1.4px;margin-top:4px}
+.gauge-band{margin-top:8px;font-size:11px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--critical);background:rgba(220,38,38,0.12);padding:3px 10px;border-radius:4px}
+.gauge-side{}
+.gauge-title{font-family:'DM Serif Display',serif;font-size:26px;font-weight:400;color:var(--ink-1);letter-spacing:-0.6px;line-height:1.2;margin-bottom:8px}
+.gauge-body{font-size:14px;color:var(--ink-3);line-height:1.6;margin-bottom:16px}
+.gauge-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}
+.gauge-metric{background:var(--surface-2);border:1px solid var(--rule);border-radius:8px;padding:10px 12px}
+.gauge-metric-val{font-family:'DM Mono',monospace;font-size:18px;font-weight:600;color:var(--ink-1)}
+.gauge-metric-lbl{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--ink-4);margin-top:2px}
+
+/* PROFILE STRIP */
+.profile{margin:0 0 32px;background:var(--surface-1);border:1px solid var(--rule);border-radius:12px;padding:22px}
+.profile-title{font-size:11px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--ga-blue);margin-bottom:14px}
+.profile-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.profile-cell{background:var(--surface-2);border:1px solid var(--rule);border-radius:8px;padding:12px 14px}
+.profile-key{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--ink-4);margin-bottom:4px}
+.profile-val{font-family:'DM Mono',monospace;font-size:12px;font-weight:500;color:var(--ink-1);word-break:break-all}
+.profile-val strong{font-weight:700}
+
+/* TABLE */
+.scorecard-table{background:var(--surface-1);border:1px solid var(--rule);border-radius:12px;overflow:hidden;margin-bottom:24px}
+.scorecard-table table{width:100%;border-collapse:collapse}
+.scorecard-table thead{background:var(--surface-2)}
+.scorecard-table th{padding:14px 16px;text-align:left;font-size:10px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-4);border-bottom:1px solid var(--rule)}
+.scorecard-table th.r{text-align:right}
+.scorecard-table th.c{text-align:center}
+.scorecard-table td{padding:14px 16px;font-size:13.5px;color:var(--ink-2);border-bottom:1px solid var(--rule);vertical-align:middle}
+.scorecard-table tr:last-child td{border-bottom:0}
+.scorecard-table tr.total td{background:var(--surface-2);font-weight:800;color:var(--ink-1)}
+.dim-num{font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-4);letter-spacing:0.4px}
+.dim-name{font-weight:700;color:var(--ink-1);margin-top:2px;letter-spacing:-0.1px}
+.wt{font-family:'DM Mono',monospace;text-align:right;color:var(--ink-3)}
+.score-cell{display:flex;align-items:center;gap:10px;justify-content:flex-end}
+.score-bar{width:80px;height:6px;background:var(--surface-3);border-radius:3px;overflow:hidden}
+.score-bar-fill{height:100%;border-radius:3px}
+.score-num{font-family:'DM Mono',monospace;font-size:13px;font-weight:700;min-width:32px;text-align:right}
+.conf{display:inline-block;font-size:9px;font-weight:800;letter-spacing:1px;padding:2px 7px;border-radius:3px;text-align:center}
+.conf.h{background:rgba(45,156,86,0.14);color:var(--ga-green)}
+.conf.m{background:rgba(245,158,11,0.16);color:var(--warn)}
+.conf.l{background:rgba(220,38,38,0.14);color:var(--critical)}
+
+/* BANDS */
+.bands{background:var(--surface-2);border:1px solid var(--rule);border-radius:10px;padding:18px 22px;font-size:12px;color:var(--ink-3);line-height:1.7;margin-bottom:24px}
+.bands strong{color:var(--ink-2)}
+.bands-title{font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-4);margin-bottom:8px}
+.band-row{display:flex;gap:14px;flex-wrap:wrap;font-family:'DM Mono',monospace;font-size:11.5px}
+.band-row span{padding:2px 8px;border-radius:3px}
+.band-row span.b1{background:rgba(45,156,86,0.14);color:var(--ga-green)}
+.band-row span.b2{background:rgba(45,156,86,0.10);color:var(--ga-green)}
+.band-row span.b3{background:rgba(51,79,180,0.12);color:var(--ga-blue)}
+.band-row span.b4{background:rgba(245,158,11,0.14);color:var(--warn)}
+.band-row span.b5{background:rgba(220,38,38,0.12);color:var(--critical)}
+
+/* FINDINGS PANEL */
+.findings{margin-top:32px}
+.findings-title{font-family:'DM Serif Display',serif;font-size:26px;font-weight:400;color:var(--ink-1);letter-spacing:-0.5px;margin-bottom:8px}
+.findings-sub{font-size:14px;color:var(--ink-3);line-height:1.6;margin-bottom:20px;max-width:760px}
+.finding-card{background:var(--surface-1);border:1px solid var(--rule);border-radius:10px;padding:20px 22px;margin-bottom:12px;border-left:4px solid var(--warn)}
+.finding-card.critical{border-left-color:var(--critical)}
+.finding-card.good{border-left-color:var(--good)}
+.f-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;gap:12px;flex-wrap:wrap}
+.f-code{font-family:'DM Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.4px;color:var(--ink-4)}
+.f-weight{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink-4)}
+.f-title{font-size:15px;font-weight:800;color:var(--ink-1);margin-bottom:4px;letter-spacing:-0.1px}
+.f-body{font-size:13px;color:var(--ink-3);line-height:1.6}
+.f-body strong{color:var(--ink-2)}
+.f-body code{font-family:'DM Mono',monospace;background:var(--surface-3);padding:1px 5px;border-radius:3px;font-size:12px}
+.f-fix{margin-top:10px;padding-top:10px;border-top:1px dashed var(--rule);font-size:12px;color:var(--ink-4)}
+.f-fix strong{color:var(--ga-blue);font-weight:800}
+
+/* FOOTER */
+.footer{padding:26px 0 40px;border-top:1px solid var(--rule);margin-top:40px;font-size:11px;color:var(--ink-4);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer strong{color:var(--ink-2)}
+.footer a{color:var(--ga-blue);text-decoration:none;font-weight:700}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="tb-left">
+      <div class="mntd-mark"><img src="assets/mntd-logo-black.svg" alt="MNTD"></div>
+      <div>
+        <div class="tb-title">MNTD × Growth Automated</div>
+        <div class="tb-sub">Full Scorecard · Prepared for Kate Rothschild</div>
+      </div>
+    </div>
+    <div class="tb-right">
+      <a class="tb-back" href="index.html">← Back to proposal</a>
+      <div class="theme-seg" role="group" aria-label="Theme">
+        <button data-theme-btn="light" aria-pressed="true">Light</button>
+        <button data-theme-btn="dark" aria-pressed="false">Dark</button>
+      </div>
+      <div class="ga-mark"><img src="assets/ga-logo-color.svg" alt="Growth Automated"></div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+<div class="sc-hero">
+  <div class="sc-eye">Proforma Email Program Audit · MNTD (wearmntd.ca)</div>
+  <h1 class="sc-headline">A 34/100 program — with fixes that fit inside a 90-day retainer.</h1>
+  <p class="sc-sub">Outside-in audit. No account access. Klaviyo on shared sending infrastructure. Evidence window now includes: <strong>5 marketing emails</strong> (Jun 21 – Jul 7), <strong>9 transactional fulfilment emails</strong> (Jul 9–11), <strong>2 SMS threads</strong>, a full mobile + desktop mystery shop, an in-store visit at Knix Eaton Centre, a real order, and the physical unboxing. CASL regime.</p>
+</div>
+
+<div class="gauge-block">
+  <div class="gauge">
+    <svg viewBox="0 0 220 220">
+      <circle class="gauge-track" cx="110" cy="110" r="92"></circle>
+      <circle class="gauge-fill" cx="110" cy="110" r="92" stroke-dasharray="578" stroke-dashoffset="382"></circle>
+    </svg>
+    <div class="gauge-inner">
+      <div class="gauge-val">34</div>
+      <div class="gauge-out">/ 100</div>
+      <div class="gauge-band">At Risk</div>
+    </div>
+  </div>
+  <div class="gauge-side">
+    <div class="gauge-title">Distinctive brand · early-stage program</div>
+    <p class="gauge-body">MNTD has the bones of a real brand — distinctive positioning, credible origin story, mature parent playbook (Knix) to draw from. But the observable email and SMS program is operating at a fraction of its potential. In seven days: image-stacked emails with minimal copy, a welcome series firing as a broadcast flow, an SMS program with a broken double-subscribe loop, and a discount conflict between SMS and email.</p>
+    <div class="gauge-metrics">
+      <div class="gauge-metric"><div class="gauge-metric-val">14</div><div class="gauge-metric-lbl">Emails observed</div></div>
+      <div class="gauge-metric"><div class="gauge-metric-val">2</div><div class="gauge-metric-lbl">SMS threads</div></div>
+      <div class="gauge-metric"><div class="gauge-metric-val">7 / 14</div><div class="gauge-metric-lbl">DMARC fails</div></div>
+      <div class="gauge-metric"><div class="gauge-metric-val">0</div><div class="gauge-metric-lbl">Marketing recovery flows</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="profile">
+  <div class="profile-title">Confirmed profile · from headers and mystery-shop</div>
+  <div class="profile-grid">
+    <div class="profile-cell"><div class="profile-key">Platform</div><div class="profile-val"><strong>Shopify</strong> (Klaviyo R63DZk)</div></div>
+    <div class="profile-cell"><div class="profile-key">ESP</div><div class="profile-val">Klaviyo · shared IP</div></div>
+    <div class="profile-cell"><div class="profile-key">Auth domain</div><div class="profile-val">wearmntd.ca (DKIM kl1)</div></div>
+    <div class="profile-cell"><div class="profile-key">From (fail · 7 of 14)</div><div class="profile-val">info@wearmntd.com</div></div>
+    <div class="profile-cell"><div class="profile-key">Physical address</div><div class="profile-val">179 John St, Toronto ON M5T 1X4</div></div>
+    <div class="profile-cell"><div class="profile-key">Regime</div><div class="profile-val">CASL · Canada</div></div>
+    <div class="profile-cell"><div class="profile-key">Catalog</div><div class="profile-val">Boxers · T-shirts · Socks · Bundles</div></div>
+    <div class="profile-cell"><div class="profile-key">Loyalty</div><div class="profile-val">None observed</div></div>
+  </div>
+</div>
+
+<div class="scorecard-table">
+  <table>
+    <thead>
+      <tr>
+        <th>Dimension</th>
+        <th class="r">Weight</th>
+        <th class="r">Score / 5</th>
+        <th class="r">Weighted</th>
+        <th class="c">Conf.</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><div class="dim-num">D1 · 20%</div><div class="dim-name">Deliverability &amp; list health</div></td><td class="wt">20</td><td><div class="score-cell"><div class="score-bar"><div class="score-bar-fill" style="width:30%;background:#DC2626"></div></div><div class="score-num" style="color:#DC2626">1.5</div></div></td><td class="wt">6.0</td><td class="c"><span class="conf m">Med</span></td></tr>
+      <tr><td><div class="dim-num">D2 · 20%</div><div class="dim-name">Lifecycle / flow coverage</div></td><td class="wt">20</td><td><div class="score-cell"><div class="score-bar"><div class="score-bar-fill" style="width:10%;background:#DC2626"></div></div><div class="score-num" style="color:#DC2626">0.5</div></div></td><td class="wt">2.0</td><td class="c"><span class="conf l">Low</span></td></tr>
+      <tr><td><div class="dim-num">D3 · 12%</div><div class="dim-name">Segmentation &amp; personalization</div></td><td class="wt">12</td><td><div class="score-cell"><div class="score-bar"><div class="score-bar-fill" style="width:10%;background:#DC2626"></div></div><div class="score-num" style="color:#DC2626">0.5</div></div></td><td class="wt">1.5</td><td class="c"><span class="conf m">Med</span></td></tr>
+      <tr><td><div class="dim-num">D4 · 10%</div><div class="dim-name">Campaign strategy &amp; calendar</div></td><td class="wt">10</td><td><div class="score-cell"><div class="score-bar"><div class="score-bar-fill" style="width:40%;background:#F59E0B"></div></div><div class="score-num" style="color:#F59E0B">2.0</div></div></td><td class="wt">4.0</td><td class="c"><span class="conf m">Med</span></td></tr>
+      <tr><td><div class="dim-num">D5 · 10%</div><div class="dim-name">Offer &amp; margin strategy</div></td><td class="wt">10</td><td><div class="score-cell"><div class="score-bar"><div class="score-bar-fill" style="width:20%;background:#DC2626"></div></div><div class="score-num" style="color:#DC2626">1.0</div></div></td><td class="wt">2.0</td><td class="c"><span class="conf m">Med</span></td></tr>
+      <tr><td><div class="dim-num">D6 · 10%</div><div class="dim-name">Creative, copy &amp; UX</div></td><td class="wt">10</td><td><div class="score-cell"><div class="score-bar"><div class="score-bar-fill" style="width:50%;background:#F59E0B"></div></div><div class="score-num" style="color:#F59E0B">2.5</div></div></td><td class="wt">5.0</td><td class="c"><span class="conf h">High</span></td></tr>
+      <tr><td><div class="dim-num">D7 · 8%</div><div class="dim-name">Conversion path &amp; tracking</div></td><td class="wt">8</td><td><div class="score-cell"><div class="score-bar"><div class="score-bar-fill" style="width:20%;background:#DC2626"></div></div><div class="score-num" style="color:#DC2626">1.0</div></div></td><td class="wt">2.0</td><td class="c"><span class="conf h">High</span></td></tr>
+      <tr><td><div class="dim-num">D8 · 6%</div><div class="dim-name">Measurement &amp; reporting</div></td><td class="wt">6</td><td><div class="score-cell"><div class="score-bar"><div class="score-bar-fill" style="width:20%;background:#DC2626"></div></div><div class="score-num" style="color:#DC2626">1.0</div></div></td><td class="wt">1.5</td><td class="c"><span class="conf l">Low</span></td></tr>
+      <tr><td><div class="dim-num">D9 · 4%</div><div class="dim-name">Compliance &amp; consent (CASL)</div></td><td class="wt">4</td><td><div class="score-cell"><div class="score-bar"><div class="score-bar-fill" style="width:70%;background:#2D9C56"></div></div><div class="score-num" style="color:#2D9C56">3.5</div></div></td><td class="wt">3.5</td><td class="c"><span class="conf h">High</span></td></tr>
+      <tr class="total"><td>Total (weighted, adjusted)</td><td class="wt">100</td><td></td><td class="wt" style="color:#DC2626;font-size:16px">34 / 100</td><td class="c"><span class="conf l">At Risk</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="bands">
+  <div class="bands-title">Grade bands</div>
+  <div class="band-row">
+    <span class="b1">85 – 100 · Best-in-class</span>
+    <span class="b2">70 – 84 · Strong</span>
+    <span class="b3">55 – 69 · Competent</span>
+    <span class="b4">40 – 54 · Underperforming</span>
+    <span class="b5">&lt; 40 · At risk</span>
+  </div>
+</div>
+
+<div class="findings">
+  <h2 class="findings-title">Findings by dimension</h2>
+  <p class="findings-sub">Each dimension mapped to the mystery-shop evidence and the specific fix path. Highest-weight-lowest-score dimensions ranked first.</p>
+
+  <div class="finding-card critical">
+    <div class="f-head"><span class="f-code">D2 · Lifecycle / flow coverage</span><span class="f-weight">Weight 20 · Score 0.5 / 5 · Confidence: Low</span></div>
+    <div class="f-title">Zero cart / checkout / browse-abandon flows — confirmed by mystery shop</div>
+    <div class="f-body">Welcome flow confirmed (first email within minutes of subscribe). Two more emails in the following 3 days — all under the same <code>X-Kmail-Flow: XbyBZ5</code> tag, confirming broadcast, not branched. Mystery-shop cart abandoned Jun 21 → zero recovery email or SMS through Jun 28. No winback. No browse. Transactional lifecycle exists (9 fulfilment emails Jul 9–11) but is chained to carrier events with lag (MNTD's "delivered" arrives ~1 hour after the physical package). Post-purchase MARKETING lifecycle is still absent — no first-wear, no care, no re-engagement flow observed.</div>
+    <div class="f-fix"><strong>Fix path:</strong> Flow audit with account access = first working-session deliverable. Priority order: cart/checkout abandon → post-purchase → browse abandon → winback.</div>
+  </div>
+
+  <div class="finding-card critical">
+    <div class="f-head"><span class="f-code">D1 · Deliverability &amp; list health</span><span class="f-weight">Weight 20 · Score 1.5 / 5 · Confidence: Med</span></div>
+    <div class="f-title">DMARC fail on 7 of 14 emails — sender domain doesn't match auth on the transactional side too</div>
+    <div class="f-body">DMARC policy on <code>wearmntd.ca</code> is <code>p=none</code> (monitoring only). BIMI skipped on all five marketing emails ("insufficient dmarc"). <strong>Marketing:</strong> 3 of 5 send from <code>info@wearmntd.com</code> (Jun 21/22/24) while DKIM auth is on <code>wearmntd.ca</code> — iCloud DMARC verifier logs fail. Jun 28 and Jul 7 send from <code>info@wearmntd.ca</code> and pass: proof the fix is a config, not an infra rebuild. <strong>Transactional:</strong> the same split — order confirmation from <code>.ca</code> (pass), 4 shipping-update emails from <code>.com</code> (fail).</div>
+    <div class="f-fix"><strong>Fix path:</strong> Align From address to <code>wearmntd.ca</code> across all Klaviyo flows and campaigns, or set up DKIM on <code>wearmntd.com</code>. One DNS change, Day 1.</div>
+  </div>
+
+  <div class="finding-card critical">
+    <div class="f-head"><span class="f-code">D3 · Segmentation &amp; personalization</span><span class="f-weight">Weight 12 · Score 0.5 / 5 · Confidence: Med</span></div>
+    <div class="f-title">"Hi, there." — no first-name merge, no behavioural branching</div>
+    <div class="f-body">Zero first-name personalization across all five marketing emails. Same discount code across email and SMS with no channel differentiation. No dynamic product recs visible. No segment split between new-and-returning, high-intent-and-low-intent, or the three segmentation lanes identified in the proposal (Section 08).</div>
+    <div class="f-fix"><strong>Fix path:</strong> First-name merge in Day 1 template pass. New vs. returning segment in Sprint 2. Dads-with-daughters onboarding tag in Sprint 3.</div>
+  </div>
+
+  <div class="finding-card critical">
+    <div class="f-head"><span class="f-code">D5 · Offer &amp; margin strategy</span><span class="f-weight">Weight 10 · Score 1.0 / 5 · Confidence: Med</span></div>
+    <div class="f-title">Bundle-exclusion + SMS/email discount conflict</div>
+    <div class="f-body">Welcome code doesn't apply to bundles — the highest-AOV product. No disclosure at offer stage. And within 24 hours: SMS says <strong>20% off</strong>, emails say <strong>15% off</strong>, same code. Trust hit at the moment of first purchase. Post-purchase evidence adds two more offer problems: (a) the GWP threshold made me <em>buy less</em> to protect the free Tee, working against AOV, and (b) actual delivery was ~40 hours on the free tier, making the paid expedited option a commercial mystery.</div>
+    <div class="f-fix"><strong>Fix path:</strong> Reconcile SMS + email welcome copy Day 1. Disclose bundle exclusion at offer stage. Consider a separate bundle-specific welcome offer.</div>
+  </div>
+
+  <div class="finding-card critical">
+    <div class="f-head"><span class="f-code">D7 · Conversion path &amp; tracking</span><span class="f-weight">Weight 8 · Score 1.0 / 5 · Confidence: High</span></div>
+    <div class="f-title">Six-step welcome-code journey + four-decision product path</div>
+    <div class="f-body">Welcome code <code>WELCOMEMNTD1557TPTGFM</code> — 22 characters, no deep link, no auto-apply. Mobile product flow: Style → Colour → Size → Length, each reloading and losing context on back-navigation. Desktop shop adds: Klaviyo welcome code silently dropped from the cart after a few bundle iterations — no toast, no explanation. All compound to raise cart abandon.</div>
+    <div class="f-fix"><strong>Fix path:</strong> Shorten code (<code>MNTD15</code>) or Klaviyo unique codes with deep-link auto-apply. Cut product path to two upfront choices with size flyout.</div>
+  </div>
+
+  <div class="finding-card">
+    <div class="f-head"><span class="f-code">D6 · Creative, copy &amp; UX</span><span class="f-weight">Weight 10 · Score 2.5 / 5 · Confidence: High</span></div>
+    <div class="f-title">Image-stacked emails · minimal copy · inconsistent template widths</div>
+    <div class="f-body">The three welcome emails render as image stacks — accessibility and dark-mode legibility both suffer. Templates render at 600px and 640px inconsistently. Brand voice IS there in the Jun 28 "For the guys who don't overthink getting dressed" campaign AND the Jul 7 CoolShift Tee campaign (5-star verified-reviewer social proof, product-feature callouts, cool-comfort narrative) — the brand CAN do creative, it just doesn't in the welcome series. Post-purchase adds a missed brand-moment: the interior label is a physical annoyance where a Ted Baker–style "have a nice day" could be a delight-loop.</div>
+    <div class="f-fix"><strong>Fix path:</strong> Copy-first templates for welcome + browse-abandon. Consistent 600px table width. Alt-text on all images.</div>
+  </div>
+
+  <div class="finding-card">
+    <div class="f-head"><span class="f-code">D4 · Campaign strategy &amp; calendar</span><span class="f-weight">Weight 10 · Score 2.0 / 5 · Confidence: Med</span></div>
+    <div class="f-title">Campaign voice is there — calendar has no offer strategy attached</div>
+    <div class="f-body">Two campaigns observed — Jun 28 "For the guys who don't overthink getting dressed" and Jul 7 "Beat the heat without breaking a sweat" (CoolShift Tee) — show the brand can do editorial with product narrative and social proof. The problem is the calendar isn't tied to a commercial strategy — no gifting arc, no seasonal storytelling, no product-drop rhythm. And the 9-day gap between the two campaigns leaves warm subscribers cold.</div>
+    <div class="f-fix"><strong>Fix path:</strong> 90-day content-plus-commercial calendar. Q4 gifting arc anchored to dads-with-daughters segment.</div>
+  </div>
+
+  <div class="finding-card">
+    <div class="f-head"><span class="f-code">D8 · Measurement &amp; reporting</span><span class="f-weight">Weight 6 · Score 1.0 / 5 · Confidence: Low</span></div>
+    <div class="f-title">No visible reporting layer — no unified RFM / cohort / LTV view</div>
+    <div class="f-body">From the outside: no evidence of a reporting layer beyond Klaviyo defaults. No cohort segmentation into Klaviyo templates. No LTV or first-purchase attribution in email UTMs.</div>
+    <div class="f-fix"><strong>Fix path:</strong> Retention X wired to Shopify + Klaviyo in Sprint 2. Shared change log + weekly working note in the Growth Automated dashboard from Day 1.</div>
+  </div>
+
+  <div class="finding-card good">
+    <div class="f-head"><span class="f-code">D9 · Compliance &amp; consent (CASL)</span><span class="f-weight">Weight 4 · Score 3.5 / 5 · Confidence: High</span></div>
+    <div class="f-title">CASL holds — physical address, unsubscribe, consent all present</div>
+    <div class="f-body">Explicit consent SMS opt-in (JOIN token confirmed). Physical Canadian address in the footer of every email. Unsubscribe link on every send. This is the only dimension that clears the AA bar today — a solid base to build on.</div>
+    <div class="f-fix"><strong>Fix path:</strong> Maintain and monitor. Add BIMI once DMARC is at <code>p=quarantine</code>.</div>
+  </div>
+
+  <div class="finding-card">
+    <div class="f-head"><span class="f-code">Post-Purchase · supplementary (not scored)</span><span class="f-weight">11 observations · PP-1 through PP-11</span></div>
+    <div class="f-title">Delivery-to-doorstep · where the brand should feel most present, and where it's easiest to disappear</div>
+    <div class="f-body">Post-purchase evidence gathered after the initial audit window: 9 transactional fulfilment emails (Jul 9–11), a delivery SMS from an unrecognised number, order-tracking web views on mobile, and the physical unboxing. Distinct findings: <strong>(a)</strong> MNTD notifications drift out of sync with the carrier's real-time state — MNTD's "delivered" arrives ~1 hour after the physical package, <strong>(b)</strong> FleetOptics carrier emails and SMS are entirely unbranded and first read as spam, <strong>(c)</strong> ~40-hour delivery on the free tier makes the paid "expedited" option a commercial mystery, <strong>(d)</strong> no first-wear or care education at a premium $55 price, <strong>(e)</strong> the interior label is a physical annoyance and a missed brand-moment opportunity, <strong>(f)</strong> the 15% welcome popup fires on the post-purchase order-tracking page.</div>
+    <div class="f-fix"><strong>Fix path:</strong> Own the post-purchase communication stream (either MNTD-only or clean handoff to carrier — never both), add a 24h first-wear email that owns break-in + care + wash, redesign the interior label as a delight moment, suppress popups on authenticated / order-history views, and reposition the shipping tiers to capture the value of the current free-tier speed.</div>
+  </div>
+</div>
+
+<div class="footer">
+  <div><strong>Prepared for Kate Rothschild</strong> · MNTD · Toronto ON · July 2026</div>
+  <div>Growth Automated · <a href="https://growthautomated.ai">growthautomated.ai</a> · <a href="index.html">← Back to proposal</a></div>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var btns = document.querySelectorAll('[data-theme-btn]');
+  function apply(t){
+    document.documentElement.setAttribute('data-theme', t);
+    try{ localStorage.setItem('mntd_theme', t); }catch(e){}
+    btns.forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-theme-btn') === t ? 'true' : 'false'); });
+  }
+  var current = document.documentElement.getAttribute('data-theme') || 'light';
+  apply(current);
+  btns.forEach(function(b){ b.addEventListener('click', function(){ apply(b.getAttribute('data-theme-btn')); }); });
+})();
+</script>
+
+</body>
+</html>

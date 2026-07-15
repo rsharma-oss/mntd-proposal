@@ -1,0 +1,1128 @@
+Return-path: <notifications@mailer.fleetopticsinc.com>
+Original-recipient: rfc822;rahul_sharma@mac.com
+Received: from p00-icloudmta-smtpin-us-east-2d-20-percent-7 by p129-mailgateway-smtp-775cbbf858-vcf9q (mailgateway 2626B90)
+	with SMTP id 30675798-c337-4571-8a49-64266aac05a9 
+	for <rahul_sharma@mac.com>; Sat, 11 Jul 2026 15:24:28 GMT
+X-Apple-MoveToFolder: INBOX 
+X-Apple-Action: MOVE_TO_FOLDER/INBOX
+X-Apple-UUID: 30675798-c337-4571-8a49-64266aac05a9
+Received: from mailer.fleetopticsinc.com (mailer.fleetopticsinc.com [192.99.169.146])
+	by p00-icloudmta-smtpin-us-east-2d-20-percent-7 (Postfix) with ESMTPS id 58FBDC00135
+	for <rahul_sharma@mac.com>; Sat, 11 Jul 2026 15:24:24 +0000 (UTC)
+X-ICL-RepId: 019f51c7-9cfb-7cb9-a573-8d2b6369b9e2
+X-ICL-Info: GAtbRVYDBVFFSlVFSwQEUFUKE0oWX1gHVQoPB0UBD1BbQF9ZSQYPTERNUFcdVAsMGg0PERFTVxYcFggEOF1XCxkcFFkeXFMHARYWAxFTRQsbGkgUF10WBBFECxYRXFMQWx8KEh1EWRIBEAUEEV5VTBYWC1cKUwsQFBETGydDXgMHFAc3FVFVTBYWC1cQVVoNSBQHHhRVREwTFQMSDF9GFhwaFR4WUxgBGhRGBwxCCw8UEAoSCh5QDhAcEhgIRF8BBhAIFFZTWQ9VHQJKFVFfDhALSBEUVVMWGgkSHhtDXwwWVwUYFRBbCxFEWhJMBAAHR0gEQEgEBwNDTlVBGglXVkIfAkVBA1VQQktWNxVRXw4QC0gRFFVTFhoJEh4bQ18MFlcFGBUO
+X-ICL-Score: 2.33303323422
+Authentication-Results: bimi.icloud.com; bimi=skipped reason="insufficient dmarc"
+X-ARC-Info: policy=fail; arc=none; r1=-20; r2=0
+Authentication-Results: arc.icloud.com; arc=none
+Authentication-Results: dmarc.icloud.com; dmarc=pass header.from=mailer.fleetopticsinc.com
+X-DMARC-Policy: v=DMARC1; p=none; rua=mailto:admin@mailer.fleetopticsinc.com
+X-DMARC-Info: pass=pass; dmarc-policy=none; s=r1; d=r1; pdomain=mailer.fleetopticsinc.com
+Authentication-Results: dkim-verifier.icloud.com; dkim=pass header.d=mailer.fleetopticsinc.com header.i=@mailer.fleetopticsinc.com header.b=lprnZnjN
+Received-SPF: pass (spf.icloud.com: domain of notifications@mailer.fleetopticsinc.com designates 192.99.169.146 as permitted sender) receiver=spf.icloud.com; client-ip=192.99.169.146; helo=mailer.fleetopticsinc.com; envelope-from=notifications@mailer.fleetopticsinc.com
+Authentication-Results: spf.icloud.com; spf=pass (spf.icloud.com: domain of notifications@mailer.fleetopticsinc.com designates 192.99.169.146 as permitted sender) smtp.mailfrom=notifications@mailer.fleetopticsinc.com
+Received: from localhost (localhost [127.0.0.1])
+	by mailer.fleetopticsinc.com (Postfix) with ESMTP id BAB5B1024A1
+	for <rahul_sharma@mac.com>; Sat, 11 Jul 2026 15:24:22 +0000 (UTC)
+Received: from mailer.fleetopticsinc.com ([127.0.0.1])
+ by localhost (mailer.fleetopticsinc.com [127.0.0.1]) (amavis, port 10032)
+ with ESMTP id B2XwS-xdHMxF for <rahul_sharma@mac.com>;
+ Sat, 11 Jul 2026 15:24:22 +0000 (UTC)
+Received: from localhost (localhost [127.0.0.1])
+	by mailer.fleetopticsinc.com (Postfix) with ESMTP id 5DF7A102097
+	for <rahul_sharma@mac.com>; Sat, 11 Jul 2026 14:48:24 +0000 (UTC)
+DKIM-Filter: OpenDKIM Filter v2.10.3 mailer.fleetopticsinc.com 5DF7A102097
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=mailer.fleetopticsinc.com; s=625FB03C-4238-11EE-AA93-A9FD7F933DEF;
+	t=1783781304; bh=UQ45MMht3XxgwWcXv1vMyLUWW4+bNrFhpCDg4Svhad8=;
+	h=From:To:Message-ID:MIME-Version:Date;
+	b=lprnZnjNeQr9cTf20hBCZOAdCEGhz93qMFtDnAF2lK2dYp5A14yDKrpLtsv4g8LNE
+	 jM7Yhe/sMWtBnm7kO9aqn6f/kwe+x03KpkPkk9cAyknGLvehELfAy9xcCFXVA4ecFL
+	 UfA42ROtcHiXOqxNkRKDZBQ8cAgFQr47I+hrTYacWAsaYCL8WGpl5aZjgGwcn21/qg
+	 9JFGZ4mvLXWXAwkivvhU6gnNtaXuj0tH35B8pDFY/yqhpe50J470F0rkUF3bYGN0ug
+	 1wSC0uB2DqiF1hGzzKQnocUFZ9/2oLhxEw9MrdWkVHLxcioSR+eANWLHl5TtjZwPvk
+	 GnSeMrvFE3cVQ==
+X-Virus-Scanned: amavis at mailer.fleetopticsinc.com
+Received: from mailer.fleetopticsinc.com ([127.0.0.1])
+ by localhost (mailer.fleetopticsinc.com [127.0.0.1]) (amavis, port 10026)
+ with ESMTP id uAIenUpgQdHq for <rahul_sharma@mac.com>;
+ Sat, 11 Jul 2026 14:48:24 +0000 (UTC)
+Received: from [127.0.0.1] (ec2-3-99-114-148.ca-central-1.compute.amazonaws.com [3.99.114.148])
+	by mailer.fleetopticsinc.com (Postfix) with ESMTPSA id 7006B102D6C
+	for <rahul_sharma@mac.com>; Sat, 11 Jul 2026 14:03:19 +0000 (UTC)
+From: FleetOptics Notifications <notifications@mailer.fleetopticsinc.com>
+To: rahul_sharma@mac.com
+Subject: Rahul Sharma Get Excited - Your delivery is coming up next
+ TL26070907239001C21405127!
+Message-ID: <e446e21b7041a6736b9a47fd293c2720@mailer.fleetopticsinc.com>
+MIME-Version: 1.0
+Date: Sat, 11 Jul 2026 10:03:19 -0400
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+X-MANTSH: 1TFkXHRgRCllEF2QYXBlkcG1EW11pEQpZTRdkRURPEQpZSRcacRoQGncGHxhxEhs
+ QGB53BhgaBhoRClleF2xseREKQ04XTRpIE11gaWldB1t8WGMYQ20YSUwcEn8YcG9QTlAdeUkRC
+ lhcFxkEGgQfEgUbGgQbHB8EGBgEGB4dEBseGh8aEQpeWRdCQ2t+bxEKTVwXGx8cEQpMWhdpaGl
+ NTU0RCkxGF01rEQpDWhcbExgEExMEGxwTBBseHBEKQl4XGxEKQlwXGxEKQksXYGVDX2dfclxZR
+ XIRCkJJF2FgaVpYa1llXmtzEQpCRRdubkNQBVpOHXl4chEKQk4XYWBpWlhrWWVea3MRCkJMF2N
+ FBXtsRG1FZXlvEQpCbBdjTExrEhhLcxgebxEKQkAXax5wEmRffX14fxwRCkJYF20eS1tzY2wdU
+ 3lNEQpCeBdrR0UaXxp4QxpGEhEKWlgXHBEKcGgXZWhsfRJ6HVp+fVsQBx4SEQpwaBdkQ38aeFl
+ CSF59XxAaEQpwaBdkRBpfQWwefk8YchAaEQpwaBdhQ1gSeR4TYAFmaRAaEQpwaBdmXxIcAWVHb
+ W9EbhAaEQpwaBdlSGVrYGVsQ04fYBAaEQpwaBdhRhhab1pCfBpbYRAHHBoRCnBoF29kXBhif3B
+ uZGR9EAceEhEKcH8XbUNlZBhmSE1hfxoQBxMeEQpwXxdrRU4FHGBsUENaARAHEx8RCnB9F2tFT
+ gUcYGxQQ1oBEAcTHxEKcH8XZ0lDemAScFIBYmgQBxMZEQpwXxdkfE1hRWRBX1pbThAHExkRCnB
+ 9F2R8TWFFZEFfWltOEAcTGREKcGwXbmQdSExhQEEbaGsQGhEKcEMXYHhTc11lGEcecnoQGhEKb
+ X4XGhEKWE0XSxE=
+X-Proofpoint-GUID: g0b9wJCCw-qVrI2iG2cf68U2ZEzdz7Sc
+X-Authority-Info: v=2.4 cv=SMVPlevH c=1 sm=1 tr=0 ts=6a526029 b=1
+ cx=c_apl:c_pps a=myxGZ7LZuLZi0t3wr0lwww==:117 a=myxGZ7LZuLZi0t3wr0lwww==:17
+ a=_I8IqbBjOcmSvWXn:21 a=IkcTkHD0fZMA:10 a=RAioF0-LDSMA:10 a=mXtw7aGXGcYA:10
+ a=g8TUdU_LZmEA:10 a=3g80flMcAAAA:8 a=IoeQSOh0AAAA:8 a=5fRQchWeAAAA:8
+ a=F3aIKIVzAAAA:8 a=jU4qhlNgAAAA:8 a=BkpHzsgbAAAA:8 a=l2a325ZpAAAA:20
+ a=5_gdj94Cftb2bF5RlTsA:9 a=SNxt3xUz8273JoEl:21 a=frz4AuCg-hUA:10
+ a=QEXdDO2ut3YA:10 a=3urWGuTZa-U-TZ_dHwj2:22 a=zHLE2jnfhNzAW3bdPdKa:22
+ a=bMcWnErouujyJYG1L1d3:22 a=BiMpNAmiY6N5_xBkPAl-:22 a=bA3UWDv6hWIuX7UZL3qL:22
+ a=5yU3S35YU4bGjq-dph-N:22 a=Bho9c0fBagfJEIQBS7DQ:22 cc=ntf awl=host:17599
+X-Proofpoint-ORIG-GUID: g0b9wJCCw-qVrI2iG2cf68U2ZEzdz7Sc
+X-Proofpoint-Spam-Details-Enc: AW1haW4tMjYwNzExMDE1NSBTYWx0ZWRfXzXJXyNTdocho
+ WQ5AMTydXWJZ7EOMNrkzKVE9UlMrm4fGgSMITAm8fmGTrj9bHJtIUNkC/pddjTq7iwA3OiVc9Ri
+ LaJ5S4croMByWSo4VhTgyZYe28WgANQwW3MuCWaFjL6E18CupwXQFaWHiK4HpwMdEQii8dz5jmn
+ O+XxSwk3OgG5oQ8CcGWlCYrwF34Ipfah+mFpL34tHQKvfbzvDQTdeq5uNmWOulIBwhfS5jZwrUV
+ duvoem/es7sYgklP7EGQpDS5tYd7QNr0OUdC4RqD8pflOYffgrMSPeCv0LdvvlRxN0u8GJErlkX
+ vZxfdtMjCyx07mTHGEedgZISYDW0aId5T49ibrTESsJQK2RyOXuM8Qx03rZ8FzHPzh701JbMNdn
+ AoBnQkW5jTd6O8Qp7FFgeVGQf9MLn73MrvuYuH4CeZJG0qh7iuWu80sB1BEe4ie7ObZWuyaI
+X-JNJ: AAAAAAAB4i7LlLRhitKeHOW8+XBGJkad/COnm8DVQADyIR+JXJHcLKjDJyeBhBkpLQIqY9KTaGceuuGUUGy5FC07o4S8XULURIeeQxG8dJQqyKuibWv80h3YXGmyqT+8DH0vM9Ocayd8ozAcC7m4PkJOIXQ5dxBv7dndhAFsK2uRSonXPwxbfLC6MJI7JQYaGqHZX4Q5iOc8TkrRs8N6Z5enygCKC+vo2iF3MzfcCYNECkwQJ7YdPTR+f6UyE8oxZYMQZD7Il3ggCjhDquoi0r/pwswJBpftmU+vrqucbFG+7N1F9EOf6UKaIdKPOiPyuivm3fyEk5muKC/CYVkbDbXatyUUs//SAc5qDKOtBaOxV1sUDpj2cR+uZBcJ7PvkMB2k0HYQpOUZUwtNW83ocWEJygFVGHUGW+mOFmkRpjx3OrhtBdQTs/0kWrdbCVhb+ON6iTMqwv3ubBWlG5h+ctchFCxfBtuv0hNevS9M2hBdr81jtCim4CJzE48Evs+gHdRLN4fr4Evw6Mphjco3TP2GITgUch0kwEgFeR4dAVT3yvjY8U3NaS6CGAgeYjBeTbj8qIPZmGyzFjUh5ffKAlRZalB4xltuuqrSsrBomjrD/eqy3LmRvieSJyF1QZX+qMPT7yn8qi6CQBbthCtObOkNSTmmNsCe5q9kqzvlAwTokoMbF1YzEMqrUgGnC6rcGut7urks5HQDIIrzGMHa3tNO8Itk5gSR2rc4iv9xQiy+OZHPElUqAopzM0ETqs7/nVr2ilorgobcUsAijFZLIMrsu6LGngf4txyalUd40mDW4XyU9uMl9lwOaZBWhzMrrTFkrToBBGZmuW2C17b+5mlXg1f80aP7EJfo740asBLkdheHXVSSxCdeuSam6UDnT8Kdo58tIixgTdSjmq4vX5fOMI2YuNco8g5TVJ5rd/AjgDQFYvpsRLJaD1+LYnJdhJ3/1Ep7iOUccSlyTVFGn6IuIZmTePKGgbi9x0czF2H5q0R67H+XHFuYxQ==
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">=
+
+=09<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+   <met=
+a name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1, use=
+r-scalable=3Dyes">
+   <meta name=3D"format-detection" content=3D"telephon=
+e=3Dno, date=3Dno, address=3Dno, email=3Dno, url=3Dno">
+   <meta name=3D"=
+x-apple-disable-message-reformatting">
+   <!-- <meta name=3D"color-scheme=
+" content=3D"light dark">
+   <meta name=3D"supported-color-schemes" conte=
+nt=3D"light dark"> -->
+=09<title>We are just a few stops away!</title>
+=
+=09<link rel=3D"preconnect" href=3D"https://fonts.googleapis.com">
+=09<li=
+nk rel=3D"preconnect" href=3D"https://fonts.gstatic.com" crossorigin=3D"">=
+
+=09<link href=3D"https://fonts.googleapis.com/css2?family=3DPublic+Sans:=
+ital,wght@0,100..900;1,100..900&amp;display=3Dswap" rel=3D"stylesheet">
+ =
+  <!--[if mso]>
+      <noscript>
+         <xml>
+            <o:Office=
+DocumentSettings>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+   =
+         </o:OfficeDocumentSettings>
+         </xml>
+      </noscript>=
+
+   <![endif]-->
+   <style type=3D"text/css">
+      table {
+=09=09=
+=09border-spacing: 0;
+=09=09=09border-collapse: collapse;
+=09=09}
+   =
+   td {
+         padding: 0;
+      }
+      p {
+         font-size: =
+16px;
+      }
+      img {
+         border: 0;
+      }
+      a {=
+
+         text-decoration: none;
+         color: #277fd2;
+         fo=
+nt-size: 16px;
+      }
+      .content {
+         line-height: 20px;=
+
+         font-size: 16px;
+      }
+
+=09=09span.Object {
+         =
+color: inherit !important;
+      }
+      span.Object-hover {
+        =
+ color: inherit !important;
+         text-decoration:none !important;
+ =
+     }
+
+      u + .body .gmail-blend-screen { background:#000; mix-blen=
+d-mode:screen; }
+=09=09u + .body .gmail-blend-difference { background:#00=
+0; mix-blend-mode:difference; }
+
+      .ExternalClass {
+         widt=
+h: 100%;
+      }
+=09=09.ExternalClass, .ExternalClass p, .ExternalClass=
+ span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+     =
+    line-height: 100%;
+      }
+
+      a[x-apple-data-detectors=3Dtrue=
+]{
+         color: inherit !important;
+         text-decoration: inheri=
+t !important;
+      }
+
+      @media screen and (max-width: 600px) {=
+
+         .banner {
+            height: auto!important;
+            p=
+adding-top: 40px !important;
+            padding-bottom: 60px !important;=
+
+         }
+=09=09=09.px-600-0 {
+=09=09=09=09padding-left: 0!importan=
+t;
+=09=09=09=09padding-right: 0!important;
+=09=09=09}
+=09=09=09.pt-60=
+0-0 {
+=09=09=09=09padding-top: 0!important;
+=09=09=09}
+=09=09=09img.t=
+hird-img-last {
+=09=09=09=09width: 200px!important;
+=09=09=09=09max-wid=
+th: 200px!important;
+=09=09=09}
+=09=09=09.d-600-none {
+=09=09=09=09di=
+splay: none!important;
+=09=09=09}
+=09=09=09.pr-large {
+=09=09=09=09pa=
+dding-right: 140px!important;
+=09=09=09}
+=09=09=09.center-text-mobile {=
+
+=09=09=09=09text-align: center!important;
+=09=09=09}
+      }
+=09=
+=09@media screen and (max-width: 549.98px) {=20
+=09=09=09.pt-550-0 {
+=09=
+=09=09=09padding-top: 0!important;
+=09=09=09}
+=09=09=09.pr-large {
+=
+=09=09=09=09padding-right: 100px!important;
+=09=09=09}
+=09=09}
+=09=09=
+@media screen and (max-width: 500px) {=20
+=09=09=09.pt-500-0 {
+=09=09=09=
+=09padding-top: 0!important;
+=09=09=09}
+=09=09=09.pr-large {
+=09=09=
+=09=09padding-right: 60px!important;
+=09=09=09}
+=09=09}
+=09=09@media =
+screen and (max-width: 400px) {
+=09=09=09.banner {
+            height: =
+auto!important;
+            padding-top: 20px!important;
+            pa=
+dding-bottom: 30px!important;
+         }
+=09=09=09.px-sm-0 {
+=09=09=
+=09=09padding-left: 0!important;
+=09=09=09=09padding-right: 0!important;=
+
+=09=09=09}
+=09=09=09.pt-400-0 {
+=09=09=09=09padding-top: 0!important=
+;
+=09=09=09}
+=09=09=09img.third-img {
+=09=09=09=09width: 200px!import=
+ant;
+=09=09=09=09max-width: 200px!important;
+=09=09=09}
+=09=09=09.pr-=
+large {
+=09=09=09=09padding-right: 25px!important;
+=09=09=09}
+=09=09}=
+
+
+      :root {
+         color-scheme: light dark;
+         support=
+ed-color-schemes: light dark;
+      }
+      /* @media (prefers-color-sc=
+heme: dark) {
+         body, center, table, .darkmode-bg {
+            =
+background: #2d2d2d !important;
+            color: #ffffff !important;
+=
+         }
+         .darkmode-transparent {
+            background-colo=
+r: transparent !important;
+         }
+         [data-ogsc] body, center=
+, table {
+            background: #2d2d2d !important;
+            color=
+: #ffffff !important;
+         }
+         [data-ogsc] .darkmode-transpa=
+rent {
+            background-color: transparent !important;
+         }=
+
+      } */
+
+=09  @import url('https://fonts.googleapis.com/css2?fami=
+ly=3DPublic+Sans:ital,wght@0,100..900;1,100..900&display=3Dswap');
+   </s=
+tyle>
+
+=09<!--[if mso]>
+=09=09<style type=3D"text/css">
+=09=09=09bo=
+dy {background-color: #EBEDF3 !important;}
+         body, table, td, p, a=
+ {font-family: 'Lato', Arial, Helvetica, sans-serif !important;}
+        =
+ table {border-spacing: 0 !important;border-collapse: collapse !important;}=
+
+=09=09</style>
+=09<![endif]-->
+=09
+
+
+
+   <div style=3D"width=
+: 100%; table-layout:fixed; background-color: #EBEDF3; color:#101112; font-=
+family: 'Lato', Arial, Helvetica, sans-serif; font-size: 16px; margin: 0 au=
+to 0;">
+      <div style=3D"max-width: 600px; background-color: #ffffff; =
+color:#101112; font-family: 'Lato', Arial, Helvetica, sans-serif; font-size=
+: 16px; box-shadow: 0 0 10px rgba(0, 0, 0, .2);margin: 0 auto;">
+
+     =
+    <div style=3D"font-size: 0px; color: #ffffff; mso-line-height-rule: exa=
+ctly; line-height: 0px; display: none; max-width: 0px; max-height: 0px; opa=
+city: 0; overflow: hidden; mso-hide:all;">
+=09=09=09We are just a few sto=
+ps away!
+            =E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=
+=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=
+=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=
+=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nb=
+sp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=
+=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nb=
+sp;=CD=8F=E2=80=8C&nbsp;=CD=8F
+         </div>     =20
+         <!--[if m=
+so]>
+            <table width=3D"600" align=3D"center" style=3D"border-sp=
+acing: 0; border-collapse:collapse; color: #101112;" role=3D"presentation">=
+
+            <tr>
+            <td style=3D"padding:0;">
+         <![e=
+ndif]-->
+
+         <table align=3D"center" style=3D"border-spacing:0; b=
+order-collapse: collapse; color:#101112; font-family: 'Lato', Arial, Helvet=
+ica, sans-serif; font-size: 16px; background-color: #ffffff; margin: 0 auto=
+; padding:0; width: 100%; max-width: 600px;" role=3D"presentation">
+
+=
+=09=09=09=09<tbody><tr>
+=09=09=09=09=09<td class=3D"column-1" style=3D"pa=
+dding: 0 0 12px 0;text-align:left;font-size:0;">
+
+=09=09=09=09=09=09<!-=
+-[if mso]>
+=09=09=09=09=09=09=09<table width=3D"100%" style=3D"border-spa=
+cing:0;color:#101112;" role=3D"presentation">
+=09=09=09=09=09=09=09<tr>=
+
+=09=09=09=09=09=09=09<td width=3D"600" valign=3D"top" style=3D"padding: =
+0;">
+=09=09=09=09=09=09<![endif]-->
+
+=09=09=09=09=09=09<table class=
+=3D"column000" style=3D"border-spacing:0;color:#4D5358;width:100%;max-width=
+:600px;vertical-align: top;" role=3D"presentation">
+=09=09=09=09=09=09=09=
+<tbody><tr>
+=09=09=09=09=09=09=09=09<td style=3D"padding:0; ">
+=09=09=
+=09=09=09=09=09=09=09<table style=3D"border-spacing:0;color:#101112;width:1=
+00%;text-align:center;background-color: #02001E;" role=3D"presentation">
+=
+=09=09=09=09=09=09=09=09=09=09<tbody><tr>
+=09=09=09=09=09=09=09=09=09=09=
+=09<td>
+=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"http://www.fleetop=
+ticsinc.com/" style=3D"outline:none" target=3D"_blank"><img alt=3D"" height=
+=3D"auto" src=3D"https://delivery.fleetopticsinc.com/email-assets/images/al=
+l_email_templates/top_logo_part_image.png" style=3D"display: block; height:=
+ auto; border: 0;" width=3D"600"></a>
+=09=09=09=09=09=09=09=09=09=09=09</=
+td>
+=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09</tb=
+ody></table>
+=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09</tr>=
+
+=09=09=09=09=09=09</tbody></table>
+=09=09=09=09=09=09<!--[if mso]>
+=
+=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=
+=09=09</table>
+=09=09=09=09=09=09<![endif]-->
+=09=09=09=09=09</td>
+=
+=09=09=09=09</tr>
+=09=09=09=09<tr>
+=09=09=09=09=09<td style=3D"padding:=
+ 10px 0 25px 0;">
+=09=09=09=09=09=09<table width=3D"100%" style=3D"border=
+-spacing:0;" role=3D"presentation">
+=09=09=09=09=09=09=09<tbody><tr>
+=
+=09=09=09=09=09=09=09=09<td class=3D"padding content" style=3D"padding: 30p=
+x 20px 0 20px;width:100%;text-align:center;font-size:20px;">
+=09=09=09=09=
+=09=09=09=09=09<img alt=3D"" height=3D"auto" src=3D"https://delivery.fleeto=
+pticsinc.com/email-assets/images/all_email_templates/track_image_master.png=
+" style=3D"height: auto; border: 0; max-width: 220px;" title=3D"" width=3D"=
+220">=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09<table align=
+=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"=
+ role=3D"presentation">
+=09=09=09=09=09=09=09=09=09=09<tbody><tr>
+=09=
+=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"padding-top: 15=
+px;">
+=09=09=09=09=09=09=09=09=09=09=09=09<table width=3D"75%" border=3D"=
+0" cellspacing=3D"0" cellpadding=3D"0" role=3D"presentation">
+=09=09=09=
+=09=09=09=09=09=09=09=09=09=09<tbody><tr>
+=09=09=09=09=09=09=09=09=09=09=
+=09=09=09<!--[if mso]>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td styl=
+e=3D"padding-top:15px;padding-bottom:15px;">
+=09=09=09=09=09=09=09=09=09=
+=09=09=09=09<![endif]-->
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09<td wi=
+dth=3D"75%" align=3D"center" style=3D"border-top:4px solid #000000;"></td>=
+
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09<!--[if mso]>
+              =
+                          =09=09=09  </td>
+=09=09=09=09=09=09=09=09=09=09=
+=09=09=09<![endif]-->
+=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=
+=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<=
+/tbody></table>
+=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=
+=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09</tbody></table>
+=09=09=
+=09=09=09=09=09=09=09<table align=3D"center" width=3D"100%" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" role=3D"presentation">
+=09=09=09=09=09=
+=09=09=09=09=09<tbody><tr>
+=09=09=09=09=09=09=09=09=09=09=09<td align=3D"=
+center" style=3D"padding-top: 15px;">
+=09=09=09=09=09=09=09=09=09=09=09=
+=09<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" role=3D"presenta=
+tion">
+=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody><tr>
+=09=09=09=09=
+=09=09=09=09=09=09=09=09=09<!--[if mso]>
+=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09<td style=3D"padding-top:15px;text-align: center;">
+=09=09=09=
+=09=09=09=09=09=09=09=09=09=09<![endif]-->
+=09=09=09=09=09=09=09=09=09=09=
+=09=09=09<td style=3D"font-size: 36px;font-family: Public Sans, Trebuchet M=
+S, sans-serif;text-align: center;">=09<p style=3D"font-size:36px; font-weig=
+ht:700;line-height: 120%;padding-bottom: 5px;font-family: Public Sans, Treb=
+uchet MS, sans-serif;margin: 0;">We are just a few<br>
+=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09stops away!
+=09=09=09=09=09=09=09=09=09=09=09=09=
+=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=
+=09=09=09=09=09=09<!--[if mso]>
+                                        =
+=09=09=09  </td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09<![endif]-->
+=
+=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09</tbody></table>
+=09=09=
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09</tr>
+=
+=09=09=09=09=09=09=09=09=09</tbody></table>=09=09=09=09=09=09=09=09=09
+=
+=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09</tr>
+=09=09=09=09=
+=09=09=09<tr>
+=09=09=09=09=09=09=09=09<td class=3D"padding content" style=
+=3D"padding:10px 40px 10px 40px;width:100%;text-align:center;font-size:16px=
+;">
+=09=09=09=09=09=09=09=09=09<p style=3D"font-size:16px;padding-top:10p=
+x;line-height:150%;font-weight: bold;font-family: Public Sans, Trebuchet MS=
+, sans-serif;margin: 0;">Your  package will be arriving shortly.</p>
+
+=
+=09=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" role=3D"presentation">
+=09=09=09=09=09=09=09=09=
+=09=09<tbody><tr>
+=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" s=
+tyle=3D"padding-top:20px;">
+=09=09=09=09=09=09=09=09=09=09=09=09<table bo=
+rder=3D"0" cellspacing=3D"0" cellpadding=3D"0" role=3D"presentation">
+=09=
+=09=09=09=09=09=09=09=09 =09=09=09=09<tbody><tr>
+=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09<td align=3D"center">
+=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09<img alt=3D"" height=3D"auto" src=3D"https://delivery.fleetopti=
+csinc.com/email-assets/images/all_email_templates/eta_delivery_progress.png=
+" style=3D" height: auto; border: 0; max-width: 355px;" width=3D"355">
+=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=
+=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09</tbody></table>=
+
+=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09<=
+/tr>
+=09=09=09=09=09=09=09=09=09</tbody></table>
+=09=09=09=09=09=09=09=
+=09=09<table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" role=3D"presentation">
+=09=09=09=09=09=09=09=09=09=09<tbody><tr>
+=
+=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"padding-top:=
+25px;">
+=09=09=09=09=09=09=09=09=09=09=09=09<table border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0" role=3D"presentation">
+=09=09=09=09=09=09=09=
+=09=09=09=09=09=09<tbody><tr>=20
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<td align=3D"center">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09 <a href=
+=3D"https://fleetopticsinc.ca/?t=3Dfe47af2r" target=3D"_blank" style=3D"tex=
+t-decoration: none!important;"><img src=3D"https://delivery.fleetopticsinc.=
+com/email-assets/images/all_email_templates/track_your_order.png" alt=3D"Tr=
+ack_your_Order" width=3D"180"></a> =09
+=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=
+=09=09=09=09=09=09=09=09=09</tbody></table>
+=09=09=09=09=09=09=09=09=09=
+=09=09</td>
+=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=
+=09=09</tbody></table>
+=09=09=09=09=09=09=09=09=09<table align=3D"center"=
+ border=3D"0" cellspacing=3D"0" cellpadding=3D"0" role=3D"presentation">
+=
+=09=09=09=09=09=09=09=09=09=09<tbody><tr>
+=09=09=09=09=09=09=09=09=09=09=
+=09<td align=3D"center" style=3D"padding-top:25px;">
+=09=09=09=09=09=09=
+=09=09=09=09=09=09<table border=3D"0" cel=3D"" lspacing=3D"0" cellpadding=
+=3D"0" role=3D"presentation">
+=09=09=09=09=09=09=09=09=09=09=09=09=09<tbo=
+dy><tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center">=
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"https://delivery=
+.fleetopticsinc.com/update/?reid=3Dfe47af2r" target=3D"_blank" style=3D"tex=
+t-decoration: none!important;"><img src=3D"https://delivery.fleetopticsinc.=
+com/email-assets/images/all_email_templates/add_delivery_preferences_button=
+.png" alt=3D"Add_Delivery_Preferences" width=3D"235"></a> =09
+=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09   </td>
+=09=09=09=09=09=09=09=09=09=09=
+=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09</tbody></table>
+=09=
+=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09</tr>=
+
+=09=09=09=09=09=09=09=09=09</tbody></table>
+=09=09=09=09=09=09=09=09=
+=09<table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"=
+ role=3D"presentation">
+=09=09=09=09=09=09=09=09=09=09<tbody><tr>
+=09=
+=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"padding-top:20p=
+x;">
+=09=09=09=09=09=09=09=09=09=09=09=09<table border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" role=3D"presentation">
+=09=09=09=09=09=09=09=09=
+=09=09=09=09=09<tbody><tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td =
+align=3D"center" style=3D"font-family: Public Sans, Trebuchet MS, sans-seri=
+f;font-size: 12px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p styl=
+e=3D"margin: 0;font-family: Public Sans, Trebuchet MS, sans-serif;font-size=
+: 12px;">Please do not reply to this message. It was sent from a notificati=
+on-only address that cannot accept incoming email. Visit <a href=3D"http://=
+www.fleetopticsinc.com/" rel=3D"noopener" style=3D"text-decoration: underli=
+ne; color: #101112;font-size: 12px;" target=3D"_blank">www.fleetopticsinc.c=
+om</a> for help with your shipment  <br><a href=3D"https://fleetopticsinc.c=
+om/faq/" rel=3D"noopener" style=3D"text-decoration: underline; color: #1011=
+12;font-size: 12px;" target=3D"_blank">More Questions?</a></p>
+=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09</tbody></table>
+=09=09=
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09</tr>
+=
+=09=09=09=09=09=09=09=09=09</tbody></table>
+=09=09=09=09=09=09=09=09=09<t=
+able align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" role=
+=3D"presentation">
+=09=09=09=09=09=09=09=09=09=09<tbody><tr>
+=09=09=09=
+=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"padding-top:20px;">=
+
+=09=09=09=09=09=09=09=09=09=09=09=09<table border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0" role=3D"presentation">
+=09=09=09=09=09=09=09=09=09=09=
+=09=09=09<tbody><tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=
+=3D"center">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"http=
+s://www.linkedin.com/company/fleetoptics-inc/?viewAsMember=3Dtrue" target=
+=3D"_blank"><img alt=3D"linedin" height=3D"auto" src=3D"https://delivery.fl=
+eetopticsinc.com/email-assets/images/all_email_templates/linkedin.png" styl=
+e=3D" height: auto; border: 0;" title=3D"Custom" width=3D"32.125"></a>&nbsp=
+;&nbsp;&nbsp;&nbsp;<a href=3D"https://www.instagram.com/fleetopticsinc?utm_=
+source=3Dig_web_button_share_sheet&amp;igsh=3DZDNlZDc0MzIxNw=3D=3D" target=
+=3D"_blank"><img alt=3D"instagram" height=3D"auto" src=3D"https://i.imgur.c=
+om/2Rpgw5d.png" style=3D" height: auto; border: 0;" title=3D"Custom" width=
+=3D"32.1875"></a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=
+=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=
+=09=09</tbody></table>
+=09=09=09=09=09=09=09=09=09=09=09</td>=20
+=09=09=
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09</tbody></table>=
+
+=09=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellspac=
+ing=3D"0" cellpadding=3D"0" role=3D"presentation">
+=09=09=09=09=09=09=09=
+=09=09=09<tbody><tr>
+=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center=
+" style=3D"padding-top:25px;">
+=09=09=09=09=09=09=09=09=09=09=09=09<table=
+ border=3D"0" cellspacing=3D"0" cellpadding=3D"0" role=3D"presentation">
+=
+=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<tbody><tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"=
+center" style=3D"font-size: 12px;font-family: Public Sans, Trebuchet MS, sa=
+ns-serif;padding-top: 10px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<p style=3D"margin: 0;font-family: Public Sans, Trebuchet MS, sans-serif=
+;font-size: 12px;color: #838291;">If you encounter issue with the link, ple=
+ase use the following:  <br>FleetOptics tracking portal: <a href=3D"https:/=
+/fleetopticsinc.ca/?t=3Dfe47af2r" rel=3D"noopener" style=3D"text-decoration=
+:underline!important; color: #838291;font-size: 12px;" target=3D"_blank">ht=
+tps://fleetopticsinc.ca/?t=3Dfe47af2r</a><br>
+=09
+=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09Delivery preference page: <a href=3D"https://del=
+ivery.fleetopticsinc.com/update/?reid=3Dfe47af2r" rel=3D"noopener" style=3D=
+"text-decoration:underline!important; color: #838291;font-size: 12px;" targ=
+et=3D"_blank">https://delivery.fleetopticsinc.com/update/?reid=3Dfe47af2r</=
+a></p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>=
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"=
+font-size: 10px;font-family: Public Sans, Trebuchet MS, sans-serif;padding-=
+top:20px;line-height: 150%;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<p style=3D"margin: 0;font-size: 10px;color: #101112;font-family: Public=
+ Sans, Trebuchet MS, sans-serif;">=C2=A9 FleetOptics Inc.</p>
+=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"margin: 0;font-size: 10px;c=
+olor: #101112;font-family: Public Sans, Trebuchet MS, sans-serif;">If you n=
+o longer wish to receive future emails, click here to <a href=3D"https://de=
+livery.fleetopticsinc.com/unsubscribe/?tracking_number=3DTL26070907239001C2=
+1405127" target=3D"_blank" style=3D"text-decoration: underline!important;co=
+lor: #101112;font-size:10px;"> UNSUBSCRIBE.</a></p>
+=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>=
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09<td style=3D"padding: 10px 0 25px 0;">
+=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09<table width=3D"100%" style=3D"border-spacing=
+:0;" role=3D"presentation">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<tbody><tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td cla=
+ss=3D"padding content" style=3D"padding:10px 40px 10px 40px;width:100%;text=
+-align:center;font-size:16px;">
+=09=09=09=09=09=09=09=09=09
+=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"center" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" role=3D"presenta=
+tion">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody><t=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=
+=3D"center" style=3D"padding-top:25px;">
+=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09<table width=3D"75%" border=3D"0" cellspac=
+ing=3D"0" cellpadding=3D"0" role=3D"presentation">
+=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody><tr>
+=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<!--[if mso]>
+=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D=
+"padding-top:15px;padding-bottom:15px;">
+=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09<![endif]-->
+=09=09=09=09=09=09=09=09=
+=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td=
+ width=3D"75%" align=3D"center" style=3D"border-top:4px solid #000000;"></t=
+d>
+=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09<!--[if mso]>
+=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09  </td>
+=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09<![endif]-->
+=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09</tbody></table>
+=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09</tbody></table>
+=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09<table align=3D"center" width=3D"100%" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" role=3D"presentation">
+=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody><tr>
+=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"pad=
+ding-top: 15px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" role=3D"pr=
+esentation">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<tbody><tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09<!--[if mso]>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09<td style=3D"padding-top:15px;text-align: center;">=
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<![end=
+if]-->
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<td style=3D"font-size: 36px;font-family: Public Sans, Trebuchet MS, sans-s=
+erif;text-align: center;"><p style=3D"font-size:36px; font-weight:700;line-=
+height: 120%;padding-bottom: 5px;font-family: Public Sans, Trebuchet MS, sa=
+ns-serif;margin: 0;">Nous sommes =C3=A0 quelques<br>arr=C3=AAts de chez vou=
+s !</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</=
+td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<!-=
+-[if mso]>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09  </td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09<![endif]-->
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</tbody></table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody></=
+table>=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>=
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09<td class=3D"padding content" style=3D"=
+padding:10px 40px 10px 40px;width:100%;text-align:center;font-size:16px;">=
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"font-s=
+ize:16px;padding-top:10px;line-height:150%;font-weight: bold;font-family: P=
+ublic Sans, Trebuchet MS, sans-serif;margin: 0;">Votre colis  arrivera sous=
+ peu.</p>
+=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"0" role=3D"presentation">
+=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09<tbody><tr>
+=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"padding-top:20px;"=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0" role=3D"presentation">
+=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody><t=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<=
+td align=3D"center">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09<img alt=3D"" height=3D"auto" src=3D"https://delivery.=
+fleetopticsinc.com/email-assets/images/all_email_templates/eta_delivery_pro=
+gress.png" style=3D" height: auto; border: 0; max-width: 355px;" width=3D"3=
+55">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<=
+/tbody></table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>=
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody></table>=
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"ce=
+nter" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" role=3D"presentation=
+">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody><tr>=
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D=
+"center" style=3D"padding-top:25px;">
+=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09<table border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" role=3D"presentation">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09<tbody><tr>
+=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center">
+=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"https:/=
+/fleetopticsinc.ca/fr/?t=3Dfe47af2r" target=3D"_blank" style=3D"text-decora=
+tion: none!important;"><img src=3D"https://delivery.fleetopticsinc.com/emai=
+l-assets/images/all_email_templates/suivez_votre_commande.png" alt=3D"Suive=
+z_votre_commande" width=3D"224"></a> =09
+=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09   </td>
+=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody></table>
+=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09</tbody></table>
+=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0" role=3D"presentation">
+=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09<tbody><tr>
+=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"padding-top:25p=
+x;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tabl=
+e border=3D"0" cellspacing=3D"0" cellpadding=3D"0" role=3D"presentation">=
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
+><tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<td align=3D"center">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09<a href=3D"https://delivery.fleetopticsinc.com/upda=
+te/fr/?reid=3Dfe47af2r" target=3D"_blank" style=3D"text-decoration: none!im=
+portant;"><img src=3D"https://delivery.fleetopticsinc.com/email-assets/imag=
+es/all_email_templates/ajoutez_des_inst.png" alt=3D"Ajoutez_des_instruction=
+s_sp=C3=A9ciales" width=3D"320"></a> =09
+=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09   </td>
+=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody></table>
+=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09</tbody></table>
+=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0" role=3D"presentation">
+=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09<tbody><tr>
+=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"padding-top:20p=
+x;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tabl=
+e border=3D"0" cellspacing=3D"0" cellpadding=3D"0" role=3D"presentation">=
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
+><tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<td align=3D"center" style=3D"font-family: Public Sans, Trebuchet MS, sa=
+ns-serif;font-size: 12px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09<p style=3D"margin: 0;font-family: Public Sans, =
+Trebuchet MS, sans-serif;font-size: 12px;">Veuillez ne pas r=C3=A9pondre =
+=C3=A0 ce message. Il a =C3=A9t=C3=A9 envoy=C3=A9 =C3=A0 partir d=E2=80=
+=99une adresse de notification uniquement et ne peut pas recevoir de courri=
+els. Visitez <a href=3D"https://fleetopticsinc.com/fr/" rel=3D"noopener" st=
+yle=3D"text-decoration: underline; color: #101112;font-size: 12px;" target=
+=3D"_blank">www.fleetopticsinc.com/fr</a> pour obtenir de l'aide concernant=
+ votre envoi. <br><a href=3D"https://fleetopticsinc.com/fr/faq/" rel=3D"noo=
+pener" style=3D"text-decoration: underline; color: #101112;font-size: 12px;=
+" target=3D"_blank">D'autres questions ?</a></p>
+=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody></table>
+=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09</tbody></table>
+=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" role=3D"presentation">
+=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09<tbody><tr>
+=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"padding-top:=
+20px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<t=
+able border=3D"0" cellspacing=3D"0" cellpadding=3D"0" role=3D"presentation"=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbod=
+y><tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<td align=3D"center">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09<a href=3D"https://www.linkedin.com/company/fleetop=
+tics-inc/?viewAsMember=3Dtrue" target=3D"_blank"><img alt=3D"linedin" heigh=
+t=3D"auto" src=3D"https://delivery.fleetopticsinc.com/email-assets/images/a=
+ll_email_templates/linkedin.png" style=3D" height: auto; border: 0;" title=
+=3D"Custom" width=3D"32.125"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=3D"https:/=
+/www.instagram.com/fleetopticsinc?utm_source=3Dig_web_button_share_sheet&am=
+p;igsh=3DZDNlZDc0MzIxNw=3D=3D" target=3D"_blank"><img alt=3D"instagram" hei=
+ght=3D"auto" src=3D"https://delivery.fleetopticsinc.com/email-assets/images=
+/all_email_templates/instagram.png" style=3D" height: auto; border: 0;" tit=
+le=3D"Custom" width=3D"32.1875"></a>
+=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09</tbody></table>
+=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09</tbody></table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09<table align=3D"center" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" role=3D"presentation">
+=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09<tbody><tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09<td align=3D"center" style=3D"padding-top:25px;">
+=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table borde=
+r=3D"0" cellspacing=3D"0" cellpadding=3D"0" role=3D"presentation">
+=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody><tr>
+=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"ce=
+nter" style=3D"font-size: 12px;font-family: Public Sans, Trebuchet MS, sans=
+-serif;padding-top: 10px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09<p style=3D"margin: 0;font-family: Public Sans, =
+Trebuchet MS, sans-serif;font-size: 12px;color: #838291;">Si vous rencontre=
+z un probl=C3=A8me avec le lien, veuillez utiliser les suivants : <br> =09=
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09Portail de suivi FleetOptics : <a href=3D"https://delivery.fleetopticsin=
+c.com/tracking/fr/?t=3Dfe47af2r" rel=3D"noopener" style=3D"text-decoration:=
+underline!important; color: #838291;font-size: 12px;" target=3D"_blank">htt=
+ps://delivery.fleetopticsinc.com/tracking/fr/?t=3Dfe47af2r</a> <br>
+=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Pag=
+e de pr=C3=A9f=C3=A9rences de livraison : <a href=3D"https://delivery.fleet=
+opticsinc.com/update/fr/?reid=3Dfe47af2r" rel=3D"noopener" style=3D"text-de=
+coration:underline!important; color: #838291;font-size: 12px;" target=3D"_b=
+lank">https://delivery.fleetopticsinc.com/update/fr/?reid=3Dfe47af2r</a> <b=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+</tbody></table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody></table>=
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09</tbody></table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>=
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=
+=3D"center" style=3D"font-size: 10px;font-family: Public Sans, Trebuchet MS=
+, sans-serif;padding-top:2px;line-height: 150%;">
+=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09<p style=3D"margin: 0;font-size: 10px;color: #10111=
+2;font-family: Public Sans, Trebuchet MS, sans-serif;">=C2=A9 FleetOptics I=
+nc.</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"margin: =
+0;font-size: 10px;color: #101112;font-family: Public Sans, Trebuchet MS, sa=
+ns-serif;">Si vous ne souhaitez plus recevoir de courriels =C3=A0 l'avenir,=
+ cliquez ici pour vous&nbsp;<a href=3D"https://delivery.fleetopticsinc.com/=
+unsubscribe/fr/?tracking_number=3DTL26070907239001C21405127" target=3D"_bla=
+nk" style=3D"color:#000000; font-size: 10px; font-family: &quot;Public Sans=
+&quot;, &quot;Trebuchet MS&quot;, sans-serif; font-weight: 400; text-decora=
+tion: underline !important;">UNSUBSCRIBE.</a></p>
+=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>=
+
+=09=09=09=09=09=09=09=09=09=09=09=09</tbody></table>
+=09=09=09=09=09=
+=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=
+=09=09=09=09=09=09</tbody></table>
+=09=09=09=09=09=09=09=09=09=09
+=09=
+=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=
+=09=09
+=09=09=09=09=09=09</tbody></table>
+=09=09=09=09=09</td>
+=09=09=
+=09=09</tr>
+=09=09=09</tbody></table>
+
+=09=09=09<!--[if mso]>
+=09=
+=09=09=09</td>
+=09=09=09=09</tr>
+=09=09=09=09</table>
+=09=09=09<![end=
+if]-->
+
+=09=09</div>
+=09</div>
+

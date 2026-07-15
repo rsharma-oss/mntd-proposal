@@ -1,0 +1,1509 @@
+Return-path: <bounce-kl_25924019930-kl_1115skpapw-h-d008b4ec27=2@send.wearmntd.ca>
+Original-recipient: rfc822;rahul_sharma@mac.com
+Received: from p00-icloudmta-smtpin-us-east-2d-60-percent-6 by p129-mailgateway-smtp-775cbbf858-v5l24 (mailgateway 2626B90)
+	with SMTP id 4bb6d5ae-3252-4a56-80f2-91c27b8a0a0a 
+	for <rahul_sharma@mac.com>; Sat, 11 Jul 2026 15:12:13 GMT
+X-Apple-MoveToFolder: INBOX 
+X-Apple-Action: MOVE_TO_FOLDER/INBOX
+X-Apple-UUID: 4bb6d5ae-3252-4a56-80f2-91c27b8a0a0a
+Received: from kl-203-24-13.kmta.shared.klaviyomail.com (kl-203-24-13.kmta.shared.klaviyomail.com [170.203.24.13])
+	by p00-icloudmta-smtpin-us-east-2d-60-percent-6 (Postfix) with ESMTPS id 69798C00089
+	for <rahul_sharma@mac.com>; Sat, 11 Jul 2026 15:12:10 +0000 (UTC)
+X-ICL-RepId: 019f51bc-6a38-74e8-b750-61cc537c74e1
+X-ICL-Info: GAtbRVYDBVBFSlVFSgQEUFUKE0oWX1gHVQoPB0UBAVJbS1ZEVgICTERKRhIcDVQNABcFElVbWj1HTF9FTAAHW0xKVloTXGlTREhTBBNAVxICVA5aHAAGWhdNAxRKBwtQNQoDGRweQQcUCwsZDFQYARRZABNFR1MDBxQIAxweVQ0YWRQURUJXCgAVOQQQUUQPFDkLFhseVQ0YWQ4SFF8LCRlUVEdLHQRWWEhVWRNdQgNbCg4WClVSTB4VBwERSVkPFBAKWRtfW0IFDRRKE1wbUEVKS0VMHQdRWxILAxkeRQoUCwMTVltaAwMQHxgVUV8OWxoJGlhUUl8GEQcFHVQYCRkYEB4BX1sDHBVIFBddDRUQGBQaFkRSTBYYRhoRVAteRUgtL0BmZjQtTywlQAh9UT1MVT9PdG8kRj0mHBRRQAsMFgsWEVwYARoUWA==
+X-ICL-Score: 2.33203322422
+Authentication-Results: bimi.icloud.com; bimi=skipped reason="insufficient dmarc"
+X-ARC-Info: policy=fail; arc=none; r1=-20; r2=0
+Authentication-Results: arc.icloud.com; arc=none
+Authentication-Results: dmarc.icloud.com; dmarc=fail header.from=wearmntd.com
+X-DMARC-Policy: v=DMARC1; p=none; rua=mailto:postmaster@knix.com;
+X-DMARC-Info: pass=fail; dmarc-policy=none; s=r0; d=r0; pdomain=wearmntd.com
+Authentication-Results: dkim-verifier.icloud.com; dkim=pass header.d=shared.klaviyomail.com header.i=@shared.klaviyomail.com header.b=jXCAeDLy
+Authentication-Results: dkim-verifier.icloud.com; dkim=pass header.d=wearmntd.ca header.i=@wearmntd.ca header.b=Pijj3GZb
+Received-SPF: pass (spf.icloud.com: domain of bounce-kl_25924019930-kl_1115skpapw-h-d008b4ec27=2@send.wearmntd.ca designates 170.203.24.13 as permitted sender) receiver=spf.icloud.com; client-ip=170.203.24.13; helo=kl-203-24-13.kmta.shared.klaviyomail.com; envelope-from=bounce-kl_25924019930-kl_1115skpapw-h-d008b4ec27=2@send.wearmntd.ca
+Authentication-Results: spf.icloud.com; spf=pass (spf.icloud.com: domain of bounce-kl_25924019930-kl_1115skpapw-h-d008b4ec27=2@send.wearmntd.ca designates 170.203.24.13 as permitted sender) smtp.mailfrom=bounce-kl_25924019930-kl_1115skpapw-h-d008b4ec27=2@send.wearmntd.ca
+X-Mailer-Info-Extra2: 2320d3f14c:03BXYwt2c1ETMx8FbrBwcA02bj5yYh1GQh1mc
+ hh2cfxWdoFmcAIHAzEjLzMjL04CMxAAcvBwMx0CNy0yMwITLstGAu9GA2IDNAk2bA02bj
+ 5CbpFWbvlXa2FGbr5CZlJXYoNnLhRXbr5yMx0CNy0yMwITLstGAo9GAx8Fbh52bpR3YhN
+ nbhJHdA4WbAEzN4AQatBQYj5CZ05WbyFWZ35CZuV2cAJTP3IzYlRjY4ADMk1CatcHchB3
+ azVTMxEzXstWLwMTO5EDM0ITO1IzXstWLlNmb19mYAYWbAEzXsFmbvlGdjF2cuFmc0BQb
+ AAzM5kTMwQjM5UjMfx2aAwGA3BVYwt0U1ETMxAQaA0XfiIXZk52bwNXZy9Gd1FmI6ICei
+ wiIENjRZR0NINTNINzS4gjUKZDWWBlV4g1SxAjI6ISb0JCL3IzNygzNzgzNxojI0JCLic
+ HUhB3STJiOi0mIscjM3IDO3MDO3EjOiQHaiwCM6ISbhNmIsIyaaR0M2IlI6IyYisnOiQ0
+ MGlFR3g0M1g0MLhDOSpkNYZFUWhDWLFDMisHIAMGAlVmYkdDZ5MWO1YjY++
+X-Mailer-Info: 10.sGbfJTN5IDNwETO5MDM.was9VMxETNztGchB3d.IXYoVHbfNHahJXbhBUbh
+ NmLj9Wb.AyeiATMLhFOWBlVYZjSShDOLNDS1MDS3QUWGNDRiozeiMmI6IiU2MDRatmIsIyYh1mI6
+ ADLigGdioTM3gzM3gjM3IzNsISbiojITtEchB1diwiI0JiOxcDOzcDOycjM3wiI01mI6ICMxsEW4
+ YFUWhlNKJFO4s0MIVzMIdDRZZ0MEJCLignI6ISY1R3byV2cw9mbkVmci0Xf..QMxETNTtEchB1d.
+ .
+X-Mailer-Info-Extra: d008b4ec27:0cHUhB3STVTMxEDApBQf9JiclRmbvB3clJ3b0V
+ XYiojI4JCLiQ0MGlFR3g0M1g0MLhDOSpkNYZFUWhDWLFDMiojItRnIscjM3IDO3MDO3Ej
+ OiQnIsIydQFGcLNlI6ISbiwyNycjM4czM4cTM6ICdoJCLwojItF2YiwiIrpFRzYjUiojI
+ jJye6ICRzYUWEdDSzUDSzsEO4IlS2glVQZFOYtUMwIyegAwYA02bj5yYh1GQh1mchh2cf
+ xWdoFmc++
+List-Unsubscribe: </unsub/5fe87656MQByYWh1bF9zaGFybWFAbWFjLmNvbQBrbF8xMTE1c2twYXB3AGtsXzI1OTI0MDE5OTMwACB7IjAxS1g4VlBWWDZKUjg4SzNINTNIN0RZRjNEIjp7ImMiOiJSNjNEWmsiLCJjYW0iOjAsImh0IjoxNzgzNzgyNzI3LCJtIjoiU0twYVB3IiwidCI6MTc4Mzc4MjcyNywidG0iOiIwMUtYOFZQVlg2SlI4OEszSDUzSDdEWUYzRCIsIngiOiJhdXRvcmVzcG9uZGVyIn19ADExMTVTS3BhUHc>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Received: from unknown (HELO kmta-worker-prod-go-7647886c68-z5686) (kmta-send@vmta.klaviyomail.com@10.8.202.106)
+  by kmta-mta-blue-0b1c86e518e99e860.servers.clovesoftware.com with SMTP; 11 Jul 2026 15:12:07 -0000
+CFBL-Address: fbl@kmta.shared.klaviyomail.com; report=arf
+Date: Sat, 11 Jul 2026 15:12:07 +0000
+MIME-Version: 1.0
+Message-ID: <01KX8VPVX6JR88K3H53H7DYF3D@klaviyomail.com>
+Subject: Your order has been delivered!
+X-Kmail-Account: R63DZk
+X-Kmail-Flow: QWXhj3
+X-Kmail-Message: SKpaPw
+X-Kmail-Ops: 01KVNJPC1AKA97H4MR4C0B8FSC
+X-Report-Abuse: Please report any spam or abuse to: abuse@klaviyo.com
+DKIM-Signature: a=rsa-sha256; bh=OW2FiI7vxzJAKzXYnXLkthyzNnNzBQUE4ifSPEzCFHU=;
+ c=relaxed/relaxed; d=shared.klaviyomail.com;
+ h=DKIM-Signature:From:To:CFBL-Address:Message-ID:Date:Subject:Subject:From:To:CC:Date:CFBL-Feedback-ID:CFBL-Address;
+ s=def1; t=1783782727; v=1;
+ b=jXCAeDLyzjO5eOiGEzO7qv05JhAN3bdiiVPwJtvVb1ljpVJp6QFC1PC344A5824FmLxCJY+p
+ yKwvyGba+lI7HXW4tr13r9pDAsMJsCyULpNCBJkACJkGAwORvmQ+qxTUm3bKzQn7388iLcy/Rp3
+ nKgIBC8FaTKMw8VUUca2RKQc=
+DKIM-Signature: a=rsa-sha256; bh=OW2FiI7vxzJAKzXYnXLkthyzNnNzBQUE4ifSPEzCFHU=;
+ c=relaxed/relaxed; d=wearmntd.ca;
+ h=From:To:CFBL-Address:Message-ID:Date:Subject:Subject:From:To:CC:Date:CFBL-Feedback-ID:CFBL-Address;
+ s=kl1; t=1783782727; v=1;
+ b=Pijj3GZb3Dh0GLl22UPs3j/JeSvoi5NHG3Duw8BSZU8ldGVUnaxCkUeyDejlE8l8t1QCfQ10
+ R4O8LGdYUcsVsWhI2Ib78ZURZryZavL0ba+tVrQUy3kd+5vZYyb0dvMDKYN1wgJkEz6R820JdXx
+ Bu23YLTYeYlC9zacSjPiMDeY=
+From: "MNTD" <info@wearmntd.com>
+To: "Rahul Sharma" <rahul_sharma@mac.com>
+Content-Type: multipart/alternative;
+ boundary=7b8eb130f270a2d92314a7a77fd1304c5c118f811df09687ebfd452a552c
+X-MANTSH: 1TFkXHBgRCllEF21kWB1iEkZ7QVgfEQpZTRdkRURPEQpZSRcacRoQGncGHhhxGBI
+ QGxp3BhgaBhoRClleF2NueREKQ04XQH9FXEx9X1lmG0FOWXh9cl1dXkB9eQcHdX1teWl/ZVwRC
+ lhcFxkEGgQfEgUbGgQbHBgEGRoEGBIQGx4aHxoRCl5ZF0JDa2JHEQpNXBcHGxIfEQpMWhdpeG1
+ rXRoRCkVZF28RCkxfF3oFBQUFBQUFBQVDEQpNThdpaxEKTEYXTWsRCkNaFxsdGgQYGhkEGB4EG
+ xkRCkJeFxsRCkJGF2lsHGIcbWR+HF1tEQpCRxdhUm1iYn4Se05vaxEKQkUXbEQSTE5QTHJaGkw
+ RCkJOF2wab0hvGlMYGEgbEQpCTBdmbUx4ekdkc34aXxEKQmwXZ0JHBQV9GxITeHIRCkJAF20aQ
+ X9lZE1LHF9nEQpCWBdtHktbc2NsHVN5TREKQngXa0dFGl8aeEMaRhIRClpYFxseEQpwaBdseFp
+ tQh9aehl/HRAHHBsRCnBoF29rHgFYTxJPTWdQEBoRCnBoF214Rh1jcEkYaEZJEAcdBBMRCnBoF
+ 2dgbU9+RUQFeG5TEAcfHhEKcGgXZmF9WE5QaF9saXwQGhEKcGgXZV5uQl1oUHB5TWQQBx8cEQp
+ waBd6TwFORF9MUHwTYhAHHx8RCnBoF21rfWFvRFl+E2FuEBoRCnB/F2VFRV0afXtGHFpDEBoRC
+ nB/F21SX39FfwVYbEtaEAcfHREKcH0XYUEYcBtPSBxSYBoQBxsSEQpwXxdrTGRheR9maBweeRA
+ aEQpwfRdofBlHYllEW2NBTRAaEQpwXxdsG1tNY2h+QWRFQRAaEQpwfRdkXUZtaRNGWUN8ExAaE
+ QpwXxdnSQVmbnJgXh5EQRAaEQpwfRdoRlNlXXwdHW0ZZhAaEQpwXxdmaEViYH4eeHtCbxAaEQp
+ wfRdtGE1PY3tLaHJAaxAaEQpwfxdoSGB5RWJfeGxfGhAHHBoRCnBfF2Z9X15/GAFHfU5OEBoRC
+ nB9F2lzHBp5Xm8YcG0YEBoRCnB9F2tlekVPaE1uQ21MEBoRCnB9F2tlekVPaE1uQ21MEBoRCnB
+ 9F2tlekVPaE1uQ21MEBoRCnB9F2tlekVPaE1uQ21MEBoRCnB9F2tlekVPaE1uQ21MEBoRCnBfF
+ 2xlGXJZSx9iXlhoEBoRCnB9F21SSGJGHkkcQUIcEBoRCnB9F2lzHBp5Xm8YcG0YEBoRCnB/F2J
+ ochMfR2x6ZXhAEBwaEQpwXxd6fh9MZRlDbWYBXhAaEQpwfRdnWxNCHkhiG1xAfBAaEQpwfxdhX
+ BlzQnlveUJAXhAHHBMRCnBfF3pFXmxtU0x+em9kEAcZGhEKcH0XaGV5eHIbaFpubUIQBx0EExE
+ KcH8XekN7UB8YfRgSfxoQBx0eEQpwXxd6aB0fRhJ4TxhJaxAHHx4RCnB9F29NchtgWmkFegVHE
+ AcdBBMRCnB/F2FPHxl5SWlceRpmEAcdGBEKcF8XZnxebhJkZ217fm8QBx0EExEKcH0XYHB9blN
+ lQ29FWF8QBx0EExEKcH8XbWRpTm0BTUV7TEAQBx0bEQpwXxd6fX1LW0hsb2sFcBAHHhkRCnB9F
+ 2QfUgEdf01NAX9EEAcdBBMRCnB/F2VIE3hQXRJbY1hPEAcfHhEKcH0XYm0TAX9lekNBZkwQGhE
+ KcH8XZUtuX21TeXxJeEwQBxwbEQpwXxd6ZWdfQRlFHGxdHxAHGxIRCnB9F2dmZV1LQH9ZQmBFE
+ BoRCnB/F2dwYkJoTn5TRHJYEAcfGREKcF8XY3xNGmgeQBwdXWMQBx8aEQpwfRdrbR1eE2tSfRp
+ FaBAaEQpwfRdoQRMbfRtIf2NkehAaEQpwfRdsXUwcGlgFXXxSHhAaEQpwfRdkTm4dc31bYllMQ
+ hAaEQpwbBd6ZUB6XQFMGV95XBAHHQQTEQpwTBdhQG5cfVlvZ25NHxAaEQptfhcaEQpYTRdLEQ= =
+X-Proofpoint-Spam-Details-Enc: AW1haW4tMjYwNzExMDE1MiBTYWx0ZWRfXxcqiMCFpTlnT
+ jn3j4Yv6QdnHbdv+M4yEefBBQiNAIXTRGsBJVLPmjg9YrvwaqtkPi+4toQf8E4ZSzqFBUYHMnBk
+ MH+Bx2ObxAz8CNGrgB0zAl5K6Y5WVg5HTCIPWXuDbhkkZeqI554BvBpM4JyRyJyz+NPifrK1Nfh
+ 4zBbcafGcOSZ+HQC/pOa7ZvdJn2nOQC1oyzsC8tkZHUYaGFszL1rJj/etaHYzp+gZdFexZ9kjzU
+ TqDKQRNjJOWbQN/JQikjVZFrDSI3ra8zqxJ8/Nrcj412K6fRSeLZmD5jTSjmRI72EJuESxK0192
+ RX7kpmtPtxS+8IiYfE0qEm0u3aDfznrZmTVEIjJDLWjcXhv4+lVjJUTKfeZULUIZZzzNYo0fUBv
+ HMofCz+HGqampHCxoTDnODl6TgnYajziHvHxhmKZpmRlaTHRJzGooG65SDR1yFm/j80Xh2Yr
+X-Proofpoint-GUID: jUovfWusL1kdsRWXwwtjWS--_WGSCUOv
+X-Proofpoint-ORIG-GUID: jUovfWusL1kdsRWXwwtjWS--_WGSCUOv
+X-Authority-Info: v=2.4 cv=P8g3RyAu c=1 sm=1 tr=0 ts=6a525d4b b=1
+ cx=c_apl:c_pps a=nlvzanjjUvN2wsJJFKKbow==:117 a=nlvzanjjUvN2wsJJFKKbow==:17
+ a=b3DhMmMkJVNBYjixYE3i3TbOsPs=:19 a=RAioF0-LDSMA:10 a=X4JVzSvzMZ0A:10
+ a=R_FKn6Doux8A:10 a=4FVviiqyAAAA:8 a=tW5lGkDtAAAA:8 a=9d5wO-mrAAAA:8
+ a=BkpHzsgbAAAA:8 a=svKqqNJeAAAA:8 a=3j4BkbkPAAAA:8 a=vnREMb7VAAAA:8
+ a=yZt5frTIAAAA:8 a=n-kJSqksAAAA:8 a=7NYUue2Gqorv0TrkHxgA:9 a=CjuIK1q_8ugA:10
+ a=-J4cjzx4AAAA:8 a=my13bNkbAAAA:8 a=uZ30BzuaAAAA:8 a=SSmOFEACAAAA:8
+ a=6Cbp7lfFAAAA:8 a=OYH88vmINXB0HNNfXTAA:9 a=UpQ9ThsVtjPVQbvl:21
+ a=gKO2Hq4RSVkA:10 a=frz4AuCg-hUA:10 a=_W_S_7VecoQA:10 a=QEXdDO2ut3YA:10
+ a=xb1TjRqlh1HAZwzqnHSW:22 a=s9ArqoGGUUpF6cn5d4J9:22 a=7NUpIbj70gRZvbiySIIK:22
+ a=f_HuWnRbMzPSrDeP96AE:22 a=fMAGXkzVR7cRuVcbbVfL:22 a=XVif6Fz7n-MfDs5-tR9A:22
+ a=3pPIBQ76aAvWTjhCwuo6:22 cc=ntf
+X-JNJ: AAAAAAABFt65gbOwzGSZQEmofdddvAojyc/4APu0aM8zOsLb6Oq8yuJD9T9ELiNYvX9O3Psa/YoE95HZXY6ab82XfDXLSi/EEgiCdVc8gGMjrfBYJdo/KrWkRlnofkIj4B5pINduXEnTjTqGRlZZ5DvmcBCP0yGFmWVIyDNEB6wJb8vucLamz/DH/p7jffWCRI/nokIcQj7rY0tWPf3NtLjlOk2zBydNBDhb1WvD4y3GjkifXH5D0Tu6A7DBcxOWhn46LCzNCeFj7E0ZxxNCCEEDRXAV5Q5OYi8eyn9jXRfOCf8hLP7FG+MDtuC0r1D/SwFibHko+9JN2qcZ/ngVGdZatBnGOsXTaw8rwPCS8hmwEC4Fe0Pyda2c4OAreH9gICZp04liWazYRhrjHCmljo1b/1IEs6jTnbblGGBkZDQNtrPF6Z/xL4KiaYAB9fnO9ZrW0kyrYZRxVOgJvduDtOWXCCDtBWnmhdkv4F8LlIvnzxVIhGVx2CEVvpR0jUqF4f7RTBhd9GOF7FEDYxx0ddS1hXpjuzJ+CSaBwbBunhGrG2aK2lZRgbOwz9mb7DMS7SLXueta9q2MVrQA8FQCFFGajusyHUK/jVTo/cnJvgxsAZjI+H9BITRsGaUmc6+vvJ9mMf8nndVoKS2Pzsj4Z6jYdCakaRUHm/13naGk1lwWz9m5ii4CV249i72DbV8CwEzQ3kdF/nXSAgYnBPmxZF7FAQp26lFfGDawz+uFgYb1EMbTLt0naVlOmsff9UdB7FnG3WS5seNRTnbOju33pzNeNcdJc+ivIpNj1kKICy/tY/Wm32tjbhn5yB3jlYVwsF6pMuTU/f2hBZMxc/vwZlrbHeQ/c/P4lEleuVkXKIojsqzysJ+Knyvw2YjMsMx2twjd6zu1tzIC5wJFFyf+8c9fWpnzZm7GfwcswrpEwoc4/cikGlYFribVsinnDdzOqefBsoBr
+
+--7b8eb130f270a2d92314a7a77fd1304c5c118f811df09687ebfd452a552c
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset=US-ASCII
+
+[MNTD logo](https://wearmntd.ca/)
+[BOXERS](https://wearmntd.ca/collections/underwear)
+
+[T-SHIRTS](https://wearmntd.ca/collections/t-shirts)
+
+[SOCKS](https://wearmntd.ca/collections/socks)
+
+[BUNDLES](https://wearmntd.ca/collections/bundles)
+
+=E2=80=8A
+
+Your order has been delivered!!
+
+Order MNTDCA4963
+
+Hey Rahul, we've got good news.
+
+Your order has been delivered by Fleet Optics today!
+
+[Track Your Package](https://griufp-f1.myshopify.com/pages/tracking?search=
+=3DMNTDCA4963&gen=3Dwon&t=3DeyJxdWVyeSI6Ik1OVERDQTQ5NjMiLCJlbWFpbCI6InJhaHV=
+sX3NoYXJtYUBtYWMuY29tIn0=3D)
+
+What's Arrived:
+
+[item.ProductName](https://griufp-f1.myshopify.com/pages/tracking?search=3D=
+MNTDCA4963&gen=3Dwon&t=3DeyJxdWVyeSI6Ik1OVERDQTQ5NjMiLCJlbWFpbCI6InJhaHVsX3=
+NoYXJtYUBtYWMuY29tIn0=3D)
+Best Damn=E2=84=A2 Boxer Brief 5"
+Quantity: 1 Ice / L / 5"
+Total: 26.00
+
+[item.ProductName](https://griufp-f1.myshopify.com/pages/tracking?search=3D=
+MNTDCA4963&gen=3Dwon&t=3DeyJxdWVyeSI6Ik1OVERDQTQ5NjMiLCJlbWFpbCI6InJhaHVsX3=
+NoYXJtYUBtYWMuY29tIn0=3D)
+Best Damn=E2=84=A2 Boxer Brief 5"
+Quantity: 2 Midnight / L / 5"
+Total: 26.00
+
+[item.ProductName](https://griufp-f1.myshopify.com/pages/tracking?search=3D=
+MNTDCA4963&gen=3Dwon&t=3DeyJxdWVyeSI6Ik1OVERDQTQ5NjMiLCJlbWFpbCI6InJhaHVsX3=
+NoYXJtYUBtYWMuY29tIn0=3D)
+Non-Stop Crew Sock
+Quantity: 1 White / L/XL 10-13
+Total: 15.00
+
+[item.ProductName](https://griufp-f1.myshopify.com/pages/tracking?search=3D=
+MNTDCA4963&gen=3Dwon&t=3DeyJxdWVyeSI6Ik1OVERDQTQ5NjMiLCJlbWFpbCI6InJhaHVsX3=
+NoYXJtYUBtYWMuY29tIn0=3D)
+Best Damn Tee=E2=84=A2
+Quantity: 1 Black / M
+Total: 55.00
+
+[item.ProductName](https://griufp-f1.myshopify.com/pages/tracking?search=3D=
+MNTDCA4963&gen=3Dwon&t=3DeyJxdWVyeSI6Ik1OVERDQTQ5NjMiLCJlbWFpbCI6InJhaHVsX3=
+NoYXJtYUBtYWMuY29tIn0=3D)
+Best Damn Tee=E2=84=A2
+Quantity: 1 Moss / M
+Total: 55.00
+
+Delivered To:
+
+Shipping Address
+
+Rahul Sharma
+42 Columbine Avenue
+Toronto, ON M4L 1P3
+CA
+
+Shipped By
+
+FLEET OPTICS
+
+Tracking #
+
+[TL26070907239001C21405127](https://griufp-f1.myshopify.com/apps/wonderment=
+/tracking?search=3DTL26070907239001C21405127&gen=3Dwon&t=3DeyJxdWVyeSI6Ik1O=
+VERDQTQ5NjMiLCJlbWFpbCI6InJhaHVsX3NoYXJtYUBtYWMuY29tIn0=3D)
+
+[Track Your Package](https://griufp-f1.myshopify.com/pages/tracking?search=
+=3DMNTDCA4963&gen=3Dwon&t=3DeyJxdWVyeSI6Ik1OVERDQTQ5NjMiLCJlbWFpbCI6InJhaHV=
+sX3NoYXJtYUBtYWMuY29tIn0=3D)
+
+=E2=80=8A
+
+NEED HELP?
+
+For questions about the shipment of your package, please contact the carrie=
+r directly. All other inquiries can be sent to our [Customer Empowerment te=
+am](https://knix.ca/contact-us).
+
+[Custom](https://www.instagram.com/wearmntd/)
+[Custom](https://www.tiktok.com/@wearmntd)
+[Custom](https://www.facebook.com/people/Wear-MNTD/61568070549408/#)
+[Custom](https://www.youtube.com/@wearmntd)
+
+No longer want to receive these emails? [Unsubscribe](https://manage.kmail-=
+lists.com/subscriptions/unsubscribe?a=3DR63DZk&c=3D01KVNJPC1AKA97H4MR4C0B8F=
+SC&k=3D715018beab12aa5d67f831b01308120d&se=3Drahul_sharma%40mac.com&m=3DSKp=
+aPw&r=3D01KX8VPVX6JR88K3H53H7DYF3D&e=3D7gUFzGVdngP).
+MNTD CA 179 John St Toronto,, Ontario M5T 1X4
+--7b8eb130f270a2d92314a7a77fd1304c5c118f811df09687ebfd452a552c
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html><html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:o=3D"urn:=
+schemas-microsoft-com:office:office" xmlns:v=3D"urn:schemas-microsoft-com:v=
+ml"><head>
+<title>
+</title>
+<!--[if !mso]><!-->
+<meta content=3D"IE=3Dedge" http-equiv=3D"X-UA-Compatible">
+<!--<![endif]-->
+<meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Type">
+<meta content=3D"width=3Ddevice-width, initial-scale=3D1" name=3D"viewport"=
+>
+<!--[if mso]>
+        <noscript>
+        <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+        </xml>
+        </noscript>
+        <![endif]-->
+<!--[if lte mso 11]>
+        <style type=3D"text/css" data-inliner=3D"ignore">
+          .mj-outlook-group-fix { width:100% !important; }
+        </style>
+        <![endif]-->
+<!--[if !mso]><!--><!--<![endif]-->
+<style>a:not([name]) {color:#15c;text-decoration:underline}
+a:link {color:#15c;text-decoration:underline}
+a:visited {color:#15c;text-decoration:underline}
+a:active {color:#15c;text-decoration:underline}
+a:hover {color:#15c;text-decoration:underline}</style><style>@import url(ht=
+tps://static-forms.klaviyo.com/fonts/api/v1/R63DZk/custom_fonts.css);
+#outlook a {
+    padding: 0
+    }
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+    }
+table, td {
+    border-collapse: collapse;
+    mso-table-lspace: 0;
+    mso-table-rspace: 0
+    }
+img {
+    border: 0;
+    line-height: 100%;
+    outline: none;
+    text-decoration: none;
+    -ms-interpolation-mode: bicubic
+    }
+p {
+    display: block;
+    margin: 13px 0
+    }
+@media only screen and (min-width: 480px) {
+    .mj-column-per-100 {
+        width: 100% !important;
+        max-width: 100%
+        }
+    }
+.moz-text-html .mj-column-per-100 {
+    width: 100% !important;
+    max-width: 100%
+    }
+@media only screen and (max-width: 480px) {
+    div.kl-row.colstack div.kl-column {
+        display: block !important;
+        width: 100% !important
+        }
+    }
+@media only screen and (max-width: 480px) {
+    .kl-table-subblock.use-legacy-mobile-padding {
+        padding-left: 9px !important;
+        padding-right: 9px !important
+        }
+    }
+@media only screen and (max-width: 480px) {
+    td.kl-img-base-auto-width {
+        width: 100% !important
+        }
+    }
+@media only screen and (max-width: 480px) {
+    .component-wrapper .mob-no-spc {
+        padding-left: 0 !important;
+        padding-right: 0 !important
+        }
+    }
+.kl-button a {
+    display: block !important
+    }
+@media screen and (max-width: 480px) {
+    .kl-sl-stk {
+        display: block !important;
+        width: 100% !important;
+        padding: 0 0 9px !important;
+        text-align: center !important
+        }
+    .kl-sl-stk.lbls {
+        padding: 0 !important
+        }
+    .kl-sl-stk.spcblk {
+        display: none !important
+        }
+    }
+img {
+    border: 0;
+    height: auto;
+    line-height: 100%;
+    outline: none;
+    text-decoration: none;
+    max-width: 100%
+    }
+.root-container {
+    background-repeat: repeat !important;
+    background-size: auto !important;
+    background-position: left top !important
+    }
+.root-container-spacing {
+    padding-top: 50px !important;
+    padding-bottom: 20px !important;
+    font-size: 0 !important
+    }
+.content-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important
+    }
+.content-padding.kl-first {
+    padding-top: 0 !important
+    }
+.content-padding.kl-last {
+    padding-bottom: 0 !important
+    }
+@media only screen and (max-width: 480px) {
+    td.mobile-only {
+        display: table-cell !important
+        }
+    div.mobile-only {
+        display: block !important
+        }
+    table.mobile-only {
+        display: table !important
+        }
+    .desktop-only {
+        display: none !important
+        }
+    }
+@media only screen and (max-width: 480px) {
+    .table-mobile-only {
+        display: table-cell !important;
+        max-height: none !important
+        }
+    .table-mobile-only.block {
+        display: block !important
+        }
+    .table-mobile-only.inline-block {
+        display: inline-block !important
+        }
+    .table-desktop-only {
+        max-height: 0 !important;
+        display: none !important;
+        mso-hide: all !important;
+        overflow: hidden !important
+        }
+    }
+p {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 1em
+    }
+@media only screen and (max-width: 480px) {
+    body.mce-content-body, /* NOTE: needed for internal tinymce styles */.k=
+l-text > div, .kl-table-subblock > div, .kl-split-subblock > div {
+        font-size: 14px !important;
+        line-height: 1.3 !important
+        }
+    }
+h1 {
+    color: #000;
+    font-family: "nort", Helvetica, Arial, sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: left
+    }
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 36px !important;
+        line-height: 1.1 !important
+        }
+    }
+h2 {
+    color: #000;
+    font-family: "nort", Helvetica, Arial, sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0;
+    margin: 0;
+    margin-bottom: 16px;
+    text-align: left
+    }
+@media only screen and (max-width: 480px) {
+    h2 {
+        font-size: 36px !important;
+        line-height: 1.1 !important
+        }
+    }
+h3 {
+    color: #000;
+    font-family: "nort", Helvetica, Arial, sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0;
+    margin: 0;
+    margin-bottom: 12px;
+    text-align: left
+    }
+@media only screen and (max-width: 480px) {
+    h3 {
+        font-size: 26px !important;
+        line-height: 1.1 !important
+        }
+    }
+h4 {
+    color: #000;
+    font-family: "nort", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0;
+    margin: 0;
+    margin-bottom: 9px;
+    text-align: left
+    }
+@media only screen and (max-width: 480px) {
+    h4 {
+        font-size: 20px !important;
+        line-height: 1.1 !important
+        }
+    }
+@media only screen and (max-width: 480px) {
+    .root-container {
+        width: 100% !important
+        }
+    .root-container-spacing {
+        padding: 5px !important
+        }
+    .content-padding {
+        padding-left: 0 !important;
+        padding-right: 0 !important
+        }
+    .content-padding.kl-first {
+        padding-top: 0 !important
+        }
+    .content-padding.kl-last {
+        padding-bottom: 0 !important
+        }
+    .kl-column > .component-wrapper {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: unset !important
+        }
+    .kl-text {
+        padding-right: 18px !important;
+        padding-left: 18px !important
+        }
+    }</style></head>
+<body style=3D"word-spacing:normal;background-color:#F6F4F4;">
+<div style=3D"display:none;font-size:1px;color:#ffffff;line-height:1px;max-=
+height:0px;max-width:0px;opacity:0;overflow:hidden;">
+     =20
+    </div>
+<!-- TRACKING_PIXEL_TOP -->
+<div class=3D"root-container" id=3D"bodyTable" style=3D"background-color:#F=
+6F4F4;">
+<div class=3D"root-container-spacing">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"kl-section" role=3D"presentation" style=3D"width:100%;">
+<tbody>
+<tr>
+<td>
+<!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" class=3D"kl-section-outlook" style=3D"width:640px;" width=
+=3D"640" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-ru=
+le:exactly;"><![endif]-->
+<div style=3D"margin:0px auto;max-width:640px;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"width:100%;">
+<tbody>
+<tr>
+<td style=3D"direction:ltr;font-size:0px;padding:0px;text-align:center;">
+<!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0"><table align=3D"center" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" class=3D"" style=3D"width:640px;" width=3D"640" bgcolor=
+=3D"#F2F2ED" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-heigh=
+t-rule:exactly;"><![endif]-->
+<div style=3D"background:#F2F2ED;background-color:#F2F2ED;margin:0px auto;b=
+order-radius:0px 0px 0px 0px;max-width:640px;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"background:#F2F2ED;background-color:#F2F2ED;wi=
+dth:100%;border-radius:0px 0px 0px 0px;">
+<tbody>
+<tr>
+<td style=3D"direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0px;=
+padding-left:0px;padding-right:0px;padding-top:0px;text-align:center;">
+<!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0"><![endif]-->
+<div class=3D"content-padding kl-first kl-last">
+<!--[if true]><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"640" style=3D"width:640px;direction:ltr"><tr><![endif]-->
+<div class=3D"kl-row colstack" style=3D"display:table;table-layout:fixed;wi=
+dth:100%;">
+<!--[if true]><td style=3D"vertical-align:top;width:640px;"><![endif]-->
+<div class=3D"kl-column" style=3D"display:table-cell;vertical-align:top;wid=
+th:100%;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"background-color:#1F211C;vertical-align:top;padding=
+-top:15px;padding-right:0px;padding-bottom:15px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"kl-table" style=3D"background:#1F211C;font-size=
+:0px;padding:0px;word-break:break-word;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"color:#000=
+000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-he=
+ight:22px;table-layout:fixed;width:100%;border:none;" width=3D"100%">
+<thead>
+</thead>
+<tbody>
+<tr>
+<td class=3D"kl-table-subblock" style=3D"width:auto;overflow:hidden;vertica=
+l-align:middle;padding-top:0px;padding-right:0px;padding-bottom:0px;padding=
+-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+<tbody><tr>
+<td align=3D"center" class=3D"" style=3D"font-size:0px;word-break:break-wor=
+d;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td class=3D"" style=3D"border:0;padding:0;width:60px;" valign=3D"top">
+<a class=3D"kl-img-link" style=3D"color:#15c; text-decoration:underline; di=
+splay:block" href=3D"https://ctrk.klclick.com/l/01KX8VRQFESGNZ5MR0ERBV04PY_=
+0">
+<img alt=3D"MNTD logo" src=3D"https://d3k81ch9hvuctc.cloudfront.net/company=
+/R63DZk/images/69ee55c2-bf52-45c3-bbf3-803810ddf9ff.png" style=3D"display:b=
+lock;outline:none;text-decoration:none;height:auto;font-size:13px;width:100=
+%;" title=3D"MNTD logo" width=3D"60">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody></table>
+</td>
+<td class=3D"kl-table-subblock" style=3D"width:auto;overflow:hidden;vertica=
+l-align:middle;padding-top:0px;padding-right:0px;padding-bottom:0px;padding=
+-left:0px;">
+<div style=3D"font-family:'nort', Helvetica, Arial, sans-serif;font-size:14=
+px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.5;tex=
+t-align:left;color:#000000;"><div style=3D"text-align: center;"><a style=3D=
+"color:rgb(255, 255, 255); text-decoration:none; background-color:rgb(31, 3=
+3, 28); display:inline-block" href=3D"https://ctrk.klclick.com/l/01KX8VRQFE=
+SGNZ5MR0ERBV04PY_1"> BOXERS </a></div></div>
+</td>
+<td class=3D"kl-table-subblock" style=3D"width:auto;overflow:hidden;vertica=
+l-align:middle;padding-top:0px;padding-right:0px;padding-bottom:0px;padding=
+-left:0px;">
+<div style=3D"font-family:'nort', Helvetica, Arial, sans-serif;font-size:14=
+px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.5;tex=
+t-align:left;color:#000000;"><div style=3D"text-align: center;"><a style=3D=
+"color:rgb(255, 255, 255); text-decoration:none; display:inline-block" href=
+=3D"https://ctrk.klclick.com/l/01KX8VRQFESGNZ5MR0ERBV04PY_2"> T-SHIRTS </a>=
+</div></div>
+</td>
+<td class=3D"kl-table-subblock" style=3D"width:auto;overflow:hidden;vertica=
+l-align:middle;padding-top:0px;padding-right:0px;padding-bottom:0px;padding=
+-left:0px;">
+<div style=3D"font-family:'nort', Helvetica, Arial, sans-serif;font-size:14=
+px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.5;tex=
+t-align:left;color:#000000;"><div style=3D"text-align: center;"><a style=3D=
+"color:rgb(255, 255, 255); text-decoration:none; display:inline-block" href=
+=3D"https://ctrk.klclick.com/l/01KX8VRQFESGNZ5MR0ERBV04PY_3"> SOCKS </a></d=
+iv></div>
+</td>
+<td class=3D"kl-table-subblock" style=3D"width:auto;overflow:hidden;vertica=
+l-align:middle;padding-top:0px;padding-right:0px;padding-bottom:0px;padding=
+-left:0px;">
+<div style=3D"font-family:'nort', Helvetica, Arial, sans-serif;font-size:14=
+px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.5;tex=
+t-align:left;color:#000000;"><div style=3D"text-align: center;"><a style=3D=
+"color:rgb(255, 255, 255); text-decoration:none; display:inline-block" href=
+=3D"https://ctrk.klclick.com/l/01KX8VRQFESGNZ5MR0ERBV04PY_4"> BUNDLES </a><=
+/div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"background-color:#1F211C;vertical-align:top;padding=
+-top:18px;padding-right:18px;padding-bottom:18px;padding-left:18px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"font-size:0px;padding:0px;word-break:break-wo=
+rd;">
+<p style=3D"padding-bottom:0; border-top:solid 1px #FFF; font-size:1px; mar=
+gin:0 auto; width:100%">
+</p>
+<!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"border-top:solid 1px #FFFFFF;font-size:1px;margin:=
+0px auto;width:604px;" role=3D"presentation" width=3D"604px" ><tr><td style=
+=3D"height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:0px;padding-right:0p=
+x;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"kl-image" style=3D"font-size:0px;word-break:b=
+reak-word;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td class=3D"kl-img-base-auto-width" style=3D"border:0;padding:0px 0px 0px =
+0px;width:640px;" valign=3D"top">
+<img src=3D"https://d3k81ch9hvuctc.cloudfront.net/company/R63DZk/images/e9d=
+ad141-85ee-4881-bf69-ee5a6dc6d01a.jpeg" style=3D"display:block;outline:none=
+;text-decoration:none;height:auto;font-size:13px;width:100%;" width=3D"640"=
+>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:0px;padding-right:0p=
+x;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td style=3D"font-size:0px;word-break:break-word;">
+<div style=3D"height:20px;line-height:20px;">=E2=80=8A</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:15px;padding-right:1=
+5px;padding-bottom:15px;padding-left:15px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"kl-text" style=3D"font-size:0px;padding:0px;pad=
+ding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:18px;word-b=
+reak:break-word;">
+<div style=3D"font-family:'nort', Helvetica, Arial, sans-serif;font-size:14=
+px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.5;tex=
+t-align:left;color:#000000;"><div>
+<h2 style=3D"text-align: center;">Your order has been delivered!!</h2>
+<h3 style=3D"text-align: center;">Order MNTDCA4963</h3>
+<p style=3D"text-align: center;">Hey Rahul, we've got good news.</p>
+<p style=3D"padding-bottom:0; text-align:center">Your order has been delive=
+red by Fleet Optics today!</p>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!--[if true]></td><![endif]-->
+</div>
+<!--[if true]></tr></table><![endif]-->
+<!--[if true]><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"640" style=3D"width:640px;direction:ltr"><tr><![endif]-->
+<div class=3D"kl-row colstack" style=3D"display:table;table-layout:fixed;wi=
+dth:100%;">
+<!--[if true]><td style=3D"vertical-align:top;width:640px;"><![endif]-->
+<div class=3D"kl-column" style=3D"display:table-cell;vertical-align:top;wid=
+th:100%;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:15px;padding-right:1=
+5px;padding-bottom:15px;padding-left:15px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"kl-button" style=3D"font-size:0px;padding:0px=
+;word-break:break-word;" vertical-align=3D"middle">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:separate;line-height:100%;">
+<tbody><tr>
+<td align=3D"center" bgcolor=3D"#000000" role=3D"presentation" style=3D"bor=
+der:none;border-radius:0px;cursor:auto;font-style:normal;mso-padding-alt:15=
+px 30px 15px 30px;background:#000000;" valign=3D"middle">
+<a style=3D"color:#fff; text-decoration:none; display:inline-block; backgro=
+und:#000; font-family:&quot;nort&quot;, Helvetica, Arial, sans-serif; font-=
+size:16px; font-style:normal; font-weight:400; line-height:100%; letter-spa=
+cing:0; margin:0; text-transform:none; padding:15px 30px 15px 30px; mso-pad=
+ding-alt:0; border-radius:0" target=3D"_blank" href=3D"https://ctrk.klclick=
+.com/l/01KX8VRQFESGNZ5MR0ERBV04PY_5">
+              Track Your Package
+            </a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:15px;padding-right:1=
+5px;padding-bottom:15px;padding-left:15px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"kl-text" style=3D"font-size:0px;padding:0px;pad=
+ding-top:15px;padding-right:0px;padding-bottom:0px;padding-left:0px;word-br=
+eak:break-word;">
+<div style=3D"font-family:'nort', Helvetica, Arial, sans-serif;font-size:14=
+px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.5;tex=
+t-align:left;color:#000000;"><h1 style=3D"text-align: center;">What's Arriv=
+ed:</h1></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:15px;padding-right:1=
+5px;padding-bottom:15px;padding-left:15px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"kl-table" style=3D"font-size:0px;padding:0px;wo=
+rd-break:break-word;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"color:#000=
+000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-he=
+ight:22px;table-layout:fixed;width:100%;border:none;" width=3D"100%">
+       =20
+        <thead>
+</thead>
+<tbody>
+         =20
+           =20
+   =20
+      <tr>
+<td class=3D"kl-table-subblock" style=3D"width:30%;overflow:hidden;vertical=
+-align:middle;padding-top:4px;padding-right:5px;padding-bottom:4px;padding-=
+left:5px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+<tbody><tr>
+<td align=3D"left" class=3D"" style=3D"font-size:0px;word-break:break-word;=
+">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td class=3D"kl-img-base-auto-width" style=3D"border:0;padding:0;width:640p=
+x;" valign=3D"top">
+<a class=3D"kl-img-link" style=3D"color:#15c; text-decoration:underline; di=
+splay:block" href=3D"https://ctrk.klclick.com/l/01KX8VRQFESGNZ5MR0ERBV04PY_=
+6">
+<img alt=3D"item.ProductName" src=3D"https://cdn.shopify.com/s/files/1/0748=
+/1370/2366/files/COTTON_MODAL_BOXERBRIEF_ICE_4.jpg?v=3D1770745573" style=3D=
+"display:block;outline:none;text-decoration:none;height:auto;font-size:13px=
+;width:100%;" title=3D"item.ProductName" width=3D"640">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody></table>
+</td>
+<td class=3D"kl-table-subblock" style=3D"width:70%;overflow:hidden;vertical=
+-align:middle;padding-top:4px;padding-right:5px;padding-bottom:4px;padding-=
+left:5px;">
+<div style=3D"font-family:'nort', Helvetica, Arial, sans-serif;font-size:14=
+px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.5;tex=
+t-align:left;color:#000000;"><div>
+<div><span style=3D"font-size: 16px;">Best Damn=E2=84=A2 Boxer Brief 5" </s=
+pan></div>
+<div><span style=3D"font-size: 16px;">Quantity: 1  Ice / L / 5" </span></di=
+v>
+<div><span style=3D"font-size: 16px;">Total: 26.00</span></div>
+</div></div>
+</td>
+</tr>
+     =20
+   =20
+         =20
+           =20
+   =20
+      <tr>
+<td class=3D"kl-table-subblock" style=3D"width:30%;overflow:hidden;vertical=
+-align:middle;padding-top:4px;padding-right:5px;padding-bottom:4px;padding-=
+left:5px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+<tbody><tr>
+<td align=3D"left" class=3D"" style=3D"font-size:0px;word-break:break-word;=
+">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td class=3D"kl-img-base-auto-width" style=3D"border:0;padding:0;width:640p=
+x;" valign=3D"top">
+<a class=3D"kl-img-link" style=3D"color:#15c; text-decoration:underline; di=
+splay:block" href=3D"https://ctrk.klclick.com/l/01KX8VRQFESGNZ5MR0ERBV04PY_=
+7">
+<img alt=3D"item.ProductName" src=3D"https://cdn.shopify.com/s/files/1/0748=
+/1370/2366/files/COTTON_MODAL_BOXERBRIEF_MIDNIGHT_4.jpg?v=3D1770745573" sty=
+le=3D"display:block;outline:none;text-decoration:none;height:auto;font-size=
+:13px;width:100%;" title=3D"item.ProductName" width=3D"640">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody></table>
+</td>
+<td class=3D"kl-table-subblock" style=3D"width:70%;overflow:hidden;vertical=
+-align:middle;padding-top:4px;padding-right:5px;padding-bottom:4px;padding-=
+left:5px;">
+<div style=3D"font-family:'nort', Helvetica, Arial, sans-serif;font-size:14=
+px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.5;tex=
+t-align:left;color:#000000;"><div>
+<div><span style=3D"font-size: 16px;">Best Damn=E2=84=A2 Boxer Brief 5" </s=
+pan></div>
+<div><span style=3D"font-size: 16px;">Quantity: 2  Midnight / L / 5" </span=
+></div>
+<div><span style=3D"font-size: 16px;">Total: 26.00</span></div>
+</div></div>
+</td>
+</tr>
+     =20
+   =20
+         =20
+           =20
+   =20
+      <tr>
+<td class=3D"kl-table-subblock" style=3D"width:30%;overflow:hidden;vertical=
+-align:middle;padding-top:4px;padding-right:5px;padding-bottom:4px;padding-=
+left:5px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+<tbody><tr>
+<td align=3D"left" class=3D"" style=3D"font-size:0px;word-break:break-word;=
+">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td class=3D"kl-img-base-auto-width" style=3D"border:0;padding:0;width:640p=
+x;" valign=3D"top">
+<a class=3D"kl-img-link" style=3D"color:#15c; text-decoration:underline; di=
+splay:block" href=3D"https://ctrk.klclick.com/l/01KX8VRQFESGNZ5MR0ERBV04PY_=
+8">
+<img alt=3D"item.ProductName" src=3D"https://cdn.shopify.com/s/files/1/0748=
+/1370/2366/files/MNTD_006_10232025_PDP_Images_MAC101_White_3-min_a6f7b4b8-d=
+a6e-42b8-9fa7-3c1b70023426.jpg?v=3D1765209450" style=3D"display:block;outli=
+ne:none;text-decoration:none;height:auto;font-size:13px;width:100%;" title=
+=3D"item.ProductName" width=3D"640">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody></table>
+</td>
+<td class=3D"kl-table-subblock" style=3D"width:70%;overflow:hidden;vertical=
+-align:middle;padding-top:4px;padding-right:5px;padding-bottom:4px;padding-=
+left:5px;">
+<div style=3D"font-family:'nort', Helvetica, Arial, sans-serif;font-size:14=
+px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.5;tex=
+t-align:left;color:#000000;"><div>
+<div><span style=3D"font-size: 16px;">Non-Stop Crew Sock </span></div>
+<div><span style=3D"font-size: 16px;">Quantity: 1  White / L/XL 10-13 </spa=
+n></div>
+<div><span style=3D"font-size: 16px;">Total: 15.00</span></div>
+</div></div>
+</td>
+</tr>
+     =20
+   =20
+         =20
+           =20
+   =20
+      <tr>
+<td class=3D"kl-table-subblock" style=3D"width:30%;overflow:hidden;vertical=
+-align:middle;padding-top:4px;padding-right:5px;padding-bottom:4px;padding-=
+left:5px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+<tbody><tr>
+<td align=3D"left" class=3D"" style=3D"font-size:0px;word-break:break-word;=
+">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td class=3D"kl-img-base-auto-width" style=3D"border:0;padding:0;width:640p=
+x;" valign=3D"top">
+<a class=3D"kl-img-link" style=3D"color:#15c; text-decoration:underline; di=
+splay:block" href=3D"https://ctrk.klclick.com/l/01KX8VRQFESGNZ5MR0ERBV04PY_=
+9">
+<img alt=3D"item.ProductName" src=3D"https://cdn.shopify.com/s/files/1/0748=
+/1370/2366/files/MNTD_006_05262026_PDP_Images_MNT904_Black_1.jpg?v=3D178060=
+6121" style=3D"display:block;outline:none;text-decoration:none;height:auto;=
+font-size:13px;width:100%;" title=3D"item.ProductName" width=3D"640">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody></table>
+</td>
+<td class=3D"kl-table-subblock" style=3D"width:70%;overflow:hidden;vertical=
+-align:middle;padding-top:4px;padding-right:5px;padding-bottom:4px;padding-=
+left:5px;">
+<div style=3D"font-family:'nort', Helvetica, Arial, sans-serif;font-size:14=
+px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.5;tex=
+t-align:left;color:#000000;"><div>
+<div><span style=3D"font-size: 16px;">Best Damn Tee=E2=84=A2 </span></div>
+<div><span style=3D"font-size: 16px;">Quantity: 1  Black / M </span></div>
+<div><span style=3D"font-size: 16px;">Total: 55.00</span></div>
+</div></div>
+</td>
+</tr>
+     =20
+   =20
+         =20
+           =20
+   =20
+      <tr>
+<td class=3D"kl-table-subblock" style=3D"width:30%;overflow:hidden;vertical=
+-align:middle;padding-top:4px;padding-right:5px;padding-bottom:4px;padding-=
+left:5px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+<tbody><tr>
+<td align=3D"left" class=3D"" style=3D"font-size:0px;word-break:break-word;=
+">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td class=3D"kl-img-base-auto-width" style=3D"border:0;padding:0;width:640p=
+x;" valign=3D"top">
+<a class=3D"kl-img-link" style=3D"color:#15c; text-decoration:underline; di=
+splay:block" href=3D"https://ctrk.klclick.com/l/01KX8VRQFESGNZ5MR0ERBV04PY_=
+10">
+<img alt=3D"item.ProductName" src=3D"https://cdn.shopify.com/s/files/1/0748=
+/1370/2366/files/MNTD_006_05262026_PDP_Images_MNT904_Moss_1.jpg?v=3D1780606=
+121" style=3D"display:block;outline:none;text-decoration:none;height:auto;f=
+ont-size:13px;width:100%;" title=3D"item.ProductName" width=3D"640">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody></table>
+</td>
+<td class=3D"kl-table-subblock" style=3D"width:70%;overflow:hidden;vertical=
+-align:middle;padding-top:4px;padding-right:5px;padding-bottom:4px;padding-=
+left:5px;">
+<div style=3D"font-family:'nort', Helvetica, Arial, sans-serif;font-size:14=
+px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.5;tex=
+t-align:left;color:#000000;"><div>
+<div><span style=3D"font-size: 16px;">Best Damn Tee=E2=84=A2 </span></div>
+<div><span style=3D"font-size: 16px;">Quantity: 1  Moss / M </span></div>
+<div><span style=3D"font-size: 16px;">Total: 55.00</span></div>
+</div></div>
+</td>
+</tr>
+     =20
+   =20
+         =20
+           =20
+   =20
+   =20
+        </tbody>
+     =20
+      </table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:15px;padding-right:1=
+5px;padding-bottom:15px;padding-left:15px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"kl-text" style=3D"font-size:0px;padding:0px;pad=
+ding-top:15px;padding-right:0px;padding-bottom:0px;padding-left:0px;word-br=
+eak:break-word;">
+<div style=3D"font-family:'nort', Helvetica, Arial, sans-serif;font-size:14=
+px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.5;tex=
+t-align:left;color:#000000;"><h1 style=3D"text-align: center;">Delivered To=
+:</h1></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:15px;padding-right:1=
+5px;padding-bottom:15px;padding-left:15px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"kl-table" style=3D"font-size:0px;padding:0px;wo=
+rd-break:break-word;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"color:#000=
+000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-he=
+ight:22px;table-layout:fixed;width:100%;border:none;" width=3D"100%">
+<thead>
+</thead>
+<tbody>
+<tr>
+<td class=3D"kl-table-subblock" style=3D"width:auto;overflow:hidden;vertica=
+l-align:top;padding-top:4px;padding-right:0px;padding-bottom:4px;padding-le=
+ft:0px;">
+<div style=3D"font-family:'nort', Helvetica, Arial, sans-serif;font-size:14=
+px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.5;tex=
+t-align:left;color:#000000;"><div>
+<h3 style=3D"text-align: center;">Shipping Address</h3>
+<p style=3D"padding-bottom:0; text-align:center">Rahul Sharma<br>42 Columbi=
+ne Avenue <br>Toronto, ON M4L 1P3<br>CA</p>
+</div></div>
+</td>
+</tr>
+<tr>
+<td class=3D"kl-table-subblock" style=3D"width:auto;overflow:hidden;vertica=
+l-align:top;padding-top:4px;padding-right:0px;padding-bottom:4px;padding-le=
+ft:0px;">
+<div style=3D"font-family:'nort', Helvetica, Arial, sans-serif;font-size:14=
+px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.5;tex=
+t-align:left;color:#000000;"><div> <p></p>
+</div></div>
+</td>
+</tr>
+<tr>
+<td class=3D"kl-table-subblock" style=3D"width:auto;overflow:hidden;vertica=
+l-align:top;padding-top:4px;padding-right:0px;padding-bottom:4px;padding-le=
+ft:0px;">
+<div style=3D"font-family:'nort', Helvetica, Arial, sans-serif;font-size:14=
+px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.5;tex=
+t-align:left;color:#000000;"><div>
+<h3 style=3D"text-align: center;">Shipped By</h3>
+<p style=3D"text-align: center;">FLEET OPTICS</p>
+<h3 style=3D"text-align: center;">Tracking #</h3>
+<p style=3D"padding-bottom:0; text-align:center"><a style=3D"color:#15c; te=
+xt-decoration:underline" href=3D"https://ctrk.klclick.com/l/01KX8VRQFESGNZ5=
+MR0ERBV04PY_11">TL26070907239001C21405127</a></p>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:15px;padding-right:1=
+5px;padding-bottom:15px;padding-left:15px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"kl-button" style=3D"font-size:0px;padding:0px=
+;word-break:break-word;" vertical-align=3D"middle">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:separate;line-height:100%;">
+<tbody><tr>
+<td align=3D"center" bgcolor=3D"#000000" role=3D"presentation" style=3D"bor=
+der:none;border-radius:0px;cursor:auto;font-style:normal;mso-padding-alt:15=
+px 30px 15px 30px;background:#000000;" valign=3D"middle">
+<a style=3D"color:#fff; text-decoration:none; display:inline-block; backgro=
+und:#000; font-family:&quot;nort&quot;, Helvetica, Arial, sans-serif; font-=
+size:16px; font-style:normal; font-weight:400; line-height:100%; letter-spa=
+cing:0; margin:0; text-transform:none; padding:15px 30px 15px 30px; mso-pad=
+ding-alt:0; border-radius:0" target=3D"_blank" href=3D"https://ctrk.klclick=
+.com/l/01KX8VRQFESGNZ5MR0ERBV04PY_12">
+              Track Your Package
+            </a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:0px;padding-right:0p=
+x;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td style=3D"font-size:0px;word-break:break-word;">
+<div style=3D"height:20px;line-height:20px;">=E2=80=8A</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:15px;padding-right:1=
+5px;padding-bottom:15px;padding-left:15px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"kl-text" style=3D"font-size:0px;padding:0px;pad=
+ding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:18px;word-b=
+reak:break-word;">
+<div style=3D"font-family:'nort', Helvetica, Arial, sans-serif;font-size:14=
+px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.5;tex=
+t-align:left;color:#000000;"><p style=3D"font-size: 16px; text-align: cente=
+r;">NEED HELP?</p>
+<p style=3D"padding-bottom:0; text-align:center">For questions about the sh=
+ipment of your package, please contact the carrier directly. All other inqu=
+iries can be sent to our <a style=3D"color:#15c; text-decoration:underline"=
+ href=3D"https://ctrk.klclick.com/l/01KX8VRQFESGNZ5MR0ERBV04PY_13">Customer=
+ Empowerment team</a>.
+</p></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:15px;padding-right:1=
+5px;padding-bottom:15px;padding-left:15px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td>
+<div style=3D"width:100%;text-align:center">
+<!--[if true]><table style=3D"all:unset;opacity:0;" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" ><tr><![endif]-->
+<!--[if !true]><!--><div class=3D"" style=3D"display:inline-block;padding-r=
+ight:10px;"><!--<![endif]-->
+<!--[if true]><td style=3D"padding-right:10px;"><![endif]-->
+<div style=3D"text-align: center;">
+<a style=3D"color:#15c; text-decoration:underline" target=3D"_blank" href=
+=3D"https://ctrk.klclick.com/l/01KX8VRQFESGNZ5MR0ERBV04PY_14">
+<img alt=3D"Custom" src=3D"https://d3k81ch9hvuctc.cloudfront.net/company/R6=
+3DZk/images/25e76302-bfd1-4aeb-817e-692b9d432269.png" style=3D"width:30px;"=
+ width=3D"30">
+</a>
+</div>
+<!--[if true]></td><![endif]-->
+<!--[if !true]><!--></div><!--<![endif]-->
+<!--[if !true]><!--><div class=3D"" style=3D"display:inline-block;padding-r=
+ight:10px;"><!--<![endif]-->
+<!--[if true]><td style=3D"padding-right:10px;"><![endif]-->
+<div style=3D"text-align: center;">
+<a style=3D"color:#15c; text-decoration:underline" target=3D"_blank" href=
+=3D"https://ctrk.klclick.com/l/01KX8VRQFESGNZ5MR0ERBV04PY_15">
+<img alt=3D"Custom" src=3D"https://d3k81ch9hvuctc.cloudfront.net/company/R6=
+3DZk/images/43decbd8-b267-41f2-9a86-d1552f1da5ba.png" style=3D"width:30px;"=
+ width=3D"30">
+</a>
+</div>
+<!--[if true]></td><![endif]-->
+<!--[if !true]><!--></div><!--<![endif]-->
+<!--[if !true]><!--><div class=3D"" style=3D"display:inline-block;padding-r=
+ight:10px;"><!--<![endif]-->
+<!--[if true]><td style=3D"padding-right:10px;"><![endif]-->
+<div style=3D"text-align: center;">
+<a style=3D"color:#15c; text-decoration:underline" target=3D"_blank" href=
+=3D"https://ctrk.klclick.com/l/01KX8VRQFESGNZ5MR0ERBV04PY_16">
+<img alt=3D"Custom" src=3D"https://d3k81ch9hvuctc.cloudfront.net/company/R6=
+3DZk/images/8d063951-e286-471a-94d0-f51c0bfdb555.png" style=3D"width:30px;"=
+ width=3D"30">
+</a>
+</div>
+<!--[if true]></td><![endif]-->
+<!--[if !true]><!--></div><!--<![endif]-->
+<!--[if !true]><!--><div class=3D"" style=3D"display:inline-block;"><!--<![=
+endif]-->
+<!--[if true]><td style=3D""><![endif]-->
+<div style=3D"text-align: center;">
+<a style=3D"color:#15c; text-decoration:underline" target=3D"_blank" href=
+=3D"https://ctrk.klclick.com/l/01KX8VRQFESGNZ5MR0ERBV04PY_17">
+<img alt=3D"Custom" src=3D"https://d3k81ch9hvuctc.cloudfront.net/company/R6=
+3DZk/images/5416a695-2995-48d2-8f23-938411a408ed.png" style=3D"width:30px;"=
+ width=3D"30">
+</a>
+</div>
+<!--[if true]></td><![endif]-->
+<!--[if !true]><!--></div><!--<![endif]-->
+<!--[if true]></tr></table><![endif]-->
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!--[if true]></td><![endif]-->
+</div>
+<!--[if true]></tr></table><![endif]-->
+<!--[if true]><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"640" style=3D"width:640px;direction:ltr"><tr><![endif]-->
+<div class=3D"kl-row colstack" style=3D"display:table;table-layout:fixed;wi=
+dth:100%;">
+<!--[if true]><td style=3D"vertical-align:top;width:640px;"><![endif]-->
+<div class=3D"kl-column" style=3D"display:table-cell;vertical-align:top;wid=
+th:100%;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper kl-t=
+ext-table-layout" style=3D"font-size:0px;text-align:left;direction:ltr;vert=
+ical-align:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:15px;padding-right:1=
+5px;padding-bottom:15px;padding-left:15px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"kl-text" style=3D"font-size:0px;padding:0px;p=
+adding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:18px;word=
+-break:break-word;">
+<div style=3D"font-family:'nort', Helvetica, Arial, sans-serif;font-size:11=
+px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.5;tex=
+t-align:center;color:#222222;"><div><span style=3D"font-size: 10px;">No lon=
+ger want to receive these emails? <a class=3D"unsubscribe-link" style=3D"co=
+lor:#1155cc;font-weight:normal;text-decoration:underline;" href=3D"https://=
+ctrk.klclick.com/l/01KX8VRQFESGNZ5MR0ERBV04PY_18">Unsubscribe</a>.<br>MNTD =
+CA 179 John St Toronto,, Ontario M5T 1X4</span></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!--[if true]></td><![endif]-->
+</div>
+<!--[if true]></tr></table><![endif]-->
+</div>
+<!--[if mso | IE]></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<img src=3D"https://ctrk.klclick.com/o/01KX8VRQFESGNZ5MR0ERBV04PY" alt=3D""=
+ width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !important;width=
+:1px !important;border-width:0 !important;margin-top:0 !important;margin-bo=
+ttom:0 !important;margin-right:0 !important;margin-left:0 !important;paddin=
+g-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;p=
+adding-left:0 !important;"/>
+
+</body></html>
+--7b8eb130f270a2d92314a7a77fd1304c5c118f811df09687ebfd452a552c--

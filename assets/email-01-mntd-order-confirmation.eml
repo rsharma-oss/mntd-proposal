@@ -1,0 +1,1366 @@
+Return-path: <bounces+50705151-6293-rahul_sharma=mac.com@mailer0ew.wearmntd.ca>
+Original-recipient: rfc822;rahul_sharma@mac.com
+Received: from p00-icloudmta-smtpin-us-east-2d-60-percent-9 by p129-mailgateway-smtp-5db47665c5-lnr2x (mailgateway 2624B114)
+	with SMTP id 99d75ba5-abf3-4e1b-ade0-09772006ff2d 
+	for <rahul_sharma@mac.com>; Thu, 9 Jul 2026 20:48:32 GMT
+X-Apple-MoveToFolder: INBOX 
+X-Apple-Action: MOVE_TO_FOLDER/INBOX
+X-Apple-UUID: 99d75ba5-abf3-4e1b-ade0-09772006ff2d
+Received: from o11.mailer.shopify.com (o11.mailer.shopify.com [149.72.235.154])
+	by p00-icloudmta-smtpin-us-east-2d-60-percent-9 (Postfix) with ESMTPS id 48C45C000AC
+	for <rahul_sharma@mac.com>; Thu, 09 Jul 2026 20:48:27 +0000 (UTC)
+X-ICL-RepId: 019f48a3-9578-74ef-87b1-f066e040b72a
+X-ICL-Info: GAtbRVYDBVFFSlVFSgQEUFUKE0oWX1gHVQoPB0UBAltbTlRZSgMDTERMUlcdVAsAGgwIFB1DHVdFTlZCSQUHT0NLX0RVQlcKABU5BBBRRA8URAsWGx5VDRg5CxYRXFMQRRwRWQ9VVxAYFxITVlNXQhMdWwAdUUQPGw0CWRtRFhAWRBQWEEVaPQYRBwUVUXYPFBpIFBddFgoQFQlKFwEHTBgYDxsdQhgRHRYWHh5JGAEaFEYHDEILDURISBoZWVoHB1cVHxdAXwQMVwUYFRBSBkgOAxYKXVgWEVcFFlhdXwZIRSNGSAMGUkVNS0ZAcwYgNEtXQUwGBCNBQFNaQQVwJkdJUkU4Q14NBRAADlZTWQ9L
+X-ICL-Score: 2.33303322422
+Authentication-Results: bimi.icloud.com; bimi=skipped reason="insufficient dmarc"
+X-ARC-Info: policy=fail; arc=none; r1=-20; r2=0
+Authentication-Results: arc.icloud.com; arc=none
+Authentication-Results: dmarc.icloud.com; dmarc=pass header.from=wearmntd.ca
+X-DMARC-Policy: v=DMARC1; p=none; rua=mailto:postmaster@knix.com;
+X-DMARC-Info: pass=pass; dmarc-policy=none; s=r1; d=r1; pdomain=wearmntd.ca
+Authentication-Results: dkim-verifier.icloud.com; dkim=pass header.d=wearmntd.ca header.i=@wearmntd.ca header.b=bfeDuKUL
+Received-SPF: pass (spf.icloud.com: domain of bounces+50705151-6293-rahul_sharma=mac.com@mailer0ew.wearmntd.ca designates 149.72.235.154 as permitted sender) receiver=spf.icloud.com; client-ip=149.72.235.154; helo=o11.mailer.shopify.com; envelope-from=bounces+50705151-6293-rahul_sharma=mac.com@mailer0ew.wearmntd.ca
+Authentication-Results: spf.icloud.com; spf=pass (spf.icloud.com: domain of bounces+50705151-6293-rahul_sharma=mac.com@mailer0ew.wearmntd.ca designates 149.72.235.154 as permitted sender) smtp.mailfrom=bounces+50705151-6293-rahul_sharma=mac.com@mailer0ew.wearmntd.ca
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=wearmntd.ca;
+	h=content-type:date:from:mime-version:subject:to:cc:content-type:date:
+	from:subject:to;
+	s=0ew; t=1783630105;
+	bh=80jnjtHclV2gHQPjuwFbFIexVzi1i3f6nDwNIbSkuAA=;
+	b=bfeDuKULIi0bRwZcGQQG9Nuef0QZNxHCe6L6+LXfbWu5+lGLCG+TGS0ezhxnAKloYcpD
+	VtIJ4lbqpvVN8erVSDNez50cYY4ukQ52M92Be9fyknO2zDls9C8ukSkhZdbD/kYM6986W/
+	M9VYKmHq5r346C2J9+cgloF8KdNAm0pWoaukYDAwFs7Dje24oc12f6qWrnSGJNQkdvvuTR
+	WTK8ojfu0AfnL9Ao4vdAIKbccttuOgJrbXtXpw1wuUmtFOKroKu77yWzMO0kC8VBuByVQ/
+	FbttSQzC+hgfY3Y7Ukw2cj7QhjGhRZuI54p2Ngob6gkYmelMmAI8Y1/qbT5KTtUQ==
+Received: by recvd-55b4bcbfbb-4m8qb with SMTP id recvd-55b4bcbfbb-4m8qb-1-6A500919-11
+	2026-07-09 20:48:25.534860273 +0000 UTC m=+262138.698896750
+Received: from NTA3MDUxNTE (unknown)
+	by geopod-ismtpd-17 (SG) with HTTP
+	id i_FXfyQ7TbWVkOGqR7uhTw
+	Thu, 09 Jul 2026 20:48:25.506 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=c258fb306df1a056e2305ec7e4c376a2f32c65469e5ff2381552181eede5
+Date: Thu, 09 Jul 2026 20:48:25 +0000 (UTC)
+From: MNTD <info@wearmntd.ca>
+Mime-Version: 1.0
+Message-ID: <E1030004-18C0BA216462A495-95FD2042@shopify.com>
+Subject: Order Confirmation: MNTDCA4963
+Feedback-Id: s_74813702366:shopify
+X-SG-EID: 
+ =?us-ascii?Q?u001=2E60Te9fGlZSl4LTeyNCYo=2FPfuyeTcyNmF+X9cwqEe4dqjpM8YyHogH5AdH?=
+ =?us-ascii?Q?0SZAB1xvTow4e6QFjU2jeHhQKCLroVxKR=2FE7aus?=
+ =?us-ascii?Q?Ilq8bD6EQ9tky6Ii5qHSPSIWvhwIdRc=2F5Y38wwu?=
+ =?us-ascii?Q?oFFRGQGtR8jg4mDHgy5WjbDhgPd46Z4CSYUm0F2?=
+ =?us-ascii?Q?Bz50QlY++AJBuZ9pclua=2F9ze8L7Nv5FV6LLTshn?=
+ =?us-ascii?Q?sORTjvc6WFQW2=2FWHjdS0DE=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3BpTL9BgbK5wfSJMJGMsmprDITwp3LLcgXu9gv?=
+ =?us-ascii?Q?F1Oq5oTf1VY9MM=2F=2FZCviT=2FP37sq37Y5Gb1vdb4T?=
+ =?us-ascii?Q?VkDdvWkf0mU2VoZMnmJl7IFSm9J3HW=2F1FIIN+64?=
+ =?us-ascii?Q?7fjlbTXb4EdYJdbxRNBOq2S6W61sNurzzgau5xL?=
+ =?us-ascii?Q?qdbWGj2qVW4UmZ7sKUCI63KipXboVXh1jChrVKh?=
+ =?us-ascii?Q?q8qR7x5W1HNyoWDVAoqPCKD2CbGgPr2u7E0D1=2Fi?=
+ =?us-ascii?Q?rnh0NGmu4G+OV60EiLlXaAgKSsK0JmLYP1S1eak?=
+ =?us-ascii?Q?FjNvbyjd6AxkCdx63LhsPViOaXVpbTZbczkrP37?=
+ =?us-ascii?Q?2JzmhmU8RA1DofOVenBVA3y4SZ6ALKkrIEWIq7W?=
+ =?us-ascii?Q?0L61uZnoTmuRCdeoH+xBPbg9w89it6=2FQinTdqC8?=
+ =?us-ascii?Q?Lj9Tj3RCXbk5lKVMPjEGq6u9Pf3yJEZ9qBkQzwV?=
+ =?us-ascii?Q?Uw1j0PLrVvUT3+ZP9gHN77tXJe97qWIRDqLghoP?=
+ =?us-ascii?Q?RwE3K8LrGnM0zlJBuNVI13a6OaJc6xn25Y=2FRtJ6?=
+ =?us-ascii?Q?66ZprQ1d4J68uuSi1grGdNgKChp8KW0tW+fsrd1?=
+ =?us-ascii?Q?Bj6STZxLYpe+XFvwjci=2FQBaG+yH3kk8bQLQBxfp?=
+ =?us-ascii?Q?Mf0xOW+gM9SsHtAto9hnnFqbLlS2MjNXh5jtl+0?=
+ =?us-ascii?Q?TlIZPMd0jAfQcLp3HOelWWbie7hFJntcrmaJAUP?=
+ =?us-ascii?Q?4W1x1YLLMVJYQNn1JuUoGerSZDIIkMcj+KeBD=2Fc?=
+ =?us-ascii?Q?+l9tbTa8zb=2FzJ0Kx9B3Aii2nz54IeFsAp=2FvNRXL?=
+ =?us-ascii?Q?Kbm6+36Y0ZTCOqxkiIOaSMwrP+kCm4D9=2FP4bEcF?=
+ =?us-ascii?Q?mHzC6pdwtQmb2vEdmGU3xBnRFC+4G8oqjgJJ9I2?=
+ =?us-ascii?Q?Up8wq8yGs9FfSj4BkOLAICR4y1qHKl8KU5cGguJ?=
+ =?us-ascii?Q?cj=2FUa89d8+I+ZfDWk3bum2gFw5UpkPUqt8Vg=2F6v?=
+ =?us-ascii?Q?N=2FN8BK+LUPmK5AXv3U+u+Yqc4VZo=2FBYSJlDsHxa?=
+ =?us-ascii?Q?3+XtGsscYjW8n3gCwWOLqhJnTJLrud8+BJKdE0z?=
+ =?us-ascii?Q?f7V+O97N9N1IDcFB3mi7slfR9l1urmIR2tNalb=2F?=
+ =?us-ascii?Q?W+nYQZpH4rckpFtpFSFY+sWELGy=2FdQVSnTWaBKK?=
+ =?us-ascii?Q?Pz9HFgq8eRkBjt4uLOsYJ3Npr8eRQi0Laht=2F0MZ?=
+ =?us-ascii?Q?3JjEX8lUlArGNCmUoB4v384IO8SOpF+ga9nY=2FPG?=
+ =?us-ascii?Q?88AhFNdmNwDZKNQqJcYqjK34jFj4=2FIi1xcdhCcw?=
+ =?us-ascii?Q?BuVI24W+oOEbPy7U24pMFwq7sVzk2J3zoL8Dd38?=
+ =?us-ascii?Q?gSdV6Kcnx8OWFk9D01F=2Ft8=2FM=2FIsJROw5UJvswRO?=
+ =?us-ascii?Q?pEmtWV6UKnfHby+v0iDyxLgtktqGYdSQhpk36Oe?=
+ =?us-ascii?Q?gn+1fDXLC145ldsMbyI76bpA+SDV4Ne1TpN0O2p?=
+ =?us-ascii?Q?MRlRSVYYQ2BnZCYgwnwuPAcy82R45e=2FffL4aJu5?=
+ =?us-ascii?Q?s53uuQVvtbdbSK7VRFO8df1k4bQSXTjFajIySL+?=
+ =?us-ascii?Q?+=2FV2mzL8v16xP8XoYsrE7Nge+VhXCPMSGlkahDl?=
+ =?us-ascii?Q?ezQVD9o6p74?=
+To: rahul_sharma@mac.com
+X-Entity-ID: u001.6c8eT64e75TPJWZJnrNwAA==
+X-MANTSH: 1TFkXGxwbEQpZRBdufn5DZhkcGUVzfREKWU0XZEVETxEKWUkXGnEaEBp3BhseG3E
+ YHxAadwYYGgYaEQpZXhdsbHkRCkNOF3geckRYWGdkGQdbUkdNS2dZfV1fX2UHRm57bWlsUH59E
+ QpYXBcZBBoEHxIFGxoEGxwYBBkaBBgSEBseGh8aEQpeWRdCQksYHhEKTVwXExMRCkxaF3htTU1
+ rEQpFWRdvEQpMXxd6BQUFBQUFBQUFQxEKTEYXTWsRCkNaFxseEwQdGAQYGR8EGx8eEQpCXhcbE
+ QpCXBcbEQpeThcbEQpCSxduS0wde3pbfG5rTBEKQkkXbktMHXt6W3xua0wRCkJFF2wSQR1QXBw
+ eZltFEQpCThduS0wde3pbfG5rTBEKQkwXZExlelIeYgFBEmcRCkJsF2dCRwUFfRsSE3hyEQpCQ
+ BdoSW5IQRgYAWJiSREKQlgXbR5LW3NjbB1TeU0RCkJ4F2tHRRpfGnhDGkYSEQpaWBcbGREKcGg
+ XYWNeHkcfTBJTQRMQGhEKcGgXZWhcRnNMc0xlW0YQGhEKcGgXaXpCax5Fb3pPQUkQGhEKcGgXa
+ B5gemgZHGVEYW8QGhEKcGgXa0xPax55GnBzaB8QGhEKcGgXZGwcWRlBaBJ+ZHAQGhEKcGgXaxJ
+ EBX5Ffk9ETWgQGhEKcGgXa0BPBRttGk9zYW8QGhEKcH8XZUVFXRp9e0YcWkMQBx0EExEKcH0Xb
+ 2h4Q01NGWtdcmAQGhEKcH8XYVwZc0J5b3lCQF4QBx0dEQpwXxdjcgFwQR9GelkSThAHGRoRCnB
+ 9F3p9bHJIYhlBQWAcEBoRCnB/F3pDe1AfGH0YEn8aEAcdGxEKcF8XemgdH0YSeE8YSWsQBx4SE
+ QpwfRdvU3pmGXNLbmlNUBAaEQpwfxdhTx8ZeUlpXHkaZhAHHRIRCnBfF25rax5cc39BE29fEAc
+ dGREKcH0XY3J5ZWFsXXBIRX8QGhEKcH8XbWRpTm0BTUV7TEAQBxIaEQpwXxd6fX1LW0hsb2sFc
+ BAHHhMRCnB9F2BHQGgfehl4bB14EBoRCnBfF2xGf3BGUkFHcBoFEBoRCnB9F2hiXXsbGW1Le2F
+ GEBoRCnB/F21SX39FfwVYbEtaEAccGBEKcF8XYHxAXnpjQlppehIQBx8fEQpwfRdtQ05kEh57e
+ XAeXxAaEQpwfRduQ31YE15dRXwcbRAaEQpwXxduRWdAQ1hMX11gUxAHGRMRCnB9F21TGkMFQ0x
+ 4GWxoEAcZGREKcH0XYEsfZFNuZFpaQGIQGhEKcH0XbnpgXm1+HGxDHxMQGhEKcH0XZBJzX11OW
+ HN7Q38QGhEKcH0XbVMaQwVDTHgZbGgQBxkZEQpwfRdlaBt7GHtpGwUdEhAaEQpwfRdtUxpDBUN
+ MeBlsaBAHGRkRCnBsF3plQHpdAUwZX3lcEAcdBBMRCm1+FxoRClhNF0sR
+X-Authority-Info: v=2.4 cv=VdH6/Vp9 c=1 sm=1 tr=0 ts=6a50091d b=1
+ cx=c_apl:c_pps a=RneM+jr0Aj6QUSB97abR6A==:117 a=RneM+jr0Aj6QUSB97abR6A==:17
+ a=RAioF0-LDSMA:10 a=LoKmEmyLDP4A:10 a=R_FKn6Doux8A:10 a=4FVviiqyAAAA:8
+ a=BkpHzsgbAAAA:8 a=svKqqNJeAAAA:8 a=3j4BkbkPAAAA:8 a=vnREMb7VAAAA:8
+ a=GU5uxkdtj7pL1gXNKaAA:9 a=QEXdDO2ut3YA:10 a=uZ30BzuaAAAA:8 a=fys2sDa9AAAA:8
+ a=my13bNkbAAAA:8 a=qR7qv22Y-ZKXKmfgbsoA:9 a=1csgKb1Y5H2YLNORM/oK/lCEk10=:19
+ a=-cUuRcSiXiV_Tg62:21 a=_W_S_7VecoQA:10 a=xb1TjRqlh1HAZwzqnHSW:22
+ a=7YpECbvlQQReuXKdpsOb:22 a=3pPIBQ76aAvWTjhCwuo6:22 cc=ntf
+X-Proofpoint-Spam-Details-Enc: AW1haW4tMjYwNzA5MDIwNyBTYWx0ZWRfX3hq46XF1MqZA
+ MllAVvKjMmdlJpp2fBwlvf1Lz8YaNuwNMHZBsaKxfzy0TyETFzxZxvZMmQnywmyNsqsB5orHoEC
+ SvU2KNGdhRD+sPTwHvspTs8YXG6gFfBmqNY60Lm9lZ0Y7vGsYFkRnep83MMpj2PQ3T8skVz+iZC
+ nzkoFOrTgV6zPBvERdvfVpcssjL+ETQq9Kc+bqXLDvdtkBgBJEFBuGx7oMbWuQlr8rWly/Ct6Oe
+ cWEftCCC8N8Ekmrmw6LWz1N30cVNYCynYxkvDe8K3D0cZ6yVJthmZaC+kBaZxgKndgVfjFVG76N
+ 4KMOUycFpEYCgHkNn0MuJ9BpmArKu1l2cS9rtOb2TV5Y//t68H8Nc/j4LjWyA76wLmsm2pbEVii
+ oidEbUXyWEpfZWPLTWEhfWm0r4sMkgUWC6mXkQZfdL2w/+6+wkcnV3nxVsY1GW1J9wIkEjlo
+X-Proofpoint-GUID: R4XnrrMN3-qxmgaMsWwuuO-lDQGCFzTW
+X-Proofpoint-ORIG-GUID: R4XnrrMN3-qxmgaMsWwuuO-lDQGCFzTW
+X-JNJ: AAAAAAABd9rnO8k5UNEfdSIH2AZ1GSwtzR2jUuu/kn5+6ZBJnWzR7VeTJkhhPbUbLbOhfh8r1aj7/pQEKvcbZywwciGDnIgVO/fHCdm6u5eYihBjcEaLI2r3GYtr4jlks9JnoYx4ObvHWUWPEntE6VCH6BAGmUvbKWg/8SfAYzQQB3yLwxfSbcl+dVLJj4pkDWji4VaghaavnrA+fD8jr//r6yhjz8ofekB+HYc7QrCahgsM3P1259G5vjACbfFotpBOwckPviEmRV9wiGr4ZS0uF44rTrEuswTtcGUYxeJ/KeSZ3t8HAsvoiiy/3crcX64k8Bx5DMzdsBfz/zxr/R+SAaxoUnuNruDHqsQbqeoYiJxwIv+lCcARU2xLUF9y5MN+yzBVKhzcjLABnIieHJr7FpbDz+kH20Sl6Q9QCK51vwFSOgWH4AYTj8R6+nV8Ag4zmpLviEgPl2hB0AausI4Y9ZXaZlxSxJXlu2lF+TuXbOefenyYpTVonK5h9WD+sf/qWNRWf4lvOI7wa6RKrGlySg78aHztHgCOyNjQYfgBl98tE2Lux1i1PH2BgY5nPWl9YrVr44WmD7kTlWz0iOmAACdeOtatguWJ7ux6tBkd9UyX8SWzqHfjuRJztj4H+fjD9W3nFRl2X4J5ll9s+SK6weGkt9XWQw9aZrGLlqtjfLhNG0nyPEBW+/M2Zd/GP1e443glscWM8olGbOpLV2HvcqfTYQbFT1jy6DxjA+1SDltLa25b7BBmT+OByHCkDvawos44WkKM2v1Tv9QJvb8StZK3CwQMNQPq73V6H9FwXMTBF1kP5ubcwcHXOTv24FHojdFvCw6cdW6NImMYFAscwH+5C4W9/qGOttsxSUlSu5ZnB2Ru3d1tZ1zAjlqwNPhuS6/N6TWXfpDB+0dI/yqJIUja32fawhIJGuk87T6RPe3Ho3t8ilRDkde4wHJP0+xBzzmTsfSe
+
+--c258fb306df1a056e2305ec7e4c376a2f32c65469e5ff2381552181eede5
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+Thank you for your purchase!
+
+MNTD=20
+( https://wearmntd.ca?syclid=3Dc0890a85-a4cb-4509-a50f-5df89f716d75 )
+
+****************************
+Thank you for your purchase!
+****************************
+
+We've received your order and are getting it
+ready. Please
+allow 1-2 business days for our warehouse
+team to pack and
+ship your order. You'll get another email
+when your package
+is ready to be shipped.
+
+--------------
+Order Details:
+--------------
+
+Order Number: MNTDCA4963
+
+Order Date: July 09, 2026
+
+Shipping Address:
+
+Rahul Sharma
+42 Columbine Avenue
+Toronto ON M4L 1P3
+Canada
+
+Billing Address:
+
+Rahul Sharma
+42 Columbine Avenue
+Toronto ON M4L 1P3
+Canada
+
+--------------
+Order summary:
+--------------
+
+Best Damn Tee=E2=84=A2 =C3=97 1
+
+Moss / M
+
+GIFT-A::3H-UPHFK
+(-$55.00)
+
+$55.00
+
+Free
+
+Best Damn Tee=E2=84=A2 =C3=97 1
+
+Black / M
+
+$55.00
+
+Non-Stop Crew Sock =C3=97 1
+
+White / L/XL 10-13
+
+$15.00
+
+Best Damn=E2=84=A2 Boxer Brief 5" =C3=97 2
+
+Midnight / L / 5"
+
+VOLUME DISCOUNT
+(-$5.20)
+
+$52.00
+
+$46.80
+
+Best Damn=E2=84=A2 Boxer Brief 5" =C3=97 1
+
+Ice / L / 5"
+
+VOLUME DISCOUNT
+(-$2.60)
+
+$26.00
+
+$23.40
+
+Subtotal
+
+$140.20
+
+Shipping
+
+$0.00
+
+Taxes
+
+$18.22
+
+Total
+
+$158.42 CAD
+
+You saved $62.80
+
+Need to make changes?
+---------------------
+
+Once an order is placed, we cannot guarantee any address
+updates, order changes, or cancellations. To inquire about an
+order update, please reply to this email.
+
+Return Policy
+-------------
+
+Our return policy varies by item and promotion. To view our
+full return policy, please click here=20
+( https://wearmntd.ca/pages/about-us?syclid=3D3c6e74c4-f860-417a-ae5f-c05f9=
+0d0a022&view=3Dreturns )
+.
+
+Instagram ( https://www.instagram.com/wearmntd/ )
+
+TikTok ( https://www.tiktok.com/@wearmntd )
+
+Facebook=20
+( https://www.facebook.com/profile.php?id=3D61582207345859 )
+
+YouTube ( https://www.youtube.com/@wearmntd )
+
+MNTD 179 John St. Toronto, ON M5T1X4
+--c258fb306df1a056e2305ec7e4c376a2f32c65469e5ff2381552181eede5
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w=
+3.org/TR/REC-html40/loose.dtd"><html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8"/>
+<style>body {
+margin: 0;
+}
+h1 a:hover {
+font-size: 30px; color: #333;
+}
+h1 a:active {
+font-size: 30px; color: #333;
+}
+h1 a:visited {
+font-size: 30px; color: #333;
+}
+a:hover {
+text-decoration: none;
+}
+a:active {
+text-decoration: none;
+}
+a:visited {
+text-decoration: none;
+}
+.button__text:hover {
+color: #fff; text-decoration: none;
+}
+.button__text:active {
+color: #fff; text-decoration: none;
+}
+.button__text:visited {
+color: #fff; text-decoration: none;
+}
+a:hover {
+color: #15c; text-decoration: underline; cursor: pointer;
+}
+a:active {
+color: #15c; text-decoration: underline; cursor: pointer;
+}
+a:visited {
+color: #15c; text-decoration: underline; cursor: pointer;
+}
+@media (max-width: 600px) {
+  .container {
+    width: 94% !important;
+  }
+  .main-action-cell {
+    float: none !important; margin-right: 0 !important;
+  }
+  .actions-buttons .actions-buttons__cell {
+    display: block !important; width: 100% !important; padding-left: 0 !imp=
+ortant; padding-right: 0 !important; padding-bottom: 10px !important;
+  }
+  .actions-buttons tr {
+    width: 100% !important; display: block !important;
+  }
+  .actions-buttons .button__cell--separator {
+    width: 100% !important; display: block !important;
+  }
+  .actions-buttons .button__cell.button__cell--primary {
+    width: 100% !important; display: block !important;
+  }
+  .actions-buttons .button__cell.button__cell--shop-app {
+    width: 100% !important; display: block !important;
+  }
+  .actions-buttons .button__cell.button__cell--shop-app {
+    mso-margin-top-alt: 15px !important;
+  }
+  .actions-buttons .button__cell--separator {
+    height: 15px !important; mso-padding-top-alt: 15px !important; mso-padd=
+ing-left-alt: 0 !important;
+  }
+  .actions-buttons .button__text--shop-app {
+    white-space: normal; line-height: 1.5; mso-line-height-rule: exactly;
+  }
+  .actions-buttons .button__shop-logo {
+    padding-bottom: 1px !important; vertical-align: middle !important;
+  }
+  .secondary-action-cell {
+    text-align: center; width: 100%;
+  }
+  .header {
+    margin-top: 20px !important; margin-bottom: 2px !important;
+  }
+  .shop-name__cell {
+    display: block;
+  }
+  .order-number__cell {
+    display: block; text-align: left !important; margin-top: 20px;
+  }
+  .po-number__cell {
+    display: block; text-align: left !important; margin-top: 5px;
+  }
+  .button {
+    width: 100%;
+  }
+  .or {
+    margin-right: 0 !important;
+  }
+  .apple-wallet-button {
+    text-align: center;
+  }
+  .customer-info__item {
+    display: block; width: 100% !important;
+  }
+  .spacer {
+    display: none;
+  }
+  .subtotal-spacer {
+    display: none;
+  }
+  .return__mobile-padding {
+    margin-top: 19px; padding-top: 19px;
+  }
+}
+</style>
+</head>
+<body style=3D"margin: 0;">   =20
+
+
+
+
+
+
+
+
+
+ =20
+    <title>
+ =20
+    Thank you for your purchase!
+ =20
+</title>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+"/>
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width"/>
+   =20
+   =20
+ =20
+ =20
+    <table class=3D"body" style=3D"height: 100% !important; width: 100% !im=
+portant; border-spacing: 0; border-collapse: collapse;">
+      <tbody><tr>
+        <td style=3D"font-family: &#39;Helvetica Neue&#39;,Arial; font-size=
+: 12px; font-weight: 400; letter-spacing: 0px; line-height: 1.5; color: #22=
+2222;" align=3D"left">
+          <center>
+            <table class=3D"container" style=3D"width: 560px; text-align: l=
+eft; border-spacing: 0; border-collapse: collapse; max-width: 592.5px; tabl=
+e-layout: fixed; margin: 0 auto;">
+              <tbody><tr>
+                <td style=3D"font-family: &#39;Helvetica Neue&#39;,Arial; f=
+ont-size: 12px; font-weight: 400; letter-spacing: 0px; line-height: 1.5; co=
+lor: #222222;" align=3D"left">
+                  <a class=3D"header__banner" href=3D"https://wearmntd.ca/_=
+t/c/v3/AAD7S0c-u67LhnqU8ZXMC2qNZ9l8S60nG6SUtiNyCheDq--xKc4gi5NRVKUBlJ11ItR2=
+m6iDuS5Y_nFv9jU8CZkKj720hwIvz_se7mgBwQ5z7iag2_eTo16TVIti8pEtPADw8cq_bmXAOVc=
+t7gRhWPRtvXkt_YnpCFq6adIu2q4a63T30mGPAD7fkE9U_Pe77dN8u0UCabyuk5lWnvDPkjdwne=
+w24-eW07irPYLsCkomDi1OQwevUaxUKoNSkDpMj4Tq4psPiTWeYlQFc2lTrkmnjWoiBqAe99cAd=
+HnjL8VDUD_CiQG4vEHvsIZZtwdtw15goPqp4A=3D=3D" style=3D"font-size: 12px; text=
+-decoration: underline; color: #222222; cursor: pointer; max-width: 592.5px=
+; font-family: &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter-spa=
+cing: 0px; line-height: 1.5; text-align: left;" target=3D"_blank">
+                    <img width=3D"548px" src=3D"https://cdn.shopify.com/s/f=
+iles/1/0748/1370/2366/files/MNTD_006_09152025_OrderConfirmation_Header_1336=
+x237_267f7336-223b-4a87-9c19-c6f4e084b329.jpg?v=3D1759258455" alt=3D"MNTD" =
+style=3D"border-bottom-width: 1px; border-bottom-color: black; margin: 1em =
+0; border-style: none none solid;"/>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td style=3D"font-family: &#39;Helvetica Neue&#39;,Arial; f=
+ont-size: 12px; font-weight: 400; letter-spacing: 0px; line-height: 1.5; co=
+lor: #222222; padding: 0 3em;" colspan=3D"2" align=3D"left">
+                  <h1 style=3D"font-family: &#39;Suisse&#39;, Helvetica, Ar=
+ial, sans-serif; font-weight: 400; letter-spacing: 0px; color: #222222; fon=
+t-size: 22px; padding-top: 2em; padding-bottom: 1em; margin: 0;" align=3D"c=
+enter">
+                   =20
+ =20
+    Thank you for your purchase!
+ =20
+
+                  </h1>
+                  <p style=3D"color: #222222; line-height: 1.5; font-size: =
+12px; font-family: &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter=
+-spacing: 0px; margin: 0;" align=3D"left">
+                    We&#39;ve received your order and are getting it ready.=
+ Please
+                    allow 1-2 business days for our warehouse team to pack =
+and
+                    ship your order. You&#39;ll get another email when your=
+ package
+                    is ready to be shipped.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style=3D"font-family: &#39;Helvetica Neue&#39;,Arial; f=
+ont-size: 12px; font-weight: 400; letter-spacing: 0px; line-height: 1.5; co=
+lor: #222222; padding: 1em 5em 0 3em;" colspan=3D"2" align=3D"left">
+                  <h2 style=3D"font-weight: bold; font-size: 12px; font-fam=
+ily: &#39;Helvetica Neue&#39;,Arial; letter-spacing: 0px; line-height: 1.5;=
+ color: #222222; margin: 0 0 10px;" align=3D"left">Order Details:</h2>
+                </td>
+              </tr>
+              <tr>
+                <td style=3D"padding-left: 3em; font-family: &#39;Helvetica=
+ Neue&#39;,Arial; font-size: 12px; font-weight: 400; letter-spacing: 0px; l=
+ine-height: 1.5; color: #222222;" width=3D"50%" align=3D"left">
+                  <p style=3D"color: #222222; line-height: 1.5; font-size: =
+12px; font-family: &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter=
+-spacing: 0px; margin: 0;" align=3D"left">Order Number: MNTDCA4963</p>
+                </td>
+                <td style=3D"padding-right: 3em; font-family: &#39;Helvetic=
+a Neue&#39;,Arial; font-size: 12px; font-weight: 400; letter-spacing: 0px; =
+line-height: 1.5; color: #222222;" width=3D"50%" align=3D"left">
+                  <p style=3D"color: #222222; line-height: 1.5; font-size: =
+12px; font-family: &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter=
+-spacing: 0px; margin: 0;" align=3D"left">Order Date: July 09, 2026</p>
+                </td>
+              </tr>
+              <tr>
+               =20
+                <td style=3D"padding-left: 3em; padding-top: 1em; font-fami=
+ly: &#39;Helvetica Neue&#39;,Arial; font-size: 12px; font-weight: 400; lett=
+er-spacing: 0px; line-height: 1.5; color: #222222;" width=3D"50%" align=3D"=
+left">
+                  <p style=3D"color: #222222; line-height: 1.5; font-size: =
+12px; font-family: &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter=
+-spacing: 0px; margin: 0;" align=3D"left">Shipping Address:</p>
+                  <p style=3D"color: #222222; line-height: 1.5; font-size: =
+12px; font-family: &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter=
+-spacing: 0px; margin: 15px 0 0;" align=3D"left"></p>
+<p style=3D"color: #222222; line-height: 1.5; font-size: 12px; font-family:=
+ &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter-spacing: 0px; mar=
+gin: 15px 0 0;" align=3D"left">Rahul Sharma<br/>42 Columbine Avenue<br/>Tor=
+onto ON M4L 1P3<br/>Canada</p>
+                </td>
+                =20
+                <td style=3D"padding-right: 3em; padding-top: 1em; font-fam=
+ily: &#39;Helvetica Neue&#39;,Arial; font-size: 12px; font-weight: 400; let=
+ter-spacing: 0px; line-height: 1.5; color: #222222;" width=3D"50%" align=3D=
+"left">
+                  <p style=3D"color: #222222; line-height: 1.5; font-size: =
+12px; font-family: &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter=
+-spacing: 0px; margin: 0;" align=3D"left">Billing Address:</p>
+                  <p style=3D"color: #222222; line-height: 1.5; font-size: =
+12px; font-family: &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter=
+-spacing: 0px; margin: 15px 0 0;" align=3D"left"></p>
+<p style=3D"color: #222222; line-height: 1.5; font-size: 12px; font-family:=
+ &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter-spacing: 0px; mar=
+gin: 15px 0 0;" align=3D"left">Rahul Sharma<br/>42 Columbine Avenue<br/>Tor=
+onto ON M4L 1P3<br/>Canada</p>
+                </td>
+               =20
+              </tr>
+            </tbody></table>
+            <div class=3D"body__content">
+                </div><table class=3D"container" style=3D"width: 560px; tex=
+t-align: left; border-spacing: 0; border-collapse: collapse; max-width: 592=
+.5px; table-layout: fixed; margin: 0 auto;">
+              <tbody><tr>
+                <td colspan=3D"2" style=3D"font-family: &#39;Helvetica Neue=
+&#39;,Arial; font-size: 12px; font-weight: 400; letter-spacing: 0px; line-h=
+eight: 1.5; color: #222222; padding: 1em 3em;" align=3D"left"><h2 style=3D"=
+font-weight: bold; font-size: 12px; font-family: &#39;Helvetica Neue&#39;,A=
+rial; letter-spacing: 0px; line-height: 1.5; color: #222222; margin: 0 0 10=
+px;" align=3D"left">Order summary:</h2></td>
+                <!-- START OF BODY CONTENT -->
+                 </tr></tbody></table><table class=3D"container" style=3D"w=
+idth: 560px; text-align: left; border-spacing: 0; border-collapse: collapse=
+; max-width: 592.5px; table-layout: fixed; margin: 0 auto;">
+        <tbody><tr>
+        <td style=3D"font-family: &#39;Helvetica Neue&#39;,Arial; font-size=
+: 12px; font-weight: 400; letter-spacing: 0px; line-height: 1.5; color: #22=
+2222;" align=3D"left">
+           =20
+           =20
+
+<table class=3D"row" style=3D"width: 548px; border-spacing: 0; border-colla=
+pse: collapse; margin-left: 3em; margin-right: 3em; max-width: -webkit-fill=
+-available;">
+
+
+   =20
+
+
+
+
+
+
+<tbody><tr class=3D"order-list__item" style=3D"width: 100%; border-top-widt=
+h: 1px; border-top-color: #e5e5e5; border-top-style: none;">
+<td class=3D"order-list__item__cell" style=3D"font-family: &#39;Helvetica N=
+eue&#39;,Arial; padding-bottom: 15px; font-size: 12px; font-weight: 400; le=
+tter-spacing: 0px; line-height: 1.5; color: #222222;" align=3D"left">
+    <table style=3D"border-spacing: 0; border-collapse: collapse;">
+
+   =20
+        <tbody><tr><td class=3D"order-list__image-cell" style=3D"font-famil=
+y: &#39;Helvetica Neue&#39;,Arial; font-size: 12px; font-weight: 400; lette=
+r-spacing: 0px; line-height: 1.5; color: #222222;" align=3D"left" valign=3D=
+"middle">
+       =20
+            <img src=3D"https://cdn.shopify.com/s/files/1/0748/1370/2366/fi=
+les/MNTD_006_05262026_PDP_Images_MNT904_Moss_1_compact_cropped.jpg?v=3D1780=
+606121" align=3D"left" width=3D"60" height=3D"60" class=3D"order-list__prod=
+uct-image" style=3D"margin-right: 15px; border-radius: 8px; border: 1px sol=
+id #e5e5e5;"/>
+       =20
+        </td>
+   =20
+    <td class=3D"order-list__product-description-cell" style=3D"font-family=
+: &#39;Helvetica Neue&#39;,Arial; width: 100%; font-size: 12px; font-weight=
+: 400; letter-spacing: 0px; line-height: 1.5; color: #222222;" align=3D"lef=
+t">
+       =20
+       =20
+
+        <span class=3D"order-list__item-title" style=3D"font-size: 12px; fo=
+nt-weight: bold; line-height: 1.5; color: #222222; font-family: &#39;Helvet=
+ica Neue&#39;,Arial; letter-spacing: 0px; text-align: left;">Best Damn Tee=
+=E2=84=A2=C2=A0=C3=97=C2=A01</span><br/>
+
+       =20
+        <span class=3D"order-list__item-variant" style=3D"font-size: 14px; =
+color: #999; font-weight: 400;">Moss / M</span><br/>
+       =20
+
+       =20
+       =20
+       =20
+
+       =20
+
+       =20
+
+       =20
+
+       =20
+       =20
+           =20
+            <p style=3D"color: #222222; line-height: 1.5; font-size: 12px; =
+font-family: &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter-spaci=
+ng: 0px; margin: 4px 0 0;" align=3D"left">
+            <span class=3D"order-list__item-discount-allocation" style=3D"f=
+ont-size: 14px; display: block; line-height: 1.4; margin: 1px 0 0;">
+                <img src=3D"https://cdn.shopify.com/shopifycloud/shopify/as=
+sets/themes_support/notifications/discounttag-23d3dd52a101179fb1461daaba6b7=
+7388b99b6154de85840a5245b8d3930a68e.png" width=3D"18" height=3D"18" class=
+=3D"discount-tag-icon" style=3D"vertical-align: middle; margin-right: 6px;"=
+/>
+                <span style=3D"font-size: 12px; margin-left: -4px; font-fam=
+ily: &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter-spacing: 0px;=
+ line-height: 1.5; text-align: left; color: #222222;">
+                GIFT-A::3H-UPHFK
+                (-$55.00)
+                </span>
+            </span>
+            </p>
+           =20
+       =20
+       =20
+    </td>
+       =20
+        <td class=3D"order-list__price-cell" style=3D"font-family: &#39;Hel=
+vetica Neue&#39;,Arial; white-space: nowrap; font-size: 12px; font-weight: =
+400; letter-spacing: 0px; line-height: 1.5; color: #222222;" align=3D"left"=
+>
+       =20
+       =20
+        <del class=3D"order-list__item-original-price" style=3D"font-size: =
+14px; display: block; text-align: right; color: #999;">$55.00</del>
+       =20
+        <p class=3D"order-list__item-price" style=3D"color: #555; line-heig=
+ht: 1.5; font-size: 12px; font-weight: 600; font-family: &#39;Helvetica Neu=
+e&#39;,Arial; letter-spacing: 0px; margin: 4px 0 0 15px;" align=3D"right">
+           =20
+            Free
+           =20
+        </p>
+        </td>
+    </tr></tbody></table>
+</td>
+</tr>
+
+
+
+
+
+
+   =20
+
+
+
+
+
+
+<tr class=3D"order-list__item" style=3D"width: 100%; border-top-width: 1px;=
+ border-top-color: #e5e5e5; border-top-style: solid;">
+<td class=3D"order-list__item__cell" style=3D"font-family: &#39;Helvetica N=
+eue&#39;,Arial; padding-top: 15px; padding-bottom: 15px; font-size: 12px; f=
+ont-weight: 400; letter-spacing: 0px; line-height: 1.5; color: #222222;" al=
+ign=3D"left">
+    <table style=3D"border-spacing: 0; border-collapse: collapse;">
+
+   =20
+        <tbody><tr><td class=3D"order-list__image-cell" style=3D"font-famil=
+y: &#39;Helvetica Neue&#39;,Arial; font-size: 12px; font-weight: 400; lette=
+r-spacing: 0px; line-height: 1.5; color: #222222;" align=3D"left" valign=3D=
+"middle">
+       =20
+            <img src=3D"https://cdn.shopify.com/s/files/1/0748/1370/2366/fi=
+les/MNTD_006_05262026_PDP_Images_MNT904_Black_1_compact_cropped.jpg?v=3D178=
+0606121" align=3D"left" width=3D"60" height=3D"60" class=3D"order-list__pro=
+duct-image" style=3D"margin-right: 15px; border-radius: 8px; border: 1px so=
+lid #e5e5e5;"/>
+       =20
+        </td>
+   =20
+    <td class=3D"order-list__product-description-cell" style=3D"font-family=
+: &#39;Helvetica Neue&#39;,Arial; width: 100%; font-size: 12px; font-weight=
+: 400; letter-spacing: 0px; line-height: 1.5; color: #222222;" align=3D"lef=
+t">
+       =20
+       =20
+
+        <span class=3D"order-list__item-title" style=3D"font-size: 12px; fo=
+nt-weight: bold; line-height: 1.5; color: #222222; font-family: &#39;Helvet=
+ica Neue&#39;,Arial; letter-spacing: 0px; text-align: left;">Best Damn Tee=
+=E2=84=A2=C2=A0=C3=97=C2=A01</span><br/>
+
+       =20
+        <span class=3D"order-list__item-variant" style=3D"font-size: 14px; =
+color: #999; font-weight: 400;">Black / M</span><br/>
+       =20
+
+       =20
+       =20
+       =20
+
+       =20
+
+       =20
+
+       =20
+
+       =20
+       =20
+       =20
+    </td>
+       =20
+        <td class=3D"order-list__price-cell" style=3D"font-family: &#39;Hel=
+vetica Neue&#39;,Arial; white-space: nowrap; font-size: 12px; font-weight: =
+400; letter-spacing: 0px; line-height: 1.5; color: #222222;" align=3D"left"=
+>
+       =20
+       =20
+        <p class=3D"order-list__item-price" style=3D"color: #555; line-heig=
+ht: 1.5; font-size: 12px; font-weight: 600; font-family: &#39;Helvetica Neu=
+e&#39;,Arial; letter-spacing: 0px; margin: 4px 0 0 15px;" align=3D"right">
+           =20
+            $55.00
+           =20
+           =20
+        </p>
+        </td>
+    </tr></tbody></table>
+</td>
+</tr>
+
+
+
+
+
+
+   =20
+
+
+
+
+
+
+<tr class=3D"order-list__item" style=3D"width: 100%; border-top-width: 1px;=
+ border-top-color: #e5e5e5; border-top-style: solid;">
+<td class=3D"order-list__item__cell" style=3D"font-family: &#39;Helvetica N=
+eue&#39;,Arial; padding-top: 15px; padding-bottom: 15px; font-size: 12px; f=
+ont-weight: 400; letter-spacing: 0px; line-height: 1.5; color: #222222;" al=
+ign=3D"left">
+    <table style=3D"border-spacing: 0; border-collapse: collapse;">
+
+   =20
+        <tbody><tr><td class=3D"order-list__image-cell" style=3D"font-famil=
+y: &#39;Helvetica Neue&#39;,Arial; font-size: 12px; font-weight: 400; lette=
+r-spacing: 0px; line-height: 1.5; color: #222222;" align=3D"left" valign=3D=
+"middle">
+       =20
+            <img src=3D"https://cdn.shopify.com/s/files/1/0748/1370/2366/fi=
+les/MNTD_006_10232025_PDP_Images_MAC101_White_3-min_a6f7b4b8-da6e-42b8-9fa7=
+-3c1b70023426_compact_cropped.jpg?v=3D1765209450" align=3D"left" width=3D"6=
+0" height=3D"60" class=3D"order-list__product-image" style=3D"margin-right:=
+ 15px; border-radius: 8px; border: 1px solid #e5e5e5;"/>
+       =20
+        </td>
+   =20
+    <td class=3D"order-list__product-description-cell" style=3D"font-family=
+: &#39;Helvetica Neue&#39;,Arial; width: 100%; font-size: 12px; font-weight=
+: 400; letter-spacing: 0px; line-height: 1.5; color: #222222;" align=3D"lef=
+t">
+       =20
+       =20
+
+        <span class=3D"order-list__item-title" style=3D"font-size: 12px; fo=
+nt-weight: bold; line-height: 1.5; color: #222222; font-family: &#39;Helvet=
+ica Neue&#39;,Arial; letter-spacing: 0px; text-align: left;">Non-Stop Crew =
+Sock=C2=A0=C3=97=C2=A01</span><br/>
+
+       =20
+        <span class=3D"order-list__item-variant" style=3D"font-size: 14px; =
+color: #999; font-weight: 400;">White / L/XL 10-13</span><br/>
+       =20
+
+       =20
+       =20
+       =20
+
+       =20
+
+       =20
+
+       =20
+
+       =20
+       =20
+       =20
+    </td>
+       =20
+        <td class=3D"order-list__price-cell" style=3D"font-family: &#39;Hel=
+vetica Neue&#39;,Arial; white-space: nowrap; font-size: 12px; font-weight: =
+400; letter-spacing: 0px; line-height: 1.5; color: #222222;" align=3D"left"=
+>
+       =20
+       =20
+        <p class=3D"order-list__item-price" style=3D"color: #555; line-heig=
+ht: 1.5; font-size: 12px; font-weight: 600; font-family: &#39;Helvetica Neu=
+e&#39;,Arial; letter-spacing: 0px; margin: 4px 0 0 15px;" align=3D"right">
+           =20
+            $15.00
+           =20
+           =20
+        </p>
+        </td>
+    </tr></tbody></table>
+</td>
+</tr>
+
+
+
+
+
+
+   =20
+
+
+
+
+
+
+<tr class=3D"order-list__item" style=3D"width: 100%; border-top-width: 1px;=
+ border-top-color: #e5e5e5; border-top-style: solid;">
+<td class=3D"order-list__item__cell" style=3D"font-family: &#39;Helvetica N=
+eue&#39;,Arial; padding-top: 15px; padding-bottom: 15px; font-size: 12px; f=
+ont-weight: 400; letter-spacing: 0px; line-height: 1.5; color: #222222;" al=
+ign=3D"left">
+    <table style=3D"border-spacing: 0; border-collapse: collapse;">
+
+   =20
+        <tbody><tr><td class=3D"order-list__image-cell" style=3D"font-famil=
+y: &#39;Helvetica Neue&#39;,Arial; font-size: 12px; font-weight: 400; lette=
+r-spacing: 0px; line-height: 1.5; color: #222222;" align=3D"left" valign=3D=
+"middle">
+       =20
+            <img src=3D"https://cdn.shopify.com/s/files/1/0748/1370/2366/fi=
+les/COTTON_MODAL_BOXERBRIEF_MIDNIGHT_4_compact_cropped.jpg?v=3D1770745573" =
+align=3D"left" width=3D"60" height=3D"60" class=3D"order-list__product-imag=
+e" style=3D"margin-right: 15px; border-radius: 8px; border: 1px solid #e5e5=
+e5;"/>
+       =20
+        </td>
+   =20
+    <td class=3D"order-list__product-description-cell" style=3D"font-family=
+: &#39;Helvetica Neue&#39;,Arial; width: 100%; font-size: 12px; font-weight=
+: 400; letter-spacing: 0px; line-height: 1.5; color: #222222;" align=3D"lef=
+t">
+       =20
+       =20
+
+        <span class=3D"order-list__item-title" style=3D"font-size: 12px; fo=
+nt-weight: bold; line-height: 1.5; color: #222222; font-family: &#39;Helvet=
+ica Neue&#39;,Arial; letter-spacing: 0px; text-align: left;">Best Damn=E2=
+=84=A2 Boxer Brief 5&#34;=C2=A0=C3=97=C2=A02</span><br/>
+
+       =20
+        <span class=3D"order-list__item-variant" style=3D"font-size: 14px; =
+color: #999; font-weight: 400;">Midnight / L / 5&#34;</span><br/>
+       =20
+
+       =20
+       =20
+       =20
+
+       =20
+
+       =20
+
+       =20
+
+       =20
+       =20
+           =20
+            <p style=3D"color: #222222; line-height: 1.5; font-size: 12px; =
+font-family: &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter-spaci=
+ng: 0px; margin: 4px 0 0;" align=3D"left">
+            <span class=3D"order-list__item-discount-allocation" style=3D"f=
+ont-size: 14px; display: block; line-height: 1.4; margin: 1px 0 0;">
+                <img src=3D"https://cdn.shopify.com/shopifycloud/shopify/as=
+sets/themes_support/notifications/discounttag-23d3dd52a101179fb1461daaba6b7=
+7388b99b6154de85840a5245b8d3930a68e.png" width=3D"18" height=3D"18" class=
+=3D"discount-tag-icon" style=3D"vertical-align: middle; margin-right: 6px;"=
+/>
+                <span style=3D"font-size: 12px; margin-left: -4px; font-fam=
+ily: &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter-spacing: 0px;=
+ line-height: 1.5; text-align: left; color: #222222;">
+                VOLUME DISCOUNT
+                (-$5.20)
+                </span>
+            </span>
+            </p>
+           =20
+       =20
+       =20
+    </td>
+       =20
+        <td class=3D"order-list__price-cell" style=3D"font-family: &#39;Hel=
+vetica Neue&#39;,Arial; white-space: nowrap; font-size: 12px; font-weight: =
+400; letter-spacing: 0px; line-height: 1.5; color: #222222;" align=3D"left"=
+>
+       =20
+       =20
+        <del class=3D"order-list__item-original-price" style=3D"font-size: =
+14px; display: block; text-align: right; color: #999;">$52.00</del>
+       =20
+        <p class=3D"order-list__item-price" style=3D"color: #555; line-heig=
+ht: 1.5; font-size: 12px; font-weight: 600; font-family: &#39;Helvetica Neu=
+e&#39;,Arial; letter-spacing: 0px; margin: 4px 0 0 15px;" align=3D"right">
+           =20
+            $46.80
+           =20
+           =20
+        </p>
+        </td>
+    </tr></tbody></table>
+</td>
+</tr>
+
+
+
+
+
+
+   =20
+
+
+
+
+
+
+<tr class=3D"order-list__item" style=3D"width: 100%; border-top-width: 1px;=
+ border-top-color: #e5e5e5; border-top-style: solid;">
+<td class=3D"order-list__item__cell" style=3D"font-family: &#39;Helvetica N=
+eue&#39;,Arial; padding-top: 15px; font-size: 12px; font-weight: 400; lette=
+r-spacing: 0px; line-height: 1.5; color: #222222;" align=3D"left">
+    <table style=3D"border-spacing: 0; border-collapse: collapse;">
+
+   =20
+        <tbody><tr><td class=3D"order-list__image-cell" style=3D"font-famil=
+y: &#39;Helvetica Neue&#39;,Arial; font-size: 12px; font-weight: 400; lette=
+r-spacing: 0px; line-height: 1.5; color: #222222;" align=3D"left" valign=3D=
+"middle">
+       =20
+            <img src=3D"https://cdn.shopify.com/s/files/1/0748/1370/2366/fi=
+les/COTTON_MODAL_BOXERBRIEF_ICE_4_compact_cropped.jpg?v=3D1770745573" align=
+=3D"left" width=3D"60" height=3D"60" class=3D"order-list__product-image" st=
+yle=3D"margin-right: 15px; border-radius: 8px; border: 1px solid #e5e5e5;"/=
+>
+       =20
+        </td>
+   =20
+    <td class=3D"order-list__product-description-cell" style=3D"font-family=
+: &#39;Helvetica Neue&#39;,Arial; width: 100%; font-size: 12px; font-weight=
+: 400; letter-spacing: 0px; line-height: 1.5; color: #222222;" align=3D"lef=
+t">
+       =20
+       =20
+
+        <span class=3D"order-list__item-title" style=3D"font-size: 12px; fo=
+nt-weight: bold; line-height: 1.5; color: #222222; font-family: &#39;Helvet=
+ica Neue&#39;,Arial; letter-spacing: 0px; text-align: left;">Best Damn=E2=
+=84=A2 Boxer Brief 5&#34;=C2=A0=C3=97=C2=A01</span><br/>
+
+       =20
+        <span class=3D"order-list__item-variant" style=3D"font-size: 14px; =
+color: #999; font-weight: 400;">Ice / L / 5&#34;</span><br/>
+       =20
+
+       =20
+       =20
+       =20
+
+       =20
+
+       =20
+
+       =20
+
+       =20
+       =20
+           =20
+            <p style=3D"color: #222222; line-height: 1.5; font-size: 12px; =
+font-family: &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter-spaci=
+ng: 0px; margin: 4px 0 0;" align=3D"left">
+            <span class=3D"order-list__item-discount-allocation" style=3D"f=
+ont-size: 14px; display: block; line-height: 1.4; margin: 1px 0 0;">
+                <img src=3D"https://cdn.shopify.com/shopifycloud/shopify/as=
+sets/themes_support/notifications/discounttag-23d3dd52a101179fb1461daaba6b7=
+7388b99b6154de85840a5245b8d3930a68e.png" width=3D"18" height=3D"18" class=
+=3D"discount-tag-icon" style=3D"vertical-align: middle; margin-right: 6px;"=
+/>
+                <span style=3D"font-size: 12px; margin-left: -4px; font-fam=
+ily: &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter-spacing: 0px;=
+ line-height: 1.5; text-align: left; color: #222222;">
+                VOLUME DISCOUNT
+                (-$2.60)
+                </span>
+            </span>
+            </p>
+           =20
+       =20
+       =20
+    </td>
+       =20
+        <td class=3D"order-list__price-cell" style=3D"font-family: &#39;Hel=
+vetica Neue&#39;,Arial; white-space: nowrap; font-size: 12px; font-weight: =
+400; letter-spacing: 0px; line-height: 1.5; color: #222222;" align=3D"left"=
+>
+       =20
+       =20
+        <del class=3D"order-list__item-original-price" style=3D"font-size: =
+14px; display: block; text-align: right; color: #999;">$26.00</del>
+       =20
+        <p class=3D"order-list__item-price" style=3D"color: #555; line-heig=
+ht: 1.5; font-size: 12px; font-weight: 600; font-family: &#39;Helvetica Neu=
+e&#39;,Arial; letter-spacing: 0px; margin: 4px 0 0 15px;" align=3D"right">
+           =20
+            $23.40
+           =20
+           =20
+        </p>
+        </td>
+    </tr></tbody></table>
+</td>
+</tr>
+
+
+
+
+
+
+</tbody></table>
+
+       =20
+        <table class=3D"row subtotal-lines" style=3D"width: 548px; border-s=
+pacing: 0; border-collapse: collapse; margin-top: 15px; border-top-width: 1=
+px; border-top-color: #e5e5e5; border-top-style: solid; margin-left: 0; mar=
+gin-right: 0; max-width: -webkit-fill-available;">
+<tbody><tr>
+<td class=3D"subtotal-spacer" style=3D"font-family: &#39;Helvetica Neue&#39=
+;,Arial; width: 40%; font-size: 12px; font-weight: 400; letter-spacing: 0px=
+; line-height: 1.5; color: #222222;" align=3D"left"></td>
+<td style=3D"font-family: &#39;Helvetica Neue&#39;,Arial; font-size: 12px; =
+font-weight: 400; letter-spacing: 0px; line-height: 1.5; color: #222222;" a=
+lign=3D"left">
+    <table class=3D"row subtotal-table" style=3D"width: 100%; border-spacin=
+g: 0; border-collapse: collapse; margin-top: 20px; margin-left: 3em; margin=
+-right: 3em; max-width: -webkit-fill-available;">
+
+   =20
+
+
+
+
+
+
+
+
+<tbody><tr class=3D"subtotal-line" style=3D"font-family: &#39;Helvetica Neu=
+e&#39;,Arial; font-size: 12px; letter-spacing: 0px; line-height: 1.5;">
+<td class=3D"subtotal-line__title" style=3D"font-family: &#39;Helvetica Neu=
+e&#39;,Arial; font-size: 12px; font-weight: 400; letter-spacing: 0px; line-=
+height: 1.5; color: #222222; padding: 2px 0;" align=3D"left">
+<p style=3D"color: #222222; line-height: 1.2em; font-size: 12px; font-famil=
+y: &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter-spacing: 0px; m=
+argin: 4px 0 0;" align=3D"left">
+    <span style=3D"font-size: 12px; font-family: &#39;Helvetica Neue&#39;,A=
+rial; letter-spacing: 0px; line-height: 1.5;">Subtotal</span>
+</p>
+</td>
+<td class=3D"subtotal-line__value" style=3D"font-family: &#39;Helvetica Neu=
+e&#39;,Arial; font-size: 12px; font-weight: 400; letter-spacing: 0px; line-=
+height: 1.5; color: #222222; padding: 2px 0;" align=3D"right">
+    <strong style=3D"font-size: 12px; color: #555; font-family: &#39;Helvet=
+ica Neue&#39;,Arial; letter-spacing: 0px; line-height: 1.5;">$140.20</stron=
+g>
+</td>
+</tr>
+
+
+
+
+
+
+   =20
+       =20
+       =20
+
+<tr class=3D"subtotal-line" style=3D"font-family: &#39;Helvetica Neue&#39;,=
+Arial; font-size: 12px; letter-spacing: 0px; line-height: 1.5;">
+<td class=3D"subtotal-line__title" style=3D"font-family: &#39;Helvetica Neu=
+e&#39;,Arial; font-size: 12px; font-weight: 400; letter-spacing: 0px; line-=
+height: 1.5; color: #222222; padding: 2px 0;" align=3D"left">
+<p style=3D"color: #222222; line-height: 1.2em; font-size: 12px; font-famil=
+y: &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter-spacing: 0px; m=
+argin: 4px 0 0;" align=3D"left">
+    <span style=3D"font-size: 12px; font-family: &#39;Helvetica Neue&#39;,A=
+rial; letter-spacing: 0px; line-height: 1.5;">Shipping</span>
+</p>
+</td>
+<td class=3D"subtotal-line__value" style=3D"font-family: &#39;Helvetica Neu=
+e&#39;,Arial; font-size: 12px; font-weight: 400; letter-spacing: 0px; line-=
+height: 1.5; color: #222222; padding: 2px 0;" align=3D"right">
+    <strong style=3D"font-size: 12px; color: #555; font-family: &#39;Helvet=
+ica Neue&#39;,Arial; letter-spacing: 0px; line-height: 1.5;">$0.00</strong>
+</td>
+</tr>
+
+
+
+       =20
+   =20
+
+   =20
+
+   =20
+<tr class=3D"subtotal-line" style=3D"font-family: &#39;Helvetica Neue&#39;,=
+Arial; font-size: 12px; letter-spacing: 0px; line-height: 1.5;">
+<td class=3D"subtotal-line__title" style=3D"font-family: &#39;Helvetica Neu=
+e&#39;,Arial; font-size: 12px; font-weight: 400; letter-spacing: 0px; line-=
+height: 1.5; color: #222222; padding: 2px 0;" align=3D"left">
+<p style=3D"color: #222222; line-height: 1.2em; font-size: 12px; font-famil=
+y: &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter-spacing: 0px; m=
+argin: 4px 0 0;" align=3D"left">
+    <span style=3D"font-size: 12px; font-family: &#39;Helvetica Neue&#39;,A=
+rial; letter-spacing: 0px; line-height: 1.5;">Taxes</span>
+</p>
+</td>
+<td class=3D"subtotal-line__value" style=3D"font-family: &#39;Helvetica Neu=
+e&#39;,Arial; font-size: 12px; font-weight: 400; letter-spacing: 0px; line-=
+height: 1.5; color: #222222; padding: 2px 0;" align=3D"right">
+    <strong style=3D"font-size: 12px; color: #555; font-family: &#39;Helvet=
+ica Neue&#39;,Arial; letter-spacing: 0px; line-height: 1.5;">$18.22</strong=
+>
+</td>
+</tr>
+
+
+   =20
+    </tbody></table>
+
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+    <table class=3D"row subtotal-table subtotal-table--total" style=3D"widt=
+h: 100%; border-spacing: 0; border-collapse: collapse; margin-top: 20px; bo=
+rder-top-width: 2px; border-top-color: #e5e5e5; border-top-style: solid; ma=
+rgin-left: 3em; margin-right: 3em; max-width: -webkit-fill-available;">
+   =20
+   =20
+<tbody><tr class=3D"subtotal-line" style=3D"font-family: &#39;Helvetica Neu=
+e&#39;,Arial; font-size: 12px; letter-spacing: 0px; line-height: 1.5;">
+<td class=3D"subtotal-line__title" style=3D"font-family: &#39;Helvetica Neu=
+e&#39;,Arial; font-size: 12px; font-weight: 400; letter-spacing: 0px; line-=
+height: 1.5; color: #222222; padding: 20px 0 0;" align=3D"left">
+<p style=3D"color: #222222; line-height: 1.2em; font-size: 12px; font-famil=
+y: &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter-spacing: 0px; m=
+argin: 4px 0 0;" align=3D"left">
+    <span style=3D"font-size: 12px; font-family: &#39;Helvetica Neue&#39;,A=
+rial; letter-spacing: 0px; line-height: 1.5;">Total</span>
+</p>
+</td>
+<td class=3D"subtotal-line__value" style=3D"font-family: &#39;Helvetica Neu=
+e&#39;,Arial; font-size: 12px; font-weight: 400; letter-spacing: 0px; line-=
+height: 1.5; color: #222222; padding: 20px 0 0;" align=3D"right">
+    <strong style=3D"font-size: 24px; color: #555; font-family: &#39;Helvet=
+ica Neue&#39;,Arial; letter-spacing: 0px; line-height: 1.5;">$158.42 CAD</s=
+trong>
+</td>
+</tr>
+
+   =20
+        <tr class=3D"subtotal-line" style=3D"font-family: &#39;Helvetica Ne=
+ue&#39;,Arial; font-size: 12px; letter-spacing: 0px; line-height: 1.5;">
+        <td style=3D"font-family: &#39;Helvetica Neue&#39;,Arial; font-size=
+: 12px; font-weight: 400; letter-spacing: 0px; line-height: 1.5; color: #22=
+2222; padding: 20px 0 0;" align=3D"left"></td>
+        <td class=3D"subtotal-line__value total-discount" style=3D"font-fam=
+ily: &#39;Helvetica Neue&#39;,Arial; color: #777; font-size: 12px; line-hei=
+ght: 1.5; margin-top: 10px; font-weight: 400; letter-spacing: 0px; padding:=
+ 20px 0 0;" align=3D"right">
+            You saved <span class=3D"total-discount--amount" style=3D"font-=
+size: 12px; color: #555; font-family: &#39;Helvetica Neue&#39;,Arial; lette=
+r-spacing: 0px; line-height: 1.5;">$62.80</span>
+        </td>
+        </tr>
+   =20
+   =20
+   =20
+   =20
+    </tbody></table>
+
+   =20
+   =20
+               =20
+               =20
+                <!-- END OF BODY CONTENT -->
+              </td>
+</tr>
+            </tbody></table>
+            <table class=3D"container" style=3D"width: 560px; text-align: l=
+eft; border-spacing: 0; border-collapse: collapse; max-width: 592.5px; tabl=
+e-layout: fixed; margin: 0 auto;">
+<tbody><tr class=3D"footer__policies">
+<td colspan=3D"2" style=3D"font-family: &#39;Helvetica Neue&#39;,Arial; fon=
+t-size: 12px; font-weight: 400; letter-spacing: 0px; line-height: 1.5; colo=
+r: #222222;" align=3D"left">
+    <p style=3D"color: #222222; line-height: 1.5; font-size: 12px; font-fam=
+ily: &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter-spacing: 0px;=
+ margin: 0;" align=3D"left"></p>
+<h3 style=3D"font-weight: bold; font-size: 12px; font-family: &#39;Helvetic=
+a Neue&#39;,Arial; letter-spacing: 0px; line-height: 1.5; color: #222222; m=
+argin: 2em 0 1em;" align=3D"left">Need to make changes?</h3>
+    <p style=3D"color: #222222; line-height: 1.5; font-size: 12px; font-fam=
+ily: &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter-spacing: 0px;=
+ margin: 0;" align=3D"left">Once an order is placed, we cannot guarantee an=
+y address updates, order changes, or cancellations. To inquire about an ord=
+er update, please reply to this email.</p>
+  <p style=3D"color: #222222; line-height: 1.5; font-size: 12px; font-famil=
+y: &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter-spacing: 0px; m=
+argin: 15px 0 0;" align=3D"left"></p>
+<h3 style=3D"font-weight: bold; font-size: 12px; font-family: &#39;Helvetic=
+a Neue&#39;,Arial; letter-spacing: 0px; line-height: 1.5; color: #222222; m=
+argin: 2em 0 1em;" align=3D"left">Return Policy</h3>
+  <p style=3D"color: #222222; line-height: 1.5; font-size: 12px; font-famil=
+y: &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter-spacing: 0px; m=
+argin: 0;" align=3D"left">Our return policy varies by item and promotion. T=
+o view our full return policy, please click <a href=3D"https://wearmntd.ca/=
+_t/c/v3/AACOepevUnoWUBNDqqHbEEtIJclCZDsSVpTZ9ZXak2WKNL7ktjcfGIaPzUn8FrCMayA=
+eoF3rTfHpeN76TLOU9_sk35r10Txo32zzxZKLubPYd-XBOMDX5OVeW5A3GhumLPUcQBRkgwOQ7z=
+1Ag-T3CDEE9FumK2_K0SMmlvZuipYL_UFHGNZNPg-1pz8NAsb5aJL6GzbPJ3H5NDtSILYSqGOdx=
+ABxoVLulnXLFCkreMbwCheTLdy2ORjqHN4FBTIICG8z0Rx81Agzol8fcZovix-Do7mJpZL0Vz01=
+sw8bnlDxj67vIpR6SkyrF7-H2WISXibvEsjSEY59TEjrpn437G4Nrd7ZkEWNngKkB4b5ZW0zl_R=
+fTbCB9w=3D=3D" style=3D"font-size: 12px; text-decoration: underline; color:=
+ #222222; cursor: pointer; font-family: &#39;Helvetica Neue&#39;,Arial; fon=
+t-weight: 400; letter-spacing: 0px; line-height: 1.5; text-align: left;">he=
+re</a>.</p>
+</td>
+</tr>
+<tr class=3D"footer__socials">
+<td style=3D"font-family: &#39;Helvetica Neue&#39;,Arial; font-size: 12px; =
+font-weight: 400; letter-spacing: 0px; line-height: 1.5; color: #222222; pa=
+dding: 3em;" colspan=3D"2" align=3D"center">
+    <div style=3D"display: inline-block; padding-right: 10px;">
+    <a href=3D"https://wearmntd.ca/_t/c/v3/AAAW9tQKxbJXMEs6PlWzhUJ4MIIQ25_F=
+4N8DwiGcbP-9RlceyXveIo9uxiSrMjChHNcpx_DpqtuLOcs_YPsyGTRnukHZmK6v4tsRckRJJe1=
+9Ia2pVFuc85MDQBNv_VrRcoVaAvRE8Cn7u2qFbAxz1b102NUkf494HhSSGQMRRHv93LzgnOjI1m=
+dncyx1AATik75gJH_319FKckb-i9D_2m15jZBQW8DrMxezGnNWt170-djolcsUqa6ofqjsLRMu8=
+P98tkj7W6cQKHVR6fzqokNAHgPIuxrTfq5w" style=3D"font-size: 12px; text-decorat=
+ion: underline; color: #222222; cursor: pointer; font-family: &#39;Helvetic=
+a Neue&#39;,Arial; font-weight: 400; letter-spacing: 0px; line-height: 1.5;=
+ text-align: left;">
+        <img alt=3D"Instagram" src=3D"https://ci3.googleusercontent.com/mei=
+ps/ADKq_NYtQigoipwx1yM78OAkfVjz4AfHZzWecyID5QC1AgSnlmmyHttYyXEvDnq9Pynr-3zr=
+lxOz15Wm9Ds9gqe6jliAB6JHDFtHEOaVVvy33z_uBxsYAg6MbewvAj5gIBy3nni61Npt9olU5pl=
+Dqbm4bneRBLcXJce9tka_=3Ds0-d-e1-ft#https://d3k81ch9hvuctc.cloudfront.net/co=
+mpany/CYZZ5N/images/873eab47-1b40-4be6-84fb-a074f5411abb.png" width=3D"30px=
+"/>
+    </a>
+    </div>
+    <div style=3D"display: inline-block; padding-right: 10px;">
+    <a href=3D"https://wearmntd.ca/_t/c/v3/AAC5-RibZWbEtwEXJ3NS9PfX5zeMcfdu=
+ScNyFdfE3bq2ELvnd9sNee2H2egvCN49RjIaA3BWHOT9CKS9K1vnmLPo_NxddyiVUmaObL-8h90=
+4AsYKNi0f5yyXWwv6WS6zETzhR8wFZj8GULql22sceYb-q1fVYGpSV-4yoqjpIHQuB_By6ptGLI=
+rm_QE5xfviF1RusGenhbhdkQi-hj6qnxNOemziKG6nsaeW71QaCJW2Xovhv3-k2BgtI5Pl-VN6H=
+MqlN1MkJ6OhRCQHNmN4oadSWBudjLa2" style=3D"font-size: 12px; text-decoration:=
+ underline; color: #222222; cursor: pointer; font-family: &#39;Helvetica Ne=
+ue&#39;,Arial; font-weight: 400; letter-spacing: 0px; line-height: 1.5; tex=
+t-align: left;"><img alt=3D"TikTok" src=3D"https://ci3.googleusercontent.co=
+m/meips/ADKq_NYq5VZphEAA4Nz837l0RJSlR2JFzT9aRFxkssDZgu3Jv-1_s9PRDzzLBEvIks3=
+P-x3P_delKpT1vN8DuHWQI7dUmLPuyxuMO76yT53zDwepFbFtNPjnhF0ECg671ABCHd6wuQOoMi=
+Nlk_k70vlkO85STVhMV5NrhAl1=3Ds0-d-e1-ft#https://d3k81ch9hvuctc.cloudfront.n=
+et/company/CYZZ5N/images/4ec1f308-5485-4d12-8d1f-80274ac272bd.png" width=3D=
+"30px"/></a>
+    </div>
+    <div style=3D"display: inline-block; padding-right: 10px;">
+    <a href=3D"https://wearmntd.ca/_t/c/v3/AABSL9vFcRW4zVi4CaZL6dkRuHrg4izt=
+62Av1_817GtqT3vA9NUYCQDBEFLPNd1GZGXDxDUNc9xrtvMj-TWdlt7zgi-LaDw57znKiy6M7cp=
+8rFNvCeAlyUK_QTm47rn9QtdDom0XTGG6mW7U-xdIX2m_z_tjQHyetMrBURLODmrGLuDXccBL9b=
+TfCv7kTJ9kcrIwNI4XcRr2wxw-gjr3bKBJr15ASpacdszJDqrLQVGJgtJ_dH6bXZog7X8FyKASJ=
+hIcjLfNZCvJvWQT2_phF3ZORLotYOBPwwysQt1p7-Wbof8YEEbRO-2IHHVsjQ=3D=3D" style=
+=3D"font-size: 12px; text-decoration: underline; color: #222222; cursor: po=
+inter; font-family: &#39;Helvetica Neue&#39;,Arial; font-weight: 400; lette=
+r-spacing: 0px; line-height: 1.5; text-align: left;"><img alt=3D"Facebook" =
+src=3D"https://ci3.googleusercontent.com/meips/ADKq_NaHYs_csaNE7BWYu55iF2Iq=
+aquKDHPnm0M4EoATbw6Kyl6iBQuVZfG0oyhaX-aB3Y8lsEpozNlO7QwcUWxS3Yss4Po27AjP-LP=
+lPgjKaqvxn7YcFBdqDswW_JtU35rhv_e6ThmX8b5XVS0UIDFdUTtIVewMn3VUDvus=3Ds0-d-e1=
+-ft#https://d3k81ch9hvuctc.cloudfront.net/company/CYZZ5N/images/e9d8bff7-15=
+8f-476e-b69e-da656e71e5de.png" width=3D"30px"/></a>
+    </div>
+    <div style=3D"display: inline-block; padding-right: 10px;">
+    <a href=3D"https://wearmntd.ca/_t/c/v3/AACBsGVqgdZwpE5tqvgfl1-QXvtrPgQ9=
+VbqE_HW1NChlLDdurqCnwuP3hxIQcMfeUZBdlA4yGPoBsND_-BJO4JbBqmSw3TFIBHlpgO227o-=
+neP8E31ZvCuAUtTxlJng41rX5xY4Mu1-sP95h1JqhIKgZAAVHyZPlyc3F8W4jYpETQ0ohLzAJ-h=
+O2Fbe5R8YOIdDr_NyVv5AcA0e3bqCFfOx0yrRU9Gv17fsCSuDb9hNQWwRFS4Lci9vvaTXLzl6yE=
+qn4TyKUegLncgSvOz1pGCQ3erAX6ClHug=3D=3D" style=3D"font-size: 12px; text-dec=
+oration: underline; color: #222222; cursor: pointer; font-family: &#39;Helv=
+etica Neue&#39;,Arial; font-weight: 400; letter-spacing: 0px; line-height: =
+1.5; text-align: left;"><img alt=3D"YouTube" src=3D"https://ci3.googleuserc=
+ontent.com/meips/ADKq_NYv_lNmODQWI7QtgCrGZGT9z69t0B1DLg5-VVyl-rdMLeyEPs44rE=
+cV-WwTutjsL6Bsd18LtOipSSX7ikPcL5SJtG6TRrQtJRub2V5ZTpOTCEjI7Iw8eAS_Q9x9h4cAJ=
+qYtcMFcF-OuDLtNc_M03ESlH2v0F6iv7ho0=3Ds0-d-e1-ft#https://d3k81ch9hvuctc.clo=
+udfront.net/company/CYZZ5N/images/6c0a3416-b64d-444b-8b13-8c6fa5df0670.png"=
+ width=3D"30px"/></a>
+    </div>
+</td>
+</tr>
+<tr class=3D"footer__address">
+<td style=3D"font-family: &#39;Helvetica Neue&#39;,Arial; font-size: 12px; =
+font-weight: 400; letter-spacing: 0px; line-height: 1.5; color: #222222; pa=
+dding: 0 3em 2em;" colspan=3D"2" align=3D"center">
+<p style=3D"font-size: 10px; color: #222222; line-height: 1.5; font-family:=
+ &#39;Helvetica Neue&#39;,Arial; font-weight: 400; letter-spacing: 0px; mar=
+gin: 0;" align=3D"center">MNTD 179 John St. Toronto, ON M5T1X4</p>
+</td>
+</tr>
+</tbody></table>
+         =20
+        </td>
+      </tr>
+    </tbody></table>
+ =20
+
+
+</center></td></tr>
+</tbody></table>
+
+
+
+
+
+
+</body></html>
+--c258fb306df1a056e2305ec7e4c376a2f32c65469e5ff2381552181eede5--
