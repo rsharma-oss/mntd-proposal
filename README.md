@@ -12,7 +12,7 @@ Prepared July 2026 · Rahul Sharma · Growth Automated · Small Fidelity Service
 
 ```
 mntd-proposal/
-├── index.html           the proposal (14 sections + sticky nav + lightbox)
+├── index.html           the proposal (15 sections + sticky nav + lightbox)
 ├── scorecard.html       standalone 34/100 audit scorecard
 ├── assets/
 │   ├── mntd-logo-black.svg
@@ -39,7 +39,7 @@ mntd-proposal/
 
 ---
 
-## Section outline (14 + scorecard)
+## Section outline (15 + scorecard)
 
 | # | Section | Contents |
 |---|---|---|
@@ -50,13 +50,14 @@ mntd-proposal/
 | 05 | Pre-Purchase Journey Map | 7-stage flow chart · 13 clickable touchpoints across 4 channels |
 | 06 | Post-Purchase · Delivery to Doorstep | PP-1 through PP-11 · 6-stage flow chart · thesis callout · unboxing gallery · fulfilment email timeline · chronological `data-seq` numbering · XXXL launch shown as evidence-only (segmentation-with-existing-data) |
 | 07 | The Gaps | 6-card weighted audit · big-finding callout (SMS 20% vs Email 15%) · evidence panel |
-| 08 | Commercial Strategy | Value-proposition fraction diagram · 5 strategic cards · Style & Scale PDP video reference |
-| 09 | Segmentation | 3 lanes · Klaviyo → ad-platform orchestration |
-| 10 | The Engagement | 5 pillars · 90-day plan · investment card |
-| 11 | The Team | Rahul + Raff (NMM shared origin) · Founder card GA-blue border · 2 client references (Jeff/NMM + Brett/WBM) |
-| 12 | Tools & Stack | 16 partner cards with logos · Klaviyo Master Silver badge |
-| 13 | The Proposal | Retainer + Phase 2 AEO/SEO/Reddit tracks |
-| 14 | Legal & Onboarding | 4-doc timeline (NDA → MSA → SOW → Insurance) |
+| 08 | Commercial Strategy | Value-proposition fraction diagram · 5 strategic cards |
+| 09 | Best Practices in PDP Design | 2x-large media-ref · Style & Scale DTC Conference snippet · anchored from Section 05 callout · True Fit undergarments case |
+| 10 | Segmentation | 3 lanes · Klaviyo → ad-platform orchestration |
+| 11 | The Engagement | 5 pillars · 90-day plan · investment card |
+| 12 | The Team | Rahul + Raff (NMM shared origin) · Founder card GA-blue border · 2 client references (Jeff/NMM + Brett/WBM) |
+| 13 | Tools & Stack | 16 partner cards with logos · Klaviyo Master Silver badge |
+| 14 | The Proposal | Retainer + Phase 2 AEO/SEO/Reddit tracks |
+| 15 | Legal & Onboarding | 4-doc timeline (NDA → MSA → SOW → Insurance) |
 | — | scorecard.html | Standalone 34/100 weighted audit · 9 dimensions · Post-Purchase supplementary finding |
 
 ---
