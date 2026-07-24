@@ -46,9 +46,9 @@ mntd-proposal/
 | 01 | Story | Hero · Pints & Periods opener · Instagram photo · stakeholder map |
 | 02 | In-Store · Knix Eaton Centre | IS-1 through IS-4 · retail merchandising observations |
 | 03 | Shop 1 · Mobile | MS-1 through MS-5 · mobile mystery shop |
-| 04 | Shop 2 · Desktop | DS-1 through DS-7 · desktop purchase experience · 4-PNG coupon-conflict evidence card |
+| 04 | Shop 2 · Desktop | DS-1 through DS-8 · desktop purchase experience · 4-PNG coupon-conflict evidence card · Shop app cart-saved with competitor cross-sells |
 | 05 | Pre-Purchase Journey Map | 7-stage flow chart · 13 clickable touchpoints across 4 channels |
-| 06 | Post-Purchase · Delivery to Doorstep | PP-1 through PP-11 · 6-stage flow chart · thesis callout · unboxing gallery · fulfilment email timeline · chronological `data-seq` numbering |
+| 06 | Post-Purchase · Delivery to Doorstep | PP-1 through PP-12 · 6-stage flow chart · thesis callout · unboxing gallery · fulfilment email timeline · chronological `data-seq` numbering · XXXL launch (inclusion story extended) |
 | 07 | The Gaps | 6-card weighted audit · big-finding callout (SMS 20% vs Email 15%) · evidence panel |
 | 08 | Commercial Strategy | Value-proposition fraction diagram · 5 strategic cards · Style & Scale PDP video reference |
 | 09 | Segmentation | 3 lanes · Klaviyo → ad-platform orchestration |
