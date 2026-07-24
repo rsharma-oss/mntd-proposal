@@ -1,0 +1,1185 @@
+Return-path: <bounce-kl_25924019930-kl_101101ky7s2a0ehwgckx-h-42c7349a38=2@send.wearmntd.ca>
+Original-recipient: rfc822;rahul_sharma@mac.com
+Received: from p00-icloudmta-smtpin-us-east-1a-10-percent-6 by p129-mailgateway-smtp-599948f8b6-8jh2s (mailgateway 2628B80)
+	with SMTP id 9cccd0ed-4ea4-4e15-9e63-3804be1b7888 
+	for <rahul_sharma@mac.com>; Thu, 23 Jul 2026 15:26:37 GMT
+X-Apple-MoveToFolder: INBOX 
+X-Apple-Action: MOVE_TO_FOLDER/INBOX
+X-Apple-UUID: 9cccd0ed-4ea4-4e15-9e63-3804be1b7888
+Received: from kl-203-16-51.kmta.shared.klaviyomail.com (kl-203-16-51.kmta.shared.klaviyomail.com [170.203.16.51])
+	by p00-icloudmta-smtpin-us-east-1a-10-percent-6 (Postfix) with ESMTPS id C4616C00172
+	for <rahul_sharma@mac.com>; Thu, 23 Jul 2026 15:26:31 +0000 (UTC)
+X-ICL-RepId: 019f8f95-df40-757b-aa59-88dc00101df1
+X-ICL-Info: GAtbRVYDBVFFSlVFSgQEUFUKE0oWX1gHVQoPB0UBAVJbS1ZEVgEATEBIRhIcDVQNABcFElVbWj1HTF9FTAAHW0xKVloTXGlTRUhXR0lbT1UGSwdHHVhBBRYSHloQHQJQFk5VQ0FRBVpISyYEHV5STAIcBwUVXkIGWxoHVx5UCxUQGBQaFkRSTBYYRgUbDUQDHQwKKAtYVxAYGCYaGVMYARoURh8dXFlfHhVLRUgDG1NDVFNGVltbFhRXFR8ZQlMGWxIKFg5ZTw0YGA8bVlNZD1UJEgVFW1pPR0lVWkkGG1dEVw0aDFEYER0YFBIcHl0OFA8PDhddVwsZVwUYFRBSBkgKDhYKVVJMHhUHARFJWQ8UEApZG19bWQIcBwUVXkIGWxoHVxVZUl9JSVc8IQdlIEI6XichdHtTJStfQzpybiQsSlI3E1xXFBwACRoZWVpMFhYLSQ==
+X-ICL-Score: 2.33303322422
+Authentication-Results: bimi.icloud.com; bimi=skipped reason="insufficient dmarc"
+X-ARC-Info: policy=fail; arc=none; r1=-20; r2=0
+Authentication-Results: arc.icloud.com; arc=none
+Authentication-Results: dmarc.icloud.com; dmarc=pass header.from=wearmntd.ca
+X-DMARC-Policy: v=DMARC1; p=none; rua=mailto:postmaster@knix.com;
+X-DMARC-Info: pass=pass; dmarc-policy=none; s=r1; d=r1; pdomain=wearmntd.ca
+Authentication-Results: dkim-verifier.icloud.com; dkim=pass header.d=shared.klaviyomail.com header.i=@shared.klaviyomail.com header.b=rv7Drsa/
+Authentication-Results: dkim-verifier.icloud.com; dkim=pass header.d=wearmntd.ca header.i=@wearmntd.ca header.b=Dx/NkeZ5
+Received-SPF: pass (spf.icloud.com: domain of bounce-kl_25924019930-kl_101101ky7s2a0ehwgckx-h-42c7349a38=2@send.wearmntd.ca designates 170.203.16.51 as permitted sender) receiver=spf.icloud.com; client-ip=170.203.16.51; helo=kl-203-16-51.kmta.shared.klaviyomail.com; envelope-from=bounce-kl_25924019930-kl_101101ky7s2a0ehwgckx-h-42c7349a38=2@send.wearmntd.ca
+Authentication-Results: spf.icloud.com; spf=pass (spf.icloud.com: domain of bounce-kl_25924019930-kl_101101ky7s2a0ehwgckx-h-42c7349a38=2@send.wearmntd.ca designates 170.203.16.51 as permitted sender) smtp.mailfrom=bounce-kl_25924019930-kl_101101ky7s2a0ehwgckx-h-42c7349a38=2@send.wearmntd.ca
+X-Mailer-Info-Extra2: 78eb871964:0g3ajd2doVGMhJzc3k3axATMxATMfx2aAMHAt
+ 92YuMWYtBUYtJXYoN3XsVHahJHAyBQM14SMuQjLwEDAw9GAxUTL2ETLzAjMtw2aA42bAg
+ DNAk2bA02bj5CbpFWbvlXa2FGbr5CZlJXYoNnLhRXbr5SM10iNx0yMwITLstGAo9GA08F
+ anlGaA4WbAkzN5AQatBQYj5CZ05WbyFWZ35CZuV2cAJTP4MTY5QzM3MmM00Catg3ajd2d
+ oVGMhJzc3k3axATMxATMfx2atAzM5kTMwQjM5UjMfx2atU2YuV3biBgZtBANfh2ZphGAt
+ BAMzkTOxADNykTNy8FbrBAbAg1SDd0VIVEMBJzU3k1SxATMxATMAkGA91nIsFWduFWbio
+ jI4JCLiQzMZZEWCJEN5IFUx0ERZBFODdjQTdTWLFDMiojItRnIscDOzAjM4QDO3EjOiQn
+ IsICVSJES5IzNDFERYt0QHdFSFBTQyM1NZtUMwIiOi0mIsgDOzAjM4QDO3EjOiQHaiwSM
+ 6ISbhNmIsIyaaR0M2IlI6IyYisnOiQzMZZEWCJEN5IFUx0ERZBFODdjQTdTWLFDMisHIA
+ MGAzETZjNjMmFzNkBDO++
+X-Mailer-Info: 10.sGbfJTN5IDNwETO5MDM.sGbfFDMxEDMxsWe3MnMhBTZod3ZjtGe.IXYoVHb
+ fNHahJXbhBUbhNmLj9Wb.gsnIwEzSZdzUCdzQ4AVWE1UMQJVO0IkQYZUWzQjI6snIjJiOiIlNzQk
+ WrJCLiMWYtJiOxwiIoRnI6EzN4QDOyAzM4gDLi0mI6ICMxsUW3MlMBBTRId1RDtEWEF0Q3ITOIJk
+ UUJCLiQnI6EzN4QDOyAzM4cDLiQXbiojIwEzSZdzUCdzQ4AVWE1UMQJVO0IkQYZUWzQjIsICeioj
+ ItFmb1FGbi0Xf..EDMxEDMxsUW3MlMBBTRId1RDtEW..
+X-Mailer-Info-Extra: 42c7349a38:0AWLN0RXhURwEkMTdTWLFDMxEDMxAQaA0XfiwW
+ Y15WYtJiOignIsICNzklRYJkQ0kjUQFTTElFU4M0NCN1NZtUMwIiOi0GdiwyN4MDMygDN
+ 4cTM6ICdiwiIUJlQIljM3MUQEh1SDd0VIVEMBJzU3k1SxAjI6ISbiwCO4MDMygDN4cTM6
+ ICdoJCLxojItF2YiwiIrpFRzYjUiojIjJye6ICNzklRYJkQ0kjUQFTTElFU4M0NCN1NZt
+ UMwIyegAwYA02bj5yYh1GQh1mchh2cfxWdoFmc++
+Received: from unknown (HELO kmta-worker-prod-go-568f87fc84-859bn) (kmta-send@vmta.klaviyomail.com@10.8.10.8)
+  by kmta-mta-blue-0229771060ce5f915.servers.clovesoftware.com with SMTP; 23 Jul 2026 15:26:29 -0000
+CFBL-Address: fbl@kmta.shared.klaviyomail.com; report=arf
+Date: Thu, 23 Jul 2026 15:26:28 +0000
+List-Unsubscribe:
+ <https://manage.kmail-lists.com/subscriptions/unsubscribe?a=R63DZk&c=01KVNJPC1AKA97H4MR4C0B8FSC&k=715018beab12aa5d67f831b01308120d&se=rahul_sharma%40mac.com&m=01KY7S2A0EHWGCKXDAC729HBRT&r=01KY7SB7C8PYDM1PR94BBXFY34>,
+ <mailto:unsub1-01KVNJPC1AKA97H4MR4C0B8FSC-KI3DGRC2NM======@shared.klaviyomail.com?subject=request%20unsubscribe%20ME6VENRTIRNGWJTDHUYDCS2WJZFFAQZRIFFUCOJXJA2E2URUIMYEEOCGKNBSM2Z5G4YTKMBRHBRGKYLCGEZGCYJVMQ3DOZRYGMYWEMBRGMYDQMJSGBSCM43FHVZGC2DVNRPXG2DBOJWWCJJUGBWWCYZOMNXW2JTNHUYDCS2ZG5JTEQJQIVEFOR2DJNMEIQKDG4ZDSSCCKJKCM4R5GAYUWWJXKNBDOQZYKBMUITJRKBJDSNCCIJMEMWJTGQ======>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+MIME-Version: 1.0
+Message-ID: <01KY7SB7C8PYDM1PR94BBXFY34@klaviyomail.com>
+Subject: Built for every body. Now in XXXL.
+X-Kmail-Account: R63DZk
+X-Kmail-Message: 01KY7S2A0EHWGCKXDAC729HBRT
+X-Kmail-Ops: 01KVNJPC1AKA97H4MR4C0B8FSC
+X-Report-Abuse: Please report any spam or abuse to: abuse@klaviyo.com
+DKIM-Signature: a=rsa-sha256; bh=+YChbPbdJGiJooWreQHLp21uYTchkODU9PeAfNW5KOI=;
+ c=relaxed/relaxed; d=shared.klaviyomail.com;
+ h=DKIM-Signature:Date:Subject:From:To:List-Unsubscribe:CFBL-Address:List-Unsubscribe-Post:Message-ID:Subject:From:To:CC:Date:CFBL-Feedback-ID:CFBL-Address;
+ s=def1; t=1784820389; v=1;
+ b=rv7Drsa/lXwaYFGNuPVS6WHlK2fSMmT7TB80vC+9alu12CTcZqpqHgazuKtitPUiHLiEa0oD
+ h8baBUAqXHayWJ+MHalPnVJlZMWyA68AKlOxWF13fXlzST9UgOfDL/n94ZwP8rQAktqVH4MU8oa
+ PHtLc+MSEKdikDE1TT5QF9Eg=
+DKIM-Signature: a=rsa-sha256; bh=+YChbPbdJGiJooWreQHLp21uYTchkODU9PeAfNW5KOI=;
+ c=relaxed/relaxed; d=wearmntd.ca;
+ h=Date:Subject:From:To:List-Unsubscribe:CFBL-Address:List-Unsubscribe-Post:Message-ID:Subject:From:To:CC:Date:CFBL-Feedback-ID:CFBL-Address;
+ s=kl1; t=1784820389; v=1;
+ b=Dx/NkeZ5bAwqKG7RSpZnWOgJfdXq0xmKfWuRGGxRC/bYutX0FCOQ9hKFjx60H8mSSadsg7MR
+ +kIMxGQ+ga7wd0Ovjs24CTMsF31fmcqFm1UHD9cv8bu3e5yElOlbXH2+nIhrlZywVksBN/t0awv
+ 2mUYm7/FKq/CBz1n6r565EUQ=
+From: "MNTD" <info@wearmntd.ca>
+To: "Rahul Sharma" <rahul_sharma@mac.com>
+Content-Type: multipart/alternative;
+ boundary=34d3bc4108ab31d1f6ec6dec76cbabf32de5247db1cc5ffa1fcb8b3d49b2
+X-MANTSH: 1TFkXHxgRCllEF2EFYG0deH1Me3JZEQpZTRdkRURPEQpZSRcacRoQGncGHhxxGB8
+ QEncGHAYaEQpZXhdjY3kRCkNOF0BJaXJoWRtDe11PXVlLS1xiYXVhG0ZFblx+QUUaXVpmEQpYX
+ BcZBBoEHxIFGxoEGxwfBBgYBBgeHRAbHhofGhEKXlkXQkYTTm8RCk1cFxIRCkxaFx9tY017EQp
+ FWRdvEQpMXxd6BQUFBQUFBQUFQxEKTEYXTWsRCkNaFxsdGgQYGhkEGxwEHxsRCkJeFxsRCkJGF
+ 2Z4YHN6XEdTRVJ9EQpCRxdrGVABU0F9Q01+AREKQkUXaAFfa09ub0VvZWsRCkJOF25LTB17elt
+ 8bmtMEQpCTBdkTGV6Uh5iAUESZxEKQmwXZ0JHBQV9GxITeHIRCkJAF2RIfnIdGUdaY1xkEQpCW
+ BdtHktbc2NsHVN5TREKQngXa0dFGl8aeEMaRhIRClpYFxsZEQpwaBdnG20dYV5sWnhBBRAHHBg
+ RCnBoF2xGYlkTHFBhbwUcEAcfEhEKcGgXbHhabUIfWnoZfx0QBxwdEQpwaBdmR24dY29uHUJ6c
+ BAHHx0RCnBoF214Rh1jcEkYaEZJEB0aEQpwaBdlXm5CXWhQcHlNZBAHHBoRCnBoF3pPAU5EX0x
+ QfBNiEAcfExEKcGgXa3NOW09tGGcFch0QGhEKcH8XZUVFXRp9e0YcWkMQGRoRCnBfF2V6RktPT
+ 3lsWRx+EBoRCnB9F2NyHH9wYmcTRUhQEBoRCnB/F21dZ1sTXGVZHHweEBoRCnB9F3p8bEgdcB0
+ aGXN5EBoRCnBfF2ZoW1NMe2lZZ3J6EBoRCnB9F2VnQx9ZWHhJHmYcEBoRCnBfF2kdXBsdflx4Q
+ mdhEBoRCnB9F3oYcE1Sb1BYHE1nEBoRCnBfF2dpc25ZSR1eex9nEBoRCnB9F2BDGkYYZgFoE1l
+ HEBoRCnBfF2tnH0JfSWt/QEd/EBoRCnB9F3odAUsFHmF9ZngcEBoRCnB9F3p5eF5iY0VwRkljE
+ BoRCnB/F3pDe1AfGH0YEn8aEAcdGBEKcF8XemgdH0YSeE8YSWsQBxkSEQpwfRdvTXIbYFppBXo
+ FRxAcGhEKcH8XYU8fGXlJaVx5GmYQBx0cEQpwXxdmfF5uEmRnbXt+bxAaEQpwfRdgcH1uU2VDb
+ 0VYXxAaEQpwfxdtZGlObQFNRXtMQBAHEhkRCnBfF3p9fUtbSGxvawVwEAcbGxsRCnB9F2QfUgE
+ df01NAX9EEBoRCnB/F2VIE3hQXRJbY1hPEAcfGBEKcH0XbBpLa2hAenBPS1IQGhEKcH8XZ3BiQ
+ mhOflNEclgQBx8cEQpwXxdlfgFoeVNEYwFlSRAHHxsRCnB9F2sBXm8TUkR6TlhnEBoRCnB/F2V
+ Lbl9tU3l8SXhMEAccHxEKcF8XemVnX0EZRRxsXR8QGRoRCnB9F2djXVJOTHoBXhgdEBoRCnB9F
+ 298WU5/bx0ZHVhnEBoRCnB9F2EcEhNfU3xgSGMbEBoRCnB9F2JscmtFHFp6RnJ9EBoRCnB9F2B
+ SZ2lfHWZbZ1NyEBoRCnB9F2ZFYGZPRHlES2d5EBoRCnB9F2liQ1N5WBJ8X1l/EBoRCnB9F2gTZ
+ AVcQ15LbR5IEBoRCnB9F28efmJcS3BYWUZMEBoRCnB9F29YZEF7W0VvRmlCEBoRCnB9F2xCQVI
+ eWGJoS24BEBoRCnB9F2xiGhtpTU1Gek9oEBoRCnB9F2RnfGJLGmdlZVlzEBoRCnB9F2drX0FQG
+ mBmck1YEBoRCnB9F2McGx14H2IdZl96EBoRCnBsF3plQHpdAUwZX3lcEBwaEQpwTBdhQG5cfVl
+ vZ25NHxAaEQptfhcaEQpYTRdLEQ==
+X-Proofpoint-Spam-Details-Enc: AW1haW4tMjYwNzIzMDE1MiBTYWx0ZWRfXxBTS4xjZ1D1g
+ UoTrw6Nt2LcPzHulVkwQwK/UGQM6pc3zhQ1NonrmhbQ+R7gNrp9PtK/1pNaz6OcxiRd34wBr18U
+ zDbb8GdpWzXaeWsLIG9vVO1Rwg3QmwIFBhdUP5cuN1Moeo0GIPXbMxJJKZeGHjr93kaNB+A1DH3
+ KPfu4I02gtDBrTnYNVDEvuR04B2HNc6dwMwG7XzJVfo4HxocUJMYvyFbQQcRh71lyByMeUjGJ0h
+ EsjVmbzNSaPoudcacQanbabYNl4DYw8PiYtxIinrkjKQ6Z+b5pAUhf5TjjH/fnqFFcTkY6nl2RR
+ hE111vl2yd9h9xcUoU0ieETZIHPSeE5/HEKflo9aGH2op/jY0zpFYewaCUuEwgVFMRf2xrIk7Id
+ MHbv809tK61/m8fv/WR2V7ZmNisge8KVmD5Z3BZ3ZUQwqDMGgzU2/M8UgnDYM+/8o08/lWb4
+X-Authority-Info: v=2.4 cv=BfTVE7t2 c=1 sm=1 tr=0 ts=6a6232a9 b=1
+ cx=c_apl:c_pps a=U+dSM+S/mnGZ3gIlZw3c1g==:117 a=U+dSM+S/mnGZ3gIlZw3c1g==:17
+ a=b3DhMmMkJVNBYjixYE3i3TbOsPs=:19 a=b-_FWnGou6e7Pvh3:21 a=RAioF0-LDSMA:10
+ a=X4JVzSvzMZ0A:10 a=R_FKn6Doux8A:10 a=4FVviiqyAAAA:8 a=BkpHzsgbAAAA:8
+ a=svKqqNJeAAAA:8 a=3j4BkbkPAAAA:8 a=vnREMb7VAAAA:8 a=yZt5frTIAAAA:8
+ a=n-kJSqksAAAA:8 a=0GF7B4x-w9_pdwfGIkwA:9 a=CjuIK1q_8ugA:10 a=my13bNkbAAAA:8
+ a=-J4cjzx4AAAA:8 a=SSmOFEACAAAA:8 a=6Cbp7lfFAAAA:8 a=OYH88vmINXB0HNNfXTAA:9
+ a=5jZrjuNWxtmv2vB1:21 a=gKO2Hq4RSVkA:10 a=frz4AuCg-hUA:10 a=_W_S_7VecoQA:10
+ a=QEXdDO2ut3YA:10 a=Ru97nHiPDtp4odn3vKgu:22 a=xb1TjRqlh1HAZwzqnHSW:22
+ a=f_HuWnRbMzPSrDeP96AE:22 a=fMAGXkzVR7cRuVcbbVfL:22 a=3pPIBQ76aAvWTjhCwuo6:22
+ a=XVif6Fz7n-MfDs5-tR9A:22 cc=prm
+X-Proofpoint-GUID: jcCXBs1iQwewsaavHK_K1loDvTko0wpL
+X-Proofpoint-ORIG-GUID: jcCXBs1iQwewsaavHK_K1loDvTko0wpL
+X-JNJ: AAAAAAAB+769MKS7Z37n9DWIr2A9ztshva4Omc/g8xKJ2jUdd1iHEL0sMyHdoV/lUj3nKRuaG/JLaTkaZaQDwHZPjzaK4ysX622dre0jsMpkGfC6GQyh2/rrSVl6ulFr0rD0zfprbfkb18X7L3S4v8lxSfF7Y+1CWUYiqMPNyYgF+0Yft8iYkqUd+RjhY7rkcYVb83CdFmWDD+8zEvwnFFs9qlX0bXK0V14JnH4BgFPbkGG2eT6F7Ta6zpGwuNlDk57uEEWt7Ezr4Qc4FRDN7TIV2dxbJqhbRaLjiNmtBtceFf/O8L3clj1ksZ+18g0yAp3Y5iBb+fqMPAvJzU4UTbYNiiyiGIXmEdGowmZBmEmPjJGe8cDJcd1au0H/LAAfKzKnxtUgibAF+WbqF5zUZurDC7xswMIGjJ/zqCjkMMbOWVGhV4i8si4yxgy7eW+76eOYv3K9y7ka26z2eD50PXDZsVKPGbRz4L1foHIJHcvyXg1i3pufETEJfWi0/mTNorHyM4SUe0o119JX7yCDr0fBZ1/o+km20AwTBOdL4WLPjdeHnHcdjPyuM/hKe+984Vf3mgqI8QaITM4fQBNtkjjmg3eDNWZ/wv403kOTryWKAAZiSrnFOb1jCYJzQF7q3/FZBwnuJQIcHNtYy0C4FeNijLx0S5ObeS8jxqh6SdI1pTerpgL6doXNjHPAQTWEPubzOHdXlV8Ey4iHkbxuRQvXJnZFhAU8GZNs1sCgh5e1jWlwhRuSA+MgQxZ0KOsA2GvEszczwoBZjKes78n9aqF+zBYqxV5fzdmkHb0QTHplDeGZM/Al/r/G9Wh8L4Ymq1WX2NeDljAm/gsIugX0qzzI38XD3ITzPAU00Iqq+6U0v7BuJpibr9hWLo0kZSUr8ixYMQRMMvPmVWtzvWdGm2Y/MbQvxk2uBzPttni+AP7eEDXqTjnG2fp5lNpsLjvY4LaGCj4f0p+QNdpgyRb4x7ov6iZsGKl/Pwz6SZErPE+aWnPxTvJnN2JIL+WoDN1GNrOvLNaiJbOTfw==
+
+--34d3bc4108ab31d1f6ec6dec76cbabf32de5247db1cc5ffa1fcb8b3d49b2
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset=US-ASCII
+
+BOXERS
+
+T-SHIRTS
+
+SOCKS
+
+BUNDLES
+
+https://wearmntd.ca/collections/our-best-sellers
+
+[Models wearing soft, premium t-shirts in classic and relaxed fits, showing=
+ differences in silhouette and styling for everyday wear.](https://wearmntd=
+.ca/collections/our-best-sellers)
+
+https://wearmntd.ca/collections/our-best-sellers
+
+[Men wearing premium t-shirts in classic and relaxed fits, highlighting com=
+fort, stretch, and everyday versatility.](https://wearmntd.ca/collections/o=
+ur-best-sellers)
+
+https://wearmntd.ca/products/buffer-boxer-brief
+
+https://wearmntd.ca/products/best-damn-active-tee
+
+https://wearmntd.ca/products/cotton-modal-boxer-brief
+
+[The Best Damn Tee in classic and relaxed fits, designed for all-day comfor=
+t, breathable softness, and a perfect fit for every body.](https://wearmntd=
+.ca/products/best-damn-tee-relaxed)
+
+[Custom](https://www.instagram.com/wearmntd/)
+[Custom](https://www.tiktok.com/@wearmntd)
+[Custom](https://www.facebook.com/people/Wear-MNTD/61568070549408/#)
+[Custom](https://www.youtube.com/@wearmntd)
+
+No longer want to receive these emails? [Unsubscribe](https://manage.kmail-=
+lists.com/subscriptions/unsubscribe?a=3DR63DZk&c=3D01KVNJPC1AKA97H4MR4C0B8F=
+SC&k=3D715018beab12aa5d67f831b01308120d&se=3Drahul_sharma%40mac.com&m=3D01K=
+Y7S2A0EHWGCKXDAC729HBRT&r=3D01KY7SB7C8PYDM1PR94BBXFY34).
+MNTD CA 179 John St Toronto,, Ontario M5T 1X4
+--34d3bc4108ab31d1f6ec6dec76cbabf32de5247db1cc5ffa1fcb8b3d49b2
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html><html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:o=3D"urn:=
+schemas-microsoft-com:office:office" xmlns:v=3D"urn:schemas-microsoft-com:v=
+ml"><head>
+<title>
+</title>
+<!--[if !mso]><!-->
+<meta content=3D"IE=3Dedge" http-equiv=3D"X-UA-Compatible">
+<!--<![endif]-->
+<meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Type">
+<meta content=3D"width=3Ddevice-width, initial-scale=3D1" name=3D"viewport"=
+>
+<!--[if mso]>
+        <noscript>
+        <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+        </xml>
+        </noscript>
+        <![endif]-->
+<!--[if lte mso 11]>
+        <style type=3D"text/css" data-inliner=3D"ignore">
+          .mj-outlook-group-fix { width:100% !important; }
+        </style>
+        <![endif]-->
+<!--[if !mso]><!--><!--<![endif]-->
+<style>a:not([name]) {color:#15c;text-decoration:underline}
+a:link {color:#15c;text-decoration:underline}
+a:visited {color:#15c;text-decoration:underline}
+a:active {color:#15c;text-decoration:underline}
+a:hover {color:#15c;text-decoration:underline}</style><style>@import url(ht=
+tps://static-forms.klaviyo.com/fonts/api/v1/R63DZk/custom_fonts.css);
+#outlook a {
+    padding: 0
+    }
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+    }
+table, td {
+    border-collapse: collapse;
+    mso-table-lspace: 0;
+    mso-table-rspace: 0
+    }
+img {
+    border: 0;
+    line-height: 100%;
+    outline: none;
+    text-decoration: none;
+    -ms-interpolation-mode: bicubic
+    }
+p {
+    display: block;
+    margin: 13px 0
+    }
+@media only screen and (min-width: 480px) {
+    .mj-column-per-100 {
+        width: 100% !important;
+        max-width: 100%
+        }
+    }
+.moz-text-html .mj-column-per-100 {
+    width: 100% !important;
+    max-width: 100%
+    }
+@media only screen and (max-width: 480px) {
+    div.kl-row.colstack div.kl-column {
+        display: block !important;
+        width: 100% !important
+        }
+    }
+@media only screen and (max-width: 480px) {
+    .kl-table-subblock.use-legacy-mobile-padding {
+        padding-left: 9px !important;
+        padding-right: 9px !important
+        }
+    }
+@media only screen and (max-width: 480px) {
+    td.kl-img-base-auto-width {
+        width: 100% !important
+        }
+    }
+@media only screen and (max-width: 480px) {
+    .component-wrapper .mob-no-spc {
+        padding-left: 0 !important;
+        padding-right: 0 !important
+        }
+    }
+@media screen and (max-width: 480px) {
+    .kl-sl-stk {
+        display: block !important;
+        width: 100% !important;
+        padding: 0 0 9px !important;
+        text-align: center !important
+        }
+    .kl-sl-stk.lbls {
+        padding: 0 !important
+        }
+    .kl-sl-stk.spcblk {
+        display: none !important
+        }
+    }
+img {
+    border: 0;
+    height: auto;
+    line-height: 100%;
+    outline: none;
+    text-decoration: none;
+    max-width: 100%
+    }
+.root-container {
+    background-repeat: repeat !important;
+    background-size: auto !important;
+    background-position: left top !important
+    }
+.root-container-spacing {
+    padding-top: 0 !important;
+    padding-bottom: 20px !important;
+    font-size: 0 !important
+    }
+.content-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important
+    }
+.content-padding.kl-first {
+    padding-top: 0 !important
+    }
+.content-padding.kl-last {
+    padding-bottom: 0 !important
+    }
+@media only screen and (max-width: 480px) {
+    td.mobile-only {
+        display: table-cell !important
+        }
+    div.mobile-only {
+        display: block !important
+        }
+    table.mobile-only {
+        display: table !important
+        }
+    .desktop-only {
+        display: none !important
+        }
+    }
+@media only screen and (max-width: 480px) {
+    .table-mobile-only {
+        display: table-cell !important;
+        max-height: none !important
+        }
+    .table-mobile-only.block {
+        display: block !important
+        }
+    .table-mobile-only.inline-block {
+        display: inline-block !important
+        }
+    .table-desktop-only {
+        max-height: 0 !important;
+        display: none !important;
+        mso-hide: all !important;
+        overflow: hidden !important
+        }
+    }
+p {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 1em
+    }
+@media only screen and (max-width: 480px) {
+    body.mce-content-body, /* NOTE: needed for internal tinymce styles */.k=
+l-text > div, .kl-table-subblock > div, .kl-split-subblock > div {
+        font-size: 14px !important;
+        line-height: 1.3 !important
+        }
+    }
+h1 {
+    color: #222;
+    font-family: "Suisse", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 40px;
+    font-style: Normal;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: left
+    }
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 40px !important;
+        line-height: 1.1 !important
+        }
+    }
+h2 {
+    color: #222;
+    font-family: "Suisse", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: 0;
+    margin: 0;
+    margin-bottom: 16px;
+    text-align: left
+    }
+@media only screen and (max-width: 480px) {
+    h2 {
+        font-size: 32px !important;
+        line-height: 1.1 !important
+        }
+    }
+h3 {
+    color: #222;
+    font-family: "Suisse", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: 0;
+    margin: 0;
+    margin-bottom: 12px;
+    text-align: left
+    }
+@media only screen and (max-width: 480px) {
+    h3 {
+        font-size: 24px !important;
+        line-height: 1.1 !important
+        }
+    }
+h4 {
+    color: #222;
+    font-family: "Helvetica Neue", Arial;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0;
+    margin: 0;
+    margin-bottom: 9px;
+    text-align: left
+    }
+@media only screen and (max-width: 480px) {
+    h4 {
+        font-size: 18px !important;
+        line-height: 1.1 !important
+        }
+    }
+@media only screen and (max-width: 480px) {
+    .root-container {
+        width: 100% !important
+        }
+    .root-container-spacing {
+        padding: 5px !important
+        }
+    .content-padding {
+        padding-left: 0 !important;
+        padding-right: 0 !important
+        }
+    .content-padding.kl-first {
+        padding-top: 0 !important
+        }
+    .content-padding.kl-last {
+        padding-bottom: 0 !important
+        }
+    .kl-column > .component-wrapper {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: unset !important
+        }
+    .kl-text {
+        padding-right: 18px !important;
+        padding-left: 18px !important
+        }
+    }</style></head>
+<body style=3D"word-spacing:normal;background-color:#F6F4F4;">
+<div style=3D"display:none;font-size:1px;color:#ffffff;line-height:1px;max-=
+height:0px;max-width:0px;opacity:0;overflow:hidden;">
+      More men. More sizes. Same MNTD performance.=E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD=
+ =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD
+    </div>
+<!-- TRACKING_PIXEL_TOP -->
+<div class=3D"root-container" id=3D"bodyTable" style=3D"background-color:#F=
+6F4F4;">
+<div class=3D"root-container-spacing">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"kl-section" role=3D"presentation" style=3D"width:100%;">
+<tbody>
+<tr>
+<td>
+<!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" class=3D"kl-section-outlook" style=3D"width:640px;" width=
+=3D"640" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-ru=
+le:exactly;"><![endif]-->
+<div style=3D"margin:0px auto;max-width:640px;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"width:100%;">
+<tbody>
+<tr>
+<td style=3D"direction:ltr;font-size:0px;padding:0px;text-align:center;">
+<!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0"><table align=3D"center" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" class=3D"" style=3D"width:640px;" width=3D"640" bgcolor=
+=3D"#F2F2ED" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-heigh=
+t-rule:exactly;"><![endif]-->
+<div style=3D"background:#F2F2ED;background-color:#F2F2ED;margin:0px auto;b=
+order-radius:0px 0px 0px 0px;max-width:640px;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"background:#F2F2ED;background-color:#F2F2ED;wi=
+dth:100%;border-radius:0px 0px 0px 0px;">
+<tbody>
+<tr>
+<td style=3D"direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0px;=
+padding-left:0px;padding-right:0px;padding-top:0px;text-align:center;">
+<!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0"><![endif]-->
+<div class=3D"content-padding kl-first kl-last">
+<!--[if true]><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"640" style=3D"width:640px;direction:ltr"><tr><![endif]-->
+<div class=3D"kl-row colstack" style=3D"display:table;table-layout:fixed;wi=
+dth:100%;">
+<!--[if true]><td style=3D"vertical-align:top;width:640px;"><![endif]-->
+<div class=3D"kl-column" style=3D"display:table-cell;vertical-align:top;wid=
+th:100%;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"background-color:#1F211C;vertical-align:top;padding=
+-top:20px;padding-right:0px;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"kl-table" style=3D"background:#1F211C;font-size=
+:0px;padding:0px;word-break:break-word;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"color:#000=
+000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-he=
+ight:22px;table-layout:fixed;width:100%;border:none;" width=3D"100%">
+<thead>
+</thead>
+<tbody>
+<tr>
+<td class=3D"kl-table-subblock" style=3D"width:auto;overflow:hidden;vertica=
+l-align:middle;padding-top:0px;padding-right:0px;padding-bottom:0px;padding=
+-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+<tbody><tr>
+<td align=3D"center" class=3D"" style=3D"font-size:0px;word-break:break-wor=
+d;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td class=3D"" style=3D"border:0;padding:0;width:60px;" valign=3D"top">
+<img alt=3D"" src=3D"https://d3k81ch9hvuctc.cloudfront.net/company/R63DZk/i=
+mages/15361ba2-505b-4085-8ff9-0f90aee59362.png" style=3D"display:block;outl=
+ine:none;text-decoration:none;height:auto;font-size:13px;width:100%;" title=
+=3D"" width=3D"60">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody></table>
+</td>
+<td class=3D"kl-table-subblock" style=3D"width:auto;overflow:hidden;vertica=
+l-align:middle;padding-top:0px;padding-right:0px;padding-bottom:0px;padding=
+-left:0px;">
+<div style=3D"font-family:'Suisse', Arial, 'Helvetica Neue', Helvetica, san=
+s-serif;font-size:14px;font-style:Normal;font-weight:400;letter-spacing:0px=
+;line-height:1.3;text-align:left;color:#222222;"><div style=3D"text-align: =
+center;"><span style=3D"color: rgb(255, 255, 255);">BOXERS</span></div></di=
+v>
+</td>
+<td class=3D"kl-table-subblock" style=3D"width:auto;overflow:hidden;vertica=
+l-align:middle;padding-top:0px;padding-right:0px;padding-bottom:0px;padding=
+-left:0px;">
+<div style=3D"font-family:'Suisse', Arial, 'Helvetica Neue', Helvetica, san=
+s-serif;font-size:14px;font-style:Normal;font-weight:400;letter-spacing:0px=
+;line-height:1.3;text-align:left;color:#222222;"><div style=3D"text-align: =
+center;"><span style=3D"color: rgb(255, 255, 255);">T-SHIRTS</span></div></=
+div>
+</td>
+<td class=3D"kl-table-subblock" style=3D"width:auto;overflow:hidden;vertica=
+l-align:middle;padding-top:0px;padding-right:0px;padding-bottom:0px;padding=
+-left:0px;">
+<div style=3D"font-family:'Suisse', Arial, 'Helvetica Neue', Helvetica, san=
+s-serif;font-size:14px;font-style:Normal;font-weight:400;letter-spacing:0px=
+;line-height:1.3;text-align:left;color:#222222;"><div style=3D"text-align: =
+center;"><span style=3D"color: rgb(255, 255, 255);">SOCKS</span></div></div=
+>
+</td>
+<td class=3D"kl-table-subblock" style=3D"width:auto;overflow:hidden;vertica=
+l-align:middle;padding-top:0px;padding-right:0px;padding-bottom:0px;padding=
+-left:0px;">
+<div style=3D"font-family:'Suisse', Arial, 'Helvetica Neue', Helvetica, san=
+s-serif;font-size:14px;font-style:Normal;font-weight:400;letter-spacing:0px=
+;line-height:1.3;text-align:left;color:#222222;"><div style=3D"text-align: =
+center;"><span style=3D"color: rgb(255, 255, 255);">BUNDLES</span></div></d=
+iv>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"background-color:#1F211C;vertical-align:top;padding=
+-top:18px;padding-right:18px;padding-bottom:18px;padding-left:18px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"font-size:0px;padding:0px;word-break:break-wo=
+rd;">
+<p style=3D"padding-bottom:0; border-top:solid 1px #FFF; font-size:1px; mar=
+gin:0 auto; width:100%">
+</p>
+<!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"border-top:solid 1px #FFFFFF;font-size:1px;margin:=
+0px auto;width:604px;" role=3D"presentation" width=3D"604px" ><tr><td style=
+=3D"height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:0px;padding-right:0p=
+x;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"kl-image" style=3D"font-size:0px;word-break:b=
+reak-word;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td class=3D"kl-img-base-auto-width" style=3D"border:0;padding:0px 0px 0px =
+0px;width:640px;" valign=3D"top">
+<a class=3D"kl-img-link" style=3D"color:#15c; text-decoration:underline; di=
+splay:block" href=3D"https://ctrk.klclick.com/l/01KY7SBGBJJ40N4PTBER859EQP_=
+0">
+<img src=3D"https://d3k81ch9hvuctc.cloudfront.net/company/R63DZk/images/a52=
+31c31-0769-4a10-943e-91e38d202016.jpeg" style=3D"display:block;outline:none=
+;text-decoration:none;height:auto;font-size:13px;width:100%;" width=3D"640"=
+>
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!--[if true]></td><![endif]-->
+</div>
+<!--[if true]></tr></table><![endif]-->
+<!--[if true]><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"640" style=3D"width:640px;direction:ltr"><tr><![endif]-->
+<div class=3D"kl-row colstack" style=3D"display:table;table-layout:fixed;wi=
+dth:100%;">
+<!--[if true]><td style=3D"vertical-align:top;width:640px;"><![endif]-->
+<div class=3D"kl-column" style=3D"display:table-cell;vertical-align:top;wid=
+th:100%;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:0px;padding-right:0p=
+x;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"kl-image" style=3D"font-size:0px;word-break:b=
+reak-word;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td class=3D"kl-img-base-auto-width" style=3D"border:0;padding:0px 0px 0px =
+0px;width:640px;" valign=3D"top">
+<a class=3D"kl-img-link" style=3D"color:#15c; text-decoration:underline; di=
+splay:block" href=3D"https://ctrk.klclick.com/l/01KY7SBGBJJ40N4PTBER859EQP_=
+1">
+<img alt=3D"Models wearing soft, premium t-shirts in classic and relaxed fi=
+ts, showing differences in silhouette and styling for everyday wear." src=
+=3D"https://d3k81ch9hvuctc.cloudfront.net/company/R63DZk/images/fe6be95d-04=
+c7-498a-80ce-40848021327a.jpeg" style=3D"display:block;outline:none;text-de=
+coration:none;height:auto;font-size:13px;width:100%;" title=3D"Models weari=
+ng soft, premium t-shirts in classic and relaxed fits, showing differences =
+in silhouette and styling for everyday wear." width=3D"640">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:0px;padding-right:0p=
+x;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"kl-image" style=3D"font-size:0px;word-break:b=
+reak-word;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td class=3D"kl-img-base-auto-width" style=3D"border:0;padding:0px 0px 0px =
+0px;width:640px;" valign=3D"top">
+<a class=3D"kl-img-link" style=3D"color:#15c; text-decoration:underline; di=
+splay:block" href=3D"https://ctrk.klclick.com/l/01KY7SBGBJJ40N4PTBER859EQP_=
+2">
+<img src=3D"https://d3k81ch9hvuctc.cloudfront.net/company/R63DZk/images/f9f=
+3f37a-393f-44a5-a02d-54d5859e0cfb.jpeg" style=3D"display:block;outline:none=
+;text-decoration:none;height:auto;font-size:13px;width:100%;" width=3D"640"=
+>
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:0px;padding-right:0p=
+x;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"kl-image" style=3D"font-size:0px;word-break:b=
+reak-word;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td class=3D"kl-img-base-auto-width" style=3D"border:0;padding:0px 0px 0px =
+0px;width:640px;" valign=3D"top">
+<a class=3D"kl-img-link" style=3D"color:#15c; text-decoration:underline; di=
+splay:block" href=3D"https://ctrk.klclick.com/l/01KY7SBGBJJ40N4PTBER859EQP_=
+3">
+<img alt=3D"Men wearing premium t-shirts in classic and relaxed fits, highl=
+ighting comfort, stretch, and everyday versatility." src=3D"https://d3k81ch=
+9hvuctc.cloudfront.net/company/R63DZk/images/1fa83ed9-435e-466b-859c-17395b=
+92e204.jpeg" style=3D"display:block;outline:none;text-decoration:none;heigh=
+t:auto;font-size:13px;width:100%;" title=3D"Men wearing premium t-shirts in=
+ classic and relaxed fits, highlighting comfort, stretch, and everyday vers=
+atility." width=3D"640">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:0px;padding-right:0p=
+x;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"kl-image" style=3D"font-size:0px;word-break:b=
+reak-word;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td class=3D"kl-img-base-auto-width" style=3D"border:0;padding:0px 0px 0px =
+0px;width:640px;" valign=3D"top">
+<a class=3D"kl-img-link" style=3D"color:#15c; text-decoration:underline; di=
+splay:block" href=3D"https://ctrk.klclick.com/l/01KY7SBGBJJ40N4PTBER859EQP_=
+4">
+<img src=3D"https://d3k81ch9hvuctc.cloudfront.net/company/R63DZk/images/dff=
+124d3-d32c-4aab-bebb-b400af2da7f4.jpeg" style=3D"display:block;outline:none=
+;text-decoration:none;height:auto;font-size:13px;width:100%;" width=3D"640"=
+>
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:0px;padding-right:0p=
+x;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"kl-image" style=3D"font-size:0px;word-break:b=
+reak-word;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td class=3D"kl-img-base-auto-width" style=3D"border:0;padding:0px 0px 0px =
+0px;width:640px;" valign=3D"top">
+<a class=3D"kl-img-link" style=3D"color:#15c; text-decoration:underline; di=
+splay:block" href=3D"https://ctrk.klclick.com/l/01KY7SBGBJJ40N4PTBER859EQP_=
+5">
+<img src=3D"https://d3k81ch9hvuctc.cloudfront.net/company/R63DZk/images/6bb=
+c1794-f4de-4b6b-acb6-9d96be5a470f.jpeg" style=3D"display:block;outline:none=
+;text-decoration:none;height:auto;font-size:13px;width:100%;" width=3D"640"=
+>
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:0px;padding-right:0p=
+x;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"kl-image" style=3D"font-size:0px;word-break:b=
+reak-word;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td class=3D"kl-img-base-auto-width" style=3D"border:0;padding:0px 0px 0px =
+0px;width:640px;" valign=3D"top">
+<a class=3D"kl-img-link" style=3D"color:#15c; text-decoration:underline; di=
+splay:block" href=3D"https://ctrk.klclick.com/l/01KY7SBGBJJ40N4PTBER859EQP_=
+6">
+<img src=3D"https://d3k81ch9hvuctc.cloudfront.net/company/R63DZk/images/843=
+b9cb6-b1c8-47e8-ac85-b1104ffd7972.jpeg" style=3D"display:block;outline:none=
+;text-decoration:none;height:auto;font-size:13px;width:100%;" width=3D"640"=
+>
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:0px;padding-right:0p=
+x;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"kl-image" style=3D"font-size:0px;word-break:b=
+reak-word;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td class=3D"kl-img-base-auto-width" style=3D"border:0;padding:0px 0px 0px =
+0px;width:640px;" valign=3D"top">
+<a class=3D"kl-img-link" style=3D"color:#15c; text-decoration:underline; di=
+splay:block" href=3D"https://ctrk.klclick.com/l/01KY7SBGBJJ40N4PTBER859EQP_=
+7">
+<img alt=3D"The Best Damn Tee in classic and relaxed fits, designed for all=
+-day comfort, breathable softness, and a perfect fit for every body." src=
+=3D"https://d3k81ch9hvuctc.cloudfront.net/company/R63DZk/images/ee2a8d80-57=
+7f-4e16-bd65-f1ea41729271.jpeg" style=3D"display:block;outline:none;text-de=
+coration:none;height:auto;font-size:13px;width:100%;" title=3D"The Best Dam=
+n Tee in classic and relaxed fits, designed for all-day comfort, breathable=
+ softness, and a perfect fit for every body." width=3D"640">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:15px;padding-right:9=
+px;padding-bottom:15px;padding-left:9px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td>
+<div style=3D"width:100%;text-align:center">
+<!--[if true]><table style=3D"all:unset;opacity:0;" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" ><tr><![endif]-->
+<!--[if !true]><!--><div class=3D"" style=3D"display:inline-block;padding-r=
+ight:10px;"><!--<![endif]-->
+<!--[if true]><td style=3D"padding-right:10px;"><![endif]-->
+<div style=3D"text-align: center;">
+<a style=3D"color:#15c; text-decoration:underline" target=3D"_blank" href=
+=3D"https://ctrk.klclick.com/l/01KY7SBGBJJ40N4PTBER859EQP_8">
+<img alt=3D"Custom" src=3D"https://d3k81ch9hvuctc.cloudfront.net/company/R6=
+3DZk/images/561469ee-cd1f-40b5-9b8e-9a78ab95af3c.png" style=3D"width:30px;"=
+ width=3D"30">
+</a>
+</div>
+<!--[if true]></td><![endif]-->
+<!--[if !true]><!--></div><!--<![endif]-->
+<!--[if !true]><!--><div class=3D"" style=3D"display:inline-block;padding-r=
+ight:10px;"><!--<![endif]-->
+<!--[if true]><td style=3D"padding-right:10px;"><![endif]-->
+<div style=3D"text-align: center;">
+<a style=3D"color:#15c; text-decoration:underline" target=3D"_blank" href=
+=3D"https://ctrk.klclick.com/l/01KY7SBGBJJ40N4PTBER859EQP_9">
+<img alt=3D"Custom" src=3D"https://d3k81ch9hvuctc.cloudfront.net/company/R6=
+3DZk/images/f2c6db6e-428b-41f7-bb06-6d212d2dffb4.png" style=3D"width:30px;"=
+ width=3D"30">
+</a>
+</div>
+<!--[if true]></td><![endif]-->
+<!--[if !true]><!--></div><!--<![endif]-->
+<!--[if !true]><!--><div class=3D"" style=3D"display:inline-block;padding-r=
+ight:10px;"><!--<![endif]-->
+<!--[if true]><td style=3D"padding-right:10px;"><![endif]-->
+<div style=3D"text-align: center;">
+<a style=3D"color:#15c; text-decoration:underline" target=3D"_blank" href=
+=3D"https://ctrk.klclick.com/l/01KY7SBGBJJ40N4PTBER859EQP_10">
+<img alt=3D"Custom" src=3D"https://d3k81ch9hvuctc.cloudfront.net/company/R6=
+3DZk/images/e9cb53f4-b329-439f-8cf8-c5ba57d55cb4.png" style=3D"width:30px;"=
+ width=3D"30">
+</a>
+</div>
+<!--[if true]></td><![endif]-->
+<!--[if !true]><!--></div><!--<![endif]-->
+<!--[if !true]><!--><div class=3D"" style=3D"display:inline-block;"><!--<![=
+endif]-->
+<!--[if true]><td style=3D""><![endif]-->
+<div style=3D"text-align: center;">
+<a style=3D"color:#15c; text-decoration:underline" target=3D"_blank" href=
+=3D"https://ctrk.klclick.com/l/01KY7SBGBJJ40N4PTBER859EQP_11">
+<img alt=3D"Custom" src=3D"https://d3k81ch9hvuctc.cloudfront.net/company/R6=
+3DZk/images/d1595121-1a9c-456f-b3df-258a77855644.png" style=3D"width:30px;"=
+ width=3D"30">
+</a>
+</div>
+<!--[if true]></td><![endif]-->
+<!--[if !true]><!--></div><!--<![endif]-->
+<!--[if true]></tr></table><![endif]-->
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!--[if true]></td><![endif]-->
+</div>
+<!--[if true]></tr></table><![endif]-->
+<!--[if true]><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"640" style=3D"width:640px;direction:ltr"><tr><![endif]-->
+<div class=3D"kl-row colstack" style=3D"display:table;table-layout:fixed;wi=
+dth:100%;">
+<!--[if true]><td style=3D"vertical-align:top;width:640px;"><![endif]-->
+<div class=3D"kl-column" style=3D"display:table-cell;vertical-align:top;wid=
+th:100%;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper kl-t=
+ext-table-layout" style=3D"font-size:0px;text-align:left;direction:ltr;vert=
+ical-align:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:0px;padding-right:0p=
+x;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"kl-text" style=3D"font-size:0px;padding:0px;p=
+adding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:18px;word=
+-break:break-word;">
+<div style=3D"font-family:'Suisse', Arial, 'Helvetica Neue', Helvetica, san=
+s-serif;font-size:11px;font-style:Normal;font-weight:400;letter-spacing:0px=
+;line-height:1.3;text-align:center;color:#222222;"><div><span style=3D"font=
+-size: 10px;">No longer want to receive these emails? <a class=3D"unsubscri=
+be-link" style=3D"color:#1155cc;font-weight:normal;text-decoration:underlin=
+e;" href=3D"https://ctrk.klclick.com/l/01KY7SBGBJJ40N4PTBER859EQP_12">Unsub=
+scribe</a>.<br>MNTD CA 179 John St Toronto,, Ontario M5T 1X4</span></div></=
+div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!--[if true]></td><![endif]-->
+</div>
+<!--[if true]></tr></table><![endif]-->
+</div>
+<!--[if mso | IE]></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<img src=3D"https://ctrk.klclick.com/o/01KY7SBGBJJ40N4PTBER859EQP" alt=3D""=
+ width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !important;width=
+:1px !important;border-width:0 !important;margin-top:0 !important;margin-bo=
+ttom:0 !important;margin-right:0 !important;margin-left:0 !important;paddin=
+g-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;p=
+adding-left:0 !important;"/>
+
+</body></html>
+--34d3bc4108ab31d1f6ec6dec76cbabf32de5247db1cc5ffa1fcb8b3d49b2--

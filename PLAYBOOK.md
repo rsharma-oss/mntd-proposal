@@ -2,6 +2,8 @@
 
 The MNTD proposal is a template. This document is how to re-use it for the next mid-market brand — retail or DTC — without re-inventing structure, voice, or tech.
 
+> **This file = the theory.** For the concrete extraction work list (what to copy, tokenise, and move into a shared toolkit repo), see `TEMPLATE-BUILD.md`. That file estimates ~2 focused workdays to convert MNTD into a genuinely reusable template.
+
 Target profile: **US$5M – US$100M in annual revenue · Shopify-native · brand-led (not pure performance) · founder or brand-president level buyer.**
 
 Not the right template for: enterprise (>$500M · needs procurement-heavy proposals), pre-revenue (needs a different discovery arc), pure-B2B (this template assumes DTC lifecycle).

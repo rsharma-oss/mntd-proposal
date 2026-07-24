@@ -1,0 +1,2739 @@
+Return-path: <b3.BAABAAjMSdC4h7MgvLpB6418hHSwC4lKYQ.a8f56e.xvVYagA.dfv4V7WP@mailer3.email.shop.app>
+Original-recipient: rfc822;rahul_sharma@mac.com
+Received: from p00-icloudmta-smtpin-us-west-3a-100-percent-7 by p129-mailgateway-smtp-775cbbf858-k76ww (mailgateway 2626B90)
+	with SMTP id 909ab552-32d9-4dba-aaf5-0feb9d857b2a 
+	for <rahul_sharma@mac.com>; Thu, 16 Jul 2026 15:16:24 GMT
+X-Apple-MoveToFolder: INBOX 
+X-Apple-Action: MOVE_TO_FOLDER/INBOX
+X-Apple-UUID: 909ab552-32d9-4dba-aaf5-0feb9d857b2a
+Received: from 244-74.mailer.shopify.com (244-74.mailer.shopify.com [159.112.244.74])
+	by p00-icloudmta-smtpin-us-west-3a-100-percent-7 (Postfix) with ESMTPS id 7181CC000E6
+	for <rahul_sharma@mac.com>; Thu, 16 Jul 2026 15:16:22 +0000 (UTC)
+X-ICL-RepId: 019f6b80-0ea8-7708-bf08-b2409a0823ee
+X-ICL-Info: GAtbRVYDBVFFSlVHSgQEUVUKE0oWX1gHVQoPB0UBA1tbSFdFVgICVltOUlcdVAsARlckNjlydyMfNDUTOwReVTgeEDsIcgBWREEOPytHdVYZMj8mVlEOBEBPA1kARmA7FB4nWRxWQFYjTjEnOF1XCxkcFERWVVsDHBVIBBBfRkwUCRZXHlQLBxgYDxtWQ14NBVcHBwgQRAFICwcfDVxpER0YFBoZcFsDFlcFGBUQXgcZFltFTAQbVUFXCxYRXFMQWwoOGAhZUBtbGgkaWEBCEEhLUkNVBwJMGBgPGx1CGBEdFhYeHkkYARoURhMcDVsDHBUDBUseUw8UEApZC1hZElsYFgdYXV8GSEUjRkgCBlNFSUtGQHMEITBIVDZPBwcnMz1VWk4EdSFDTVMxOENeDQUQAA5WU1kPSw==
+X-ICL-Score: 2.33303302423
+Authentication-Results: bimi.icloud.com; bimi=pass header.d=shop.app header.selector=default policy.authority=pass policy.authority-uri=https://vmc.digicert.com/f8bbc000-ac64-4b20-beb4-5bf034fbaaf7.pem
+BIMI-Location: v=BIMI1; l=https://vmc.digicert.com/f8bbc000-ac64-4b20-beb4-5bf034fbaaf7.svg a=https://vmc.digicert.com/f8bbc000-ac64-4b20-beb4-5bf034fbaaf7.pem
+X-BIMI-Indicator-Hash: h=6gMqqSeYMXOdClITtrHHz/DuWmN1GryyopQOLpxVDWc= a=sha256
+X-ARC-Info: policy=fail; arc=none; r1=-20; r2=0
+Authentication-Results: arc.icloud.com; arc=none
+Authentication-Results: dmarc.icloud.com; dmarc=pass header.from=email.shop.app
+X-DMARC-Policy: v=DMARC1; p=reject; pct=100; fo=1; rua=mailto:dmarc-aggregate@shopify.com;ruf=mailto:dmarc-reports@shopify.com
+X-DMARC-Info: pass=pass; dmarc-policy=reject; s=r1; d=r1; pdomain=shop.app
+Authentication-Results: dkim-verifier.icloud.com; dkim=pass header.d=mailer3.email.shop.app header.i=@mailer3.email.shop.app header.b=miwfX1Tm
+Received-SPF: pass (spf.icloud.com: domain of b3.BAABAAjMSdC4h7MgvLpB6418hHSwC4lKYQ.a8f56e.xvVYagA.dfv4V7WP@mailer3.email.shop.app designates 159.112.244.74 as permitted sender) receiver=spf.icloud.com; client-ip=159.112.244.74; helo=244-74.mailer.shopify.com; envelope-from=b3.BAABAAjMSdC4h7MgvLpB6418hHSwC4lKYQ.a8f56e.xvVYagA.dfv4V7WP@mailer3.email.shop.app
+Authentication-Results: spf.icloud.com; spf=pass (spf.icloud.com: domain of b3.BAABAAjMSdC4h7MgvLpB6418hHSwC4lKYQ.a8f56e.xvVYagA.dfv4V7WP@mailer3.email.shop.app designates 159.112.244.74 as permitted sender) smtp.mailfrom=b3.BAABAAjMSdC4h7MgvLpB6418hHSwC4lKYQ.a8f56e.xvVYagA.dfv4V7WP@mailer3.email.shop.app
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailer3.email.shop.app; q=dns/txt; s=pdk1; t=1784214982; x=1784222182;
+ h=Content-Type: Content-Transfer-Encoding: List-Unsubscribe-Post: List-Unsubscribe: Reply-To: Message-Id: To: To: From: From: Subject: Subject: Mime-Version: Date: Sender;
+ bh=u4mrmfXEQM+szkhtXFuhIURUDDAq1a8HkBXtMPUvezg=;
+ b=miwfX1TmLIK1a/JB/3O2j8MFufabbBxpug15/rZzMTY7t3H8QYWU9B/cLDEhhk+O0+tSTpI+tsLY4+mrMVdfh4CDeHpVfEq/TEIsjVWNYSkp0unpIYQ5q7Fwry5ZN8RMikhQfdMnWfw+xgZ3I7Umluc/tjpHuBXGFeIsBMhjve+i5DR9NbOLYbVUHxzZYlvLzSdaIWV4oLKYONy4SGhMehotvG0D/4HHK+1OSE6NidWayCOxrtGBnkR9/Ita4W2vYkelW4uhXvABFNYO8th1qOvXiftBh8lXa0aGmR94NqvXgPq08KDW20F7ed52H+0UjgyRguOs+y4b55MYvPtPVA==
+X-Mailgun-Sid: WyJlZmVjZCIsInJhaHVsX3NoYXJtYUBtYWMuY29tIiwiYThmNTZlIl0=
+Received: by b81630cd62575db217161387f5a2718b1c007579751c06b5eb7d4d0c237055cb with HTTP
+ id 6a58f5c63d21a25d564668a9; Thu, 16 Jul 2026 15:16:22 GMT
+Date: Thu, 16 Jul 2026 15:16:22 +0000
+Mime-Version: 1.0
+Subject: =?UTF-8?q?Your_MNTD_cart=3F_Saved_=E2=9C=85_over_on_Shop?=
+From: Shopify <noreply@email.shop.app>
+To: rahul_sharma@mac.com
+X-Mailgun-Tag: a_xlv2rywhb454
+X-Mailgun-Rewrite-Sender-Header: false
+X-Mailgun-Suppressions-Bypass: true
+Message-Id: <E1020100-18C2CE12A771EFD3-64CC645F@shopify.com>
+Reply-To: Shopify <inactive@shopify.com>
+Feedback-Id: t_123028:c_19692:e_shopapp:shopify
+List-Unsubscribe: <https://shop.app/unsubscribe?d=eyJraWQiOiIxIiwiYWxnIjoiRWREU0EifQ.eyJzdWIiOjEzMjk0ODQ5OSwiaWF0IjoxNzgzNjA3MDEzLCJ2ZXJzaW9uIjoiMi4wIiwidXVpZCI6IjAxOTYxZjhhLTdhYmMtN2Y4My1hZWM0LWMwMzhhMWJiMTk3ZSJ9.H2ZJkmj1Xkv_ReOP-pNYFwF7vhiAkkgKbRw_0j3rbTDwR0Q1D3-nCwZOc6m0DlKw13fGn-9Zb-BwIjPmKgAiAQ>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+X-MANTSH: 1TFkXGxsaGREKWUQXYX1gR2kYT31kTmQRCllNF2JLRxEKX1kXGxofEQpfTRdkRUR
+ PEQpZSRcacRoQGncGBxsTcRgfGRsQGRISGXcGGBoGGhEKWV4XbGx5EQpDThdsHWtlTEtMc054S
+ Rh9f3xuWh9/HnNlREFJSGZOeXJLXhEKWFwXGQQaBB8SBRsaBBscHwQYGAQYHhIQGx4aHxoRCl5
+ ZF0JAWlpDEQpNXBccHhEKTFoXaUJ6EkddEQpNThdoaxEKTEYXY01rEQpDWhcbHxMEGxsYBBgeH
+ gQdHhEKQl4XGxEKWUUXGREKRUkXGxEKRWYXGxEKQkYXZxwfWBJZQn5lckMRCkJHF2geZHppfGN
+ FbW9rEQpCXBcbEQpCSxdsQxlFGnxEaRtoGxEKQkkXbFsbHltYYxNTGWARCkJFF2RgfERDY0ZdG
+ EJ8EQpCThdsWxseW1hjE1MZYBEKQkwXY35aYGdPfR1YAR0RCkJsF2VkQEhIHl99Ek5NEQpCQBd
+ mW0Z/RFlNT29dZBEKQlgXbR5LW3NjbB1TeU0RCkJ4F2tHRRpfGnhDGkYSEQpaWBcfEQpwZxdgX
+ WgfSRxifGVdeRAHHhoRCnBoF2gZQ2h/ZWt5XHNLEAcfHhEKcGgXZRt+TxJ5bGlHa00QBxwaEQp
+ waBdjaEZSHU9Qf11YWhAHHB4RCnBoF2tjWWYeRB8bYkJeEAccGhEKcGgXZFhZSW0aen57b3MQB
+ xweEQpwaBdpXUZDT2sFeWJSehAHHBoRCnBoF2YSZxhLUkNBcBhdEAccHhEKcGgXYlN7ZH18a3l
+ sZ2EQBxwaEQpwfxdtUl9/RX8FWGxLWhAHHxwRCnBfF2xsfXpJUF9rH2FDEAcfHBEKcH0XZW17Y
+ hweXB9JREQQBx8cEQpwXxdoR2BGeB1tQ21raxAHHB8RCnB9F2lbWgVvWH56HEN/EAccHxEKcH8
+ XZRxGGn5HaF1ZW24QBxkeEQpwXxdlZ0hveHJDT0xfQRAHHRgRCnB9F2NwHGd8S3llSF4FEBoRC
+ nBfF2RlXFtgfURvYlhmEBoRCnB9F2llSUtrb2lSf0doEBoRCnB9F2RpGmdwQV5MG1htEBoRCnB
+ fF2B8QF56Y0JaaXoSEAcfGREKcH0XZkRIfkx5aVBdc2kQGhEKcH0Xb0tMYRNwcwF/QBwQGhEKc
+ H0XZ1tGcB8SbXxFG3gQGhEKcH0XaEtoZG1cElh4EmcQGhEKcH0XZkRIfkx5aVBdc2kQGhEKcH0
+ XY1tOTFlMH2ddfXkQGhEKcH0XbVpiGxkdS0xaeEgQGhEKcH0XZgVPXwUZSBpHWnsQGhEKcGwXa
+ 29nfRxoYlxlT2UQBx8cEQptfhcaEQpYTRdLEQ==
+X-Proofpoint-ORIG-GUID: F7AOfafYdRc2WUVDp5U4YOnkcbLdSXat
+X-Proofpoint-GUID: F7AOfafYdRc2WUVDp5U4YOnkcbLdSXat
+X-Proofpoint-Spam-Details-Enc: AW1haW4tMjYwNzE2MDE1NyBTYWx0ZWRfX6Xh5sNMjVGql
+ sMej32IXLXD33HmCpaXwNitW6rD93Z+Y9wDuF25PbqnYurh0LHG3ivtDiNZIKU0RXwsPToALIig
+ Xf5B4VKNp9lTc+pa5kd+1M8sGurrL35bFSBPTQdnWH7D9WBTyVAlGC/x0Vl4dhuAj07wZMQbEiB
+ fqUpmaxYzE+QG11rE1GT6w5FI6fpFhsGNYDnklHdzTEC9nKoZzrqk3W4GLGdZZohdB5+HhtuhUb
+ kABr6cI6jpG+aerig7W9QGOpn6cT/60UVjDvym88Tb5T4I0GGT6QkmgRwZKZ9+nfzXJ6H3gwhHo
+ MAv53PLxkjQA3IbWFk0xIjAjBsclVsQbUsDppmNI1QIUp+SXd3TNrDc2eTCSOnAlpZVXuHWdCSJ
+ wkemH932pMAUerTttKAVEgw3ukGOjf8yRNVEozjW0+gPICHALiRsUzjz6V4KvhXpgR3rKWEC
+X-Authority-Info: v=2.4 cv=eeQwvrEH c=1 sm=1 tr=0 ts=6a58f5c7 b=1
+ cx=c_apl:c_pps a=3rJNpH9w8JsnGQgkaNjbhQ==:117 a=3rJNpH9w8JsnGQgkaNjbhQ==:17
+ a=IkcTkHD0fZMA:10 a=RAioF0-LDSMA:10 a=LoKmEmyLDP4A:10 a=5KLPUuaC_9wA:10
+ a=FkgPS913h9wA:10 a=g8TUdU_LZmEA:10 a=uZ30BzuaAAAA:8 a=WFKEB7JXAAAA:8
+ a=tW5lGkDtAAAA:8 a=ptFhZ1NNbCLyWRk1cu8A:9 a=A8G5LdW7BgstwCq-:21
+ a=frz4AuCg-hUA:10 a=_W_S_7VecoQA:10 a=QEXdDO2ut3YA:10
+ a=Ru97nHiPDtp4odn3vKgu:22 a=s9ArqoGGUUpF6cn5d4J9:22 cc=prm
+X-JNJ: AAAAAAABE2cVmBdS+3TX7SsIztFHcookCpwoQ3SHYqY8MfMJWYhsxcpNC1CJ3IufTiE4HPS8ZjZB6Kh8TPz593fzGpcHysKnTs9prBGckn18VXRrVBDHm/quUrYU56e2DmpQ6ZGOzxO48ARkdizgtYMzAue0r1T52qRjL6anPgnqUqNLrN3YENyoGlFo/ZRYGbhgE9mFN6YPavut2g8w3XFdoc6YlBjc1V/VLbQvJvoCF0q8WAaGHDxBzLJmDXZ+UUEOgB14wG6que/HCEU66KW0hK1d1dRvXaFaXkJkGTjEkA0OZhBbKz2Y+437KOPf4sg4gn+BpaLTXtEAZrB2rwOw7AeTrtmfig+MGlDYChFhkn/9gLNZAE9a5EquyyN2ge5Psj1t29T1XTvZnQO8j7ZfsOsVy0WZEkMbNpmIB14TdMakcU9ph5PnpeiFwxjiIZqGnxeR3WczxJpwsClO3ZaA+ZP+zHHdggG96WzuvKujCM4HL9Jq8/+tnKCyW3VN08dcT2KHq32+w4LDvdf8zN9ehyhW63Fi61rYRu51Ts+ZpbLss0H5tQXDlHlJVvy4uQ+U40J62s+v+c3e0Y3fZ62wrzV0h3ibC8PmTZ+6M4SmSL2FbN68TYVNROGfoVa8cK51/d0cCd8OQHdWIvXn3dgAOHqqHJAawkDaTtOPUnL5V1psfNWa3evDNvqFDM+de0BOiO/A2img88vPJIH3v4L33+I5EhQ79mI1HjtjHk1zEGHBiYaAi1vFCLeNLDGwKpxGLBUx3Zk7BcLGIwzjvAULLRRTwg==
+
+<html><head>
+    <meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Type=
+"/>
+    <meta content=3D"width=3Ddevice-width,initial-scale=3D1" name=3D"viewpo=
+rt"/>
+    <meta name=3D"color-scheme" content=3D"light only"/>
+    <meta name=3D"supported-color-schemes" content=3D"light only"/>
+    <style type=3D"text/css">
+      :root {
+        color-scheme: light dark;
+        supported-color-schemes: light dark;
+      }
+    </style>
+    <style>
+      :root {
+        color-scheme: only light;
+        supported-color-schemes: only light;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: inherit !important;
+      }
+
+      #MessageViewBody a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      p {
+        line-height: inherit;
+      }
+
+      .desktop_hide,
+      .desktop_hide table {
+        mso-hide: all;
+        display: none;
+        max-height: 0;
+        overflow: hidden;
+      }
+
+      .image_block img+div {
+        display: none;
+      }
+
+      @media (max-width: 600px) {
+        .social_block.desktop_hide .social-table {
+          display: inline-block !important;
+        }
+
+        .row-content {
+          width: 100% !important;
+        }
+
+        .stack .column {
+          width: 100%;
+          display: block;
+        }
+
+        .mobile_hide {
+          display: none;
+          min-height: 0;
+          max-height: 0;
+          max-width: 0;
+          overflow: hidden;
+          font-size: 0;
+        }
+
+        .desktop_hide,
+        .desktop_hide table {
+          display: table !important;
+          max-height: none !important;
+        }
+        .content {
+          width: 100% !important;
+        }
+        .product-image-container, .product-image {
+          width: 175px !important;
+          height: 175px !important;
+        }
+        .full-width-mobile {
+          width: 100%!important;
+        }
+        .display-block-mobile {
+          display: block!important;
+        }
+        .shop-cash-header-badge {
+          color: #004839!important;
+          background-color: #e4f6eb!important;
+          padding-left: 10px!important;
+          padding-right: 10px!important;
+          padding-top: 6px!important;
+          padding-bottom: 6px!important;
+        }
+        .shop-cash-header-badge span {
+          font-size: 13px!important;
+        }
+        .shop-row-v2 {
+          border-top-left-radius: 0!important;
+          border-top-right-radius: 0!important;
+          border-bottom-left-radius: 0!important;
+          border-bottom-right-radius: 0!important;
+          padding-left: 10px!important;
+          padding-right: 10px!important;
+          padding-bottom: 0px!important;
+        }
+        .shop-header-logo {
+          width: 90px!important;
+          height: auto!important;
+        }
+        .bg {
+          background-color: #FFFFFF!important;
+        }
+      }
+
+      .text {
+        color: #000000;
+      }
+      .header {
+        color: #0f1721;
+      }
+      .bg {
+        background-color: #FFFFFF;
+      }
+      .block {
+        background-color: #EFF1F2;
+      }
+      .block-text {
+        color: #636363;
+      }
+      .block-text-dark {
+        color: #3F444A;
+      }
+      .separator {
+        border-top:1px solid #e3e3e3;
+      }
+      .image-back {
+        background-color: #EEEEEE;
+      }
+      .dark-only {
+        display: none;
+      }
+      .light-only {
+        display: block;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .text {
+          color: #000000;
+        }
+        .header {
+          color: #0f1721;
+        }
+        .bg {
+          background-color: #FFFFFF;
+        }
+        .block {
+          background-color: #EFF1F2;
+        }
+        .block-text {
+          color: #636363;
+        }
+        .block-text-dark {
+          color: #3F444A;
+        }
+        .separator {
+          border-top:1px solid #e3e3e3;
+        }
+        .image-back {
+          background-color: #EEEEEE;
+        }
+        .appearance-adjustable {
+          filter: brightness(100);
+        }
+        .appearance-adjustable-invert {
+          filter: invert(100);
+        }
+        .dark-only {
+          display: block !important;
+        }
+        .light-only {
+          display: none !important;
+        }
+      }
+      @media (prefers-color-scheme: light) {
+        .text {
+          color: #000000;
+        }
+        .header {
+          color: #0f1721;
+        }
+        .bg {
+          background-color: #FFFFFF;
+        }
+        .block {
+          background-color: #EFF1F2;
+        }
+        .block-text {
+          color: #636363;
+        }
+        .block-text-dark {
+          color: #3F444A;
+        }
+        .separator {
+          border-top:1px solid #e3e3e3;
+        }
+        .image-back {
+          background-color: #EEEEEE;
+        }
+         .light-only {
+          display: block !important;
+        }
+        .dark-only {
+          display: none !important;
+        }
+      }
+
+    </style>
+  </head>
+  <body class=3D"bg" style=3D"margin: 0px; padding: 0px; text-size-adjust: =
+none;">
+    <div style=3D"display:none" id=3D"preheader-text-container">
+      <div id=3D"preheader-text">
+        Save all your carts and get special offers with Shop.
+    </div>
+      <div id=3D"preheader-text-spacer">=E2=80=87=EF=BB=BF=CD=8F =E2=80=87=
+=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=
+=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F
+      =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F
+      =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F
+      =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F
+      =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F
+      =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F
+      =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F
+      =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F
+      =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F
+      =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F
+      =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F
+      =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F
+      =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F
+      =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F
+      =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=
+=CD=8F</div>
+    </div>
+    <table class=3D"bg" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;backgrou=
+nd-color:#ffffff;" width=3D"100%">
+      <tbody>
+        <tr width=3D"100%" style=3D"width:100%;">
+          <td width=3D"100%" align=3D"left" style=3D"width:100%;">
+           =20
+
+           =20
+             =20
+
+           =20
+
+           =20
+       =20
+        <!-- Your content here -->
+       =20
+        <style type=3D"text/css">
+        @media only screen and (max-width: 480px) {
+        .email-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        }
+       =20
+        .product-card,
+        .promo-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+        }
+       =20
+        .product-name {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        max-width: 140px;
+        line-height: 1.4;
+        }
+       =20
+        .cta-button {
+        width: 100% !important;
+        max-width: 100% !important;
+        }
+        }
+       =20
+    </style>
+    <!-- BEGIN ROW -->
+    <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" width=3D"100%" id=3D"i9cpk" class=3D"- class_name" =
+style=3D"mso-table-lspace: 0; mso-table-rspace: 0;">
+        <tbody>
+            <tr>
+                <td>
+                    <table align=3D"center" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation" width=3D"580px" id=3D"i6jq8" class=
+=3D"content" style=3D"mso-table-lspace: 0; mso-table-rspace: 0; width: 580p=
+x; margin: 0 auto;">
+                        <tbody>
+                            <tr>
+                                <td width=3D"100%" id=3D"ixi5r" style=3D"te=
+xt-align: left; mso-table-lspace: 0; mso-table-rspace: 0; vertical-align: t=
+op; border-top: 0; border-right: 0; border-bottom: 0; border-left: 0; paddi=
+ng-left: 0; padding-right: 0; padding-top: 0px; padding-bottom: 20px; borde=
+r-top-left-radius: 19px; border-top-right-radius: 19px; border-bottom-left-=
+radius: 19px; border-bottom-right-radius: 19px;">
+                                    <!-- SPACING -->
+                                    <table width=3D"100%" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" role=3D"presentation" class=3D"- class_name=
+" style=3D"mso-table-lspace: 0; mso-table-rspace: 0;">
+                                    <tbody>
+                                        <tr>
+                                            <td height=3D"8px"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- END SPACING -->
+                               =20
+
+
+
+
+<table class=3D"mobile_hide" width=3D"100%" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-tab=
+le-rspace:0">
+  <tbody>
+    <tr>
+      <td style=3D"width:100%">
+        <div align=3D"center" style=3D"line-height:10px">
+          <div style=3D"max-width:580px">
+            <a href=3D"" style=3D"outline:none" tabindex=3D"-1" target=3D"_=
+blank">
+              <img src=3D"https://cdn.shopify.com/b/shopify-mozart-producti=
+on-messages/ooax73szxj3f4uo3vcem782ctkae.png" style=3D"display:block;height=
+:auto;border:0;width:100%" width=3D"580" alt=3D"" title=3D"" height=3D"auto=
+"/>
+            </a>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class=3D"desktop_hide" width=3D"100%" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-ta=
+ble-rspace:0">
+  <tbody>
+    <tr>
+      <td style=3D"width:100%">
+        <div align=3D"center" style=3D"line-height:10px">
+          <div style=3D"max-width:563px">
+            <a href=3D"" style=3D"outline:none" tabindex=3D"-1" target=3D"_=
+blank">
+              <img src=3D"https://cdn.shopify.com/b/shopify-mozart-producti=
+on-messages/baq6gjhjj8s862v6o8omp6qc5r8n.png" style=3D"display:block;height=
+:auto;border:0;width:100%" width=3D"563" alt=3D"" title=3D"" height=3D"auto=
+"/>
+            </a>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+                                <!-- SPACING -->
+                                <table width=3D"100%" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" role=3D"presentation" id=3D"iuf94-2-2" class=3D=
+"- class_name" style=3D"mso-table-lspace: 0; mso-table-rspace: 0;">
+                                <tbody>
+                                    <tr>
+                                        <td height=3D"10px"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- END SPACING -->
+                           =20
+                            <!-- BODY COPY - HEADING -->
+                            <table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" role=3D"presentation" width=3D"100%" style=3D"mso-table-lspace: 0;=
+ mso-table-rspace: 0; word-break: break-word; width: 100%;">
+                            <tbody>
+                                <tr>
+                                    <td style=3D"font-family: Helvetica Neu=
+e,Helvetica,Arial,sans-serif; margin: 0; text-align: center; mso-line-heigh=
+t-alt: 48px; padding-left: 24px; padding-right: 24px;">
+                                    <span style=3D"word-break: break-word; =
+color: #000000; font-size: 44px; font-weight: 700; letter-spacing: -1px; li=
+ne-height: 48px;">
+                                        Your cart is ready <br/> when you a=
+re
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- END BODY COPY - HEADING -->
+                    <!-- SPACING -->
+                    <table width=3D"100%" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" role=3D"presentation" class=3D"- class_name" style=3D"mso-t=
+able-lspace: 0; mso-table-rspace: 0;">
+                    <tbody>
+                        <tr>
+                            <td height=3D"8px"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- END SPACING -->
+                <!-- BODY COPY - SUBTITLE -->
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" rol=
+e=3D"presentation" width=3D"100%" style=3D"mso-table-lspace: 0; mso-table-r=
+space: 0; word-break: break-word; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td style=3D"font-family: Helvetica Neue,Helvetica,=
+Arial,sans-serif; margin: 0; text-align: center; mso-line-height-alt: 28px;=
+ padding-left: 24px; padding-right: 24px;">
+                        <span style=3D"word-break: break-word; color: rgba(=
+0,0,0,0.75); font-size: 18px; font-weight: 400; line-height: 28px; letter-s=
+pacing: 0.15px;">
+                            Everything you&#39;ve been eyeing at MNTD is he=
+re for you.
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- END BODY COPY - SUBTITLE -->
+        <!-- SPACING -->
+        <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" role=3D"presentation" class=3D"- class_name" style=3D"mso-table-lspace:=
+ 0; mso-table-rspace: 0;">
+        <tbody>
+            <tr>
+                <td height=3D"40px"></td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- END SPACING -->
+    <!-- CART CARD -->
+    <table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" align=3D"center" width=3D"100%" style=3D"max-width: 540px; margin: 0=
+ auto;">
+        <tbody><tr>
+            <td style=3D"padding: 0 24px;">
+                <table role=3D"presentation" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" align=3D"center" width=3D"100%" class=3D"cart-card" sty=
+le=3D"border-collapse: separate; border-spacing: 0; width: 100%; margin: 0 =
+auto; background-color: #fcfcfc; border: 1px solid rgba(0,0,0,0.10); border=
+-radius: 20px;">
+                    <tbody><tr>
+                        <td style=3D"padding: 24px;">
+                            <!-- MERCHANT LOCKUP -->
+                            <table role=3D"presentation" cellspacing=3D"0" =
+cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin-bottom: 16px;=
+">
+                                <tbody><tr>
+                                    <td width=3D"32" style=3D"padding-right=
+: 8px; vertical-align: middle;">
+                                       =20
+                                            <a href=3D"https://mail.shop.ap=
+p/_t/c/v3/AABn8CpkjpCZFWsTzpf9Yvt7VNwdMUpgezVdM5bIBNgnqdDb3guS9CF8Q7gPQgS4h=
+IADr8ieYMRtwoUjb6MoMUbqU011CVWseixNslwU0_zadsplLF14lg0GfB01ULZS-KCAonyK4qIH=
+Kb4X8K14g_Caoo80pN1TDKti9vqBGARz9_RvVcGYHpGDh-617DU8_cdzoR-UVSunvBn5iMXaodk=
+_c_SgyITFoSTmwFbHkO2okWG5VFJR4gSuJh-QUijyr1F-xqvY3IuX59LCjziKLapHfxS-ingC4n=
+sSEZ63GrJL8gJjjJ5uA79Yh-kqQVM41YmPH1zqirfgsBNtr0xTROnjz6FO45NFOIIsqCkFcvxWn=
+mTGw_RVVpV7lutLq5bB0_8CSq60cNkgXDUKPjwsaKAO">
+                                                <img src=3D"https://cdn.sho=
+pify.com/shop-assets/shopify_brokers/griufp-f1.myshopify.com/1764179099/log=
+o.png?format=3Dwebp" alt=3D"Merchant Logo" width=3D"32" height=3D"32" style=
+=3D"display: block; border-radius: 999px; background-color: #f0f0f0; border=
+: 0.5px solid rgba(5,41,77,0.1);"/>
+                                            </a>
+                                       =20
+                                    </td>
+                                    <td style=3D"vertical-align: middle; fo=
+nt-size: 12px; color: #000000; font-weight: 700; font-family: Helvetica Neu=
+e,Helvetica,Arial,sans-serif; letter-spacing: 0.15px; line-height: 16px;">
+                                        MNTD
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                            <!-- END MERCHANT LOCKUP -->
+                           =20
+                        <!-- Product 1 -->
+                        <table role=3D"presentation" cellspacing=3D"0" cell=
+padding=3D"0" border=3D"0" width=3D"100%" style=3D"margin-bottom: 16px;">
+                            <tbody><tr>
+                                <td width=3D"80" style=3D"padding-right: 8p=
+x; vertical-align: middle;">
+                                    <a href=3D"https://mail.shop.app/_t/c/v=
+3/AACmvvGHT_OUFVOOWmzznjETXtad8W3-BrlURO8LiiFTXUTzBIXZAEao1HMK_pg-EwoU-RNjY=
+_gaoS_2qwmEl9J7HQVBqvcMxsWcJR7tX2-LwUtULLsxWNf6qWCZA55wS3rn7L9KzZ3STqsdnx4k=
+un_CDg0uaLTvT70WF07oQTvszYXdKPBTcH6C7kzRMqNKpWhr88o_Z1TA13fYT3PI6Egp4fJRTf_=
+OySl5n7YD4iFz0pzDGu4bijDhjC62WMQ3ObiN1tNHL1a6HO1CbxlcwDCmf9D089v9309ZWZFsGk=
+G4rB-TRfk0SG4-EmKwO2ekbRJcQG0L9HJQ95iQKfnvdXCQU0EaclhCHWA1SEYgNLlFzMqOuPUEK=
+WrQOpwuDHSC9rV-ErSoNPXimSDKTVZ3TJGk">
+                                        <img src=3D"https://cdn.shopify.com=
+/s/files/1/0748/1370/2366/files/MNTD_006_05262026_PDP_Images_MNT906_Midnigh=
+t_1.jpg?v=3D1780605716" alt=3D"Best Damn=E2=84=A2 Long Sleeve" width=3D"80"=
+ height=3D"80" style=3D"display: block; border-radius: 16px; background-col=
+or: #f0f0f0; border: 0.5px solid rgba(5,41,77,0.1);"/>
+                                    </a>
+                                </td>
+                                <td style=3D"vertical-align: middle; paddin=
+g-right: 8px;">
+                                    <a href=3D"https://mail.shop.app/_t/c/v=
+3/AABO3_yt0i1jigWXEfKuN4Yove_fkfEqPSi2NPdBMlJuDC7JtYthk9w9ZdzNB34iDk2IvN1sV=
+WH79nxLtyxJuC0sQUoKmQAFLQvHFrew2MscAwn87V6kbBmaCuIBJY-35hEtYByICPj1A26tmG1B=
+8hDwATYsC6PAfqfZRN1bE2h97n332Bqkqb1H8aPdra93U43ykBwFkfIDNzYbnQn-pP5xToZUouB=
+kwPdRLPUx-kUKF8OnZbcptkzjsrTIZlTvt_86Oc4foAPL4-GOOQJcDVmBv_N8sQOaJpXp3IGjWg=
+thqVSIzO-dESn7Ki1HZm7IriTPsI2RaYxrHqRSI6sOAqO-CwlA1qXDB9aFPCfhGfDaque540P6J=
+Tonjv58Wsxm8BFMqniztBvyX5uf4S2unpFH" style=3D"text-decoration: none; color:=
+ inherit;">
+                                        <span class=3D"product-name" style=
+=3D"font-size: 16px; color: #000; font-weight: 500; font-family: Helvetica =
+Neue,Helvetica,Arial,sans-serif; line-height: 24px; letter-spacing: 0.15px;=
+">Best Damn=E2=84=A2 Long Sleeve</span>
+                                    </a>
+                                </td>
+                                <td width=3D"80" style=3D"text-align: right=
+; vertical-align: middle;">
+                                    <a href=3D"https://mail.shop.app/_t/c/v=
+3/AAB_zktoJRRU3Kxwsw0sPwquWRGeUE3BSRMQJCiix49dIstVmn2dE0jsS4iSY7fw-fZ7LRUi3=
+cx_4JS3zXwPlqej15Vph4W8v91NJN6rbbxu985gxVjJQrnbekuu-MC12GB0RcRjiQmqcPdHKQ76=
+y63zgOEMC6oWTJvzfSKsDhi46Cy8mzw8c59PIvAKxYSpZ2kcysdDTI5cY_SsK51cQq7eK-pzF4A=
+9PBqJkONquUFaoXKxuMCqRMOX-552lUF4Kzd8lXqQAQYNyy8xxaHYYvzmAPivuI8PCAHATBf49X=
+G3W4v44IYNYtnQ_ujD0K82BQFYCV6IkqnSk7Yjs2n_C3l0x4M-mQX3IoHMG60d6qTIK-pqQ1mMX=
+6oxvbdmJnoZZm3asPF4dC9gRvfcFK3oKrCw" style=3D"text-decoration: none; color:=
+ inherit;">
+                                        <span class=3D"price" style=3D"font=
+-size: 16px; color: #000; font-weight: 500; font-family: Helvetica Neue,Hel=
+vetica,Arial,sans-serif; line-height: 24px; letter-spacing: 0.15px; white-s=
+pace: nowrap;">$62.00</span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <!-- END Product 1 -->
+                        <!-- Product 2 -->
+                        <table role=3D"presentation" cellspacing=3D"0" cell=
+padding=3D"0" border=3D"0" width=3D"100%" style=3D"margin-bottom: 0;">
+                            <tbody><tr>
+                                <td width=3D"80" style=3D"padding-right: 8p=
+x; vertical-align: middle;">
+                                    <a href=3D"https://mail.shop.app/_t/c/v=
+3/AABCjmu7F6_Wtg8G1nibthSmIb4K9ZrPcPR6TIt2OjLJ-IsYsIxYZX1jvYKE1fCnbaGOr9EAC=
+Z8JkN3_XDrUHiTn1q9Z48Tb2Gyq6D78IVLvBZgBBY0fqpSAN9yBC1hQ_uRrFW12vmd1d-H9oew3=
+wbHQqU5RRUaoGy8Aa0m_n4lhXUV-1CuSNUrq-sEqFSnb-sFnJivKagQ1O9jY4xA97NOLmhSDMeF=
+hXQswvKDOoxB-NtK5wpbPBRKkCMh92lM4YMtmwRUL5sPkb7z9Jt3CLGHOyimTUJhM7vehd1Rifk=
+wSbQyzktAAXKNH-dlQ5ehqvh1ikBqzjZV4i0_-aXdM-3wz4xFtcslAKN9tSTBUcpq7CwkzSl-8L=
+pdl8zEsT5AVovnCWL1NrWEFy4nlE3S-uOdE">
+                                        <img src=3D"https://cdn.shopify.com=
+/s/files/1/0748/1370/2366/files/MNTD_006_05262026_PDP_Images_MNT906_Midnigh=
+t_1.jpg?v=3D1780605716" alt=3D"Best Damn=E2=84=A2 Long Sleeve" width=3D"80"=
+ height=3D"80" style=3D"display: block; border-radius: 16px; background-col=
+or: #f0f0f0; border: 0.5px solid rgba(5,41,77,0.1);"/>
+                                    </a>
+                                </td>
+                                <td style=3D"vertical-align: middle; paddin=
+g-right: 8px;">
+                                    <a href=3D"https://mail.shop.app/_t/c/v=
+3/AAD_u1emCfWbguaRQpQQ0otsMXqBGG8SFsbhwC-LWZvoqKk4qx2Px1_wr-vzjkCNYuNm3OsyT=
+ALzEjEXqCpoUrMxnAvqpGSK1tolDjloajrCcf26TsiDAQ7WSgzYiMLtUtLEYAyNDHdcCWAb-AJn=
+buoSJllsgDKrgtfpHHZoCAknLcIZfbEs4sooEPokQByJXlW1w5QM2Hqj_MA548AQeeJCoxogWQ0=
+tYxPiUoGPQhD_I_tea95FoMHNDlTOHDHJn0meJ8Vo84kSFspAPnCcSV9l3KJGuKFsNz7K-NeST9=
+UjGnPBiUJlZCkZVcjYKMCmpNCxFeAS8QxJUsFVrjQo1xxLoS2jCjGJEfYC27S_KSZmrch-zv0E3=
+i43GJhWogizc4lXloBmZpTUjK5deEwbCQX9" style=3D"text-decoration: none; color:=
+ inherit;">
+                                        <span class=3D"product-name" style=
+=3D"font-size: 16px; color: #000; font-weight: 500; font-family: Helvetica =
+Neue,Helvetica,Arial,sans-serif; line-height: 24px; letter-spacing: 0.15px;=
+">Best Damn=E2=84=A2 Long Sleeve</span>
+                                    </a>
+                                </td>
+                                <td width=3D"80" style=3D"text-align: right=
+; vertical-align: middle;">
+                                    <a href=3D"https://mail.shop.app/_t/c/v=
+3/AADfRHfzO3b57hMgI-KxmxaTS_2Y6GVBfS5z7E6BjHJs2zxp550w68c3UGPj7W9fxV5wGxasl=
+VcUlHc1lpd_7PsGJzvmZ7-c3c4vd9HTuvfnslUmk6zZNKuPzFo7ZdyWsKhtyCWgYsvMw7i73i3E=
+bTZZNUu6LqElQVHDB0o4j1oSbQzJivAiATkWt9kKsNg0KhToUOcdL1lz_vsdoyZ6_XBXA20Ll4-=
+72P-bZkGM_IbvXBJd_wVhhKVOOodEjSFSOOArefSB-I_83ZQqSE9AaQySgSmMoB5Sk8MOvv_-Jx=
+BSocFAjbmKLiq8Flt2KMdumiyRnOJDXJR-WtRlrjfaY2ea8nMHJyiAdcGDDQLGD6zr2lNiswHo5=
+sn6Y2WjTNcBtF4o7qWcUa8SPTnQerb9vw4N" style=3D"text-decoration: none; color:=
+ inherit;">
+                                        <span class=3D"price" style=3D"font=
+-size: 16px; color: #000; font-weight: 500; font-family: Helvetica Neue,Hel=
+vetica,Arial,sans-serif; line-height: 24px; letter-spacing: 0.15px; white-s=
+pace: nowrap;">$62.00</span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <!-- END Product 2 -->=20
+                   =20
+                </td>
+            </tr>
+        </tbody></table>
+    </td>
+</tr>
+</tbody></table>
+<!-- END CART CARD -->
+<!-- SPACING -->
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" class=3D"- class_name" style=3D"mso-table-lspace: 0; mso-=
+table-rspace: 0;">
+<tbody>
+    <tr>
+        <td height=3D"40px"></td>
+    </tr>
+</tbody>
+</table>
+<!-- END SPACING -->
+<!-- CTA BUTTON -->
+<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0" align=3D"center" width=3D"100%" style=3D"max-width: 540px; margin: 0 aut=
+o;">
+    <tbody><tr>
+        <td style=3D"padding: 0 24px;">
+            <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" role=3D"presentation" width=3D"100%" style=3D"mso-table-lspace: 0=
+; mso-table-rspace: 0;">
+            <tbody>
+                <tr>
+                    <td width=3D"100%" style=3D"text-align: center;">
+                        <!--[if mso]>
+                        <v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:v=
+ml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" class=3D"" href=3D"" =
+style=3D"height:52px;width:360px;v-text-anchor:middle;" arcsize=3D"50%" str=
+oke=3D"false" fillcolor=3D"#5433eb">
+                            <w:anchorlock/>
+                            <v:textbox inset=3D"0px,0px,0px,0px">
+                                <center style=3D"color:#ffffff; font-family=
+:Helvetica Neue, Helvetica, Arial, sans-serif; font-size:16px">
+                                    <![endif]-->
+                                    <a class=3D"cta-button" href=3D"https:/=
+/mail.shop.app/_t/c/v3/AAA_HRmHAK3yeMMQqwRL-PyZ2fDOSRu7BKX8nG1lsFpaPUcxLyPi=
+T6mc1G9ufzQew4psHk-80D6wLX93rsfonHetNs0Nt4RoXBzFvHy-ShelOBXfcQXlrjFHSr6Lyko=
+qVhmW5V5GDXKuSl7DOOxrmapOUUX0ho5Pn8pKngtRuyLGnVIzlmPcRElYVbgjUDMJAvq4SS-JYZ=
+4qBtJbCTMmMTIcE5j2D4w-bXPWDJQE0MuFiVvHc-npqCp_DEaYyCfHf7WuqWeyrCCgOELqYrWoB=
+9hmBQxqgnHxv-HMp5e7ZuE_XbRSnqjJAk5U2AYr2ZcO6_89OWd70J6pb7TwvSDzdjiBqa633AHt=
+Ssa7tiy2PJ2Z3VdS3A-ymQTI6wPwTYD0MC6RHRRwcSzIhP_r1saCIhyv" style=3D"text-dec=
+oration: none; display: inline-block; color: #ffffff; background-color: #54=
+33eb; border-radius: 999px; width: 360px; max-width: 100%; border-top: 0; b=
+order-right: 0; border-bottom: 0; border-left: 0; padding-top: 16px; paddin=
+g-bottom: 16px; font-family: &#39;Helvetica Neue&#39;, Helvetica, Arial, sa=
+ns-serif; font-size: 16px; font-weight: 500; text-align: center; mso-border=
+-alt: none; word-break: keep-all; letter-spacing: 0.15px; line-height: 20px=
+;"><span style=3D"padding-left: 37px; padding-right: 37px; font-size: 16px;=
+ display: inline-block; letter-spacing: 0.15px; word-break: break-word; lin=
+e-height: 20px; color: #ffffff;">
+                                    View your saved cart
+                                </span></a>
+                            <!--[if mso]> </center></v:textbox></v:roundrec=
+t> <![endif]-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+</tbody></table>
+<!-- END CTA BUTTON -->
+</td>
+</tr>
+</tbody>
+</table>
+<!-- END ROW -->
+
+</td>
+</tr>
+</tbody>
+</table>
+<!-- BEGIN ROW - GET EVEN MORE WITH SHOP -->
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" width=3D"100%" id=3D"i9cpk-2" class=3D"- class_name" st=
+yle=3D"mso-table-lspace: 0; mso-table-rspace: 0;">
+<tbody>
+    <tr>
+        <td>
+            <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" role=3D"presentation" width=3D"580px" id=3D"i6jq8-2" class=3D"con=
+tent" style=3D"mso-table-lspace: 0; mso-table-rspace: 0; width: 580px; marg=
+in: 0 auto;">
+            <tbody>
+                <tr>
+                    <td width=3D"100%" id=3D"ixi5r-2" style=3D"text-align: =
+left; mso-table-lspace: 0; mso-table-rspace: 0; vertical-align: top; border=
+-top: 0; border-right: 0; border-bottom: 0; border-left: 0; padding-left: 2=
+4px; padding-right: 24px; padding-top: 0px; padding-bottom: 20px; backgroun=
+d-color: #FFFFFF; border-top-left-radius: 0px; border-top-right-radius: 0px=
+; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;">
+                    <!-- SPACING -->
+                    <table width=3D"100%" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" role=3D"presentation" class=3D"- class_name" style=3D"mso-t=
+able-lspace: 0; mso-table-rspace: 0;">
+                    <tbody>
+                        <tr>
+                            <td height=3D"32px"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- END SPACING -->
+               =20
+                <!-- SECTION HEADING -->
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" rol=
+e=3D"presentation" width=3D"100%" style=3D"mso-table-lspace: 0; mso-table-r=
+space: 0; word-break: break-word; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td style=3D"font-family: Helvetica Neue,Helvetica,=
+Arial,sans-serif; margin: 0; text-align: center; mso-line-height-alt: 40px;=
+ padding-left: 24px; padding-right: 24px;">
+                        <span style=3D"word-break: break-word; color: #0000=
+00; font-size: 36px; font-weight: 700; line-height: 40px; letter-spacing: -=
+0.5px;">
+                            Get even more with Shop
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- END SECTION HEADING -->
+        <!-- SPACING -->
+        <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" role=3D"presentation" class=3D"- class_name" style=3D"mso-table-lspace:=
+ 0; mso-table-rspace: 0;">
+        <tbody>
+            <tr>
+                <td height=3D"4px"></td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- END SPACING -->
+    <!-- SECTION SUBTITLE -->
+    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"present=
+ation" width=3D"100%" style=3D"mso-table-lspace: 0; mso-table-rspace: 0; wo=
+rd-break: break-word; width: 100%;">
+    <tbody>
+        <tr>
+            <td style=3D"font-family: Helvetica Neue,Helvetica,Arial,sans-s=
+erif; margin: 0; text-align: center; mso-line-height-alt: 28px; padding-lef=
+t: 24px; padding-right: 24px;">
+            <span style=3D"word-break: break-word; color: rgba(0,0,0,0.75);=
+ font-size: 18px; font-weight: 400; line-height: 28px; letter-spacing: 0.15=
+px;">
+                Shop brands you love. Get special offers. Track every order=
+=2E All on the Shop app.
+            </span>
+        </td>
+    </tr>
+</tbody>
+</table>
+<!-- END SECTION SUBTITLE -->
+<!-- SPACING -->
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" class=3D"- class_name" style=3D"mso-table-lspace: 0; mso-=
+table-rspace: 0;">
+<tbody>
+    <tr>
+        <td height=3D"24px"></td>
+    </tr>
+</tbody>
+</table>
+<!-- END SPACING -->
+
+<!-- MERCHANTS -->
+
+
+
+
+
+ =20
+
+ =20
+
+
+
+
+
+<table class=3D"desktop_hide" width=3D"100%" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-ta=
+ble-rspace:0">
+	<tbody><tr>=20
+		<td height=3D"20"></td>=20
+	</tr>=20
+</tbody></table>
+
+ =20
+   =20
+     =20
+     =20
+     =20
+
+      <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0">
+        <tbody><tr>
+          <td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table class=3D"" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0=
+;word-break:break-word;">
+  <tbody>
+    <tr>
+      <td width=3D"48" style=3D"width:48px;">
+        <div style=3D"padding-right:6px;padding-top:10px">
+          <!--[if !mso]><!-->
+          <div style=3D"width:46px;height:46px;border-radius:12px;border:1p=
+x solid #7D60FC;background-color:transparent;padding:0;">
+            <img src=3D"https://cdn.shopify.com/b/shopify-mozart-production=
+-messages/eb6ntxvylyt2bjtjmkd53d24vzjn.png" alt=3D"Dermalogica CA" style=3D=
+"display:block;height:44px;width:44px;max-width:150px;border-radius:12px;ob=
+ject-fit:cover;padding-left:0.5px;padding-top:0.5px;"/>
+          </div>
+          <!--<![endif]-->
+
+          <!--[if mso]>
+          <div style=3D"width:48px;height:48px;border-radius:0;border:1px s=
+olid #EEEEEE;background-color:#EEEEEE;padding:2px;">
+            <img src=3D"https://cdn.shopify.com/b/shopify-mozart-production=
+-messages/eb6ntxvylyt2bjtjmkd53d24vzjn.png" alt=3D"Dermalogica CA" style=3D=
+"display:block;height:44px;width:44px;max-width:48px;border-radius:0;object=
+-fit:cover;" height=3D"44" width=3D"44" />
+          </div>
+          <![endif]-->
+        </div>
+      </td>
+      <td style=3D"margin-left:4px;padding-top:8px">
+        <div style=3D"font-family:Arial,sans-serif">
+          <div class=3D"" style=3D"font-size:15px;font-family:&#39;Helvetic=
+a Neue&#39;,Helvetica,Arial,sans-serif;mso-line-height-alt:21px;color:#0b0b=
+0c;line-height:1.5">
+            <p style=3D"margin:0;font-size:15px;text-align:justify;mso-line=
+-height-alt:28px">
+              <span style=3D"word-break: break-word; font-size: 14px; font-=
+weight: 500;">
+                <strong>
+                  <a href=3D"https://mail.shop.app/_t/c/v3/AAD9wRE7dkHSC6u5=
+auHczH8PfJjlGgIjWkNA6rF3ypLpfNl368Ve71Ff1k6M3A3bSYp4cszH9nvkBeJEh0WHTGPc9O5=
+kzKyDKote35HPvwJoVUsyo3mkVKSGbWtvSU-1MRjvp-rRA7001EUXx6dCAM5jg4ftUEEE2aOZDf=
+kGUv9YVJEytg-3sX8P0xh6ggwQqBWnmKGhSR7ViXjIZypBRnPjQGHulwSOo3gENLDc_ECy8U1A4=
+wrvlYsGBVZQyczloMRPgqj0OXVEXJBic3IyyEICAv8gmgI0O1oDwblmF93tSXGxF8KKsb1w2Ue7=
+HtTq1QJ5VAnsnR6-ZTmFqTrUnGdcHUyrN1TGmcIW4Pq6VrlSgOQbVMugLlvxAXvH4Dy8I40OwWO=
+O7tqivUfEAow6GdLbf_RNupGmxJODZq6OisG1Nx35dqs=3D" rel=3D"noopener" style=3D"=
+text-decoration: none; color: #0f1721;" target=3D"_blank">
+                    <span style=3D"word-break: break-word;">Dermalogica CA<=
+/span>
+                  </a>
+                </strong>
+              </span>
+            </p>
+          </div>
+          <div style=3D"font-family:Arial,sans-serif">
+         =20
+           =20
+              <div style=3D"font-family:Arial,sans-serif; margin-top:0px">
+                <div style=3D"font-size:14px;font-family:&#39;Helvetica Neu=
+e&#39;,Helvetica,Arial,sans-serif;mso-line-height-alt:21px;color:#0b0b0c;li=
+ne-height:1">
+                  <p style=3D"margin:0;font-size:14px;display:block;text-al=
+ign:left;mso-line-height-alt:21px;line-height:normal">
+                    <span style=3D"font-size:14px;margin-top:2px">
+                      <span style=3D"color:#5433EB;background-color:transpa=
+rent;font-weight:500;">
+                        Save $75
+                      </span>
+                       =20
+                         =20
+                            <span style=3D"color:rgba(0,0,0,0.56)"> on orde=
+rs over $130</span>
+                         =20
+                     =20
+                    </span>
+                  </p>
+                </div>
+              </div>
+           =20
+         =20
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+          </td>
+        </tr>
+      </tbody></table>
+
+      <table class=3D"mobile_hide" width=3D"100%" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;=
+mso-table-rspace:0">
+        <tbody><tr>
+          <td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ =20
+ =20
+
+ =20
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+      <table width=3D"100%" align=3D"center" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-ta=
+ble-rspace:0;margin:0 auto;overflow:hidden;width:100%;">
+        <tbody>
+          <tr>
+   =20
+
+    <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rspace:0;padd=
+ing-bottom:0px;padding-top:16px;vertical-align:top;border-top:0;border-righ=
+t:0;border-bottom:0;border-left:0;padding-right:-2.0px;" width=3D"25.0%">
+       =20
+        <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;padding:0;" width=
+=3D"100%">
+          <tbody>
+            <tr>
+              <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rsp=
+ace:0;">
+                <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;">
+                  <tbody>
+                    <tr style=3D"text-align:-webkit-center">
+                      <td style=3D"width:100%;padding:0;text-align:left;mso=
+-table-lspace:0;mso-table-rspace:0;font-family:Helvetica Neue,Helvetica,Ari=
+al,sans-serif;">
+                          <a class=3D"text" href=3D"https://mail.shop.app/_=
+t/c/v3/AADAmdNkbbzmFJNZw0wTOwVW-_KNH2hwvmr2ahMq0MwsmoimqjsggjnNHS4AhJ8zpK73=
+f2vp_v-iZfyqVMeIrAwrTLY7yXubkyeciCk1D0fCzhzIKa2cLsSgbqmlFedpjmW5m-8ggNOPUWo=
+1bycar9mEMgXCOtiBcT1_lxcls-kY0mNzhrNLKfUEQEa6qlz7uLSPFDlUbKusnm55jYZXZjUsBz=
+JNvQDDgY2YlmH07VNsppTGAmOIOtkG2B-mS-SVNuvBvl_dYIoNH-0s1Z1-ldN17Y6vjj64N9aQ5=
+V-G2QMV-89WjYp66_izDI9NExNTHEW7ITZ5zetGcvblUKgoWaa0DusXCkN_NgKcQiaCMpyVABI-=
+XAtsj4DTtYMTTjY6cZKRfKyjI75J-J8eseerQt-atZHSBAK0TUEPRJLYyWMby3EO" style=3D"=
+text-decoration:none;padding:0;margin:0;">
+                           =20
+                            <img alt=3D"special cleansing gel" src=3D"https=
+://cdn.shopify.com/s/files/1/0424/8056/6436/files/101104_special-cleansing-=
+gel_250-ml_retail.jpg?v=3D1758910551&amp;width=3D504&amp;height=3D504&amp;c=
+rop=3Dcenter&amp;pad_color=3Df3f3f3" style=3D"font-size:0;width:100%;max-wi=
+dth:131px;border-radius:16px;object-fit:cover;padding:0;margin:0;border:1px=
+ solid #EEEEEE;background-color:#EEEEEE;background-color:#EEEEEE;" width=3D=
+"131"/>
+                           =20
+                          </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+     =20
+      </td>
+
+   =20
+
+ =20
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+    <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rspace:0;padd=
+ing-bottom:0px;padding-top:16px;vertical-align:top;border-top:0;border-righ=
+t:0;border-bottom:0;border-left:0;padding-right:-1.0px;padding-left:-1.0px;=
+" width=3D"25.0%">
+       =20
+        <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;padding:0;" width=
+=3D"100%">
+          <tbody>
+            <tr>
+              <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rsp=
+ace:0;">
+                <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;">
+                  <tbody>
+                    <tr style=3D"text-align:-webkit-center">
+                      <td style=3D"width:100%;padding:0;text-align:left;mso=
+-table-lspace:0;mso-table-rspace:0;font-family:Helvetica Neue,Helvetica,Ari=
+al,sans-serif;">
+                          <a class=3D"text" href=3D"https://mail.shop.app/_=
+t/c/v3/AADv5348hWUFyiYaK0DyyNKB14X6vt00006DqgNCY92XvH7ijkAqOou0zV_T1nIVR_rA=
+Bi3rBfbOil8KX5bLZxnMaIhArrMnvaMx0IU48PFM_r9dXPpcpqDptXA1GORO8N7B918ZmBMl8dZ=
+zpaL9alYb1BiW8mWuRgYN8xUfA9nY0K2FvPO9p1ll-vq4y_4N4Zjdgr-s4Yq4vq831T4UbvS2u5=
+hAhAmzhnqruU7f_AxZWWwxI8nudrcx85Vvg4LgKH7R5As9hhFxQWNsjF-IrweR_UenIGR0FcdTv=
+2kmMCbiXsGR5IWJ9ZUGD1AWBSFKo15KK5NigLXN0lorm6mA5uv49q-wIjkH7SOjlA3OpvmwBCS4=
+kLfO0SDS1-2yW3_T1huH_db_QXdweGTK_FQ_z2Tec1S1IKp5beeVs6_Qy2iOF2Qq" style=3D"=
+text-decoration:none;padding:0;margin:0;">
+                           =20
+                            <img alt=3D"daily microfoliant exfoliator" src=
+=3D"https://cdn.shopify.com/s/files/1/0424/8056/6436/files/1617328253_PDP__=
+dailymic2.6oz.webp?v=3D1747738374&amp;width=3D504&amp;height=3D504&amp;crop=
+=3Dcenter&amp;pad_color=3Df3f3f3" style=3D"font-size:0;width:100%;max-width=
+:131px;border-radius:16px;object-fit:cover;padding:0;margin:0;border:1px so=
+lid #EEEEEE;background-color:#EEEEEE;background-color:#EEEEEE;" width=3D"13=
+1"/>
+                           =20
+                          </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+     =20
+      </td>
+
+   =20
+
+ =20
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+    <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rspace:0;padd=
+ing-bottom:0px;padding-top:16px;vertical-align:top;border-top:0;border-righ=
+t:0;border-bottom:0;border-left:0;padding-right:-1.0px;padding-left:-1.0px;=
+" width=3D"25.0%">
+       =20
+        <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;padding:0;" width=
+=3D"100%">
+          <tbody>
+            <tr>
+              <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rsp=
+ace:0;">
+                <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;">
+                  <tbody>
+                    <tr style=3D"text-align:-webkit-center">
+                      <td style=3D"width:100%;padding:0;text-align:left;mso=
+-table-lspace:0;mso-table-rspace:0;font-family:Helvetica Neue,Helvetica,Ari=
+al,sans-serif;">
+                          <a class=3D"text" href=3D"https://mail.shop.app/_=
+t/c/v3/AAB2xMPU7xiNv_UwumgXeBhjTSMej19JbJBbw7UmYVZ-9IgcSQuNjXF4jrCQKuoRteI0=
+pfdHxmJQ81AWDej0GxtHvGLdbcnxb7iVTKwA_D9a2lCHNAvdona8lAhSFe-XLWWJyh2LLDtN5CF=
+FWbfKD62JMzekVvDcXKSMrj_aiw5moCwG7fgPcVb_0s6upbwB8ixfA0GyWLNJvK3Zcb-XKGkDm0=
+PrvuLytI9ouqQq85N5fDSCm8lvfwZykk77IHNbvDsrj3gV11e3z5dgyTz9A7hWR2gfJlPrZWWmW=
+70gvGyXlAfK3el7_1xGBKyCLKbUEeSddIJmpcwGV6ARjv4lk4L0hbeC4oVdD7J7-u2yu715x9qw=
+BSmnJe7-g5Rx0bJ3mA7p-85Kevq1sPqewFu36vq2bdtu2OFEfAwF3qSDQf244rQr" style=3D"=
+text-decoration:none;padding:0;margin:0;">
+                           =20
+                            <img alt=3D"dynamic skin recovery spf 50 moistu=
+rizer" src=3D"https://cdn.shopify.com/s/files/1/0424/8056/6436/files/Dynami=
+c_Skin_Recovery_SPF_50_-_Retail_1.7oz_-_CAN_-_BTL_FRONT.jpg?v=3D1779995257&=
+amp;width=3D504&amp;height=3D504&amp;crop=3Dcenter&amp;pad_color=3Df3f3f3" =
+style=3D"font-size:0;width:100%;max-width:131px;border-radius:16px;object-f=
+it:cover;padding:0;margin:0;border:1px solid #EEEEEE;background-color:#EEEE=
+EE;background-color:#EEEEEE;" width=3D"131"/>
+                           =20
+                          </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+     =20
+      </td>
+
+   =20
+
+ =20
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+    <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rspace:0;padd=
+ing-bottom:0px;padding-top:16px;vertical-align:top;border-top:0;border-righ=
+t:0;border-bottom:0;border-left:0;padding-left:-2.0px;" width=3D"25.0%">
+       =20
+        <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;padding:0;" width=
+=3D"100%">
+          <tbody>
+            <tr>
+              <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rsp=
+ace:0;">
+                <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;">
+                  <tbody>
+                    <tr style=3D"text-align:-webkit-center">
+                      <td style=3D"width:100%;padding:0;text-align:left;mso=
+-table-lspace:0;mso-table-rspace:0;font-family:Helvetica Neue,Helvetica,Ari=
+al,sans-serif;">
+                          <a class=3D"text" href=3D"https://mail.shop.app/_=
+t/c/v3/AAD5y-UYjh3GkmYbsFV4Rg8jAD7LYRPV120ie3Y0Ggr2hsOrjoUnJjHXhCpi5KcsuTw6=
+_KsL1pe6IczUGAvHkqFL6mGEzhZf_JRHFbGORl-6zwFykvx4zTpIal8lXeCg6-TSc6C5ESKkmqP=
+VjUYW_shN78a8dj-hJmB4yj5hWecZ7jnaVs3k6_14EAlS0DyaB00ZtY6jj8-fELIfBg8R6yeh_F=
+mgqn84Qqi6-p9q0XpHRCLYsatfItuHiVAtRg35alqX2JJrMuMZ_OXyTRTjyrtmv07EVl9MqFx6N=
+8UgYSVBnuCIUFviTG7T8JuBzAXcF06KJrhxJdoEBOqrZzwzmnjFns6YqVlP5uQWobAx4ITd1KZT=
+K4hbp85YWH8GyoLtAA81Y5H9FDWmJ8b4qaYNO216BZVyi5y8MYgtDS1uNPL-c8Kp" style=3D"=
+text-decoration:none;padding:0;margin:0;">
+                           =20
+                            <img alt=3D"skin smoothing cream moisturizer" s=
+rc=3D"https://cdn.shopify.com/s/files/1/0424/8056/6436/products/skin-smooth=
+ing-cream_1.7oz_2048x2048_e4b0366e-8861-40e2-a310-ee447b85fbcd.webp?v=3D164=
+6931314&amp;width=3D504&amp;height=3D504&amp;crop=3Dcenter&amp;pad_color=3D=
+f3f3f3" style=3D"font-size:0;width:100%;max-width:131px;border-radius:16px;=
+object-fit:cover;padding:0;margin:0;border:1px solid #EEEEEE;background-col=
+or:#EEEEEE;background-color:#EEEEEE;" width=3D"131"/>
+                           =20
+                          </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+     =20
+      </td>
+
+   =20
+          </tr>
+        </tbody>
+      </table>
+   =20
+
+ =20
+
+
+          </td>
+        </tr>
+      </tbody></table>
+
+      <table class=3D"desktop_hide" width=3D"100%" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;=
+mso-table-rspace:0">
+        <tbody><tr>
+          <td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ =20
+ =20
+
+ =20
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+      <table width=3D"100%" align=3D"center" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-ta=
+ble-rspace:0;margin:0 auto;overflow:hidden;width:100%;">
+        <tbody>
+          <tr>
+   =20
+
+    <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rspace:0;padd=
+ing-bottom:0px;padding-top:16px;vertical-align:top;border-top:0;border-righ=
+t:0;border-bottom:0;border-left:0;padding-right:5.333333333333333px;" width=
+=3D"33.333333333333336%">
+       =20
+        <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;padding:0;" width=
+=3D"100%">
+          <tbody>
+            <tr>
+              <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rsp=
+ace:0;">
+                <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;">
+                  <tbody>
+                    <tr style=3D"text-align:-webkit-center">
+                      <td style=3D"width:100%;padding:0;text-align:left;mso=
+-table-lspace:0;mso-table-rspace:0;font-family:Helvetica Neue,Helvetica,Ari=
+al,sans-serif;">
+                          <a class=3D"text" href=3D"https://mail.shop.app/_=
+t/c/v3/AABOjHx9xS_tydnQe67SMvAuPb_tm0j-Q9i8LWsshp5zQc5bGijLp5z1vsyTBuetzQm9=
+C28YIZs2MH63xL3CDZNo_MsLL_JsmToBW-WYqSIC34cNu703_DEKMk7uM6MPJxfDpe93Iv63g2C=
+hDL7mMEvUIVLDEl0b7W4XisTPxTiKBzB8Hf3gKW2_3nFGTyzX32EQUzc1sjq0RslcZOGTOgwEQo=
+RPHEA8GJjG4sjwZNvkzNvrUmkxD17Eaj7LjQv5aXE1VDV5Qi2ggUKBV2kmV7_PS4B211dI-AxQ5=
+Qfv3TU017Fjcss9GWEiv9dHoZgr2bmDUWp9onY8LrleRdOX2xZXtATUSf7drSJz1rOJHu8vJmP9=
+mzC1Ynx2tOPKw0HGCGholwFdw_VJU_5r99K_aKFoJ_xvgHRuoQdciTFo_-FNacgc" style=3D"=
+text-decoration:none;padding:0;margin:0;">
+                           =20
+                            <img alt=3D"special cleansing gel" src=3D"https=
+://cdn.shopify.com/s/files/1/0424/8056/6436/files/101104_special-cleansing-=
+gel_250-ml_retail.jpg?v=3D1758910551&amp;width=3D504&amp;height=3D504&amp;c=
+rop=3Dcenter&amp;pad_color=3Df3f3f3" style=3D"font-size:0;width:100%;max-wi=
+dth:175px;border-radius:16px;object-fit:cover;padding:0;margin:0;border:1px=
+ solid #EEEEEE;background-color:#EEEEEE;background-color:#EEEEEE;" width=3D=
+"175"/>
+                           =20
+                          </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+     =20
+      </td>
+
+   =20
+
+ =20
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+    <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rspace:0;padd=
+ing-bottom:0px;padding-top:16px;vertical-align:top;border-top:0;border-righ=
+t:0;border-bottom:0;border-left:0;padding-right:2.6666666666666665px;paddin=
+g-left:2.6666666666666665px;" width=3D"33.333333333333336%">
+       =20
+        <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;padding:0;" width=
+=3D"100%">
+          <tbody>
+            <tr>
+              <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rsp=
+ace:0;">
+                <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;">
+                  <tbody>
+                    <tr style=3D"text-align:-webkit-center">
+                      <td style=3D"width:100%;padding:0;text-align:left;mso=
+-table-lspace:0;mso-table-rspace:0;font-family:Helvetica Neue,Helvetica,Ari=
+al,sans-serif;">
+                          <a class=3D"text" href=3D"https://mail.shop.app/_=
+t/c/v3/AABLdYuFBvi4VjZN4sQsQO2zMM-NYxXkvuzrqRfitJOKFttq4UCWikQOtrBYzzJl1s0P=
+weDSBQr4xNyBXfUkHAhqS3xAyIsHBYZmymLNA42ZwHwLf5W0DitbWTGpDq4pQ45YmESLJZ_1-Jm=
+Oo29uQY3gZQy2LKk2u-fg4EYgbADyjdtAN6T5eDA6GA_54tauPglqBwNogKZheP9rfzBKCWObIU=
+wNr2FldmyGB0-6tN8odXknkH3LQ93BPy0GWwRgp4w_Py3CfltXX9zV733Nj0HubmZkvv3U7-Nod=
+KUkgJRP9e3taKVPi601B2lMECDbdQjfUHyJIdrfcyc2IjaNYxf_WXC2HDYx8Qo4otuonu6MIIaS=
+_dVH6ZvoNPx5E_AjZGcBC4HMyxUC72If2PmFlWlae6MfSB_b6SlRDrEyzeRD3iR6" style=3D"=
+text-decoration:none;padding:0;margin:0;">
+                           =20
+                            <img alt=3D"daily microfoliant exfoliator" src=
+=3D"https://cdn.shopify.com/s/files/1/0424/8056/6436/files/1617328253_PDP__=
+dailymic2.6oz.webp?v=3D1747738374&amp;width=3D504&amp;height=3D504&amp;crop=
+=3Dcenter&amp;pad_color=3Df3f3f3" style=3D"font-size:0;width:100%;max-width=
+:175px;border-radius:16px;object-fit:cover;padding:0;margin:0;border:1px so=
+lid #EEEEEE;background-color:#EEEEEE;background-color:#EEEEEE;" width=3D"17=
+5"/>
+                           =20
+                          </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+     =20
+      </td>
+
+   =20
+
+ =20
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+    <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rspace:0;padd=
+ing-bottom:0px;padding-top:16px;vertical-align:top;border-top:0;border-righ=
+t:0;border-bottom:0;border-left:0;padding-left:5.333333333333333px;" width=
+=3D"33.333333333333336%">
+       =20
+        <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;padding:0;" width=
+=3D"100%">
+          <tbody>
+            <tr>
+              <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rsp=
+ace:0;">
+                <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;">
+                  <tbody>
+                    <tr style=3D"text-align:-webkit-center">
+                      <td style=3D"width:100%;padding:0;text-align:left;mso=
+-table-lspace:0;mso-table-rspace:0;font-family:Helvetica Neue,Helvetica,Ari=
+al,sans-serif;">
+                          <a class=3D"text" href=3D"https://mail.shop.app/_=
+t/c/v3/AAB7cj7XS8Lufh6MaTUFgE6pKUgX4gig5FOaqUyU4FEct2PJZiOlFrGjFAukcrJP_TsG=
+lyu9COLI3SQZokXVJrhIsYvsnyU-NpEcv_wXgrPZQbIjZSTtXkt273sOeHFHrlAh7CcxkYO5Xge=
+FrfH87c88rU5Mayj7s6rbON8_ifkxxmJqDF63Gp1ZC0if-BNem93wOawJyaJCjhJ7k8QVkaJhgR=
+fIlmyCXk59sNIGKbK8hCFB0S0page0l3FpAyUQeDMxoerp0Tbn5GulUZUu8xT8Mv3pxBsCL-QQ9=
+GEUjvUUHNV-S-Q_O4o3lc2fiz1dqCBE-WelhkSHuHVS0DbryNyR0Zj-71JBbpjsht3KhIqgV1kC=
+De9FZo-z0N9dxqy4gnTeOtLL3QOekepGyU2Zr7GdtIw3eHnrlVeXnSeMEeWAVBi_" style=3D"=
+text-decoration:none;padding:0;margin:0;">
+                           =20
+                            <img alt=3D"dynamic skin recovery spf 50 moistu=
+rizer" src=3D"https://cdn.shopify.com/s/files/1/0424/8056/6436/files/Dynami=
+c_Skin_Recovery_SPF_50_-_Retail_1.7oz_-_CAN_-_BTL_FRONT.jpg?v=3D1779995257&=
+amp;width=3D504&amp;height=3D504&amp;crop=3Dcenter&amp;pad_color=3Df3f3f3" =
+style=3D"font-size:0;width:100%;max-width:175px;border-radius:16px;object-f=
+it:cover;padding:0;margin:0;border:1px solid #EEEEEE;background-color:#EEEE=
+EE;background-color:#EEEEEE;" width=3D"175"/>
+                           =20
+                          </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+     =20
+      </td>
+
+   =20
+          </tr>
+        </tbody>
+      </table>
+   =20
+
+ =20
+
+
+          </td>
+        </tr>
+      </tbody></table>
+
+     =20
+
+
+
+
+
+<table class=3D"" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0=
+">
+	<tbody><tr>=20
+		<td height=3D"20"></td>=20
+	</tr>=20
+</tbody></table>
+   =20
+ =20
+   =20
+     =20
+     =20
+     =20
+
+      <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0">
+        <tbody><tr>
+          <td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table class=3D"" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0=
+;word-break:break-word;">
+  <tbody>
+    <tr>
+      <td width=3D"48" style=3D"width:48px;">
+        <div style=3D"padding-right:6px;padding-top:10px">
+          <!--[if !mso]><!-->
+          <div style=3D"width:46px;height:46px;border-radius:12px;border:1p=
+x solid #7D60FC;background-color:transparent;padding:0;">
+            <img src=3D"https://cdn.shopify.com/s/files/1/0838/9666/4377/fi=
+les/sq-logo-asterisk-red-1000x1000.png?v=3D1754337205" alt=3D"Manmade" styl=
+e=3D"display:block;height:44px;width:44px;max-width:150px;border-radius:12p=
+x;object-fit:cover;padding-left:0.5px;padding-top:0.5px;"/>
+          </div>
+          <!--<![endif]-->
+
+          <!--[if mso]>
+          <div style=3D"width:48px;height:48px;border-radius:0;border:1px s=
+olid #EEEEEE;background-color:#EEEEEE;padding:2px;">
+            <img src=3D"https://cdn.shopify.com/s/files/1/0838/9666/4377/fi=
+les/sq-logo-asterisk-red-1000x1000.png?v=3D1754337205" alt=3D"Manmade" styl=
+e=3D"display:block;height:44px;width:44px;max-width:48px;border-radius:0;ob=
+ject-fit:cover;" height=3D"44" width=3D"44" />
+          </div>
+          <![endif]-->
+        </div>
+      </td>
+      <td style=3D"margin-left:4px;padding-top:8px">
+        <div style=3D"font-family:Arial,sans-serif">
+          <div class=3D"" style=3D"font-size:15px;font-family:&#39;Helvetic=
+a Neue&#39;,Helvetica,Arial,sans-serif;mso-line-height-alt:21px;color:#0b0b=
+0c;line-height:1.5">
+            <p style=3D"margin:0;font-size:15px;text-align:justify;mso-line=
+-height-alt:28px">
+              <span style=3D"word-break: break-word; font-size: 14px; font-=
+weight: 500;">
+                <strong>
+                  <a href=3D"https://mail.shop.app/_t/c/v3/AABkUFqMPqoz8G_S=
+SwFHA3TvNwtS8pFtdGnZGMxy15hulZ7KIXuv883UYy9mldmIM94Le4koDnQvBLWvSIoBvE6Rj0y=
+ykGZnga0o0FMs0bs6h7RypTc53PuaNJom9_iMpnxGhE7z1MU3UDOkSoiIav7e0WMzn5xfivmV0Z=
+RShOKjDzqbfJ-0fhTC4t3YmXBsPdAvTmye_a27Wf4LoJGxJOVAULdUlcTNMkPs0Qar0Vm9YWQP_=
+NnMzUEEkrxpA8K1JgnHlhWyaM21wdRBzgrpPDgYxAqlGlsG5whUZHAxOL_vTbBYH143cdaOK4xp=
+4hPKdd0JlESFeXZtZdtX0zNkdamutdcXOe5BtXzlVLIL3fKoFaYaeErFM163VIt_dXjD1XqiHt9=
+8qdeh9p9UeQ0VrETmE94xldaLzWT7zy2oZhE=3D" rel=3D"noopener" style=3D"text-dec=
+oration: none; color: #0f1721;" target=3D"_blank">
+                    <span style=3D"word-break: break-word;">Manmade</span>
+                  </a>
+                </strong>
+              </span>
+            </p>
+          </div>
+          <div style=3D"font-family:Arial,sans-serif">
+         =20
+           =20
+              <div style=3D"font-family:Arial,sans-serif; margin-top:0px">
+                <div style=3D"font-size:14px;font-family:&#39;Helvetica Neu=
+e&#39;,Helvetica,Arial,sans-serif;mso-line-height-alt:21px;color:#0b0b0c;li=
+ne-height:1">
+                  <p style=3D"margin:0;font-size:14px;display:block;text-al=
+ign:left;mso-line-height-alt:21px;line-height:normal">
+                    <span style=3D"font-size:14px;margin-top:2px">
+                      <span style=3D"color:#5433EB;background-color:transpa=
+rent;font-weight:500;">
+                        Save $20
+                      </span>
+                       =20
+                         =20
+                            <span style=3D"color:rgba(0,0,0,0.56)"> on orde=
+rs over $40</span>
+                         =20
+                     =20
+                    </span>
+                  </p>
+                </div>
+              </div>
+           =20
+         =20
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+          </td>
+        </tr>
+      </tbody></table>
+
+      <table class=3D"mobile_hide" width=3D"100%" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;=
+mso-table-rspace:0">
+        <tbody><tr>
+          <td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ =20
+ =20
+
+ =20
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+      <table width=3D"100%" align=3D"center" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-ta=
+ble-rspace:0;margin:0 auto;overflow:hidden;width:100%;">
+        <tbody>
+          <tr>
+   =20
+
+    <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rspace:0;padd=
+ing-bottom:0px;padding-top:16px;vertical-align:top;border-top:0;border-righ=
+t:0;border-bottom:0;border-left:0;padding-right:-2.0px;" width=3D"25.0%">
+       =20
+        <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;padding:0;" width=
+=3D"100%">
+          <tbody>
+            <tr>
+              <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rsp=
+ace:0;">
+                <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;">
+                  <tbody>
+                    <tr style=3D"text-align:-webkit-center">
+                      <td style=3D"width:100%;padding:0;text-align:left;mso=
+-table-lspace:0;mso-table-rspace:0;font-family:Helvetica Neue,Helvetica,Ari=
+al,sans-serif;">
+                          <a class=3D"text" href=3D"https://mail.shop.app/_=
+t/c/v3/AADF90XG6-z6W4cQl9RiyV9Iu_SkfjZiqleqYQaYdj4bRzp4DM3t0U72XT-kBxEcesG2=
+1UWFBl-Otegx6lsxLWfYvqtrlwdMfrdmHvYFGtGuGAVU3IsC6UD_SPc46AZNsgeUEwGKGpNaRKC=
+qhg4eHAd9lUlL96X_huyYxY-GJd63spIPcJNc19rvhSdcIqO3PA1g0EJ7st9bXiRXZTCNMOzpDM=
+7S0aPFIbmSvsE1-4rixFdgJ4ayzcoIWKRIJIdZ0Ood4SVdLMWGMzPKJA7ehVxMEydoZbgew-96t=
+Cnrnk7EBiFIoKxq1bWWFtsedNe9qpXekm1a5sYs79uS2lShfwYedkycdxWQgqqeN3faGS4yhMf2=
+z4bCi_F04vg0GH47GyEWB8DNn0-dlxM4WTWSXODB4SgMxCXmVRR_z9DEcBDyS8hr" style=3D"=
+text-decoration:none;padding:0;margin:0;">
+                           =20
+                            <img alt=3D"The Boxer Brief" src=3D"https://cdn=
+=2Eshopify.com/s/files/1/0838/9666/437=
+7/files/BB-Black-05.jpg?v=3D1762197913&=
+amp;width=3D504&amp;height=3D504&amp;crop=3Dcenter&amp;pad_color=3Df3f3f3" =
+style=3D"font-size:0;width:100%;max-width:131px;border-radius:16px;object-f=
+it:cover;padding:0;margin:0;border:1px solid #EEEEEE;background-color:#EEEE=
+EE;background-color:#EEEEEE;" width=3D"131"/>
+                           =20
+                          </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+     =20
+      </td>
+
+   =20
+
+ =20
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+    <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rspace:0;padd=
+ing-bottom:0px;padding-top:16px;vertical-align:top;border-top:0;border-righ=
+t:0;border-bottom:0;border-left:0;padding-right:-1.0px;padding-left:-1.0px;=
+" width=3D"25.0%">
+       =20
+        <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;padding:0;" width=
+=3D"100%">
+          <tbody>
+            <tr>
+              <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rsp=
+ace:0;">
+                <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;">
+                  <tbody>
+                    <tr style=3D"text-align:-webkit-center">
+                      <td style=3D"width:100%;padding:0;text-align:left;mso=
+-table-lspace:0;mso-table-rspace:0;font-family:Helvetica Neue,Helvetica,Ari=
+al,sans-serif;">
+                          <a class=3D"text" href=3D"https://mail.shop.app/_=
+t/c/v3/AAChECp28KaCGGBqLGyQG9_QA29J7k82Ne75li9PSuYVHXknE9svcW7UKF0jITmJwJpn=
+6aU9kcg99v0YWesLW6v3aCHKHQxfu0nbc9tAju91F-yZtaKUH3wK1pFxtVM0U4oqUQ0GnhpzRES=
+clUWDwolJzEhWFpdRaSQgAc9RfAoQkJ-2tLayq4NAyQl-OFC-ILmkWQv0gTEtvAIJCIW2vLTp5l=
+ciawunQQd3smX9fqTrFa_NJqsOPzIUuFB9ezLQOodHsl5MTEkUDVe2z5fdcxZraXs3Xk52LGog_=
+MraTbtCnYGCmluc78ppRL-qj8INbrTAg-BhwrXT3ANsLtwr3Ag2iRJbgkhcnA4LIPIX_3RMNQvP=
+13L4zOvCcS0u5VpF_yWNm5K67vbzNY5bwk8GiBui1sWV6e-C81g4m_Ymnk_yHo9Z" style=3D"=
+text-decoration:none;padding:0;margin:0;">
+                           =20
+                            <img alt=3D"The Pant" src=3D"https://cdn.shopif=
+y.com/s/files/1/0838/9666/4377/files/pdp-pant-00.jpg?v=3D1770154884&amp;wid=
+th=3D504&amp;height=3D504&amp;crop=3Dcenter&amp;pad_color=3Df3f3f3" style=
+=3D"font-size:0;width:100%;max-width:131px;border-radius:16px;object-fit:co=
+ver;padding:0;margin:0;border:1px solid #EEEEEE;background-color:#EEEEEE;ba=
+ckground-color:#EEEEEE;" width=3D"131"/>
+                           =20
+                          </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+     =20
+      </td>
+
+   =20
+
+ =20
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+    <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rspace:0;padd=
+ing-bottom:0px;padding-top:16px;vertical-align:top;border-top:0;border-righ=
+t:0;border-bottom:0;border-left:0;padding-right:-1.0px;padding-left:-1.0px;=
+" width=3D"25.0%">
+       =20
+        <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;padding:0;" width=
+=3D"100%">
+          <tbody>
+            <tr>
+              <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rsp=
+ace:0;">
+                <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;">
+                  <tbody>
+                    <tr style=3D"text-align:-webkit-center">
+                      <td style=3D"width:100%;padding:0;text-align:left;mso=
+-table-lspace:0;mso-table-rspace:0;font-family:Helvetica Neue,Helvetica,Ari=
+al,sans-serif;">
+                          <a class=3D"text" href=3D"https://mail.shop.app/_=
+t/c/v3/AABlCerAQ414QLVcW7byX1W_N8g3U2ElL8vmZlJ1Cir7NSiCoGzu16ohha4OPsfkfXRB=
+lbaMnUpCycm2aDQMRNgYgah2KujmeIvCM2gcgDIjdqGwwqHIfjXTGl6cF-vP051SaLYAqnvQZb0=
+T8fJp2O9qYfbDB3vAX9S4UNYscyiotbwyZb9Di9bA9sZ2iPmOXGTqDj21IAblPXXXN2AA2KbZ0a=
+Zt61uTjrpWpF_Ls-uAixH1cFx5bPpeKPtt3IZxIbQWmtO-ew5bgTbpdqigYs-grvFRUBdELkQuQ=
+bij71Ka4YJlv9pmuWVQzJIoYuZxGCqht-Vxo-dpbyWW5aqvKtR7tpzMvPjp_etAug5xXF_PPewv=
+ZNBIqi7HiP5Ezou3V8PvN2AwKO9FaP5WD1Qdu8pBOd_hp2isq_CfxgdFCaLGsIdw" style=3D"=
+text-decoration:none;padding:0;margin:0;">
+                           =20
+                            <img alt=3D"The T-Shirt" src=3D"https://cdn.sho=
+pify.com/s/files/1/0838/9666/4377/files/blk-tee-d9bg__84028.jpg?v=3D1769538=
+363&amp;width=3D504&amp;height=3D504&amp;crop=3Dcenter&amp;pad_color=3Df3f3=
+f3" style=3D"font-size:0;width:100%;max-width:131px;border-radius:16px;obje=
+ct-fit:cover;padding:0;margin:0;border:1px solid #EEEEEE;background-color:#=
+EEEEEE;background-color:#EEEEEE;" width=3D"131"/>
+                           =20
+                          </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+     =20
+      </td>
+
+   =20
+
+ =20
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+    <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rspace:0;padd=
+ing-bottom:0px;padding-top:16px;vertical-align:top;border-top:0;border-righ=
+t:0;border-bottom:0;border-left:0;padding-left:-2.0px;" width=3D"25.0%">
+       =20
+        <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;padding:0;" width=
+=3D"100%">
+          <tbody>
+            <tr>
+              <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rsp=
+ace:0;">
+                <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;">
+                  <tbody>
+                    <tr style=3D"text-align:-webkit-center">
+                      <td style=3D"width:100%;padding:0;text-align:left;mso=
+-table-lspace:0;mso-table-rspace:0;font-family:Helvetica Neue,Helvetica,Ari=
+al,sans-serif;">
+                          <a class=3D"text" href=3D"https://mail.shop.app/_=
+t/c/v3/AAAQUkGfAxUXJQ4ISaPK_vVNxEa65CfQ-izv3lCjklfETAUlMxYK0PWBCPfEOL3PcvzI=
+kXec1hN9b9ucVtNpRd8DYhLO7mqwZJlworRlKvUGA7tx3hN6tXssKu7IUOu7ZPUROmjYJUhXVsO=
+NRCogsmVKqoU1_N67jZ0Nsyl7yNwpUrbcbsO2DqoGtWBV9PwUVDRhSj6ViJs9fnyeK2HMQ9lVIF=
+rSbKNWtWSsWkvehdnnrEKskln8zEcjeYnB1-GjLEgRDTf2J_jwEuhDLWy7pT_Y0mXik3lOEPsy6=
+DBoZeTmEV1dgobP4VVevBPuDxazDB52UdB3UGJwSoQJOISgMsBDob2esVUiluv5s-PMZcxpf3YF=
+oxPk7Ao3swgJw41a6-w7qvaMBMfIFiQr_qBrm2vPiKyX5lN3jOIzGZsQfaGqKzls" style=3D"=
+text-decoration:none;padding:0;margin:0;">
+                           =20
+                            <img alt=3D"7-Pack Boxer Briefs" src=3D"https:/=
+/cdn.shopify.com/s/files/1/0838/9666/4377/files/2238_source_1689357710.jpg?=
+v=3D1762197916&amp;width=3D504&amp;height=3D504&amp;crop=3Dcenter&amp;pad_c=
+olor=3Df3f3f3" style=3D"font-size:0;width:100%;max-width:131px;border-radiu=
+s:16px;object-fit:cover;padding:0;margin:0;border:1px solid #EEEEEE;backgro=
+und-color:#EEEEEE;background-color:#EEEEEE;" width=3D"131"/>
+                           =20
+                          </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+     =20
+      </td>
+
+   =20
+          </tr>
+        </tbody>
+      </table>
+   =20
+
+ =20
+
+
+          </td>
+        </tr>
+      </tbody></table>
+
+      <table class=3D"desktop_hide" width=3D"100%" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;=
+mso-table-rspace:0">
+        <tbody><tr>
+          <td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ =20
+ =20
+
+ =20
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+      <table width=3D"100%" align=3D"center" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-ta=
+ble-rspace:0;margin:0 auto;overflow:hidden;width:100%;">
+        <tbody>
+          <tr>
+   =20
+
+    <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rspace:0;padd=
+ing-bottom:0px;padding-top:16px;vertical-align:top;border-top:0;border-righ=
+t:0;border-bottom:0;border-left:0;padding-right:5.333333333333333px;" width=
+=3D"33.333333333333336%">
+       =20
+        <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;padding:0;" width=
+=3D"100%">
+          <tbody>
+            <tr>
+              <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rsp=
+ace:0;">
+                <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;">
+                  <tbody>
+                    <tr style=3D"text-align:-webkit-center">
+                      <td style=3D"width:100%;padding:0;text-align:left;mso=
+-table-lspace:0;mso-table-rspace:0;font-family:Helvetica Neue,Helvetica,Ari=
+al,sans-serif;">
+                          <a class=3D"text" href=3D"https://mail.shop.app/_=
+t/c/v3/AABLsqL7HuQV2B9WX2UiWvK47nKUjLi672MRXkR8eS0Q-oA5_8v3kzR44FytJZqP6oGg=
+MaFX2CDVsW26nr4I20xE_g6KIhKikWhFXUVTmTPRgpezIsRbE0D0Y7ltC8-N7Sr1JhFoHAp7khp=
+FwCgBA6CeVn5OTrxLq4BKkSp5aORQw717eQ66et-ZhWGhuksST9HAIyodljqvdGGWzKPJ2nGPnD=
+E_i4G6vF5nrS1wJVjhPyaV9mvsy3PzDhkbbR10Arfyw_FQOJFu7rCoiTxOYt4tqLMP4blAsm2UI=
+3TCvRP_oGee2ACpjR_NQ0WfEd-90sXNr2tBIMmFPbz-wK4o4NMoKG-cQpwZpHv0s92okMwaifyz=
+B4dQMz8OA5D-VfmT3_yGZgXe7aL4fMWkBxcsXYoHhIm4FoCCvgQUwMn6Y_e84tt4" style=3D"=
+text-decoration:none;padding:0;margin:0;">
+                           =20
+                            <img alt=3D"The Boxer Brief" src=3D"https://cdn=
+=2Eshopify.com/s/files/1/0838/9666/437=
+7/files/BB-Black-05.jpg?v=3D1762197913&=
+amp;width=3D504&amp;height=3D504&amp;crop=3Dcenter&amp;pad_color=3Df3f3f3" =
+style=3D"font-size:0;width:100%;max-width:175px;border-radius:16px;object-f=
+it:cover;padding:0;margin:0;border:1px solid #EEEEEE;background-color:#EEEE=
+EE;background-color:#EEEEEE;" width=3D"175"/>
+                           =20
+                          </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+     =20
+      </td>
+
+   =20
+
+ =20
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+    <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rspace:0;padd=
+ing-bottom:0px;padding-top:16px;vertical-align:top;border-top:0;border-righ=
+t:0;border-bottom:0;border-left:0;padding-right:2.6666666666666665px;paddin=
+g-left:2.6666666666666665px;" width=3D"33.333333333333336%">
+       =20
+        <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;padding:0;" width=
+=3D"100%">
+          <tbody>
+            <tr>
+              <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rsp=
+ace:0;">
+                <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;">
+                  <tbody>
+                    <tr style=3D"text-align:-webkit-center">
+                      <td style=3D"width:100%;padding:0;text-align:left;mso=
+-table-lspace:0;mso-table-rspace:0;font-family:Helvetica Neue,Helvetica,Ari=
+al,sans-serif;">
+                          <a class=3D"text" href=3D"https://mail.shop.app/_=
+t/c/v3/AAC42zAYJEUJMkUxFIIkMD6WFY5OUwokLkTqj6ghcZomXlQN7Nt-4UyFjH3L6cbx-c6J=
+AUZ47WbkVXlAbhv4v5Y0tdxU2Edb7Yoal4GbrAg30aZoXHoz6uUzkTZmxdVk0wqDS9XTf0xlpIe=
+nYPQHLgXfQDpBMAN5EtKtpwyIJq9NwSzUTUDIgPsT73AU3vjXkQxMrC-lgXmGhdR5sEOROEYchO=
+_zSBB_mlkyGyTGvt9iceMTJXB_L9XHaFMhpnugJDETfcpSflTZ3t2KvmZxE7c3nMbWYBIvjwOLe=
+ZLc91YjnNenBNG0icGELnvjNxQhxXbtur4TeWlLAbV0sMCRjEm6R2z_ZLTIZwG0zvDNgiq4yWPw=
+v7d1JpLDRC-RlMgd19cO_Ex0E7N0aYjsoeBe6hjqqxWHrq7TLjeef4CIiqMEiGKj" style=3D"=
+text-decoration:none;padding:0;margin:0;">
+                           =20
+                            <img alt=3D"The Pant" src=3D"https://cdn.shopif=
+y.com/s/files/1/0838/9666/4377/files/pdp-pant-00.jpg?v=3D1770154884&amp;wid=
+th=3D504&amp;height=3D504&amp;crop=3Dcenter&amp;pad_color=3Df3f3f3" style=
+=3D"font-size:0;width:100%;max-width:175px;border-radius:16px;object-fit:co=
+ver;padding:0;margin:0;border:1px solid #EEEEEE;background-color:#EEEEEE;ba=
+ckground-color:#EEEEEE;" width=3D"175"/>
+                           =20
+                          </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+     =20
+      </td>
+
+   =20
+
+ =20
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+   =20
+   =20
+
+   =20
+
+   =20
+
+   =20
+
+    <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rspace:0;padd=
+ing-bottom:0px;padding-top:16px;vertical-align:top;border-top:0;border-righ=
+t:0;border-bottom:0;border-left:0;padding-left:5.333333333333333px;" width=
+=3D"33.333333333333336%">
+       =20
+        <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;padding:0;" width=
+=3D"100%">
+          <tbody>
+            <tr>
+              <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rsp=
+ace:0;">
+                <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;">
+                  <tbody>
+                    <tr style=3D"text-align:-webkit-center">
+                      <td style=3D"width:100%;padding:0;text-align:left;mso=
+-table-lspace:0;mso-table-rspace:0;font-family:Helvetica Neue,Helvetica,Ari=
+al,sans-serif;">
+                          <a class=3D"text" href=3D"https://mail.shop.app/_=
+t/c/v3/AAARQYwO_kqK14sFy6ju1dicBx0pyqE04IZ_vk3UkTI0Oz9K_sFp1GAT-k-c0u0dKill=
+26x2o-PUtRwbi74sQOB85zAUB5t_ZeZGlsrrE8Rp2gNNj3dLFGzgPCO0Crclu-v28IpfqwaCcuM=
+Wqd71AsmsOgbaLAOKeznQDpR8fpxWmn6Z7_z4cxg5K31ftK4jFM86NLbp0jD_ldtG-gXCl8D5pZ=
+Xa6QGlSax-4aceRJlbQuOZN7GrZKnnqZ4xVItdRqJ9-m84-0MVI4vvQRE_bn4s8xBH0RiUv87-M=
+jW2USpvfislMT-zfEpJNOGXU722YwfLlK_5kshErDRMkx28H6nvOlRkg4PDvIk6WkYgrdoi13f3=
+Wubn7fLmiTJ7bmogRGjvuhreUUaQFjca_uzCQvGveMQqUrvQ06WnLlA6_aFRL--i" style=3D"=
+text-decoration:none;padding:0;margin:0;">
+                           =20
+                            <img alt=3D"The T-Shirt" src=3D"https://cdn.sho=
+pify.com/s/files/1/0838/9666/4377/files/blk-tee-d9bg__84028.jpg?v=3D1769538=
+363&amp;width=3D504&amp;height=3D504&amp;crop=3Dcenter&amp;pad_color=3Df3f3=
+f3" style=3D"font-size:0;width:100%;max-width:175px;border-radius:16px;obje=
+ct-fit:cover;padding:0;margin:0;border:1px solid #EEEEEE;background-color:#=
+EEEEEE;background-color:#EEEEEE;" width=3D"175"/>
+                           =20
+                          </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+     =20
+      </td>
+
+   =20
+          </tr>
+        </tbody>
+      </table>
+   =20
+
+ =20
+
+
+          </td>
+        </tr>
+      </tbody></table>
+
+     =20
+
+
+
+
+
+<table class=3D"" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0=
+">
+	<tbody><tr>=20
+		<td height=3D"20"></td>=20
+	</tr>=20
+</tbody></table>
+   =20
+ =20
+
+
+<!-- END MERCHANTS -->
+<!-- SPACING -->
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" class=3D"- class_name" style=3D"mso-table-lspace: 0; mso-=
+table-rspace: 0;">
+<tbody>
+    <tr>
+        <td height=3D"24px"></td>
+    </tr>
+</tbody>
+</table>
+<!-- END SPACING -->
+<!-- EXPLORE SHOP BUTTON -->
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" width=3D"100%" style=3D"mso-table-lspace: 0; mso-table-=
+rspace: 0; margin: 0 auto;">
+<tbody>
+    <tr>
+        <td width=3D"100%" style=3D"text-align: center;">
+            <!--[if mso]>
+            <v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=
+=3D"urn:schemas-microsoft-com:office:word" class=3D"" href=3D"" style=3D"he=
+ight:52px;width:360px;v-text-anchor:middle;" arcsize=3D"50%" stroke=3D"fals=
+e" fillcolor=3D"#5433eb">
+                <w:anchorlock/>
+                <v:textbox inset=3D"0px,0px,0px,0px">
+                    <center style=3D"color:#ffffff; font-family:Helvetica N=
+eue, Helvetica, Arial, sans-serif; font-size:16px">
+                        <![endif]-->
+                        <a class=3D"cta-button" href=3D"https://mail.shop.a=
+pp/_t/c/v3/AADmKoEdgW54DVtsZwzMG9A-uOC2iaXiq0AoRczduPCL-teqtGtw-WQwp-RKIZuW=
+sSCW8SJqGpjppFTTttXmoOumGGOonJtxmx4tl4L0ZvIIglnjV81vlfgN8oAW1Z11lEeIA6DOldd=
+XvS83XwmjzdRz-zlVKSDFeFGjFh21624ihO2utVdaUazNe_ZPYVpu7h-7jQErRnZC5AhrKMrev1=
+tWhnKaTKNOSVZqNTxPuVt123Bv44Bc0OtQ28LNnWoJFLSzFS04Mx8c2FYoc0PjQpiLwjTr56JNu=
+ChEXvTOMhBbgMIZB2HzumnwSrLW8qPvS6cA6dqc_7UL5s497eNqbC_l5sd0cccddJIzt1gJTZK9=
+hNfr7RmuXXzo7EuR5Dc3GfZjCuI5w6ZzObYv6z4NpxCVUxlITdp01Uk=3D" style=3D"text-d=
+ecoration: none; display: inline-block; color: #ffffff; background-color: #=
+5433eb; border-radius: 999px; width: 360px; max-width: 540px; border-top: 0=
+; border-right: 0; border-bottom: 0; border-left: 0; padding-top: 16px; pad=
+ding-bottom: 16px; font-family: &#39;Helvetica Neue&#39;, Helvetica, Arial,=
+ sans-serif; font-size: 16px; font-weight: 500; text-align: center; mso-bor=
+der-alt: none; word-break: keep-all; letter-spacing: 0.15px; line-height: 2=
+0px;"><span style=3D"padding-left: 39px; padding-right: 39px; font-size: 16=
+px; display: inline-block; letter-spacing: 0.15px; word-break: break-word; =
+line-height: 20px; color: #ffffff;">
+                        Explore Shop
+                    </span></a>
+                <!--[if mso]> </center></v:textbox></v:roundrect> <![endif]=
+-->
+            </td>
+        </tr>
+    </tbody>
+</table>
+<!-- END EXPLORE SHOP BUTTON -->
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+           =20
+             =20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"mso-table-lspace:0;mso-table-rspace:0" width=
+=3D"100%" class=3D"">
+  <tbody>
+    <tr>
+      <td>
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" class=3D"content" style=3D"mso-table-lspace:0;=
+mso-table-rspace:0;width:580px;margin:0 auto" width=3D"580">
+          <tbody>
+            <tr>
+              <td style=3D"text-align:left;mso-table-lspace:0;mso-table-rsp=
+ace:0;vertical-align:top;border-top:0;border-right:0;border-bottom:0;border=
+-left:0;padding-left:20px;padding-right:20px;padding-top:20px;padding-botto=
+m:20px;background-color:#fff;border-top-left-radius:0px;border-top-right-ra=
+dius:0px;border-bottom-left-radius:0px;border-bottom-right-radius:0px;" cla=
+ss=3D"shop-row-v2" width=3D"100%">
+               =20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"mso-table-lspace:0;mso-table-rspace:0;word-break:break-word" wi=
+dth=3D"100%">
+  <tbody>
+    <tr>
+      <td style=3D"mso-table-lspace:0;mso-table-rspace:0;font-weight:400;te=
+xt-align:left;padding-bottom:25px;padding-top:26px;vertical-align:top;borde=
+r-top:0;border-right:0;border-bottom:0;border-left:0" width=3D"100%">
+       =20
+        <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"mso-table-lspace:0;mso-table-rspace:0;word-break:break-=
+word" width=3D"100%">
+          <tbody>
+            <tr>
+              <td>
+                <div style=3D"font-family:sans-serif">
+                  <div style=3D"font-size:14px;font-family:Helvetica Neue,H=
+elvetica,Arial,sans-serif;mso-line-height-alt:21px;color:#757575;line-heigh=
+t:1.5">
+                   =20
+                    <p style=3D"margin:0;font-size:13px;text-align:center;m=
+so-line-height-alt:19.5px">
+                      <span style=3D"word-break: break-word; font-size: 13p=
+x;">
+                       =20
+                        This email contains promotional or sponsored conten=
+t. At Shop, we respect your privacy and take
+                        great care to safeguard your personal information. =
+Your information will only be used in
+                        accordance with our
+                       =20
+
+                       =20
+                        <a href=3D"https://mail.shop.app/_t/c/v3/AAAZ8MtytH=
+H70ETmVIdp6qd4r_H-FkT0udKjNdqWswRj-6JLtLpKHYHVkCrKzyw8URxFVz3c-nTcHqqkPWDjU=
+C7-5pvXUu7GN08fQVKT4XjfJvpnEBbEgkGwHmuaz8_7NM7ur3W4PNGjSbisv8Chjc8TeNm3TrZ4=
+FW2drwKNZC7SinRkiQUrebTUdVDY9N2cuC7hiIRYrCaixz56U61Z2kHu_qeA_V5ZBmPfPtawnq3=
+aXmDGm4UaMuZHjNYI0NGeh8VjXKf7cgTCN54xg4n_8RclACYGFEKKtIRkuPEuciraI1WIrfCq8w=
+Qii_QVuju6CJq4Tyl8I0lFmU__f7x5zO02XDtJQ5fMSnV_lzGujcaVM4aF0A0f3ezHNBU9FESOO=
+jFg9PO3-7ME7PdjxdoSOo73C0W7lGKhAF1SOKrDrwCOD4g5iIMspCnvwcI=3D" rel=3D"noope=
+ner" style=3D"text-decoration: none; color: #0f1721;" target=3D"_blank">Pri=
+vacy Policy</a>, and you can update your details or delete your account at =
+any time.<br/>
+                        <a href=3D"https://mail.shop.app/_t/c/v3/AAD-DRfud5=
+pxAodIsVg0_hx3yhMQl7gNLBtwQuzqb1m8x1HSp5_MvnNdy8l2OaBz1oGPmkhHYcKQAdKr4qvG_=
+nhsCHUCksJ_N8whwAvJQ1XSrNMInfUNj1yXvC1fuhM-MHgLyDJISW2P9XkJN1Ci4YlOwI_vFMDX=
+iBYFLImloxNnK61kCK3ESi8NV2wieseoqvz_L5fmgKD_43FAoTwvEPYzST5yVX1fsXzHygviP1j=
+r1e7asxj_qd2fNdXph3Vqh2eT87_93dP7INTv-B1SY6Em9Lp4ooIddYGeewnOwJ97jGU2gu7-Q8=
+TvNLwZqpP-_B93ke2i7TXGOqwvwo8kL0dOC0EKwuNQm7tDGbv-xuKE3iOGyZTfRbNnzXFok_Su_=
+vV9grUi4Tk9msEPP20EOQyqMHY86kyzD7BAig=3D=3D" rel=3D"noopener" style=3D"text=
+-decoration: none; color: #0f1721;" target=3D"_blank">
+                          Learn more about Shop.
+                        </a>
+                       =20
+                        <br/>
+                      </span>
+                    </p>
+                    <p style=3D"margin:0;font-size:13px;text-align:center;m=
+so-line-height-alt:21px;">=C2=A0</p>
+                    <p style=3D"margin:0;font-size:13px;text-align:center;m=
+so-line-height-alt:19.5px;">
+                      <span style=3D"word-break: break-word; font-size: 13p=
+x;">
+                       =20
+                        Don&#39;t want to receive these emails?<br/>
+                        <a href=3D"https://mail.shop.app/_t/c/v3/AAD8eJTHEH=
+4vouVX-0yn5Ar4xwa8bHxumqn42USze3xzvHwa--lT58O-dOX9XesUQkjg3MCJQG36KFqb7sZlA=
+AfhcfzfE-M5WHsUGlOmHpQoLbGfSYpE6mn3CpLcSZtPpLY1gMYRL2sHivmOaIvn79VDjHa0iC0d=
+U5MJta8eNpT1qNyUUe9Y6LPvZQ8vYojFwH-ehLbt-Vy_KkY92vhSy76o_yTKyH6ofDyqxiqfufo=
+1njIE5n2M7Ouy2Dc7IR6HlvKGH1aaGgYsu37a13QYd-rEDdMY8ltCaAGe5fEGV8F_srrD2XyCMQ=
+ndCMlOfaam2OWoqfyUKQpwhKiphBEol7QNW-71P1XH_nxyH-1hzt38vBYb-mJTGqczyVh13z28n=
+bR1T3Fi1JLxSgIdBQdLmxM6dImS6UsMpcid5mLiR6PQr8fGSI9SgrWV3N8txQre5JFjVI0BPLD2=
+FyJwjcry5MXtdLE1NU3inFk9voN51z5Jyn13gBoh4flXMrJviQE1bVUG8-_5M7GnD8TpYNjTUXG=
+anzOjST6MCWg_7wetv4HZyvS8-tXRpgUZ6fjGd5We04AW6XNn8Ek6ucUFmvyZiHn9IqF5YnO9VY=
+c2G96CIfR7lD6Bav0uYQnTzeJcU_pbq8LagWRHXpqPbay5Y5UZjNBMFArod8ZNWMMQQdzyGMCgD=
+zzOKC1WbCi2MOPNQyAnqQuAdJQ0-3Syk4HLfP1gInr9ba0Er6T8uotKKSxTapEVrarVNfBO4SMn=
+-Jb4-AaoVQ=3D=3D" rel=3D"noopener" style=3D"text-decoration: none; color: #=
+0f1721;" target=3D"_blank">
+                          Unsubscribe here.</a>
+                       =20
+                      </span>
+                    </p>
+                    <p style=3D"margin:0;font-size:13px;text-align:center;m=
+so-line-height-alt:21px;">=C2=A0</p>
+                    <p style=3D"margin:0;font-size:13px;text-align:center;m=
+so-line-height-alt:19.5px;">
+                      <span style=3D"word-break: break-word; font-size: 13p=
+x;">
+                       =20
+                        Shopify | 151 O=E2=80=99Connor Street, Ground floor=
+, Ottawa ON, K2P 2L8
+                       =20
+                      </span><br/>
+                    </p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+           =20
+          </td>
+        </tr>
+      </tbody>
+    </table>
+ =20
+
+
+</td></tr></tbody></table><img src=3D"https://mail.shop.app/_t/open/A102010=
+0-18C2CE12A7720017-5CE58AD3?en=3DAABPy9Lk9O3Qp8qK5jB2giheRpC5r2vtQMCQmOIigj=
+f0PnjtgHybG5ALtTBFabmKK%2FIgm4Ea14%2FMTJLiUaDUxeyr800fvbCV1d5x%2FBIYRh2me80=
+vAc3wPmGQfMABkCDgmhQh6lPP7b2gVyU4h%2FZotNZIY0ERTnv5rNXPuZSFpOxgeH2N5q1VmT6d=
+rohyzpT%2BLrJ9K%2FeEfKrhl%2F9EzXs6WVwPj38XlzkGNgOvHeB2whMO0pXdUxBpFIoouFxEc=
+uFNubxBwRssQlmYnonSKppl%2Fp6EHnkVMWrEoDUOXtF3oxvHcuTitebrZthSm8XgsPohoItlVC=
+lZPQUlw2nw3JAh6fZnnhQDw65noCWKKMFdPrST0MsgPy8i7eNlQZmYmqmB%2BHhbIrzGglUOr1j=
+2xmkSnF7QdvHVLf1IoNtFUIwuZR%2FQfGX%2F9ER%2F%2Bu605d3IsMhgehYNJgzaqzECVost%2=
+B2gf265ue0D8WxVmcUh%2FpavY5BTej%2B5wGG%2F5hn2WZvCgQbs54T98yNZknbBERodIxUPjJ=
+O%2BxpdolQCWqyElP0vBBB78vBWs33yezg87EF616YDmzaGIc2YdxBHHqgoOYgxulr4T3JzLX1c=
+gKQUIdqf3sRgghGBT0xBrfqWBoeTLHa%2B4mUFwyP2q4GRZOBtb3UbB62LXw2oiXEEyAXOsSdSe=
+SoxAvwqx4Db%2B%2BzRDDVLy5xTAGAjUKfhEDiHRJKp2Pa4%2FrFMucZ5ldUfZZEI9h1xpJ%2F9=
+KWtgURK24JDLfKI2qtp7tfBAK5ua9xDEQozjZyBnXuCFQ1MPBSRIAoGN1%2Bo8sbc%2BTP6VBC1=
+4AyZ%2FG1IaWlQh7YN0GtpR3AfiYpN2dWlfWIrTb5fdQX%2F%2FSGlVUIpx0P9Zt4PFBJKgXOvG=
+AMReboXgOzh4Oan8QVmDzEYrTB6osKz020Q59J87sKZecna1NRf2c40wpxZc5sGwNSST6B3JHJk=
+s9QP%2FghV9W%2Bcdadh6hn%2FQNMbzljD2j60wtQ2GSxbRx3BllrWur6KXiydvTk3bEGT4cTYt=
+b2881eLW7N9ifqXEhU2MEJc9jc%2FpKmoJPpzF3aA%2BQ6hajlVO03cYXrEuG%2BmUmtIS2WCL3=
+TiZVK%2Fs9trvoil9TaKpEKopQh1Z8k81zQBzhuTs%2BV2cVQ1ma5gZC7aRs5fw12Rn5W8cPmpW=
+K319AcHVYv9oXi8ARxj%2FbKCCZWVHKam9BelSFGgsGM6XULfPUEJAEJhqIywdt7RHAeqcG%2Fh=
+vP0LnQN4F5WnhihTa0F9Ncc0A%2F%2FAGqy5LohSbu3ui%2F8OvHHtPsWjLreZax%2FLXayg4Gs=
+2SHaRQZKGHPP6NR2xAbKcrgLOKk28lbtmBeI7a9FuwaiN94ObYEsj8qFibFyIGy8EdrfjS3cOB6=
+Z2%2B7NJIjUAYcPdeJhlQO%2By3L%2BdnuglFaqHoid2por7XvhavP6JlCCbL0T4PM%3D" styl=
+e=3D"display:none"/></body></html>
