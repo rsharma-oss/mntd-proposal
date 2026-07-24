@@ -394,7 +394,9 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
 
 /* Media reference · video / doc callouts */
 .media-ref{display:grid;grid-template-columns:220px 1fr;gap:22px;background:var(--surface-1);border:1px solid var(--rule);border-radius:12px;padding:20px;margin-top:22px;align-items:center}
+.media-ref.large{grid-template-columns:440px 1fr;gap:28px;padding:26px}
 @media(max-width:640px){.media-ref{grid-template-columns:1fr}}
+@media(max-width:900px){.media-ref.large{grid-template-columns:1fr}}
 .media-ref-thumb{position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,var(--surface-2),var(--surface-3));border:1px dashed var(--rule);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;overflow:hidden}
 .media-ref-thumb::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at center,rgba(51,79,180,0.05),transparent 70%)}
 .media-ref-thumb-play{position:relative;width:48px;height:48px;background:var(--ga-blue);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;padding-left:4px;box-shadow:0 6px 16px rgba(51,79,180,0.35)}
@@ -1094,6 +1096,11 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
       </div>
     </div>
   </div>
+
+  <div class="pp-thesis" style="margin-top:28px">
+    <div class="pp-thesis-eyebrow">Deeper read · size-chart education from the conference</div>
+    <div class="pp-thesis-body">Size confidence is one of the highest-leverage pre-purchase decisions at premium price. <strong>Best-in-class AI-driven size recommenders drop return rates 10–25% in DTC benchmarks.</strong> Watch a snippet from the <a href="#pdp-video" style="color:var(--ga-blue);font-weight:800;text-decoration:none;border-bottom:2px solid rgba(51,79,180,0.25)">Style and Scale DTC Conference (Section 08 · Content × Commerce)</a> — the <strong>True Fit undergarments case</strong> is worth the two minutes.</div>
+  </div>
 </section>
 
 <section class="section" id="postpurchase">
@@ -1568,7 +1575,7 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
     </div>
   </div>
 
-  <div class="media-ref">
+  <div class="media-ref large" id="pdp-video">
     <div class="media-ref-thumb has-img">
       <img src="../assets/pdp-conference-slide.png" alt="Slide from Style and Scale DTC Conference (organised by Task Husky, March 2026): Designed to reduce fit friction and increase conversion confidence, with David Yassky presenting · one of 8 hours moderated by Rahul Sharma" class="media-ref-img">
       <div class="media-ref-thumb-play">▶</div>
