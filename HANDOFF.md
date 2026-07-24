@@ -1,8 +1,13 @@
 # HANDOFF · MNTD × Growth Automated Proposal
 
-**Status:** SHIPPED · deployed · sent to Kate
-**Live URL:** https://rsharma-oss.github.io/mntd-proposal/
-**Last worked:** Jul 15, 2026
+**Status:** SHIPPED · deployed · sent to Kate · 3 recipient variants live for Raff / Joanna / Niki
+**Live URLs (4 recipients):**
+- Kate — https://rsharma-oss.github.io/mntd-proposal/ (sent 2026-07-15)
+- Raff — https://rsharma-oss.github.io/mntd-proposal/raff/ (not yet sent)
+- Joanna — https://rsharma-oss.github.io/mntd-proposal/joanna/ (not yet sent)
+- Niki — https://rsharma-oss.github.io/mntd-proposal/niki/ (not yet sent)
+
+**Last worked:** Jul 24, 2026
 **Owner:** Rahul Sharma · Growth Automated · Small Fidelity Services Ltd.
 **Working directory:** `/Users/rahulsharma/mntd-proposal/`
 
@@ -24,10 +29,18 @@ Then re-read BACKLOG.md for open items and the "Post-send follow-up" section bel
 
 ### Deployment
 - Repo `github.com/rsharma-oss/mntd-proposal` public · GitHub Pages via Actions
-- URL live at https://rsharma-oss.github.io/mntd-proposal/ (verified 200)
+- 4 URLs live (Kate at root, Raff/Joanna/Niki in subdirs) · all served from same repo, single deploy pipeline
 - Local git identity set (`rahul@growthautomated.ai` / `Rahul Sharma`)
 - PAT bound to macOS Keychain — silent pushes going forward
 - `.github/workflows/pages.yml` = `actions/configure-pages@v5` + `actions/deploy-pages@v4`, triggers on push to `main`
+
+### Per-recipient variant system
+- **Source of truth:** `/index.html` (Kate's version — already sent, do NOT break)
+- **Generator:** `scripts/build_variants.py` — regenerates `raff/`, `joanna/`, `niki/` subdirs from Kate's index.html
+- **Per-recipient changes:** `<title>` · `tb-sub` · hero eyebrow + headline + body · footer "Prepared for" · asset paths (`assets/` → `../assets/`) · scorecard link (`scorecard.html` → `../scorecard.html`)
+- **Raff-only special-case:** the "a role Kate was one of the finalists for" line in the Section 11 Raff team card is scrubbed (would land awkwardly if Raff himself opens it)
+- **After any edit to `index.html`:** re-run `python3 scripts/build_variants.py` to regenerate all 3 subdirs, then commit both root and subdirs together
+- **Stakeholder map stays Kate-primary in all 4 versions** — Raff/Joanna/Niki read it as audience, per Rahul's "everything else is the same" rule
 
 ### HubSpot stakeholder sync
 | Contact | Action | HubSpot ID |
