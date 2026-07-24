@@ -71,7 +71,9 @@ Then re-read BACKLOG.md for open items and the "Post-send follow-up" section bel
 - Interactive post-purchase flow chart (Section 06) · 6 stages · 15 nodes · `data-seq` chronological numbering · MNTD + FleetOptics + Web + Physical lanes
 - Full fulfilment email timeline · 9 emails rendered as PNG screenshots, all clickable
 - 5 welcome/campaign email screenshots (Jun 21 – Jul 7) with lightbox
-- **Jul 24 addition:** DS-8 (Shop app cart-saved with Dermalogica + Manmade cross-sells) + PP-12 (XXXL launch email · inclusion story extended to MNTD) · both softened per Knix-culture voice guidance · evidence cards wired in Section 04 + Section 06
+- **Jul 24 additions:**
+  - DS-8 (Shop app cart-saved with Dermalogica + Manmade cross-sells) in Section 04 · softened per Knix-culture voice guidance · Shop app image shown behind a thumb-grid card (tap to expand) so it doesn't dominate the evidence panel
+  - XXXL launch email in Section 06 evidence panel (evidence-only, no accordion) · subtitle leads with the segmentation-with-existing-data angle ("MNTD has my size + gender on file from prior orders — the XXXL launch fired list-wide anyway") · figcaption keeps brand-story win intact
 - Full unboxing gallery (8 photos)
 - Section 04 (Desktop) evidence panel · 4 dscart PNGs telling the coupon-conflict story
 - Section 11 Team · Rahul + Raff (NMM shared-origin) · Founder card has GA-blue border · 2 client references (Jeff/NMM Trustpilot + Brett/WBM)
