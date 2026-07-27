@@ -36,7 +36,7 @@ RAFF_HERO = hero(
     '01 · The Story · From the NMM stack forward',
     'Raff — you inherited the stack I designed at <em>New Metric Media</em>. This one comes at MNTD from the other side of the counter.',
     [
-        "<p>We haven't worked directly. But you built on the operating stack I laid down at New Metric Media — Jeff hired you into the role, and the org chart you inherited was mine. I've watched the Knix Group multi-brand build from the outside. It's sharp.</p>",
+        "<p>We had a few transition meetings when you stepped into the role at New Metric Media — you built on the operating stack I'd laid down, and the org chart you inherited was mine. I've watched the Knix Group multi-brand build from the outside since. It's sharp.</p>",
         "<p>This proposal lands on Kate's desk for MNTD. I'm not writing you as the pitchee — I'm writing you as the technical validator. <strong>The bulk of the eComm story lives in Section 06 (Post-Purchase).</strong> Nine transactional emails, FleetOptics timing gaps, a 40-hour Toronto-to-Toronto ship. If the framing is fair, great. If anything lands wrong technically, tell me before it goes further.</p>",
         "<p>The three customer touchpoints — Eaton Centre visit, mobile shop, desktop shop — are Sections 02, 03, and 04. Section 05 maps the pre-purchase arc, Section 06 maps the post-purchase arc. Everything ties back to a screenshot or a real email.</p>",
         "<p>If Kate brings me in for the co-working session I proposed, I want you in the room.</p>",
