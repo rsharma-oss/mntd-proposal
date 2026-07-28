@@ -1117,7 +1117,7 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
   <div class="pp-flow" role="region" aria-label="Post-purchase journey flow diagram">
     <div class="pp-flow-header">
       <div class="pp-flow-title">The journey · order confirmation to unboxing</div>
-      <div class="pp-flow-sub">Fifteen touchpoints across four channels and ~72 hours. Click any node — email nodes open the email as a full screenshot, web/SMS/physical nodes jump to the observation below.</div>
+      <div class="pp-flow-sub">Sixteen touchpoints across four channels · from order confirmation through the Day-13 review request. Click any node — email nodes open the email as a full screenshot, web/SMS/physical nodes jump to the observation below.</div>
     </div>
     <div class="pp-flow-legend">
       <span class="pp-legend-item mntd"><span class="pp-legend-dot"></span> MNTD</span>
@@ -1132,7 +1132,7 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
       <div class="pp-stage-header"><div class="pp-stage-name">Transit</div><div class="pp-stage-when">Sat overnight</div></div>
       <div class="pp-stage-header"><div class="pp-stage-name">Delivery</div><div class="pp-stage-when">Sat morning</div></div>
       <div class="pp-stage-header"><div class="pp-stage-name">Doorstep</div><div class="pp-stage-when">Sat 10–12</div></div>
-      <div class="pp-stage-header"><div class="pp-stage-name">After</div><div class="pp-stage-when">Sun onward</div></div>
+      <div class="pp-stage-header"><div class="pp-stage-name">After</div><div class="pp-stage-when">Sunday onward</div></div>
 
       <div class="pp-lane-cell"><span class="pp-lane-label mntd">MNTD</span></div>
       <div class="pp-stage"><a class="pp-node mntd" href="../assets/email-01-mntd-order-confirmation.png" data-seq="1" data-lightbox target="_blank" rel="noopener"><span class="pp-node-time">Thu 4:48 PM</span><span class="pp-node-label">Order Confirmation</span><span class="pp-node-tag email">Email</span></a></div>
@@ -1140,7 +1140,7 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
       <div class="pp-stage"></div>
       <div class="pp-stage"><a class="pp-node mntd" href="../assets/email-06-mntd-out-for-delivery.png" data-seq="9" data-lightbox target="_blank" rel="noopener"><span class="pp-node-time">Sat 7:25 AM</span><span class="pp-node-label">Out for Delivery</span><span class="pp-node-tag email">Email</span></a></div>
       <div class="pp-stage"><a class="pp-node mntd" href="../assets/email-09-mntd-delivered.png" data-seq="13" data-lightbox target="_blank" rel="noopener"><span class="pp-node-time">Sat 11:12 AM</span><span class="pp-node-label">Delivered</span><span class="pp-node-tag email">Email</span></a></div>
-      <div class="pp-stage"></div>
+      <div class="pp-stage"><a class="pp-node mntd" href="../assets/email-review-request-jul24.png" data-seq="16" data-lightbox target="_blank" rel="noopener"><span class="pp-node-time">Fri Jul 24 · +13d</span><span class="pp-node-label">Review request · Klaviyo</span><span class="pp-node-tag email">Email</span></a></div>
 
       <div class="pp-lane-cell"><span class="pp-lane-label web">Mobile Web</span></div>
       <div class="pp-stage"></div>
@@ -1164,7 +1164,7 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
       <div class="pp-stage"></div>
       <div class="pp-stage"></div>
       <div class="pp-stage"><a class="pp-node physical" href="#pp5" data-seq="12"><span class="pp-node-time">Sat</span><span class="pp-node-label">Package Received</span><span class="pp-node-tag physical">Physical</span></a></div>
-      <div class="pp-stage"><a class="pp-node physical" href="#pp6" data-seq="15"><span class="pp-node-time">Sun+</span><span class="pp-node-label">Unboxing</span><span class="pp-node-tag physical">Physical</span></a></div>
+      <div class="pp-stage"><a class="pp-node physical" href="#pp6" data-seq="15"><span class="pp-node-time">Sunday</span><span class="pp-node-label">Unboxing</span><span class="pp-node-tag physical">Physical</span></a></div>
     </div>
   </div>
 
@@ -1405,15 +1405,15 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
       </figure>
     </div>
 
-    <div class="evidence-subtitle">Review request · Fri Jul 24 (13 days post-delivery) · sent by Klaviyo, not Okendo · landed in junk (<code>info@wearmntd.com</code> → DMARC fail, same sender-domain issue as Section 07 D1 and the shipping notifications)</div>
+    <div class="evidence-subtitle">Review request · Fri Jul 24 · Day 13 · The two operational levers here are <strong>deliverability</strong> and <strong>category-calibrated timing</strong>. Deliverability first: the email landed in junk — same <code>info@wearmntd.com</code> DMARC-fail as Section 07 D1 and the shipping notifications, now confirmed on the review-side too · every junk-folder send is a completion opportunity lost before the customer sees the ask. On timing: the "7–10 days post-delivery" DTC default was calibrated for durable goods; wash-before-wear garments form real feedback across wash cycles · I've now washed the Tee 3 times, which is when the fit and feel become honest signal · Day 13 may actually be the right cadence for this category, once deliverability is fixed.</div>
     <div class="thumb-grid">
       <figure class="thumb">
         <img src="../assets/email-review-request-jul24.png" alt="MNTD review-request email · headline Feel like a million bucks · 5-star rating grid for Best Damn Tee, Non-Stop Crew Sock, Boxer Brief · From info@wearmntd.com · sent by Klaviyo · click routes through Klaviyo tracker to Okendo submission form" class="expandable">
-        <figcaption>"Feel like a million bucks?" · Klaviyo-native send with 5-star grid per product · headers show <code>d=shared.klaviyomail.com</code>, submission form is Okendo · brand-inconsistent handoff and 13-day trigger delay</figcaption>
+        <figcaption>"Feel like a million bucks?" · Klaviyo-native send · 5-star per-product grid · click routes through Klaviyo tracker to Okendo submission (two-platform handoff that could resolve to one sender identity)</figcaption>
       </figure>
     </div>
 
-    <div class="evidence-subtitle">Google syndication check · Okendo is installed on-site (JSON-LD <code>aggregateRating</code> outputs 4.5★ · 30 reviews for Best Damn Tee) — organic Search rich results should work · <strong>the Google Shopping Product Reviews feed is a single toggle in Okendo → Merchant Center · worth verifying it's on</strong></div>
+    <div class="evidence-subtitle">Reviews as three-surface fuel · Okendo installed · JSON-LD <code>aggregateRating</code> outputs 4.5★ · 30 reviews for Best Damn Tee — organic Search rich results should already work. Two more surfaces unlock from the same review pool: (a) Google Shopping star ratings via the Okendo → Merchant Center feed (one toggle, worth verifying it's on) and (b) <strong>AEO — AI answer engines cite structured review data when ranking brand queries · reviews aren't just for humans anymore, they're training signal for ChatGPT, Perplexity, and Claude answering "best men's basics" prompts</strong>. Every review captured feeds all three surfaces at once — the completion-compliance work above is the leverage point for all of them.</div>
   </div>
 </section>
 
