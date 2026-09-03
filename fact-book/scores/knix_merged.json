@@ -1,0 +1,22 @@
+{
+  "brand": "Knix",
+  "mode": "outside-in",
+  "audit_date": "2026-08-02",
+  "corpus_n": 235,
+  "corpus_window": "2026-01-21 → 2026-08-02",
+  "overall": 59,
+  "band": "Competent (mid)",
+  "band_note": "Group parent of MNTD. Strong creative variety and cadence infrastructure but weak DMARC posture (p=none across the portfolio) and blunt every-day-of-week send pattern (8.5 sends/week, distributed evenly across all 7 days) drag deliverability + campaign scores. Would move meaningfully with a Group-level DMARC lift.",
+  "rows": [
+    ["1 Deliverability & list health",   20, 2, "Med-High (DMARC p=none · BIMI skipped for insufficient dmarc)"],
+    ["2 Lifecycle / flow coverage",       20, 3, "Med"],
+    ["3 Segmentation & personalization",  12, 2, "Med (hreflang en-CA/en-US present but email variance not observed)"],
+    ["4 Campaign strategy & calendar",    10, 3, "High (8.5/wk · every-day-of-week even distribution)"],
+    ["5 Offer & margin strategy",         10, 3, "Med-High (10-60% depth range · very deep at top end)"],
+    ["6 Creative, copy & UX",             10, 4, "Med (visual variety strong · text-mix good)"],
+    ["7 Conversion path & tracking",       8, 3, "Med (Klaviyo → SendGrid via send.knix.com — branded tracking unverified)"],
+    ["8 Measurement & reporting",          6, 2, "Low (no ESP access)"],
+    ["9 Compliance & consent (CASL)",      4, 4, "Med"]
+  ],
+  "notes": "DNS confirmed: SPF v=spf1 include:mimecast + google + amazonses + shopify ~all (softfail, mixed sender set). DMARC p=none, rua=postmaster@knix.com. BIMI not published (blocked by insufficient dmarc). DKIM kl2 selector CNAME to sendgrid.net. MX via Mimecast. Storefront hreflang en-CA + en-US (bilingual English)."
+}

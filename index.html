@@ -510,6 +510,118 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
 .vp-comp-flag{margin-top:10px;padding-top:8px;border-top:1px dashed rgba(245,158,11,0.35);font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--warn)}
 .vp-caption{font-size:13px;color:var(--ink-3);line-height:1.6;margin-top:14px;padding-top:14px;border-top:1px solid var(--rule)}
 .vp-caption strong{color:var(--ink-1);font-weight:700}
+
+/* ===== Kate-feedback rebuild (2026-09-03) ===== */
+/* TL;DR band */
+.tldr-band{background:linear-gradient(180deg,var(--surface-1),var(--surface-2));border:1px solid var(--rule);border-radius:16px;padding:28px 26px;margin:0 0 24px}
+.tldr-eye{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--ga-blue);margin-bottom:10px}
+.tldr-h{font-size:clamp(24px,3.6vw,34px);font-weight:800;line-height:1.12;letter-spacing:-.02em;color:var(--ink-1);margin:0 0 22px;max-width:24ch}
+.tldr-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.tldr-card{background:var(--bg);border:1px solid var(--rule);border-radius:12px;padding:20px 20px}
+.tldr-card .k{font-size:10.5px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--ga-blue);margin-bottom:10px}
+.tldr-card ul{list-style:none;padding:0;margin:0}
+.tldr-card ul li{font-size:14.5px;line-height:1.5;color:var(--ink-2);padding:5px 0;font-weight:500}
+.tldr-card ul li strong{color:var(--ink-1);font-weight:700}
+.tldr-card ul li a{color:var(--ga-blue);text-decoration:none;font-weight:700;border-bottom:1px solid rgba(51,79,180,0.25)}
+.tldr-card p{margin:0;font-size:14.5px;line-height:1.55;color:var(--ink-2)}
+.tldr-card p strong{color:var(--ink-1);font-weight:700}
+.tldr-card .price-row{display:flex;align-items:baseline;gap:8px;padding:4px 0;font-size:14.5px;color:var(--ink-2)}
+.tldr-card .price-row .amt{font-family:'DM Serif Display',serif;font-size:22px;color:var(--ink-1);font-weight:400;letter-spacing:-.5px}
+.tldr-card .price-row .lbl{font-size:12.5px;color:var(--ink-3);font-weight:500}
+.tldr-card.pay{background:linear-gradient(135deg,rgba(51,79,180,0.06),transparent);border-color:rgba(51,79,180,0.28)}
+.tldr-card.pay strong{color:var(--ga-blue)}
+.tldr-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:22px}
+.tldr-btn{display:inline-flex;align-items:center;gap:8px;background:var(--ga-blue);color:#fff !important;font-weight:800;font-size:15px;padding:14px 24px;border-radius:10px;text-decoration:none;letter-spacing:.02em;min-height:48px;box-shadow:0 6px 16px rgba(51,79,180,0.24)}
+.tldr-btn:hover{background:#2a419a}
+.tldr-descend{font-size:13px;color:var(--ink-3);text-decoration:none;font-weight:600}
+.tldr-descend:hover{color:var(--ga-blue)}
+/* Jump strip beneath TL;DR */
+.jump-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 40px}
+.jump-strip a{display:flex;align-items:center;justify-content:center;gap:6px;padding:12px 10px;background:var(--surface-2);border:1px solid var(--rule);border-radius:10px;color:var(--ink-1);text-decoration:none;font-weight:700;font-size:13.5px;min-height:48px}
+.jump-strip a:hover{background:var(--surface-3);border-color:var(--ga-blue);color:var(--ga-blue)}
+@media(max-width:640px){
+  .tldr-grid{grid-template-columns:1fr}
+  .jump-strip{grid-template-columns:repeat(2,1fr)}
+  .tldr-band{padding:20px 18px;border-radius:12px}
+  .tldr-h{font-size:22px}
+}
+/* Redesigned nav — 6 primary anchors + Evidence dropdown */
+.topbar-nav{display:flex;align-items:center;gap:2px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.topbar-nav::-webkit-scrollbar{display:none}
+.topbar-nav > a, .topbar-nav > details > summary{white-space:nowrap;padding:10px 14px;font-size:13.5px;font-weight:600;color:var(--ink-2);text-decoration:none;border-radius:8px;list-style:none;cursor:pointer;letter-spacing:.01em}
+.topbar-nav > a:hover, .topbar-nav > details > summary:hover{background:var(--surface-2);color:var(--ink-1)}
+.topbar-nav > a.book-pill{background:var(--ga-blue);color:#fff;font-weight:800;padding:10px 18px;box-shadow:0 2px 6px rgba(51,79,180,0.28);margin-left:auto}
+.topbar-nav > a.book-pill:hover{background:#2a419a;color:#fff}
+.topbar-nav > details{position:relative}
+.topbar-nav > details > summary::marker,.topbar-nav > details > summary::-webkit-details-marker{display:none}
+.topbar-nav > details > summary::after{content:"▾";margin-left:4px;font-size:10px;color:var(--ink-3)}
+.topbar-nav > details[open] > summary{background:var(--surface-2);color:var(--ink-1)}
+.topbar-nav-drop{position:absolute;top:calc(100% + 6px);left:0;background:var(--bg);border:1px solid var(--rule);border-radius:10px;padding:6px;box-shadow:0 8px 24px rgba(0,0,0,0.12);min-width:200px;z-index:60}
+.topbar-nav-drop a{display:block;padding:9px 12px;font-size:13.5px;font-weight:600;color:var(--ink-2);text-decoration:none;border-radius:6px}
+.topbar-nav-drop a:hover{background:var(--surface-2);color:var(--ga-blue)}
+@media(max-width:640px){
+  .topbar-nav > a, .topbar-nav > details > summary{font-size:12.5px;padding:9px 10px}
+  .topbar-nav > a.book-pill{margin-left:6px}
+}
+/* Sticky floating Book button (visible from scroll depth 200) */
+.book-float{position:fixed;bottom:24px;right:24px;background:var(--ga-blue);color:#fff !important;font-weight:800;font-size:14.5px;padding:14px 22px;border-radius:99px;text-decoration:none;letter-spacing:.02em;box-shadow:0 10px 26px rgba(51,79,180,0.36),0 2px 6px rgba(0,0,0,0.1);z-index:70;opacity:0;transform:translateY(12px);transition:opacity .25s,transform .25s;min-height:48px;display:inline-flex;align-items:center;gap:8px}
+.book-float.on{opacity:1;transform:translateY(0)}
+.book-float:hover{background:#2a419a}
+@media(max-width:640px){.book-float{bottom:16px;right:16px;padding:12px 18px;font-size:13.5px}}
+/* Scroll progress bar — thin line, top of viewport */
+.scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--ga-blue),var(--ga-green));z-index:100;width:0;transition:width .12s ease-out}
+/* Fact-book accordions (Section 15) */
+.fb-scoreboard{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px}
+.fb-brand{background:var(--surface-1);border:1px solid var(--rule);border-radius:14px;padding:22px 18px;text-align:center}
+.fb-brand .bname{font-size:11px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--ga-blue);margin-bottom:6px}
+.fb-brand .bnum{font-family:'DM Serif Display',serif;font-size:44px;font-weight:400;line-height:1;letter-spacing:-1.5px;color:var(--ink-1)}
+.fb-brand .bnum span{font-size:18px;color:var(--ink-3);margin-left:2px}
+.fb-brand .bband{font-size:12.5px;color:var(--ink-3);margin-top:6px;font-weight:600}
+.fb-brand .bmode{font-size:9.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--warn);font-weight:800;margin-top:8px}
+.fb-brand .bmode.io{color:var(--ga-green)}
+@media(max-width:640px){.fb-scoreboard{grid-template-columns:1fr}}
+.fb-acc{border:1px solid var(--rule);border-radius:12px;margin-bottom:12px;overflow:hidden;background:var(--bg)}
+.fb-acc summary{padding:16px 20px;cursor:pointer;font-weight:700;font-size:15px;color:var(--ink-1);list-style:none;display:flex;align-items:center;gap:12px;min-height:48px}
+.fb-acc summary::marker,.fb-acc summary::-webkit-details-marker{display:none}
+.fb-acc summary::after{content:"+";margin-left:auto;font-weight:400;font-size:22px;color:var(--ink-3);transition:transform .2s}
+.fb-acc[open] summary::after{content:"×"}
+.fb-acc summary .fb-score{font-family:'DM Mono',monospace;font-size:13px;font-weight:700;color:var(--ga-blue);background:var(--surface-2);padding:3px 8px;border-radius:5px;letter-spacing:.02em}
+.fb-acc summary:hover{background:var(--surface-2)}
+.fb-acc-body{padding:8px 22px 22px;border-top:1px solid var(--rule)}
+.fb-acc-body p{font-size:14.5px;line-height:1.6;color:var(--ink-2);margin:10px 0}
+.fb-acc-body ul{padding-left:20px;margin:8px 0}
+.fb-acc-body li{font-size:14px;line-height:1.55;color:var(--ink-2);padding:3px 0}
+.fb-acc-body strong{color:var(--ink-1);font-weight:700}
+.fb-plays{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.fb-play{border:1px solid var(--rule);border-radius:12px;overflow:hidden;display:grid;grid-template-columns:1.15fr 1fr 1fr}
+.fb-play > div{padding:16px 18px}
+.fb-play .k{font-size:10.5px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:6px}
+.fb-play .find .k{color:var(--ink-1)}
+.fb-play .fix{background:rgba(51,79,180,0.06)}
+.fb-play .fix .k{color:var(--ga-blue)}
+.fb-play .win{background:rgba(45,156,86,0.06)}
+.fb-play .win .k{color:var(--ga-green)}
+.fb-play p{margin:0;font-size:14px;line-height:1.55;color:var(--ink-1)}
+.fb-play .win p{color:#20502F;font-weight:600}
+@media(max-width:760px){.fb-play{grid-template-columns:1fr}}
+/* Section 14 hardball card variants (extend existing invest layout) */
+.hb-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:22px}
+.hb-card{background:var(--surface-1);border:1px solid var(--rule);border-radius:14px;padding:22px 22px}
+.hb-card.wide{grid-column:1 / -1}
+.hb-card .k{font-size:10.5px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--ga-blue);margin-bottom:12px}
+.hb-card h4{font-size:16px;font-weight:800;margin:0 0 10px;color:var(--ink-1);letter-spacing:-.02em}
+.hb-card ul{padding-left:18px;margin:6px 0 0}
+.hb-card ul li{font-size:14.5px;line-height:1.55;color:var(--ink-2);padding:4px 0}
+.hb-card ul li strong{color:var(--ink-1);font-weight:700}
+.hb-card p{margin:0;font-size:14.5px;line-height:1.55;color:var(--ink-2)}
+.hb-card p strong{color:var(--ink-1);font-weight:700}
+.hb-card.pay{background:linear-gradient(135deg,rgba(51,79,180,0.07),rgba(45,156,86,0.03));border-color:rgba(51,79,180,0.25)}
+.hb-price-block{display:flex;flex-wrap:wrap;gap:20px;padding:6px 0}
+.hb-price-block .p-line{display:flex;align-items:baseline;gap:6px}
+.hb-price-block .amt{font-family:'DM Serif Display',serif;font-size:32px;color:var(--ink-1);letter-spacing:-1px;font-weight:400;line-height:1}
+.hb-price-block .per{font-size:12px;color:var(--ink-3);font-weight:600;text-transform:uppercase;letter-spacing:.12em}
+@media(max-width:640px){.hb-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -533,27 +645,93 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
   </div>
   <div class="topbar-nav-wrap">
     <nav class="topbar-nav" aria-label="Section navigation">
+      <a href="#tldr">TL;DR</a>
       <a href="#story">Story</a>
-      <a href="#store">In-Store</a>
-      <a href="#shop1">Mobile</a>
-      <a href="#shop2">Desktop</a>
-      <a href="#prejourney">Journey Map</a>
-      <a href="#postpurchase">Post-Purchase</a>
-      <a href="#gaps">Gaps</a>
-      <a href="#commercial">Commercial</a>
-      <a href="#pdp-design">PDP</a>
-      <a href="#segmentation">Segmentation</a>
-      <a href="#engagement">Engagement</a>
-      <a href="#team">Team</a>
-      <a href="#tools">Tools</a>
       <a href="#proposal">Proposal</a>
-      <a href="#legal">Legal</a>
+      <a href="#team">Team</a>
+      <details class="topbar-nav-details">
+        <summary>Evidence</summary>
+        <div class="topbar-nav-drop">
+          <a href="#store">In-Store</a>
+          <a href="#shop1">Mobile Shop</a>
+          <a href="#shop2">Desktop Shop</a>
+          <a href="#prejourney">Journey Map</a>
+          <a href="#postpurchase">Post-Purchase</a>
+          <a href="#gaps">Gaps</a>
+          <a href="#commercial">Commercial</a>
+          <a href="#pdp-design">PDP Design</a>
+          <a href="#segmentation">Segmentation</a>
+          <a href="#engagement">Engagement</a>
+          <a href="#fact-book">Competitive Email Audit</a>
+          <a href="#tools">Tools</a>
+          <a href="#legal">Legal</a>
+        </div>
+      </details>
       <a href="scorecard.html" class="ext">Scorecard</a>
+      <a href="https://seo-for-ai.growthautomated.ai/book_time" target="_blank" rel="noopener" class="book-pill">Book 30 min ↗</a>
     </nav>
   </div>
 </div>
 
 <div class="page">
+
+<div id="tldr" class="tldr-band">
+  <div class="tldr-eye">TL;DR · The 60-second read</div>
+  <h1 class="tldr-h">MNTD has product-market fit. The customer experience around it hasn't caught up yet.</h1>
+
+  <div class="tldr-grid">
+    <div class="tldr-card">
+      <div class="k">What we'll do</div>
+      <ul>
+        <li>Fix the cart-to-checkout coupon conflict — <a href="#ds3"><strong>a $73.60 gap per order today</strong></a></li>
+        <li>Stand up the missing abandoned-cart flow — recovery is currently zero</li>
+        <li>Rebuild the review-request cadence for wash-before-wear timing so <strong>Best Damn Tee</strong> earns its fifth star</li>
+        <li>Move the Knix Group to DMARC quarantine — MNTD's inbox lifts for free (<a href="#fact-book">receipts</a>)</li>
+      </ul>
+    </div>
+
+    <div class="tldr-card">
+      <div class="k">What it costs</div>
+      <div class="hb-price-block">
+        <div class="p-line"><span class="amt">$12K</span><span class="per">/mo · core retainer</span></div>
+      </div>
+      <p style="margin-top:8px;font-size:13.5px;color:var(--ink-3)">90-day working plan. Deposit + monthly. Net 30 thereafter.</p>
+      <div class="hb-price-block" style="margin-top:14px">
+        <div class="p-line"><span class="amt">$3.5K</span><span class="per">/mo · per Phase 2 track</span></div>
+      </div>
+      <p style="margin-top:8px;font-size:13.5px;color:var(--ink-3)">AEO / SEO / Reddit — optional, gated on Day 60.</p>
+    </div>
+
+    <div class="tldr-card">
+      <div class="k">What you get</div>
+      <ul>
+        <li><strong>Every cart abandoner touched</strong> — Klaviyo flow, 3-touch, live inside 90 days</li>
+        <li><strong>DTC-standard review completion</strong> — deliverable-first, category-calibrated cadence</li>
+        <li><strong>10–25% return-rate drop</strong> from AI-driven size charts (DTC benchmark)</li>
+        <li><strong>A DMARC posture that matches SAXX</strong> — group-wide inbox trust</li>
+      </ul>
+    </div>
+
+    <div class="tldr-card pay">
+      <div class="k">What it pays back</div>
+      <p><strong>$73.60 of recovered revenue per abandoned-cart order</strong> — the same evidence-anchored number from your own cart audit.</p>
+      <p style="margin-top:10px">The retainer breaks even at <strong>163 recovered orders per month</strong>. Every recovered order after that is pure margin.</p>
+    </div>
+  </div>
+
+  <div class="tldr-cta">
+    <a class="tldr-btn" href="https://seo-for-ai.growthautomated.ai/book_time" target="_blank" rel="noopener">Book 30 minutes ↗</a>
+    <a class="tldr-descend" href="#story">Descend into the story ↓</a>
+  </div>
+</div>
+
+<div class="jump-strip" aria-label="Quick jump">
+  <a href="#proposal">→ The Plan</a>
+  <a href="#team">→ The Team</a>
+  <a href="#gaps">→ The Gaps</a>
+  <a href="scorecard.html">→ Scorecard</a>
+</div>
+
 
 <section class="hero" id="story">
   <div class="hero-top">
@@ -1752,8 +1930,8 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
       <div class="invest-body">Founder-level operator in Shopify + Klaviyo. Weekly working sessions with Kate. Shared dashboard and change log. Deposit + monthly, net 30 thereafter.</div>
     </div>
     <div class="invest-price">
-      <div class="invest-amt">*.*</div>
-      <div class="invest-per">Pricing TBD · not yet defined</div>
+      <div class="invest-amt">$12K</div>
+      <div class="invest-per">per month · 90-day core retainer</div>
     </div>
   </div>
 </section>
@@ -1940,17 +2118,47 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
 
 <section class="section" id="proposal">
   <div class="section-label">14 · The Proposal</div>
-  <h2 class="section-title">Pricing to be defined. Ninety days. Then a Phase 2 gate for AEO, SEO, Reddit.</h2>
-  <p class="section-intro">This is the shape of the working agreement. Everything scoped in Sections 08 – 13 fits inside the core retainer. The MRR expansion below is optional — added on top after the first 60 days if the shared dashboard says it's the right time.</p>
+  <h2 class="section-title">This is what we'll do. This is what it costs. This is what you get. This is what it pays back.</h2>
+  <p class="section-intro">Ninety days on the core retainer. Then a Phase 2 gate for AEO, SEO, Reddit. Everything scoped in Sections 08 – 13 fits inside the core retainer. Phase 2 tracks add on top after Day 60 if the shared dashboard says it's the right time.</p>
+
+  <div class="hb-grid">
+    <div class="hb-card">
+      <div class="k">What we'll do</div>
+      <ul>
+        <li><strong>Fix</strong> the cart-to-checkout coupon conflict (Section 04 DS-3)</li>
+        <li><strong>Stand up</strong> the abandoned-cart Klaviyo flow (Section 07 · biggest single Tier-1 gap)</li>
+        <li><strong>Rebuild</strong> the review-request cadence for wash-before-wear timing (Section 06 · Day-13 evidence)</li>
+        <li><strong>Ship</strong> a confident size recommender to the PDP (Section 09 · 10-25% return-rate drop)</li>
+        <li><strong>Move</strong> the Knix Group to DMARC quarantine — lifts MNTD's inbox for free (Section 15 · fact book)</li>
+      </ul>
+    </div>
+
+    <div class="hb-card">
+      <div class="k">What you get</div>
+      <ul>
+        <li><strong>Every cart abandoner touched</strong> — 3-touch Klaviyo flow live inside 90 days</li>
+        <li><strong>DTC-standard review completion</strong> — deliverable-first, category-calibrated cadence</li>
+        <li><strong>Category-matching size confidence</strong> — 10-25% return-rate drop from AI-driven size charts (DTC benchmark)</li>
+        <li><strong>A DMARC posture that matches SAXX</strong> — group-wide inbox trust, BIMI earnable within 90 days</li>
+        <li><strong>One dashboard, one weekly session</strong> — with Kate, or with whoever owns MNTD hands-on</li>
+      </ul>
+    </div>
+
+    <div class="hb-card pay wide">
+      <div class="k">What it pays back</div>
+      <p><strong>$73.60 of recovered revenue per abandoned-cart order</strong> — the evidence-anchored gap between the welcome-code path and the Volume + GWP path from the DS-3 cart audit. Every recovered abandon is real margin, not new marketing spend.</p>
+      <p style="margin-top:10px"><strong>The $12K/month retainer breaks even at 163 recovered orders per month.</strong> Every recovered order after that is pure margin. At the AOV shown in the DS-7 evidence, breakeven arrives well before Day 90.</p>
+    </div>
+  </div>
 
   <div class="invest" style="margin-bottom:22px">
     <div>
-      <div class="invest-title">Core working retainer</div>
-      <div class="invest-body">Sections 08 – 13 inclusive. 90-day working plan. Weekly co-working session with Kate. Shared change log. Deposit + monthly, net 30 thereafter. MSA + SOW under Growth Automated's standard papering (see Section 15).</div>
+      <div class="invest-title">Core working retainer · $12K / month</div>
+      <div class="invest-body">Sections 08 – 13 inclusive. 90-day working plan. Weekly co-working session with Kate. Shared change log. Deposit + monthly, net 30 thereafter. MSA + SOW under Growth Automated's standard papering (see Section 16).</div>
     </div>
     <div class="invest-price">
-      <div class="invest-amt">*.*</div>
-      <div class="invest-per">Pricing TBD · not yet defined</div>
+      <div class="invest-amt">$12K</div>
+      <div class="invest-per">per month · 3 months · $36K total</div>
     </div>
   </div>
 
@@ -1978,8 +2186,111 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
   </div>
 </section>
 
+<section class="section" id="fact-book">
+  <div class="section-label">15 · Competitive Email Audit</div>
+  <h2 class="section-title">Three brands, one email ceiling. The lift is at the Group layer.</h2>
+  <p class="section-intro">Same 9-dimension rubric applied three ways — <strong>SAXX Underwear</strong> (competitor, outside-in), <strong>MNTD</strong> (this proposal, inside-out), and <strong>Knix</strong> (parent, outside-in). 407 total campaigns parsed. Confidence rated per dimension so the outside-in vs inside-out asymmetry doesn't inflate MNTD. Tap any brand card below to descend.</p>
+
+  <div class="fb-scoreboard">
+    <div class="fb-brand">
+      <div class="bname">SAXX</div>
+      <div class="bnum">69<span>/100</span></div>
+      <div class="bband">Competent · top of band</div>
+      <div class="bmode">Outside-in</div>
+    </div>
+    <div class="fb-brand">
+      <div class="bname">MNTD</div>
+      <div class="bnum">58<span>/100</span></div>
+      <div class="bband">Competent · mid</div>
+      <div class="bmode io">Inside-out</div>
+    </div>
+    <div class="fb-brand">
+      <div class="bname">Knix</div>
+      <div class="bnum">59<span>/100</span></div>
+      <div class="bband">Competent · mid</div>
+      <div class="bmode">Outside-in</div>
+    </div>
+  </div>
+
+  <details class="fb-acc">
+    <summary>SAXX Underwear · 155 campaigns · outside-in <span class="fb-score">69/100</span></summary>
+    <div class="fb-acc-body">
+      <p><strong>Corpus:</strong> 155 campaigns · Sep 22 2025 → Jul 30 2026 (310 days) · Klaviyo (<code>Yuky3w</code>) · 3.5 sends/week · Sunday-heavy send calendar · 15:00 Pacific peak (Vancouver lunchtime).</p>
+      <p><strong>Best-in-class signals:</strong> <code>DMARC p=reject; pct=100</code> (rare for DTC) · 100% branded tracking via <code>trk.saxxunderwear.ca</code> → CloudFront · full CASL compliance · One-Click unsubscribe · disciplined 15/25/30/40% discount ladder with bundle framing on 27.7% of sends.</p>
+      <p><strong>Real gaps:</strong> BIMI not published · 1.3% subject personalization · English-only despite Canadian brand · 73.5% promo mix (higher than best-practice 50/50).</p>
+      <p><strong>Discovery hooks (would move SAXX 69 → 74–77 with ESP access):</strong> Klaviyo flow inventory · flow-vs-campaign revenue split · segment library · complaint / bounce / placement rates · marketplace segmentation · CA-French feasibility.</p>
+    </div>
+  </details>
+
+  <details class="fb-acc">
+    <summary>MNTD · 17 campaigns · inside-out <span class="fb-score">58/100</span></summary>
+    <div class="fb-acc-body">
+      <p><strong>Corpus:</strong> 17 campaigns · Jun 21 → Jul 24 2026 (33 days) · Klaviyo (<code>CYZZ5N</code>) · 3.6 sends/week · Saturday-heavy (35% of sends).</p>
+      <p><strong>Strongest dimension:</strong> Lifecycle 4/5 · full 9-email transactional flow observed (order → carrier → doorstep) · MNTD + FleetOptics in parallel at every stage.</p>
+      <p><strong>Inherits parent limits:</strong> DMARC <code>p=none</code> on both <code>wearmntd.ca</code> and <code>wearmntd.com</code> (matches Knix Group posture · rua reports to <code>postmaster@knix.com</code>). Same segmentation ceiling as parent — XXXL launch fired list-wide despite Rahul's size on file.</p>
+      <p><strong>MNTD-specific finding:</strong> single 15% welcome code with SMS-vs-email conflict (20% on SMS, 15% on email, same code) — a trust hit at first purchase visible in one screenshot.</p>
+    </div>
+  </details>
+
+  <details class="fb-acc">
+    <summary>Knix · 235 campaigns · outside-in <span class="fb-score">59/100</span></summary>
+    <div class="fb-acc-body">
+      <p><strong>Corpus:</strong> 235 campaigns · Jan 21 → Aug 2 2026 (193 days) · Klaviyo (<code>D4phSK</code>) via SendGrid on <code>send.knix.com</code> · <strong>8.5 sends/week</strong> · every-day-of-week even distribution (30–37 per weekday, no cadence discipline visible).</p>
+      <p><strong>Real gaps:</strong> DMARC <code>p=none</code> — same as MNTD, group-wide monitor-only · BIMI blocked (<em>"insufficient dmarc"</em>) · discount depth 10–60% (deepest single-brand ladder observed, 60% risks margin erosion) · English-only email stream despite storefront <code>hreflang="en-CA"</code> + <code>"en-US"</code>.</p>
+      <p><strong>Group posture:</strong> Corporate MX via Mimecast, marketing send via Klaviyo → SendGrid, DKIM via <code>kl2._domainkey</code> selector. The 8.5/week cadence is the most aggressive of the three brands and shows no send-day strategy.</p>
+    </div>
+  </details>
+
+  <p class="section-intro" style="margin-top:32px;font-weight:700;color:var(--ink-1)">Three Group-level plays · what to move first</p>
+
+  <div class="fb-plays">
+    <div class="fb-play">
+      <div class="find">
+        <div class="k">What we found</div>
+        <p>Knix Group DMARC sits at <code>p=none</code> across <code>knix.com</code>, <code>wearmntd.ca</code>, and <code>wearmntd.com</code> — while competitor SAXX runs <code>p=reject; pct=100</code>. Gmail's Feb 2024 bulk-sender guidance pushes toward <code>p=quarantine</code> minimum for senders at Klaviyo scale.</p>
+      </div>
+      <div class="fix">
+        <div class="k">What we'd do</div>
+        <p>Move Knix Group to <code>p=quarantine</code> across all three sender domains, then earn BIMI. One config change, three brands lifted.</p>
+      </div>
+      <div class="win">
+        <div class="k">What it protects</div>
+        <p>Inbox placement + brand-mark trust across the whole portfolio at once.</p>
+      </div>
+    </div>
+    <div class="fb-play">
+      <div class="find">
+        <div class="k">What we found</div>
+        <p>All three brands sit at Segmentation 2/5 despite Klaviyo capability. SAXX runs 1.3% subject personalization. MNTD sends its XXXL launch list-wide with size on file. Knix serves English-only email despite en-CA + en-US hreflang on the storefront.</p>
+      </div>
+      <div class="fix">
+        <div class="k">What we'd do</div>
+        <p>Klaviyo profile properties for size, gender, and language, fed into templates via merge tags and behavioural segment splits.</p>
+      </div>
+      <div class="win">
+        <div class="k">What it unlocks</div>
+        <p>The highest-leverage dimension moves 2 → 3+ across the group.</p>
+      </div>
+    </div>
+    <div class="fb-play">
+      <div class="find">
+        <div class="k">What we found</div>
+        <p>Offer strategy inconsistent across the group. SAXX 15-40% with bundle framing (differentiated). MNTD single 15% code with SMS-vs-email conflict. Knix 10-60% deep-ladder (60% risks margin erosion).</p>
+      </div>
+      <div class="fix">
+        <div class="k">What we'd do</div>
+        <p>Discount-ladder standard + code-consistency audit across email, SMS, and the storefront popup. Bundle-framed offers as the default lever.</p>
+      </div>
+      <div class="win">
+        <div class="k">What it unlocks</div>
+        <p>Margin protection at Knix depth · offer clarity at MNTD level.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="legal">
-  <div class="section-label">15 · Legal &amp; Onboarding</div>
+  <div class="section-label">16 · Legal &amp; Onboarding</div>
   <h2 class="section-title">Four documents. In order.</h2>
   <p class="section-intro">Growth Automated papers every engagement the same way. All four documents live in our legal folder and can be shared under NDA on request.</p>
 
@@ -2042,7 +2353,7 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
       <ul class="legal-detail-terms">
         <li>Cover, scope, RACI, milestones, investment, acceptance</li>
         <li>MNTD-specific inclusions: Sections 08 – 13 above</li>
-        <li>Retainer form · pricing TBD · not yet defined</li>
+        <li>Retainer form · $12K/mo core · $3.5K/mo per Phase 2 track</li>
       </ul>
       <div class="legal-detail-when"><strong>When:</strong> Signed per engagement. This is where the MNTD scope and monthly figure are codified.</div>
     </div>
@@ -2064,7 +2375,7 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
 <div class="cta">
   <div class="cta-eye">Next step</div>
   <h2 class="cta-h">A 30-minute co-working session — I share the screen, we walk it together.</h2>
-  <p class="cta-body">Not a pitch call. I'll open the site on my phone, we'll retrace the customer journey together, and we'll agree what ships in the first two weeks. If it lands, we paper it under the MSA + SOW in Section 15.</p>
+  <p class="cta-body">Not a pitch call. I'll open the site on my phone, we'll retrace the customer journey together, and we'll agree what ships in the first two weeks. If it lands, we paper it under the MSA + SOW in Section 16.</p>
   <div class="cta-btns">
     <a class="cta-btn" href="https://seo-for-ai.growthautomated.ai/book_time" target="_blank" rel="noopener">Book 30 minutes ↗</a>
     <a class="cta-btn ghost" href="scorecard.html">Open the full scorecard →</a>
@@ -2075,6 +2386,29 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
   <div><strong>Prepared for Kate Rothschild</strong> · MNTD · Toronto ON · July 2026</div>
   <div>Growth Automated · <a href="https://growthautomated.ai">growthautomated.ai</a></div>
 </div>
+
+
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+<a class="book-float" id="book-float" href="https://seo-for-ai.growthautomated.ai/book_time" target="_blank" rel="noopener" aria-label="Book 30 minutes">Book 30 min ↗</a>
+
+<script>
+(function(){
+  var pb=document.getElementById('scroll-progress');
+  var bf=document.getElementById('book-float');
+  var lastY=-1;
+  function update(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    if(y===lastY) return;
+    lastY=y;
+    var h=(document.documentElement.scrollHeight-window.innerHeight)||1;
+    var pct=Math.max(0,Math.min(100,(y/h)*100));
+    pb.style.width=pct+'%';
+    if(y>200){bf.classList.add('on')} else {bf.classList.remove('on')}
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  update();
+})();
+</script>
 
 </div>
 

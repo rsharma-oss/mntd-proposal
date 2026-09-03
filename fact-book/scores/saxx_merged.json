@@ -1,0 +1,40 @@
+{
+  "brand": "SAXX Underwear",
+  "mode": "outside-in",
+  "audit_date": "2026-07-24",
+  "corpus_n": 155,
+  "corpus_window": "2025-09-22 → 2026-07-30",
+  "overall": 69,
+  "band": "Competent (top of band)",
+  "band_note": "55–69 Competent. Would move to ~74–77 Strong with ESP-account access confirming lifecycle depth, measurement rigor, and any behavioural segmentation.",
+  "rows": [
+    ["1 Deliverability & list health",   20, 4, "Med-High"],
+    ["2 Lifecycle / flow coverage",       20, 3, "Med"],
+    ["3 Segmentation & personalization",  12, 2, "Med"],
+    ["4 Campaign strategy & calendar",    10, 4, "High"],
+    ["5 Offer & margin strategy",         10, 4, "Med-High"],
+    ["6 Creative, copy & UX",             10, 3, "Med"],
+    ["7 Conversion path & tracking",       8, 5, "High"],
+    ["8 Measurement & reporting",          6, 2, "Low (no ESP)"],
+    ["9 Compliance & consent (CASL)",      4, 5, "High"]
+  ],
+  "evidence_notes": {
+    "deliverability": "SPF v=spf1 include:spf.protection.outlook.com -all (Klaviyo authenticates via DKIM per skill note, not SPF include). DMARC p=reject pct=100 with ruf reporting — best-in-class enforcement. BIMI not published (nice-to-have gap). Corpus auth pass 100% (SPF/DKIM/DMARC). Branded tracking trk.saxxunderwear.ca → CloudFront (Klaviyo standard) on 100% of sends.",
+    "lifecycle":      "Corpus surfaces welcome (15% off), winback, cart/browse-abandon, and back-in-stock flow signals — 13 lifecycle-typed emails inside 155-msg window. Flow depth, branching, and flow-vs-campaign revenue split need ESP access.",
+    "segmentation":   "Subject-line personalization tokens on only 1.3% of sends. No hreflang / no /fr/ locale despite Canadian brand — CA-French market unaddressed on the storefront. No observed variance suggesting behavioural or RFM segment splits from a single-subscriber vantage.",
+    "campaign":       "3.5 sends/week sustained over 310 days. Send-day skew Sunday-dominant (26% of sends) — unconventional and probably intentional given consumer-brand weekend browsing. Seasonal calendar visible (Valentine's, Father's Day, Cyber Monday, Winter Sale, Realtree collab). Content mix 73.5% promo / 16.8% editorial-education — promo-heavier than best-practice 50/50.",
+    "offer":          "Ladder observed: 15% / 25% / 30% / 40%. Median 40%, but only 24.5% of sends carry any discount — three-quarters of sends are editorial or product-drop (non-margin-eroding). Bundle/multipack callouts on 27.7% of sends — differentiated offer construction, not pure blast-discount.",
+    "creative":       "31-char avg subject (mobile-optimised). 23.9% emoji, 14.2% urgency. Image-heavy sends 0% (favors deliverability + accessibility). Editorial mix present. Full creative quality needs visual inspection of rendered emails.",
+    "conversion":     "100% branded tracking via trk.saxxunderwear.ca (CloudFront-hosted, standard Klaviyo). Zero raw myshopify.com links. Zero marketplace redirects in the 8-email deep sample or the whole-corpus subject scan — the brief's marketplace/omnichannel angle wasn't in this subscriber's stream (could be segmented).",
+    "measurement":    "Infra suggests capability (Klaviyo + branded tracking = clean attribution). Execution quality unverifiable without ESP.",
+    "compliance":     "One-click unsubscribe (RFC 8058) on 100% of sends. Preferences link on 100%. Physical address (2015 Main St, Vancouver BC) on 100%. Fully CASL-compliant."
+  },
+  "discovery_hooks": [
+    "Klaviyo flow inventory + status — confirm the welcome, cart, browse, winback, and BiS depth",
+    "Flow-vs-campaign revenue split — the single number that would move Lifecycle from 3 to 4/5",
+    "Segment library + predictive analytics usage — does anything behind the scenes explain the low subject personalization?",
+    "Complaint / bounce / placement rates — completes the Deliverability picture",
+    "Marketplace segmentation — do Amazon/retail-partner subscribers get a different stream?",
+    "CA-French experiment feasibility — Klaviyo language branching + storefront hreflang"
+  ]
+}

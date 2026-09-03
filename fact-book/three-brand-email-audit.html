@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MNTD × SAXX × Knix — Competitive Email Teardown (drop-in section)</title>
+<style>
+  /* proofing shell only — NOT part of the drop-in */
+  body { margin:0; background:#ffffff; }
+</style>
+</head>
+<body>
+
+<!-- ============================================================= -->
+<!-- ▼▼▼  PASTE FROM HERE INTO index.html (after Section 15/Legal) ▼▼▼ -->
+<!-- ============================================================= -->
+<section class="ga-eaudit">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&display=swap');
+
+    .ga-eaudit{
+      --ga-blue:#334FB4;
+      --ga-green:#2D9C56;
+      --ga-black:#121212;
+      --ga-gray:#F3F3F3;
+      --ga-line:#E2E4EC;
+      --ga-ink-soft:#4A4D57;
+      --ga-blue-tint:#EEF1FB;
+      --ga-green-tint:#EAF6EF;
+      --ga-warn:#F59E0B;
+
+      font-family:'Assistant',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+      color:var(--ga-black);
+      background:#ffffff;
+      -webkit-font-smoothing:antialiased;
+      box-sizing:border-box;
+      padding:88px 24px;
+      line-height:1.55;
+    }
+    .ga-eaudit *,.ga-eaudit *::before,.ga-eaudit *::after{box-sizing:inherit;}
+    .ga-eaudit .wrap{max-width:1080px;margin:0 auto;}
+
+    /* ---- eyebrow + headline ---- */
+    .ga-eaudit .eyebrow{
+      display:inline-flex;align-items:center;gap:10px;
+      font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+      color:var(--ga-blue);margin:0 0 18px;
+    }
+    .ga-eaudit .eyebrow::before{content:"";width:26px;height:2px;background:var(--ga-blue);display:inline-block;}
+    .ga-eaudit h2.ga-h{
+      font-size:clamp(30px,4.4vw,46px);font-weight:800;letter-spacing:-.02em;
+      line-height:1.08;margin:0 0 20px;max-width:24ch;
+    }
+    .ga-eaudit .lede{font-size:18px;color:var(--ga-ink-soft);max-width:70ch;margin:0;}
+    .ga-eaudit .lede b{color:var(--ga-black);font-weight:700;}
+
+    /* ---- scope pills ---- */
+    .ga-eaudit .scope{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 0;}
+    .ga-eaudit .scope span{
+      font-size:14px;color:var(--ga-ink-soft);
+      background:var(--ga-gray);border:1px solid var(--ga-line);
+      padding:9px 15px;border-radius:99px;
+    }
+    .ga-eaudit .scope b{color:var(--ga-blue);font-weight:800;}
+
+    /* ---- working / reassurance strip ---- */
+    .ga-eaudit .working{
+      margin:40px 0 8px;padding:18px 22px;border-left:3px solid var(--ga-green);
+      background:var(--ga-green-tint);border-radius:0 10px 10px 0;
+      font-size:15.5px;color:#20502F;
+    }
+    .ga-eaudit .working b{color:var(--ga-green);font-weight:700;}
+
+    /* ---- section label ---- */
+    .ga-eaudit .lbl{
+      font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--ga-ink-soft);margin:56px 0 18px;
+    }
+
+    /* ---- proof cards ---- */
+    .ga-eaudit .proof{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+    .ga-eaudit .card{border:1px solid var(--ga-line);border-radius:14px;padding:22px 20px;background:#fff;}
+    .ga-eaudit .card .tag{
+      display:inline-block;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+      font-size:11px;color:var(--ga-blue);background:var(--ga-blue-tint);
+      padding:4px 8px;border-radius:6px;margin-bottom:14px;letter-spacing:.02em;
+    }
+    .ga-eaudit .card h4{font-size:17px;font-weight:700;margin:0 0 8px;line-height:1.25;}
+    .ga-eaudit .card p{font-size:14.5px;color:var(--ga-ink-soft);margin:0;}
+
+    /* ---- 3-brand scorecard ---- */
+    .ga-eaudit .scorewrap{margin-top:24px;border:1px solid var(--ga-line);border-radius:16px;overflow:hidden;}
+
+    /* header row of overall totals · 3 columns */
+    .ga-eaudit .scorehead{
+      display:grid;grid-template-columns:1fr repeat(3,1fr);gap:0;
+      background:var(--ga-gray);border-bottom:1px solid var(--ga-line);
+    }
+    .ga-eaudit .headleft{padding:24px 26px;display:flex;flex-direction:column;justify-content:center;}
+    .ga-eaudit .headleft .ttl{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ga-ink-soft);margin-bottom:4px;}
+    .ga-eaudit .headleft .sub{font-size:14px;color:var(--ga-ink-soft);}
+    .ga-eaudit .brandcell{
+      padding:24px 20px;text-align:center;border-left:1px solid var(--ga-line);
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+    }
+    .ga-eaudit .brandcell .bname{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ga-blue);margin-bottom:4px;}
+    .ga-eaudit .brandcell .bnum{font-size:44px;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--ga-black);}
+    .ga-eaudit .brandcell .bnum span{font-size:18px;color:var(--ga-ink-soft);font-weight:700;margin-left:2px;}
+    .ga-eaudit .brandcell .bband{font-size:12px;color:var(--ga-ink-soft);margin-top:6px;font-weight:600;}
+    .ga-eaudit .brandcell.mid .bnum{color:var(--ga-blue);}
+    .ga-eaudit .brandcell .bmode{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ga-warn);font-weight:700;margin-top:6px;}
+    .ga-eaudit .brandcell .bmode.inout{color:var(--ga-green);}
+
+    /* row area · dim label + 3 mini-meters */
+    .ga-eaudit .rows{padding:8px 0;}
+    .ga-eaudit .row{
+      display:grid;grid-template-columns:1fr repeat(3,1fr);align-items:center;gap:0;
+      padding:0;border-bottom:1px solid var(--ga-line);
+    }
+    .ga-eaudit .row:last-child{border-bottom:none;}
+    .ga-eaudit .row .name{padding:14px 26px;font-size:14.5px;font-weight:600;}
+    .ga-eaudit .row .name small{display:block;font-weight:500;color:var(--ga-ink-soft);font-size:12px;letter-spacing:.03em;margin-top:2px;}
+    .ga-eaudit .cell{
+      padding:14px 18px;border-left:1px solid var(--ga-line);
+      display:grid;grid-template-columns:1fr 30px;align-items:center;gap:12px;
+    }
+    .ga-eaudit .meter{height:8px;border-radius:99px;background:var(--ga-line);overflow:hidden;}
+    .ga-eaudit .meter i{display:block;height:100%;border-radius:99px;background:var(--ga-blue);}
+    .ga-eaudit .cell .sc{font-size:13px;font-weight:700;text-align:right;color:var(--ga-black);}
+    .ga-eaudit .cell .sc b{color:var(--ga-ink-soft);font-weight:600;}
+    .ga-eaudit .cell.hi .meter i{background:var(--ga-green);}
+    .ga-eaudit .cell.lo .meter i{background:var(--ga-warn);}
+
+    /* ---- analyze -> action ---- */
+    .ga-eaudit .aa{display:flex;flex-direction:column;gap:14px;margin-top:22px;}
+    .ga-eaudit .aarow{
+      display:grid;grid-template-columns:1.15fr 1fr auto;gap:0;
+      border:1px solid var(--ga-line);border-radius:14px;overflow:hidden;
+    }
+    .ga-eaudit .aacell{padding:18px 20px;}
+    .ga-eaudit .aacell .k{
+      font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;margin:0 0 7px;
+    }
+    .ga-eaudit .aacell.find .k{color:var(--ga-black);}
+    .ga-eaudit .aacell.fix{background:var(--ga-blue-tint);}
+    .ga-eaudit .aacell.fix .k{color:var(--ga-blue);}
+    .ga-eaudit .aacell.win{background:var(--ga-green-tint);min-width:230px;}
+    .ga-eaudit .aacell.win .k{color:var(--ga-green);}
+    .ga-eaudit .aacell p{margin:0;font-size:14.5px;color:var(--ga-black);}
+    .ga-eaudit .aacell.win p{color:#20502F;font-weight:600;}
+
+    /* ---- close ---- */
+    .ga-eaudit .close{
+      margin-top:52px;padding:40px 36px;border-radius:18px;background:var(--ga-black);color:#fff;
+    }
+    .ga-eaudit .close h3{font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.01em;margin:0 0 12px;max-width:28ch;}
+    .ga-eaudit .close p{font-size:16.5px;color:#C7C9D2;margin:0 0 6px;max-width:60ch;}
+    .ga-eaudit .close .who{margin-top:22px;font-size:14px;color:#9CA0AC;}
+    .ga-eaudit .close .who b{color:#fff;font-weight:700;}
+    .ga-eaudit .close .who span{color:var(--ga-blue);}
+
+    /* ---- responsive ---- */
+    @media (max-width:900px){
+      .ga-eaudit .proof{grid-template-columns:1fr;}
+      .ga-eaudit .aarow{grid-template-columns:1fr;}
+      .ga-eaudit .scorehead,.ga-eaudit .row{grid-template-columns:1fr;}
+      .ga-eaudit .brandcell,.ga-eaudit .cell{border-left:none;border-top:1px solid var(--ga-line);}
+      .ga-eaudit .row .name{padding:14px 20px 4px;}
+      .ga-eaudit .cell{padding:6px 20px 12px;}
+    }
+    @media (prefers-reduced-motion:reduce){
+      .ga-eaudit .meter i{transition:none;}
+    }
+  </style>
+
+  <div class="wrap">
+
+    <p class="eyebrow">Appendix · Competitive email teardown</p>
+    <h2 class="ga-h">Three brands, one email ceiling. The lift is at the Group layer.</h2>
+    <p class="lede">Same 9-dimension rubric applied three ways — <b>SAXX Underwear</b> (competitor, outside-in), <b>MNTD</b> (this proposal, inside-out), and <b>Knix</b> (parent, outside-in). <b>407 total campaigns parsed</b>. Confidence rated per dimension so the outside-in vs inside-out asymmetry doesn't inflate MNTD or flatter Knix. The story that emerges: the biggest single lever isn't at brand level — it's at the Knix Group configuration layer.</p>
+
+    <div class="scope">
+      <span><b>407</b> campaigns parsed (155 + 235 + 17)</span>
+      <span><b>3</b> brands · same rubric · confidence tagged</span>
+      <span><b>DNS + storefront + corpus</b> for each</span>
+    </div>
+
+    <div class="working">
+      <b>First, the good news across the portfolio.</b> All three brands run Klaviyo-native infrastructure with clean templates, sound authentication at the sender level, and CASL-compliant footers. What's below isn't a rebuild — it's configuration and segmentation that already exists but isn't wired.
+    </div>
+
+    <p class="lbl">Three proof-points that shape the read</p>
+    <div class="proof">
+      <div class="card">
+        <span class="tag">DELIVERABILITY · GROUP</span>
+        <h4>Knix Group is at <code>p=none</code> across the portfolio</h4>
+        <p>DMARC monitor-only on <code>knix.com</code>, <code>wearmntd.ca</code>, <code>wearmntd.com</code>. Competitor SAXX is at <code>p=reject; pct=100</code>. One config change lifts every brand's inbox floor at once.</p>
+      </div>
+      <div class="card">
+        <span class="tag">DISCIPLINE · SAXX</span>
+        <h4>SAXX punches above its brand size</h4>
+        <p>Smaller player, tighter discipline: 3.5 sends/wk (vs Knix 8.5), Sunday-heavy send calendar, differentiated bundle-framed offers, 100% branded tracking, DMARC enforced. Discipline is doing the work brand size can't.</p>
+      </div>
+      <div class="card">
+        <span class="tag">INHERITANCE · MNTD</span>
+        <h4>MNTD inherits parent limits</h4>
+        <p>Same DMARC hole and same segmentation ceiling as Knix, but stronger lifecycle coverage (full 9-email transactional flow observed). Portfolio fixes at Group level move MNTD's floor without brand-specific work.</p>
+      </div>
+    </div>
+
+    <p class="lbl">The 9-dimension read · side-by-side</p>
+    <div class="scorewrap">
+      <div class="scorehead">
+        <div class="headleft">
+          <div class="ttl">Weighted /100</div>
+          <div class="sub">Bands: 85+ Best-in-class · 70+ Strong · 55+ Competent</div>
+        </div>
+        <div class="brandcell">
+          <div class="bname">SAXX</div>
+          <div class="bnum">69<span>/100</span></div>
+          <div class="bband">Competent · top</div>
+          <div class="bmode">Outside-in</div>
+        </div>
+        <div class="brandcell mid">
+          <div class="bname">MNTD</div>
+          <div class="bnum">58<span>/100</span></div>
+          <div class="bband">Competent · mid</div>
+          <div class="bmode inout">Inside-out</div>
+        </div>
+        <div class="brandcell">
+          <div class="bname">Knix</div>
+          <div class="bnum">59<span>/100</span></div>
+          <div class="bband">Competent · mid</div>
+          <div class="bmode">Outside-in</div>
+        </div>
+      </div>
+
+      <div class="rows">
+        <!-- Row template: name+weight · SAXX cell · MNTD cell · Knix cell
+             meter width = score/5 * 100% -->
+        <div class="row">
+          <div class="name">Deliverability &amp; list health <small>Weight 20</small></div>
+          <div class="cell hi"><div class="meter"><i style="width:80%"></i></div><div class="sc">4<b>/5</b></div></div>
+          <div class="cell"><div class="meter"><i style="width:60%"></i></div><div class="sc">3<b>/5</b></div></div>
+          <div class="cell lo"><div class="meter"><i style="width:40%"></i></div><div class="sc">2<b>/5</b></div></div>
+        </div>
+        <div class="row">
+          <div class="name">Lifecycle / flow coverage <small>Weight 20</small></div>
+          <div class="cell"><div class="meter"><i style="width:60%"></i></div><div class="sc">3<b>/5</b></div></div>
+          <div class="cell hi"><div class="meter"><i style="width:80%"></i></div><div class="sc">4<b>/5</b></div></div>
+          <div class="cell"><div class="meter"><i style="width:60%"></i></div><div class="sc">3<b>/5</b></div></div>
+        </div>
+        <div class="row">
+          <div class="name">Segmentation &amp; personalization <small>Weight 12</small></div>
+          <div class="cell lo"><div class="meter"><i style="width:40%"></i></div><div class="sc">2<b>/5</b></div></div>
+          <div class="cell lo"><div class="meter"><i style="width:40%"></i></div><div class="sc">2<b>/5</b></div></div>
+          <div class="cell lo"><div class="meter"><i style="width:40%"></i></div><div class="sc">2<b>/5</b></div></div>
+        </div>
+        <div class="row">
+          <div class="name">Campaign strategy &amp; calendar <small>Weight 10</small></div>
+          <div class="cell hi"><div class="meter"><i style="width:80%"></i></div><div class="sc">4<b>/5</b></div></div>
+          <div class="cell"><div class="meter"><i style="width:60%"></i></div><div class="sc">3<b>/5</b></div></div>
+          <div class="cell"><div class="meter"><i style="width:60%"></i></div><div class="sc">3<b>/5</b></div></div>
+        </div>
+        <div class="row">
+          <div class="name">Offer &amp; margin strategy <small>Weight 10</small></div>
+          <div class="cell hi"><div class="meter"><i style="width:80%"></i></div><div class="sc">4<b>/5</b></div></div>
+          <div class="cell lo"><div class="meter"><i style="width:40%"></i></div><div class="sc">2<b>/5</b></div></div>
+          <div class="cell"><div class="meter"><i style="width:60%"></i></div><div class="sc">3<b>/5</b></div></div>
+        </div>
+        <div class="row">
+          <div class="name">Creative, copy &amp; UX <small>Weight 10</small></div>
+          <div class="cell"><div class="meter"><i style="width:60%"></i></div><div class="sc">3<b>/5</b></div></div>
+          <div class="cell"><div class="meter"><i style="width:60%"></i></div><div class="sc">3<b>/5</b></div></div>
+          <div class="cell hi"><div class="meter"><i style="width:80%"></i></div><div class="sc">4<b>/5</b></div></div>
+        </div>
+        <div class="row">
+          <div class="name">Conversion path &amp; tracking <small>Weight 8</small></div>
+          <div class="cell hi"><div class="meter"><i style="width:100%"></i></div><div class="sc">5<b>/5</b></div></div>
+          <div class="cell"><div class="meter"><i style="width:60%"></i></div><div class="sc">3<b>/5</b></div></div>
+          <div class="cell"><div class="meter"><i style="width:60%"></i></div><div class="sc">3<b>/5</b></div></div>
+        </div>
+        <div class="row">
+          <div class="name">Measurement &amp; reporting <small>Weight 6</small></div>
+          <div class="cell lo"><div class="meter"><i style="width:40%"></i></div><div class="sc">2<b>/5</b></div></div>
+          <div class="cell lo"><div class="meter"><i style="width:40%"></i></div><div class="sc">2<b>/5</b></div></div>
+          <div class="cell lo"><div class="meter"><i style="width:40%"></i></div><div class="sc">2<b>/5</b></div></div>
+        </div>
+        <div class="row">
+          <div class="name">Compliance &amp; consent · CASL <small>Weight 4</small></div>
+          <div class="cell hi"><div class="meter"><i style="width:100%"></i></div><div class="sc">5<b>/5</b></div></div>
+          <div class="cell"><div class="meter"><i style="width:60%"></i></div><div class="sc">3<b>/5</b></div></div>
+          <div class="cell hi"><div class="meter"><i style="width:80%"></i></div><div class="sc">4<b>/5</b></div></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="lbl">Three Group-level plays · what to move first</p>
+    <div class="aa">
+      <div class="aarow">
+        <div class="aacell find">
+          <p class="k">What we found</p>
+          <p>Knix Group DMARC sits at <code>p=none</code> across knix.com, wearmntd.ca, and wearmntd.com — while SAXX runs <code>p=reject; pct=100</code>. Gmail's Feb 2024 bulk-sender guidance pushes toward <code>p=quarantine</code> minimum for senders at Klaviyo scale.</p>
+        </div>
+        <div class="aacell fix">
+          <p class="k">What we'd do</p>
+          <p>Move Knix Group to <code>p=quarantine</code> across all three sender domains, then earn BIMI. One config change, three brands lifted.</p>
+        </div>
+        <div class="aacell win">
+          <p class="k">What it protects</p>
+          <p>Inbox placement + brand-mark trust across the whole portfolio at once.</p>
+        </div>
+      </div>
+      <div class="aarow">
+        <div class="aacell find">
+          <p class="k">What we found</p>
+          <p>All three brands sit at Segmentation 2/5 despite Klaviyo capability — SAXX runs 1.3% subject personalization, MNTD sends its XXXL launch list-wide with size on file, Knix serves English-only email despite en-CA + en-US hreflang on the storefront.</p>
+        </div>
+        <div class="aacell fix">
+          <p class="k">What we'd do</p>
+          <p>Klaviyo profile properties for size, gender, and language, fed into templates via merge tags and behavioural segment splits.</p>
+        </div>
+        <div class="aacell win">
+          <p class="k">What it unlocks</p>
+          <p>The highest-leverage dimension moves 2 → 3+ across the group.</p>
+        </div>
+      </div>
+      <div class="aarow">
+        <div class="aacell find">
+          <p class="k">What we found</p>
+          <p>Offer strategy inconsistent across the group. SAXX 15–40% with bundle framing (differentiated). MNTD single 15% code with SMS-vs-email conflict (20% on SMS, 15% on email — same code). Knix 10–60% deep-ladder (60% risks margin erosion).</p>
+        </div>
+        <div class="aacell fix">
+          <p class="k">What we'd do</p>
+          <p>Discount-ladder standard + code-consistency audit across email, SMS, and the storefront popup. Bundle-framed offers as the default lever, not blanket percentage cuts.</p>
+        </div>
+        <div class="aacell win">
+          <p class="k">What it unlocks</p>
+          <p>Margin protection at Knix depth · offer clarity at MNTD level.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="close">
+      <h3>The lift isn't at the brand — it's at the Group.</h3>
+      <p>DMARC, segmentation, and offer consistency are portfolio plays. Fix once at the Knix Group configuration layer and all three brands benefit. MNTD's own audit already earns the strongest Lifecycle score of the three (4/5, inside-out) — the ceiling on its scoring is set by policy it inherits, not by anything MNTD is doing wrong.</p>
+      <p class="who"><b>Rahul Sharma</b> · Founder · <span>Growth Automated</span> · Aug 2026</p>
+    </div>
+
+  </div>
+</section>
+<!-- ============================================================= -->
+<!-- ▲▲▲  PASTE UNTIL HERE  ▲▲▲ -->
+<!-- ============================================================= -->
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "brand": "MNTD",
+  "mode": "inside-out (scored on email evidence only for fair 3-way comparison)",
+  "audit_date": "2026-08-02",
+  "corpus_n": 17,
+  "corpus_window": "2026-06-21 → 2026-07-24",
+  "overall": 58,
+  "band": "Competent (mid)",
+  "band_note": "Inherits parent Knix's DMARC posture (p=none across wearmntd.ca + wearmntd.com) but has stronger lifecycle coverage than parent (full 9-email transactional flow observed). Small corpus (17 emails, 33 days) — some dimensions are lower confidence than SAXX (155/310) or Knix (235/193).",
+  "rows": [
+    ["1 Deliverability & list health",   20, 3, "High (own audit)"],
+    ["2 Lifecycle / flow coverage",       20, 4, "High (full transactional flow observed)"],
+    ["3 Segmentation & personalization",  12, 2, "High (XXXL launch fired list-wide despite size on file)"],
+    ["4 Campaign strategy & calendar",    10, 3, "Med (small window)"],
+    ["5 Offer & margin strategy",         10, 2, "High (single 15% code · SMS 20% vs email 15% conflict)"],
+    ["6 Creative, copy & UX",             10, 3, "Med"],
+    ["7 Conversion path & tracking",       8, 3, "Med (Klaviyo native · branded tracking unverified)"],
+    ["8 Measurement & reporting",          6, 2, "Low (no ESP access disclosed)"],
+    ["9 Compliance & consent (CASL)",      4, 3, "Med"]
+  ],
+  "notes": "Same DMARC-p=none policy as parent Knix (with rua=postmaster@knix.com pointing to Group). Klaviyo DKIM configured on both wearmntd.ca and wearmntd.com (different kl2 selector CNAMEs). Sat-heavy send distribution (6/17 = 35%). Only 3 weeks of data — cadence signal is directional not settled."
+}
