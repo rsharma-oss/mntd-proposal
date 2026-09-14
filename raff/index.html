@@ -227,6 +227,13 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
 @media(max-width:700px){.invest-price{text-align:left}}
 .invest-amt{font-family:'DM Serif Display',serif;font-size:44px;font-weight:400;line-height:1;letter-spacing:-1.5px}
 .invest-per{font-size:12px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-top:4px}
+.invest-valueprop{margin-bottom:18px;text-align:right;max-width:340px;margin-left:auto;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,0.18)}
+.invest-vp-eye{font-size:10.5px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:rgba(255,255,255,0.62);margin-bottom:6px}
+.invest-vp-h{font-size:15.5px;font-weight:800;color:#FFF;line-height:1.3;letter-spacing:-0.2px;margin-bottom:6px}
+.invest-vp-stages{font-size:11px;color:rgba(255,255,255,0.78);line-height:1.5;letter-spacing:1px;margin-bottom:6px;font-weight:700;text-transform:uppercase}
+.invest-vp-b{font-size:12.5px;color:rgba(255,255,255,0.7);line-height:1.5}
+.invest-vp-b strong{color:rgba(255,255,255,0.92);font-weight:700}
+@media(max-width:700px){.invest-valueprop{text-align:left;max-width:none;margin-left:0;border-bottom:none;border-top:1px solid rgba(255,255,255,0.18);padding-top:14px;padding-bottom:0;margin-top:14px;margin-bottom:14px}}
 
 /* TEAM */
 .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -676,17 +683,19 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
 <div class="page">
 
 <div id="tldr" class="tldr-band">
-  <div class="tldr-eye">TL;DR · The 60-second read</div>
-  <h1 class="tldr-h">MNTD has product-market fit. The customer experience around it hasn't caught up yet.</h1>
+  <div class="tldr-eye">The Growth Automated Revenue Growth Engine · applied to MNTD</div>
+  <h1 class="tldr-h">MNTD has product-market fit. The customer experience around it hasn't caught up yet. We wire it in — and each fix compounds on the next.</h1>
 
   <div class="tldr-grid">
     <div class="tldr-card">
-      <div class="k">What we'll do</div>
+      <div class="k">What we'll ship · six commitments · 90 days · each compounds on the next</div>
       <ul>
-        <li>Fix the cart-to-checkout coupon conflict — <a href="#ds3"><strong>a $73.60 gap per order today</strong></a></li>
-        <li>Stand up the missing abandoned-cart flow — recovery is currently zero</li>
-        <li>Rebuild the review-request cadence for wash-before-wear timing so <strong>Best Damn Tee</strong> earns its fifth star</li>
-        <li>Move the Knix Group to DMARC quarantine — MNTD's inbox lifts for free (<a href="#fact-book">receipts</a>)</li>
+        <li><strong>Cart-to-checkout coupon logic</strong> fixed by <strong>Day 14</strong> — closes the <a href="#ds3">$73.60 Volume + GWP gap</a>. <em>Every recovered order funds every downstream lift.</em></li>
+        <li><strong>Klaviyo abandoned-cart flow</strong> live inside <strong>Day 30</strong> — recovery today: $0. <em>Klaviyo benchmark: 15-25% of touched abandons convert.</em></li>
+        <li><strong>Review-request rebuild</strong> — junk → inbox, Day 13 timing for wash-before-wear garments. <em>Reviews feed organic + AEO citations · less paid dependency month over month.</em></li>
+        <li><strong>PDP size recommender by Day 60</strong> — <a href="#pdp-video">True Fit undergarments</a> pattern. <em>10-25% fewer returns keeps margin on what already converted.</em></li>
+        <li><strong>Klaviyo profile properties</strong> for size, gender, language — retires the <a href="#postpurchase">XXXL list-wide blast</a>. <em>Every future launch lands with its cohort.</em></li>
+        <li><strong>DMARC to quarantine group-wide + BIMI earned</strong> — one config change lifts MNTD, Knix, and every future Emerging Brand. <em>Inbox trust is the multiplier on everything above.</em> See <a href="#fact-book">receipts</a>.</li>
       </ul>
     </div>
 
@@ -703,12 +712,14 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
     </div>
 
     <div class="tldr-card">
-      <div class="k">What you get</div>
+      <div class="k">What you get · not one-off wins · the engine, compounding</div>
       <ul>
-        <li><strong>Every cart abandoner touched</strong> — Klaviyo flow, 3-touch, live inside 90 days</li>
-        <li><strong>DTC-standard review completion</strong> — deliverable-first, category-calibrated cadence</li>
-        <li><strong>10–25% return-rate drop</strong> from AI-driven size charts (DTC benchmark)</li>
-        <li><strong>A DMARC posture that matches SAXX</strong> — group-wide inbox trust</li>
+        <li><strong>Every abandoned cart earns a second chance</strong> — $73.60 recovered per order · breakeven at 163 orders/month · every order beyond is pure margin.</li>
+        <li><strong>Every review a fifth star</strong> — Klaviyo → organic → AEO citations · less paid dependency month over month.</li>
+        <li><strong>Every conversion protected</strong> — 10-25% fewer returns keeps margin on what already converted.</li>
+        <li><strong>Every launch lands right</strong> — size / gender / language segmentation retires the XXXL-style misfire forever.</li>
+        <li><strong>Every email in the inbox</strong> — group-wide DMARC lift + BIMI in the header · same rail as SAXX.</li>
+        <li><strong>Every repeat purchase is cheaper</strong> — retention lifts LTV, LTV reduces CAC, CAC drop compounds. <em>Portfolio precedent: 3x revenue growth in 24 months (New Metric Media · Sections 11, 12).</em></li>
       </ul>
     </div>
 
@@ -1930,6 +1941,12 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
       <div class="invest-body">Founder-level operator in Shopify + Klaviyo. Weekly working sessions with Kate. Shared dashboard and change log. Deposit + monthly, net 30 thereafter.</div>
     </div>
     <div class="invest-price">
+      <div class="invest-valueprop">
+        <div class="invest-vp-eye">What we offer</div>
+        <div class="invest-vp-h">The end-to-end revenue system for Shopify.</div>
+        <div class="invest-vp-stages">Learn · Buy · Get · Use · Pay · Support</div>
+        <div class="invest-vp-b">Every stage <strong>compounds revenue and protects margin</strong> — instead of leaking both.</div>
+      </div>
       <div class="invest-amt">$12K</div>
       <div class="invest-per">per month · 90-day core retainer</div>
     </div>
@@ -2157,6 +2174,12 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
       <div class="invest-body">Sections 08 – 13 inclusive. 90-day working plan. Weekly co-working session with Kate. Shared change log. Deposit + monthly, net 30 thereafter. MSA + SOW under Growth Automated's standard papering (see Section 16).</div>
     </div>
     <div class="invest-price">
+      <div class="invest-valueprop">
+        <div class="invest-vp-eye">What we offer</div>
+        <div class="invest-vp-h">The end-to-end revenue system for Shopify.</div>
+        <div class="invest-vp-stages">Learn · Buy · Get · Use · Pay · Support</div>
+        <div class="invest-vp-b">Every stage <strong>compounds revenue and protects margin</strong> — instead of leaking both.</div>
+      </div>
       <div class="invest-amt">$12K</div>
       <div class="invest-per">per month · 3 months · $36K total</div>
     </div>
