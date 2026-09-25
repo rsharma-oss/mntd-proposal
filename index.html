@@ -542,6 +542,18 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
 .tldr-btn:hover{background:#2a419a}
 .tldr-descend{font-size:13px;color:var(--ink-3);text-decoration:none;font-weight:600}
 .tldr-descend:hover{color:var(--ga-blue)}
+/* Fastball · GA ecomm value prop at top of the TL;DR band */
+.fastball{background:var(--ga-blue);color:#FFF;padding:22px 26px;border-radius:14px;margin:0 0 22px;box-shadow:0 12px 28px -12px rgba(51,79,180,0.4)}
+.fastball-brand{font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.72);margin-bottom:10px}
+.fastball-h{font-size:clamp(19px,2.6vw,26px);font-weight:800;line-height:1.2;letter-spacing:-.01em;margin:0 0 10px;color:#FFF}
+.fastball-h em{font-style:normal;background:rgba(255,255,255,0.18);padding:2px 8px;border-radius:6px}
+.fastball-stages{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 12px}
+.fastball-stages span{font-size:10.5px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;background:rgba(255,255,255,0.14);padding:6px 11px;border-radius:99px;color:#FFF}
+.fastball-body{font-size:14px;line-height:1.55;color:rgba(255,255,255,0.9);max-width:60ch;margin:0 0 14px}
+.fastball-body strong{color:#FFF;font-weight:700}
+.fastball-proof{display:flex;gap:26px;flex-wrap:wrap;padding-top:14px;border-top:1px solid rgba(255,255,255,0.18)}
+.fastball-proof div{font-size:11px;color:rgba(255,255,255,0.72);letter-spacing:0.6px;text-transform:uppercase}
+.fastball-proof b{display:block;font-family:'DM Serif Display',serif;font-size:24px;color:#FFF;font-weight:400;line-height:1;letter-spacing:-.5px;margin-bottom:4px;text-transform:none;letter-spacing:-0.5px}
 /* Jump strip beneath TL;DR */
 .jump-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 40px}
 .jump-strip a{display:flex;align-items:center;justify-content:center;gap:6px;padding:12px 10px;background:var(--surface-2);border:1px solid var(--rule);border-radius:10px;color:var(--ink-1);text-decoration:none;font-weight:700;font-size:13.5px;min-height:48px}
@@ -551,6 +563,10 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
   .jump-strip{grid-template-columns:repeat(2,1fr)}
   .tldr-band{padding:20px 18px;border-radius:12px}
   .tldr-h{font-size:22px}
+  .fastball{padding:18px 20px}
+  .fastball-proof{gap:18px}
+  .fastball-proof b{font-size:20px}
+  .fastball-stages span{font-size:10px;padding:5px 9px}
 }
 /* Redesigned nav — 6 primary anchors + Evidence dropdown */
 .topbar-nav{display:flex;align-items:center;gap:2px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
@@ -683,19 +699,32 @@ section[id],.obs-details[id]{scroll-margin-top:140px}
 <div class="page">
 
 <div id="tldr" class="tldr-band">
-  <div class="tldr-eye">The Growth Automated Revenue Growth Engine · applied to MNTD</div>
+  <div class="fastball">
+    <div class="fastball-brand">Growth Automated · The Shopify Revenue System</div>
+    <div class="fastball-h">The end-to-end revenue system for Shopify — <em>applied to MNTD</em>.</div>
+    <div class="fastball-stages">
+      <span>Learn</span><span>Buy</span><span>Get</span><span>Use</span><span>Pay</span><span>Support</span>
+    </div>
+    <p class="fastball-body">Every stage of the journey <strong>compounds revenue and protects margin</strong> — instead of leaking both. That's the engine. Below is the same engine wired for MNTD.</p>
+    <div class="fastball-proof">
+      <div><b>3×</b>Revenue growth · 24 months</div>
+      <div><b>13.44%</b>Peak conversion rate</div>
+      <div><b>4×</b>Customer base growth</div>
+      <div><b>4.91</b>Store rating · out of 5</div>
+    </div>
+  </div>
   <h1 class="tldr-h">MNTD has product-market fit. The customer experience around it hasn't caught up yet. We wire it in — and each fix compounds on the next.</h1>
 
   <div class="tldr-grid">
     <div class="tldr-card">
-      <div class="k">What we'll ship · six commitments · 90 days · each compounds on the next</div>
+      <div class="k">What we'll ship · six wins in 90 days · each one compounds on the next</div>
       <ul>
-        <li><strong>Cart-to-checkout coupon logic</strong> fixed by <strong>Day 14</strong> — closes the <a href="#ds3">$73.60 Volume + GWP gap</a>. <em>Every recovered order funds every downstream lift.</em></li>
-        <li><strong>Klaviyo abandoned-cart flow</strong> live inside <strong>Day 30</strong> — recovery today: $0. <em>Klaviyo benchmark: 15-25% of touched abandons convert.</em></li>
-        <li><strong>Review-request rebuild</strong> — junk → inbox, Day 13 timing for wash-before-wear garments. <em>Reviews feed organic + AEO citations · less paid dependency month over month.</em></li>
-        <li><strong>PDP size recommender by Day 60</strong> — <a href="#pdp-video">True Fit undergarments</a> pattern. <em>10-25% fewer returns keeps margin on what already converted.</em></li>
-        <li><strong>Klaviyo profile properties</strong> for size, gender, language — retires the <a href="#postpurchase">XXXL list-wide blast</a>. <em>Every future launch lands with its cohort.</em></li>
-        <li><strong>DMARC to quarantine group-wide + BIMI earned</strong> — one config change lifts MNTD, Knix, and every future Emerging Brand. <em>Inbox trust is the multiplier on everything above.</em> See <a href="#fact-book">receipts</a>.</li>
+        <li><strong>Recover every abandoned cart.</strong> The coupon confusion that costs <a href="#ds3">$73.60 per bundle-abandoning order</a> gets fixed in the first two weeks. A follow-up flow catches anyone who leaves without buying — live by Day 30. <em>Every recovered order funds every fix that follows.</em></li>
+        <li><strong>Reviews land in the inbox — timed for real opinions.</strong> Not junk. Not day-two silence. When customers have actually worn the Best Damn Tee, they hear from us. <em>Reviews feed organic search and AI recommendations — paid-media dependency starts shrinking.</em></li>
+        <li><strong>A fit-first product page.</strong> Confident size guidance live by Day 60, modeled on the <a href="#pdp-video">industry-proven pattern</a> that drops returns 10–25%. <em>Fewer returns keeps margin on every conversion.</em></li>
+        <li><strong>Every launch reaches the right customers.</strong> The size, gender, and language data already in your Klaviyo starts doing work. The <a href="#postpurchase">XXXL launch that hit me</a> is the pattern we retire. <em>Every future drop lands with the cohort it was built for.</em></li>
+        <li><strong>Inbox trust across the whole Knix Group.</strong> One email-authentication upgrade — the posture <a href="#fact-book">SAXX already runs</a> — lifts every brand's deliverability at once. <em>MNTD gets the lift as a byproduct of a Group-level decision.</em></li>
+        <li><strong>Post-purchase feels like MNTD, not the carrier.</strong> Delivery updates and unboxing become one branded stream instead of two. <em>Higher satisfaction, lower support cost, more repeat customers.</em></li>
       </ul>
     </div>
 
